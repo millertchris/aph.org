@@ -143,8 +143,24 @@ git push
 ### Server setup (one-time after first deploy)
 
 1. Ensure SpinupWP document root is set to `web`
-2. SSH in and create `.env` from `.env.example` with production values
-3. The deploy script handles the rest — `composer install` provides WordPress core and vendor deps
+2. SSH in and create `.env` from `.env.example` with environment-appropriate values
+3. Import the database: `./scripts/db-pull.sh` (pulls from production via WP Migrate DB Pro CLI, excludes ~1.7GB of rebuildable data)
+4. Reset an admin password: `wp user update <username> --user_pass='password' --skip-plugins --skip-themes`
+
+### Staging DB sync
+
+Staging mirrors production data via a weekly cron:
+```bash
+# Staging server crontab — Sundays 3am
+0 3 * * 0 cd /path/to/site && ./scripts/db-pull.sh >> /var/log/db-pull.log 2>&1
+```
+
+| Environment | DB source | DB pull |
+|------------|-----------|---------|
+| Production | Is the source | Never |
+| Staging | Pull from production | Weekly cron |
+| Dev server | Pull from production | Manual |
+| Local (DDEV) | SQL dump via `ddev setup-db` | Manual |
 
 See [CLAUDE.md](CLAUDE.md) for full deployment details.
 

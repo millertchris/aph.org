@@ -349,16 +349,49 @@ After the first deploy, SSH into the server and create the `.env` file:
 
 ```bash
 cp .env.example .env
-# Edit .env with production values:
+# Edit .env with environment-appropriate values:
 # - Real DB credentials (DB_NAME, DB_USER, DB_PASSWORD, DB_HOST)
-# - WP_HOME='https://www.aph.org'
-# - WP_SITEURL='https://www.aph.org/wp'
-# - WP_ENV='production'
+# - WP_HOME / WP_SITEURL (the environment's URL)
+# - WP_ENV ('production', 'staging', or 'development')
 # - All auth salts (generate at https://roots.io/salts.html)
 # - AWS/S3 credentials for WP Offload Media
 # - All plugin license keys
 # - API credentials (HumanWare, FQ/NET, etc.)
+# - WPMDB_SOURCE_URL and WPMDB_SOURCE_KEY (for staging/dev DB pulls)
 ```
+
+Then import the database for the first time:
+
+```bash
+./scripts/db-pull.sh
+```
+
+This pulls the production database via WP Migrate DB Pro CLI, excluding ~1.7GB of rebuildable indexes and logs (SearchWP, Yoast, Gravity Forms entries, ActionScheduler, Defender, etc.). It also deactivates Defender and flushes caches.
+
+After the pull, reset an admin password:
+```bash
+wp user update <username> --user_pass='password' --skip-plugins --skip-themes
+```
+
+### Staging DB sync (scheduled)
+
+Staging should mirror production data. A cron job pulls the production database every Sunday at 3am:
+
+```bash
+# Add to the staging server's crontab (crontab -e):
+0 3 * * 0 cd /path/to/site && ./scripts/db-pull.sh >> /var/log/db-pull.log 2>&1
+```
+
+This keeps staging data at most 7 days stale without slowing down code deploys. The pull script handles search-replace automatically (WP Migrate DB Pro replaces URLs during the pull), deactivates Defender, and flushes caches.
+
+### Environment matrix
+
+| Environment | Deploy trigger | DB source | DB pull frequency |
+|------------|---------------|-----------|-------------------|
+| **Production** | Push to `main` | Is the source | Never (it is the source) |
+| **Staging** | Push to `main` | Pull from production | Weekly cron (Sundays 3am) |
+| **Dev server** | Push to `main` (or branch) | Pull from production | Manual (`./scripts/db-pull.sh`) |
+| **Local (DDEV)** | N/A | SQL dump via `ddev setup-db` | Manual |
 
 ### Critical SpinupWP settings
 
