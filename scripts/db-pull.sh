@@ -134,9 +134,10 @@ fi
 
 # Check if WP Migrate DB Pro CLI is available
 # Try 'migrate' (current) first, fall back to 'migratedb' (legacy alias)
-if wp migrate --help &>/dev/null; then
+# Use 'wp cli has-command' which checks registration without triggering deprecation errors
+if wp cli has-command "migrate pull" 2>/dev/null; then
   MIGRATE_CMD="wp migrate"
-elif wp migratedb --help &>/dev/null; then
+elif wp cli has-command "migratedb pull" 2>/dev/null; then
   MIGRATE_CMD="wp migratedb"
 else
   echo "ERROR: WP Migrate DB Pro CLI is not available."
