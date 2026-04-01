@@ -41,6 +41,29 @@ ddev xdebug on             # Enable Xdebug (port 9003)
 
 Debug log location: `web/app/debug.log`
 
+## Custom Agents
+
+Specialized sub-agents in `.claude/agents/` — invoke by name for focused tasks:
+
+| Agent | Model | Use For |
+|-------|-------|---------|
+| `wp-developer` | sonnet | Theme mods, WooCommerce hooks, APH PHP classes, CPTs, REST APIs |
+| `wp-debugger` | sonnet | PHP errors, plugin conflicts, Bedrock config issues, database problems |
+| `qa-tester` | sonnet | Playwright testing — pages, WooCommerce flows, forms, accessibility |
+| `security-auditor` | opus | Security audit — XSS, SQLi, CSRF, exposed secrets, OWASP top 10 |
+| `performance-optimizer` | sonnet | Slow queries, asset optimization, DB bloat, caching opportunities |
+| `plugin-developer` | sonnet | Scaffold and develop custom plugins following APH patterns |
+| `frontend-developer` | sonnet | SCSS/JS/Gulp, responsive design, WCAG accessibility (top priority for APH) |
+
+## Custom Skills
+
+Slash commands in `.claude/skills/` — load project context on demand:
+
+| Skill | Purpose |
+|-------|---------|
+| `/aph-dev` | Full project context — environment, structure, agents, key files, commands |
+| `/db-workflow` | Database import/export/snapshot/search-replace workflow guide |
+
 ## Project Structure (Bedrock)
 
 ```
