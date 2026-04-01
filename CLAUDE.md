@@ -315,15 +315,33 @@ Production and staging are hosted on **SpinupWP** with push-to-deploy from the `
 
 ### Deploy script
 
+Runs after every push to `main`:
+
 ```bash
 composer install --optimize-autoloader --no-dev --no-interaction
 wp rewrite flush --skip-plugins --skip-themes 2>/dev/null || true
 wp cache flush --skip-plugins --skip-themes 2>/dev/null || true
 ```
 
-- `composer install` — installs WordPress core (`web/wp/`) and vendor dependencies, since both are gitignored
+- `composer install` — installs WordPress core (`web/wp/`) and vendor dependencies, since both are gitignored. This is **not a full reinstall every time** — Composer reads `composer.lock` and only installs what's missing or changed. If everything is already present and up to date, it finishes in seconds.
 - `wp rewrite flush` — regenerates permalink rules after code changes
 - `wp cache flush` — clears object cache so stale data doesn't persist
+
+### Updating WordPress
+
+WordPress core is version-locked by `composer.lock`. It never auto-updates on the server. To update:
+
+```bash
+# 1. Locally, update the lock file
+ddev composer update roots/wordpress
+
+# 2. Commit and push the updated lock file
+git add composer.lock
+git commit -m "Update WordPress to X.X.X"
+git push
+```
+
+SpinupWP deploys → `composer install` sees the new version in `composer.lock` → installs the updated core. This is the only way WordPress updates — it requires an explicit local update, commit, and push.
 
 ### Server setup (one-time)
 

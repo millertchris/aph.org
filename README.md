@@ -123,6 +123,23 @@ wp rewrite flush --skip-plugins --skip-themes 2>/dev/null || true
 wp cache flush --skip-plugins --skip-themes 2>/dev/null || true
 ```
 
+`composer install` is not a full reinstall every time — it reads `composer.lock` and only acts on what's missing or changed. Subsequent deploys finish in seconds.
+
+### Updating WordPress
+
+WordPress core is version-locked by `composer.lock`. It never auto-updates on the server.
+
+```bash
+# 1. Update locally
+ddev composer update roots/wordpress
+
+# 2. Commit and push
+git add composer.lock
+git commit -m "Update WordPress to X.X.X"
+git push
+# SpinupWP deploys and composer install picks up the new version
+```
+
 ### Server setup (one-time after first deploy)
 
 1. Ensure SpinupWP document root is set to `web`
