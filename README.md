@@ -111,13 +111,33 @@ npm install
 npm run dev
 ```
 
+## Deployment
+
+Production and staging are hosted on **SpinupWP** with push-to-deploy from the `main` branch.
+
+### Deploy script (runs after every push to main)
+
+```bash
+composer install --optimize-autoloader --no-dev --no-interaction
+wp rewrite flush --skip-plugins --skip-themes 2>/dev/null || true
+wp cache flush --skip-plugins --skip-themes 2>/dev/null || true
+```
+
+### Server setup (one-time after first deploy)
+
+1. Ensure SpinupWP document root is set to `web`
+2. SSH in and create `.env` from `.env.example` with production values
+3. The deploy script handles the rest — `composer install` provides WordPress core and vendor deps
+
+See [CLAUDE.md](CLAUDE.md) for full deployment details.
+
 ## Architecture
 
 This project uses **Bedrock** by Roots, which provides:
 
 - **Environment-based configuration** — all secrets and settings in `.env`, never hardcoded
 - **Improved security** — WordPress content directory (`web/app/`) separated from core (`web/wp/`)
-- **Composer for WordPress core** — version-locked, installed automatically on `ddev start`
+- **Composer for WordPress core** — version-locked, installed automatically
 - **Git-tracked plugins** — all 77 plugins committed to the repo for reliable, auth-free onboarding
 
 For detailed setup instructions and troubleshooting, see [docs/SETUP.md](docs/SETUP.md).

@@ -303,6 +303,51 @@ To update a plugin: download the new version, replace files in `web/app/plugins/
 3. Check `web/app/debug.log` for PHP errors
 4. Commit your changes to git
 
+## Deployment (SpinupWP)
+
+Production and staging are hosted on **SpinupWP** with push-to-deploy from the `main` branch.
+
+### How it works
+
+1. Push to `main` → SpinupWP webhook triggers deployment
+2. SpinupWP pulls the latest code from `git@github.com:millertchris/aph.org.git`
+3. The deploy script runs automatically after pull
+
+### Deploy script
+
+```bash
+composer install --optimize-autoloader --no-dev --no-interaction
+wp rewrite flush --skip-plugins --skip-themes 2>/dev/null || true
+wp cache flush --skip-plugins --skip-themes 2>/dev/null || true
+```
+
+- `composer install` — installs WordPress core (`web/wp/`) and vendor dependencies, since both are gitignored
+- `wp rewrite flush` — regenerates permalink rules after code changes
+- `wp cache flush` — clears object cache so stale data doesn't persist
+
+### Server setup (one-time)
+
+After the first deploy, SSH into the server and create the `.env` file:
+
+```bash
+cp .env.example .env
+# Edit .env with production values:
+# - Real DB credentials (DB_NAME, DB_USER, DB_PASSWORD, DB_HOST)
+# - WP_HOME='https://www.aph.org'
+# - WP_SITEURL='https://www.aph.org/wp'
+# - WP_ENV='production'
+# - All auth salts (generate at https://roots.io/salts.html)
+# - AWS/S3 credentials for WP Offload Media
+# - All plugin license keys
+# - API credentials (HumanWare, FQ/NET, etc.)
+```
+
+### Critical SpinupWP settings
+
+- **Document root**: Must be set to `web` (not project root) — Bedrock serves from `web/`
+- **PHP version**: 8.4
+- The `wp-cli.yml` in the repo tells WP-CLI where WordPress core lives (`path: web/wp`)
+
 ## Important Notes
 
 - Media files are served from production S3 via WP Offload Media
