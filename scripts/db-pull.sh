@@ -132,19 +132,8 @@ if [ -z "$SOURCE_URL" ] || [ -z "$SOURCE_KEY" ]; then
   exit 1
 fi
 
-# Check if WP Migrate DB Pro CLI is available
-# Try 'migrate' (current) first, fall back to 'migratedb' (legacy alias)
-# Use 'wp cli has-command' which checks registration without triggering deprecation errors
-if wp cli has-command "migrate pull" 2>/dev/null; then
-  MIGRATE_CMD="wp migrate"
-elif wp cli has-command "migratedb pull" 2>/dev/null; then
-  MIGRATE_CMD="wp migratedb"
-else
-  echo "ERROR: WP Migrate DB Pro CLI is not available."
-  echo "Ensure the plugin and CLI addon are active:"
-  echo "  wp plugin activate wp-migrate-db-pro --skip-plugins --skip-themes"
-  exit 1
-fi
+# Use 'wp migrate' (current command name)
+MIGRATE_CMD="wp migrate"
 
 echo "Building table include list..."
 INCLUDE_TABLES=$(build_include_tables)
