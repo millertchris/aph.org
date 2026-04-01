@@ -156,13 +156,15 @@ echo "Pulling database (~1.7GB estimated)..."
 echo "(This may take several minutes)"
 echo ""
 
-# --skip-plugins --skip-themes prevents WooCommerce REST API fatal errors on PHP 8.4
+# Skip all plugins EXCEPT wp-migrate-db-pro (and its addons) to avoid
+# WooCommerce REST API fatal errors on PHP 8.4.
+# Cannot use --skip-plugins globally — that would skip the migrate plugin itself.
 $MIGRATE_CMD pull "$SOURCE_URL" "$SOURCE_KEY" \
   --skip-replace-guids \
   --exclude-spam \
   --exclude-post-types="$EXCLUDE_POST_TYPES" \
   --include-tables="$INCLUDE_TABLES" \
-  --skip-plugins --skip-themes
+  --skip-themes
 
 PULL_EXIT=$?
 if [ $PULL_EXIT -ne 0 ]; then
