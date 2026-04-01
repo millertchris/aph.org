@@ -133,9 +133,15 @@ if [ -z "$SOURCE_URL" ] || [ -z "$SOURCE_KEY" ]; then
 fi
 
 # Check if WP Migrate DB Pro CLI is available
-if ! wp migratedb --help &>/dev/null; then
+# Try 'migrate' (current) first, fall back to 'migratedb' (legacy alias)
+if wp migrate --help &>/dev/null; then
+  MIGRATE_CMD="wp migrate"
+elif wp migratedb --help &>/dev/null; then
+  MIGRATE_CMD="wp migratedb"
+else
   echo "ERROR: WP Migrate DB Pro CLI is not available."
-  echo "Ensure the plugin is active: wp plugin activate wp-migrate-db-pro"
+  echo "Ensure the plugin and CLI addon are active:"
+  echo "  wp plugin activate wp-migrate-db-pro --skip-plugins --skip-themes"
   exit 1
 fi
 
@@ -155,7 +161,7 @@ echo "Pulling database (~1.7GB estimated)..."
 echo "(This may take several minutes)"
 echo ""
 
-wp migratedb pull "$SOURCE_URL" "$SOURCE_KEY" \
+$MIGRATE_CMD pull "$SOURCE_URL" "$SOURCE_KEY" \
   --skip-replace-guids \
   --exclude-spam \
   --exclude-post-types="$EXCLUDE_POST_TYPES" \
