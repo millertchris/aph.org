@@ -156,9 +156,15 @@ echo "Pulling database..."
 echo "(This may take several minutes for large databases)"
 echo ""
 
+# Post types to exclude — bloat inside wp_posts/wp_postmeta:
+#   - postman_sent_mail: 491MB — Post SMTP email logs with full transcripts
+#   - wp-rest-api-log:    36MB — REST API request/response debug logs
+EXCLUDE_POST_TYPES="postman_sent_mail,wp-rest-api-log"
+
 wp migratedb pull "$SOURCE_URL" "$SOURCE_KEY" \
   --skip-replace-guids \
   --exclude-spam \
+  --exclude-post-types="$EXCLUDE_POST_TYPES" \
   $TABLE_FLAG
 
 echo ""
@@ -168,6 +174,13 @@ echo ""
 # Deactivate production-only plugins
 wp plugin deactivate wp-defender --skip-plugins --skip-themes 2>/dev/null && \
   echo "Deactivated: wp-defender" || echo "wp-defender already inactive"
+
+# Clean up metadata bloat that can't be excluded by table/post-type
+echo "Cleaning up metadata bloat..."
+wp db query "DELETE FROM wp_postmeta WHERE meta_key = 'wp-smpro-smush-data'" --skip-plugins --skip-themes 2>/dev/null && \
+  echo "  Removed Smush optimization data (~14MB)" || true
+wp db query "DELETE FROM wp_postmeta WHERE meta_key LIKE '_oembed_%'" --skip-plugins --skip-themes 2>/dev/null && \
+  echo "  Removed oEmbed cache entries" || true
 
 # Flush caches
 wp rewrite flush --skip-plugins --skip-themes 2>/dev/null || true
