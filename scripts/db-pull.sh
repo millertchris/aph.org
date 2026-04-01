@@ -40,26 +40,45 @@ SOURCE_URL="${WPMDB_SOURCE_URL:-}"
 # Source site secret key (from production WP Admin → Tools → Migrate DB Pro → Settings)
 SOURCE_KEY="${WPMDB_SOURCE_KEY:-}"
 
-# ---- Tables to include ----
+# ---- Tables to exclude ----
 # WP Migrate DB Pro uses --include-tables (whitelist), not exclude.
-# Omitting --include-tables migrates ALL tables.
-# To skip large rebuildable/unnecessary tables, we explicitly list what to include.
+# We build the include list dynamically by querying all tables and filtering out
+# the ones we don't need. This way new tables are automatically included.
 #
-# Tables we SKIP (not listed below) — saves ~1.7GB:
-#   - wp_swp_*, wp_searchwp_*    (SearchWP index — 702MB, rebuildable)
-#   - wp_yoast_*                 (Yoast index — 58MB, rebuildable)
-#   - wp_blc_*                   (Broken Link Checker — 9MB, rescans automatically)
+# Tables we SKIP — saves ~1.3GB total:
+#
+# Rebuildable indexes (~780MB):
+#   - wp_swp_*, wp_searchwp_*    (SearchWP — 702MB, rebuild via WP Admin)
+#   - wp_yoast_*                 (Yoast SEO — 58MB, rebuild via SEO → Tools)
+#   - wp_facetwp_index           (FacetWP — 9MB, rebuilds on reindex)
+#   - wp_wps_*                   (SearchWP metrics — 12MB, rebuildable)
+#
+# WooCommerce analytics/lookups (~148MB):
+#   - wp_wc_order_product_lookup (111MB, rebuild via WC → Status → Tools)
+#   - wp_wc_order_stats          (29MB, rebuildable)
+#   - wp_wc_customer_lookup      (7MB, rebuildable)
+#   - wp_wc_download_log         (2MB, download tracking)
+#
+# WooCommerce order notes (~271MB):
+#   - wp_comments/wp_commentmeta (271MB — 585K rows, ALL are WC order notes
+#     like "Payment received", "Order shipped". Not user comments or reviews.
+#     Useful for debugging but not essential for dev/staging.)
+#
+# Logs, sessions, runtime data (~60MB):
 #   - wp_gf_entry*, wp_gf_form_view (Gravity Forms entries — 84MB)
 #   - wp_gravitysmtp_*           (SMTP logs — 4MB)
 #   - wp_actionscheduler_*       (ActionScheduler — 6MB, regenerates)
-#   - wp_pmxe_*                  (WP All Export — 31MB)
+#   - wp_pmxe_*, wp_pmxi_*       (WP All Export/Import — 32MB)
 #   - wp_defender_*              (Defender — 7MB, deactivated locally)
 #   - wp_cartflows_*             (CartFlows — 4MB)
+#   - wp_blc_*                   (Broken Link Checker — 9MB, rescans)
 #   - wp_redirection_logs/404    (Redirection logs)
+#   - wp_woocommerce_sessions    (Active sessions — meaningless on another server)
+#   - wp_oauth_*                 (OAuth tokens — session-specific)
+#   - wp_wsal_*                  (WP Security Audit Log)
+#   - wp_wf*                     (Wordfence leftovers)
 
 # ---- Build include list dynamically ----
-# Query the SOURCE database for all tables, then exclude the ones we don't want.
-# This way new tables are automatically included.
 
 build_include_tables() {
   # Get all tables from local DB, then filter out the ones we want to skip
@@ -67,16 +86,31 @@ build_include_tables() {
     -e 'wp_swp_' \
     -e 'wp_searchwp_' \
     -e 'wp_yoast_' \
+    -e 'wp_facetwp_index' \
+    -e 'wp_wps_' \
     -e 'wp_blc_' \
     -e 'wp_gf_entry' \
     -e 'wp_gf_form_view' \
     -e 'wp_gravitysmtp_' \
     -e 'wp_actionscheduler_' \
     -e 'wp_pmxe_' \
+    -e 'wp_pmxi_' \
     -e 'wp_defender_' \
     -e 'wp_cartflows_' \
     -e 'wp_redirection_logs' \
     -e 'wp_redirection_404' \
+    -e 'wp_wc_order_product_lookup' \
+    -e 'wp_wc_order_stats' \
+    -e 'wp_wc_customer_lookup' \
+    -e 'wp_wc_download_log' \
+    -e 'wp_woocommerce_sessions' \
+    -e 'wp_comments' \
+    -e 'wp_commentmeta' \
+    -e 'wp_oauth_' \
+    -e 'wp_wsal_' \
+    -e 'wp_wf' \
+    -e 'wp_smush_dir_images' \
+    -e 'wp_post_smtp_logmeta' \
     | tr '\n' ',' | sed 's/,$//'
 }
 
@@ -145,9 +179,14 @@ echo "================================================"
 echo " Database pull complete! $(date)"
 echo "================================================"
 echo ""
-echo "Post-pull steps (if first-time setup):"
+echo "Post-pull steps:"
 echo "  1. Reset admin password:"
 echo "     wp user update <username> --user_pass='password'"
-echo "  2. Rebuild SearchWP index: WP Admin → SearchWP → rebuild"
-echo "  3. Rebuild Yoast index: WP Admin → SEO → Tools → reindex"
+echo ""
+echo "Rebuild indexes (excluded from pull to save ~780MB):"
+echo "  2. SearchWP:  WP Admin → SearchWP → Settings → rebuild index"
+echo "  3. Yoast SEO: WP Admin → SEO → Tools → reindex"
+echo "  4. FacetWP:   WP Admin → FacetWP → Settings → reindex"
+echo "  5. WooCommerce lookups: WP Admin → WooCommerce → Status → Tools →"
+echo "     'Regenerate order statistics' + 'Regenerate customer lookup tables'"
 echo ""
