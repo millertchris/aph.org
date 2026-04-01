@@ -1,0 +1,42 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import FileUpload from './FileUpload'
+import { action } from '@storybook/addon-actions'
+import { useState } from 'react'
+
+<Meta
+	title="lib/components/FileUpload"
+	component={FileUpload}
+	argTypes={{
+		accept: {
+			name: 'accept',
+			description: `Takes one or more file type specifications, separated by commas. Each file type specification can be either a MIME type or a file extension, or a combination of both.<br/>
+      <strong>Examples:</strong><br/>
+      <strong>"image/*"</strong>: All types of images
+      <strong>"image/jpeg,image/png"</strong>: All types of images
+      You can also use extensions:<br/>
+      <strong>".pdf"</strong>, <strong>"png"</strong>
+      `,
+			table: {
+				type: { summary: 'string' },
+				defaultValue: { summary: '*/*' },
+			},
+		},
+	}}
+/>
+
+export const Template = (args) => <FileUpload {...args} />
+
+# FileUpload
+
+<Canvas>
+	<Story name="default">{Template.bind()}</Story>
+</Canvas>
+
+<ArgsTable story="default" />
+
+<h2>Global variables & props</h2>
+
+| prop        | corresponding variable             |
+| ----------- | ---------------------------------- |
+| lable       | $i18n.settings.buttons.upload_file |
+| removeLabel | $i18n.settings.buttons.remove_file |

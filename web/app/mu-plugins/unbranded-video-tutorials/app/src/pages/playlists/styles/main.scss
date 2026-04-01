@@ -1,0 +1,40 @@
+$prefix: 'wpmudev-videos';
+
+// Summary image.
+$summary-image-sm: '../../../images/summary/main.png';
+
+// Overwrite image size
+$summary-image-sm--width: 96px;
+$summary-image-sm--height: 96px;
+
+// Overwrite image position
+$summary-image-sm--position-x: 30px; // Horizontal position (only)
+$summary-image-sm--position-y: center; // Vertical position (only)
+
+// Overwrite font path.
+$sui-font-path: '~@wpmudev/shared-ui/dist/fonts/';
+$sui-image-path: '~@wpmudev/shared-ui/dist/images/';
+
+// Share UI styles.
+@import '~@wpmudev/shared-ui/scss/shared-ui';
+
+// Components.
+@import '../../../styles/colors';
+@import '../../../styles/thumbs'; // Has a relative images path
+@import '../../../styles/summary';
+@import '../../../styles/search';
+
+// Page components.
+@import './components/utilities';
+@import './components/videos-list';
+@import './components/field-thumbnail';
+@import './components/accordion';
+@import './components/loader';
+@import './components/modal';
+@import './components/summary-box';
+
+.video-iframe {
+	iframe {
+		max-width: 100%;
+	}
+}

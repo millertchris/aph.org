@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import Accordion from './Accordion'
+import { action } from '@storybook/addon-actions'
+
+<Meta title="lib/components/Accordion" component={Accordion} />
+
+export const Template = (args) => <Accordion {...args} />
+
+# Accordion
+
+<Canvas>
+	<Story
+		name="default"
+		args={{
+			children: (
+				<>
+					<Accordion.Item id="1">
+						<Accordion.Header>
+							<Accordion.Title>
+								Accordion Title 01
+							</Accordion.Title>
+							<Accordion.Date>Accordion Date 01</Accordion.Date>
+							<Accordion.AutoCol>
+								Auto Flex column 01
+							</Accordion.AutoCol>
+						</Accordion.Header>
+						<Accordion.Body>Accordion Content 01 </Accordion.Body>
+					</Accordion.Item>
+					<Accordion.Item id="2">
+						<Accordion.Header>
+							<Accordion.Title>
+								Accordion Title 02
+							</Accordion.Title>
+							<Accordion.Date>Accordion Date 02</Accordion.Date>
+							<Accordion.AutoCol>
+								Auto Flex column 02
+							</Accordion.AutoCol>
+						</Accordion.Header>
+						<Accordion.Body>Accordion Content 02 </Accordion.Body>
+					</Accordion.Item>
+				</>
+			),
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<ArgsTable story="default" />

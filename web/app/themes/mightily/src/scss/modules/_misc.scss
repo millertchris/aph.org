@@ -1,0 +1,150 @@
+::selection {
+	background: #333;
+	color: #fff;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #333;
+	color: #fff;
+	text-shadow: none;
+}
+
+::-webkit-selection {
+	background: #333;
+	color: #fff;
+	text-shadow: none;
+}
+
+.break {
+	display: block;
+
+	&:nth-of-type(1) {
+		animation-delay: 0.5s;
+	}
+
+	&:nth-of-type(2) {
+		animation-delay: 2.5s;
+	}
+
+	&:nth-of-type(3) {
+		animation-delay: 2.5s;
+	}
+
+	&:nth-of-type(4) {
+		animation-delay: 4.5s;
+	}
+}
+
+.magical-underline {
+	line-height: 1;
+	color: #000;
+	padding: 5px 0;
+	background-image: linear-gradient(120deg, #000 0%, #000 100%);
+	background-repeat: no-repeat;
+	background-size: 0 0.1em;
+	background-position: 0 100%;
+	transition: 300ms all ease-in-out;
+
+	&.rollin {
+		background-size: 100% 0.1em;
+	}
+	// &:hover {
+	//   color: #fff;
+	//   background-size: 100% 88%;
+	//   background-image: linear-gradient(120deg, #000 0%, #000 100%);
+	// }
+}
+
+.inline-notification {
+	position: relative;
+	width: 100%;
+	padding: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #000000;
+	border-left: 16px solid #000000;
+
+	.close-button {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: auto;
+		height: auto;
+		border: none;
+		background: transparent;
+	}
+
+	.details {
+		display: flex;
+		align-items: center;
+	}
+
+	.subtitle,
+	.text-wrapper,
+	.title {
+		display: inline;
+		margin-left: 2px;
+	}
+
+	svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.title {
+		font-weight: $font-weight-bold;
+		margin-left: 20px;
+	}
+
+	&.error {
+		color: #ffffff;
+		border-color: $black;
+		background-color: $red;
+
+		path {
+			fill: #ffffff;
+		}
+	}
+
+	&.info {
+		color: #ffffff;
+		border-color: $black;
+		background-color: $pink;
+
+		path {
+			fill: #ffffff;
+		}
+	}
+
+	&.success {
+		color: #000000;
+		border-color: $black;
+		background-color: $green;
+
+		path {
+			fill: $black;
+		}
+	}
+
+	&.warning {
+		color: $black;
+		border-color: $black;
+		background-color: $yellow;
+
+		path {
+			fill: $black;
+		}
+	}
+}
+
+.red {
+	color: $red;
+}
+
+.yellow {
+	color: $yellow;
+}
+
+.green {
+	color: $green;
+}

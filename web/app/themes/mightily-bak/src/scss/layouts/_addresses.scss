@@ -1,0 +1,25 @@
+.addresses-app {
+    position: relative;
+    .back-to-checkout {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    .bx--toolbar-search-container-expandable {
+        width: 100% !important;
+    }
+    .bx--toolbar-search-container-expandable .bx--search {
+        width: 100% !important;
+    }
+    .bx--toolbar-search-container-expandable .bx--search .bx--search-input {
+        visibility: visible !important;
+        padding-left: 3rem !important;
+    }
+    .address-wrap {
+        display: flex;
+        justify-content: space-between;
+        .address-controls {
+            text-align: right;
+        }
+    }
+}

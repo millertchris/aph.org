@@ -1,0 +1,39 @@
+.layout.teasers {
+	margin-bottom: 80px;
+
+	.teaser-list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		@media screen and (max-width: 800px) {
+			flex-direction: column;
+		}
+	}
+
+	.card {
+		max-width: 360px;
+		margin-top: 40px;
+
+		&+.card {
+			margin-left: 40px;
+			@media screen and (max-width: 800px) {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.image {
+		width: 100%;
+		height: 200px;
+		margin-bottom: 20px;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		overflow: hidden;
+	}
+
+	.title {
+		margin-bottom: 20px;
+	}
+}

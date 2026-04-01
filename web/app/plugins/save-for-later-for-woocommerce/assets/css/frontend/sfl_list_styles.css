@@ -1,0 +1,176 @@
+.sfl_pagination {
+	cursor: pointer;
+}
+
+.sfl-list-table td img {
+	height: auto;
+	width: 32px;
+}
+
+/*.sfl-wrapper {
+	float: left;
+	width:100%;
+	margin-top: 15px;
+}*/
+
+.sfl-list-table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #999;
+}
+
+.sfl-list-table thead {
+	background: #f1f1f1;
+}
+
+.sfl-list-table thead th {
+	padding: 10px;
+	color: #000;
+	background: #f1f1f1;
+	border-bottom: 1px solid #999;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.sfl-list-table tbody td {
+	padding: 10px;
+	color: #222;
+	border-bottom: 0;
+	vertical-align: top;
+	text-align: center;
+}
+
+.sfl-list-table tbody tr td:last-child {
+	border-right: none;
+}
+
+.sfl-list-table tbody td img {
+	width: 75px;
+	height: auto;
+}
+
+.sfl-list-table tbody td a {
+	color: #00f;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.sfl-list-table tbody td a:hover {
+	text-decoration: underline;
+}
+
+.sfl-list-table tbody td span {
+	color: #f00;
+	font-size: 14px;
+}
+
+.sfl-list-table tbody td .button {
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 7px 15px;
+	color: #fff;
+	border: none;
+	box-shadow: none;
+	font-size: 14px;
+	font-weight: 600;
+	display: inline-block;
+}
+
+.sfl-list-table tbody td .sfl-add {
+	background: #29b58f;
+	color: #fff;
+}
+
+.sfl-list-table tbody td .sfl-stock {
+	color: #619a48;
+}
+
+.sfl-list-table tbody td .sfl-remove {
+	color: #fff;
+	background: #ee6a60;
+}
+
+.sfl_table_list_filter_container {
+	width: 100%;
+	display: block;
+	margin: 10px 0;
+	padding: 0;
+	float: left;
+}
+
+.sfl_table_list_filter_container .sfl_bulk_actions {
+	width: 100%;
+	display: inline-flex;
+	float: left;
+}
+
+.sfl_table_list_filter_container .sfl_bulk_actions select {
+	width: 200px;
+	height: 40px;
+	border: 1px solid #ccc;
+	background: #fff;
+	border-radius: 5px;
+}
+
+.sfl_table_list_filter_container .sfl_bulk_actions .sfl_action_btn {
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 5px 20px;
+	border: none;
+	box-shadow: none;
+	font-size: 14px;
+	font-weight: 600;
+	border-radius: 5px;
+	background: #0244ad;
+	border: 2px solid #0244ad;
+	color: #fff;
+}
+
+.sfl_table_list_filter_container .sfl_bulk_actions .sfl_action_btn:hover {
+	background: #fff;
+	border: 2px solid #0244ad;
+	color: #000;
+}
+
+.slf-composite-product-child .sfl-component-name-wrap::before {
+	font-family: dashicons;
+	content: "\f139";
+}
+
+.slf-composite-product-child .sfl-component-name-wrap,
+.slf-composite-product-child .sfl-component-price-wrap,
+.slf-composite-product-child .sfl-component-qty-wrap {
+	margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+
+	.sfl-list-table tbody tr {
+		display: block;
+	}
+
+	.sfl-list-table thead {
+		display: none;
+	}
+
+	.sfl-list-table tr td::before {
+		content: attr(data-title) ": ";
+		font-weight: 700;
+		float: left;
+	}
+
+	.sfl-list-table tr td {
+		display: block;
+		border-right: 0;
+		text-align: right !important;
+
+	}
+
+	.sfl-list-table tbody td button {
+		float: none;
+	}
+
+	.sfl-list-table td img {
+		display: inherit !important;
+	}
+}

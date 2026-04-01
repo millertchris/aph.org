@@ -1,0 +1,34 @@
+$prefix: 'wpmudev-videos';
+
+// Summary image.
+//$summary-image: '../../../images/summary/videos.png';
+$summary-image: '../../../images/summary/main.png';
+
+// Overwrite image size
+$summary-image--width: 96px !default;
+$summary-image--height: 96px !default;
+$summary-image--position-x: 40px !default;
+$summary-image--position-y: center !default;
+
+// Overwrite font path.
+$sui-font-path: '~@wpmudev/shared-ui/dist/fonts/';
+$sui-image-path: '~@wpmudev/shared-ui/dist/images/';
+
+// Share UI styles.
+@import '~@wpmudev/shared-ui/scss/shared-ui';
+
+// Components.
+@import '../../../styles/colors';
+@import '../../../styles/thumbs'; // Has a relative images path
+@import '../../../styles/summary';
+@import '../../../styles/player';
+@import '../../../styles/search';
+
+// Page components.
+@import './components/box';
+@import './components/accordion';
+@import './components/summary-box';
+@import './components/empty-results';
+@import './components/video-preview';
+@import './components/modal-add';
+@import './components/loading';

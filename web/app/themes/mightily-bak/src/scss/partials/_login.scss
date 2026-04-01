@@ -1,0 +1,29 @@
+.layout.login {
+	padding: 30px 0 50px;
+
+	.row {
+		max-width: 500px;
+		margin: auto;
+	}
+}
+
+.alert {
+	padding: 10px;
+	font-size: 1em;
+
+	&:before {
+		display: inline-block;
+		position: relative;
+		font-family: "Font Awesome 5 Pro";
+		margin-right: 10px;
+	}
+
+	&.error {
+		color: #ffffff;
+		background: $red;
+
+		&:before {
+			content: '\f06a';
+		}
+	}
+}

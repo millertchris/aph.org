@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../webfonts/Inter-Medium.woff2?v=3.13") format("woff2"),
+         url("../webfonts/Inter-Medium.woff?v=3.13") format("woff");
+}
+@font-face {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("../webfonts/Inter-Bold.woff2?v=3.13") format("woff2"),
+         url("../webfonts/Inter-Bold.woff?v=3.13") format("woff");
+  }
+// Base
+//$base-font-family: 'Roboto', Helvetica, Arial;
+$base-font-family: 'Inter', Helvetica, Arial;
+$base-font-size: 16px;
+$button-font-size: 18px;
+$base-letter-spacing: 1;
+$base-line-height: 1.7;
+
+// Breakpoints
+$laptop: "max-width: 1260px";
+$tablet: "max-width: 768px";
+$mobile-lg: "max-width: 640px";
+$mobile-sm: "max-width: 480px";
+
+// Typography
+$heading-font-family: $base-font-family;
+
+// Header Sizes
+$font-size-h1: 4.75em;
+$font-size-h2: 3.75em;
+$font-size-h3: 3em;
+$font-size-h4: 2.25em;
+$font-size-h5: 2em;
+$font-size-h6: 1.75em;
+
+$heading-line-height: 1.1;
+$heading-letter-spacing: $base-letter-spacing;
+
+// Font Weights
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 800;
+$font-weight-extra-bold: 900;
+
+$base-font-weight: $font-weight-medium;
+$heading-font-weight: $font-weight-bold;
+
+// Other Sizes
+$base-border-radius: 5px;
+$base-spacing: 40px;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$white: #FFFFFF;
+$black: #000000;
+$pink: #E90A59;
+$green: #3ED2B8;
+$yellow: #FEBF36;
+$red: #c61a1a;
+$grey: #ddd;
+
+
+$bg: #fafafa;
+$sitebg: $white;
+$base: #F7F6F0;
+$darken: darken(#F7F6F0 , 30%);
+$back: darken(#F7F6F0, 40%);
+
+$pink_darken: darken($pink, 10%);
+$green_darken: darken($green, 10%);
+$yellow_darken: darken($yellow, 10%);
+$red_darken: darken($red, 10%);
+
+$image_gradient_start: rgba(255,255,255,1);
+$image_gradient_end: rgba(255,255,255,0);
+
+// Font Colors
+$base-font-color: $black;
+$action-color: $pink;
+
+// Border
+$base-border-color: $black;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$viewport-background-color: #fff;
+
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 2px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: -2px;
+
+// Animations
+$base-duration: 300ms;
+$base-timing: ease-in-out;

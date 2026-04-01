@@ -1,0 +1,54 @@
+.manual-kern {
+	display: inline;
+	span {
+		display: inline !important;
+	}
+}
+.screen-reader-text {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+// HOMEPAGE
+.welcomeeve {
+	span {
+		margin-right: -1px;
+	}
+	span.char-0.char-W {
+		margin-right: -4px;
+	}
+	span.char-3.char-c {
+		margin-right: 1px;
+	}
+	span.char-9.char-v {
+		margin-right: -2px;
+	}
+	span.char-11.char-r {
+		margin-right: 2px;
+	}
+	span.char-8.char-e {
+		@media screen and (max-width: 680px) {
+			margin-left: 9px;
+		}
+	}
+}
+// .welcomeeve {
+// 	span {
+// 		margin-right: -1px;
+// 		&.char-r {
+// 			margin-right:5px;
+// 		}
+// 		&.char-8.char-e {
+// 			@media screen and (max-width: 680px) {
+// 				margin-left: 15px;
+// 			}
+// 		}
+		
+// 	}
+// }
+
+

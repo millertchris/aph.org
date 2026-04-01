@@ -1,0 +1,98 @@
+Plugin Name: WP Defender
+Author: WPMU DEV
+Tested up to: 6.9.1
+
+Change Log:
+
+= 5.10.0 ( 2026-02-26 ) =
+
+- Enhancement: Improve AntiBot Stats endpoint
+- Enhancement: Improve handling of response data in the Audit API
+- Enhancement: Update malware signatures
+- Enhancement: Improve suspicious issue view on the Malware Scanning page
+- Enhancement: Include selected presets in the User Agent blocklist during export
+- Fix: Error when filtering the Firewall logs
+- Fix: Error when switching languages with WPML while Bot Trap is enabled
+- Fix: Strong Passwords do not work when Mask Login URL is enabled
+- Fix: Colored elements appear on Defender admin pages when High Contrast Mode is enabled
+- Fix: Exported Firewall logs do not follow the selected sort order
+
+= 5.9.0 ( 2026-01-27 ) =
+
+- New: WooCommerce and BuddyPress integrations in Cloudflare Turnstile
+- Enhancement: Compatibility with PHP 8.4
+- Enhancement: Update malware signatures
+- Enhancement: Update ALTCHA functionality
+- Enhancement: Improve plugin code style using PHPStan
+- Enhancement: Refactor CAPTCHA file structure
+- Enhancement: Add Thinkbot user agent to Blocklist Presets
+- Enhancement: Display the readme file on the Malware Scanning page after it is renamed
+- Enhancement: Add new "Outdated and closed plugin" key to the config structure
+- Fix: Prevent audit logs from being created when updating a user profile without changes
+- Fix: Backslash character in salt generator can break the site
+- Fix: Update copy for Mask URL block page
+- Fix: Hide Settings > General > "More info" link when Whitelabel is enabled
+- Fix: Inconsistent validation in CAPTCHA when the Preview test is not passed
+- Fix: IP address and event type filters not working in the audit log export file
+- Fix: Masked Login URL slug validation after activation
+
+= 5.8.1 ( 2026-01-12 ) =
+
+- Enhancement: Miscellaneous improvements
+
+= 5.8.0 ( 2025-12-24 ) =
+
+- New: Detect suspicious code in JavaScript files during Malware Scanning
+- Enhancement: Prevent false lockouts when requests contain mixed Facebook/Twitterbot user agents
+- Enhancement: Update Axios and form-data package versions
+- Enhancement: Update malware signatures
+- Enhancement: Split Bulk checkboxes between tabs on Malware Scanning page
+- Enhancement: Display Disconnect Site button on Defender’s general settings screen
+- Enhancement: Improve plugin code style using PHPStan
+- Enhancement: Improve UI for background Malware Scanning
+- Enhancement: Restore reCAPTCHA class alias for backward compatibility
+- Enhancement: Add new audit logging events
+- Enhancement: Migrate notification events to the centralized Cron Manager
+- Enhancement: Migrate common plugin events to the centralized Cron Manager
+- Fix: Update .htaccess rules for LiteSpeed servers
+- Fix: Duplicate user agent records in robots.txt
+- Fix: Extra space and hidden Google reCAPTCHA field shown on multisite registration page
+- Fix: Duplicates of Ignored Scan issues
+- Fix: Deprecation warnings from the thecodingmachine/safe package in PHP 8.4
+- Fix: Quarantine activation link does not work in the free version
+- Fix: Incorrect "Configure" button flow in the Firewall widget on the Dashboard
+- Fix: UI improvements
+
+= 5.7.2 ( 2025-12-15 ) =
+
+- Enhancement: Miscellaneous improvements
+
+= 5.7.1 ( 2025-11-24 ) =
+
+- Fix: Improve 404 detection flow
+
+= 5.7.0 ( 2025-11-18 ) =
+
+- New: Cloudflare Turnstile integration
+- Enhancement: Compatibility with WordPress 6.9
+- Enhancement: Redesigned CAPTCHA menu
+- Enhancement: Optimize database performance on multisite
+- Enhancement: Add additional widget IDs on Defender’s Dashboard page
+- Enhancement: Add new hooks to simplify Audit testing and Firewall logs deletion
+- Enhancement: Update minimum supported PHP version to 8.0
+- Enhancement: Disable New Scan button until the background scan is complete
+- Enhancement: Migrate Security Recommendations multisite events to the centralized Cron Manager system
+- Enhancement: Migrate Malware Scanning multisite events to the centralized Cron Manager system
+- Enhancement: Tracking improvements
+- Fix: Masking URL displays a notice when using a slug already assigned to another page
+- Fix: Defender not detecting some outdated plugins
+- Fix: Recommended PHP version appears as NULL on WP Engine hosting
+- Fix: Default Security Config name and description not saving properly
+- Fix: UI improvements
+
+= 5.6.2 ( 2025-11-20 ) =
+
+- Enhancement: Miscellaneous improvements
+
+
+914447-1772635684-au

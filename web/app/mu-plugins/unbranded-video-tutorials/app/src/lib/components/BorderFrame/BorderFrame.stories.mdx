@@ -1,0 +1,22 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import BorderFrame from './BorderFrame'
+import { action } from '@storybook/addon-actions'
+
+<Meta title="lib/components/BorderFrame" component={BorderFrame} />
+
+export const Template = (args) => <BorderFrame {...args} />
+
+# Box
+
+<Canvas>
+	<Story
+		name="default"
+		args={{
+			children: 'Content Goes Into The Children!',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<ArgsTable story="default" />

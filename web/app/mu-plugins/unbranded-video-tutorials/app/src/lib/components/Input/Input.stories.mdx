@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import Input from './Input'
+import { action } from '@storybook/addon-actions'
+import { useState } from 'react'
+import iconsList from '../../helpers/icons-list/icons-list'
+
+<Meta
+	title="lib/components/Input"
+	component={Input}
+	argTypes={{
+		icon: {
+			name: 'icon',
+			description: 'Icon Name',
+			options: iconsList,
+			control: { type: 'select' },
+			table: {
+				type: { summary: 'string' },
+				defaultValue: { summary: '' },
+			},
+		},
+	}}
+/>
+
+export const Template = (args) => {
+	const [value, setValue] = useState('')
+	return <Input {...args} value={value} onChange={setValue} />
+}
+
+# Input
+
+<Canvas>
+	<Story name="default">{Template.bind()}</Story>
+</Canvas>
+
+<ArgsTable story="default" />

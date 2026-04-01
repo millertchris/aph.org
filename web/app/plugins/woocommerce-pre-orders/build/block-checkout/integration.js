@@ -1,0 +1,1 @@
+(()=>{"use strict";(0,window.wc.blocksCheckout.registerCheckoutFilters)("woocommerce-pre-order",{placeOrderButtonLabel:e=>{const r=window.wc_pre_orders_checkout_params||{};return r&&r.cart_contains_pre_order&&r.place_order_button_text&&""!==r.place_order_button_text?r.place_order_button_text:e}})})();

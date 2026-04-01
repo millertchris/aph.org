@@ -1,0 +1,98 @@
+$videos: (
+        add-image-from-url: '\f232',
+        add-image-from-media-library: '\f232',
+        add-media: '\f161',
+        categories: '\f318',
+        change-theme: '\f100',
+        change-password: '\f112',
+        create-edit-user: '\f110',
+        playlists: '\f493',
+        custom: '\f126',
+        edit-image: '\f166',
+        edit-text: '\f215',
+        oEmbed: '\f490',
+        gutenberg-add-page: '\f105',
+        gutenberg-add-post: '\f109',
+        gutenberg-editor-overview: '\f464',
+        trash-post: '\f182',
+        gutenberg-reusable-blocks: '\f180',
+        add-heading: '\f491',
+        hyperlinks: '\f103',
+        image-gallery: '\f166',
+        install-themes: '\f309',
+        install-plugin: '\f106',
+        lists: '\f203',
+        comments: '\f101',
+        widgets: '\f478',
+        menus: '\f349',
+        pages-v-posts: '\f135',
+        playlist: '\f163',
+        excerpt: '\f123',
+        quickpress: '\f497',
+        replace-image: '\f161',
+        restore-post: '\f531',
+        restore-page: '\f531',
+        revisions: '\f321',
+        running-updates: '\f463',
+        featured-image: '\f233',
+        settings: '\f108',
+        tags: '\f323',
+        admin-bar: '\f535',
+        customize: '\f540',
+        dashboard: '\f226',
+        image-editor: '\f128',
+        media-library: '\f104',
+        the-toolbar: '\f111',
+        tools: '\f107',
+        add-paragraph: '\f476',
+        add-new-post: '\f109',
+        add-new-page: '\f109',
+        add-image-from-pc: '\f317',
+        delete-image: '\f153',
+        export-erase-data: '\f17a',
+        site-health: '\f21e',
+        import-export: '',
+        paragraphs: '',
+        file-blocks: '',
+        google-calendar: '',
+);
+
+@include body-class(true) {
+
+  .#{$prefix}-list-thumb {
+
+    &.dashicons {
+
+      &[data-icon] {
+        position: relative;
+        background-color: palette(gray, light);
+        color: $white;
+        font-size: 16px;
+
+        &:before {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &:not([data-icon]) {
+
+        &:before,
+        &:after {
+          content: unset;
+          display: none;
+        }
+      }
+
+      @each $key, $icon in $videos {
+
+        &[data-icon='#{$key}']:before {
+          content: $icon;
+        }
+      }
+    }
+  }
+}

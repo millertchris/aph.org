@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="lib/hooks/useDebouncedValue" />
+
+## useDebouncedValue
+
+The useDebouncedValue hook is a custom React hook that allows you to debounce a value change. It takes an object as an argument with two properties:
+
+-   value - the value you want to debounce
+-   delay - the debounce delay in milliseconds (default is 500ms)
+
+It returns an array with two elements:
+
+-   debouncedValue - the debounced value that will be updated after the specified delay
+-   setDebounce - a function that you can call to set a new debounced value
+
+## Example usage
+
+Here's an example of how to use useDebouncedValue in a React component:
+
+```
+import React, { useState } from 'react';
+import { useDebouncedValue } from './useDebouncedValue';
+
+function MyComponent() {
+  const [value, setValue] = useState('');
+  const [debouncedValue, setDebouncedValue] = useDebouncedValue({ value, delay: 1000 });
+
+  function handleChange(event) {
+    setValue(event.target.value);
+    setDebouncedValue(event.target.value);
+  }
+
+  return (
+    <div>
+      <input type="text" value={value} onChange={handleChange} />
+      <p>Debounced value: {debouncedValue}</p>
+    </div>
+  );
+}
+```
+
+In this example, we create a state variable value and a debounced value debouncedValue using the `useDebouncedValue` hook. We also define a handleChange function that updates the value state and calls setDebouncedValue with the new value. This way, the debouncedValue will be updated only after a delay of 1000ms after the user stops typing.

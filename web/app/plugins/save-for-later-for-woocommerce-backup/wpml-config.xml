@@ -1,0 +1,23 @@
+<wpml-config>
+    <admin-texts>
+	<key name="sfl_localization_sfl_table"/>
+	<key name="sfl_localization_sfl_s_no"/>
+	<key name="sfl_localization_sfl_image"/>
+	<key name="sfl_localization_sfl_pro_name"/>
+	<key name="sfl_localization_sfl_pro_price"/>
+	<key name="sfl_localization_sfl_pro_qty"/>
+	<key name="sfl_localization_sfl_pro_actions"/>
+	<key name="sfl_localization_move_to_cart"/>
+	<key name="sfl_localization_remove"/>
+	<key name="sfl_messages_sfl_btn_text"/>
+	<key name="sfl_messages_sfl_price_inc_msg"/>
+	<key name="sfl_messages_sfl_price_dec_msg"/>
+	<key name="sfl_messages_sfl_qty_change_msg"/>
+	<key name="sfl_messages_sfl_cart_to_list_msg"/>
+	<key name="sfl_messages_sfl_list_to_cart_msg"/>
+	<key name="sfl_messages_sfl_cart_remove_msg"/>
+	<key name="sfl_messages_sfl_list_to_cart_msg_bulk"/>
+	<key name="sfl_messages_sfl_cart_remove_msg_bulk"/>
+	<key name="sfl_messages_sfl_cart_exist_remove_msg"/>
+    </admin-texts>
+</wpml-config>

@@ -1,0 +1,68 @@
+@include body-class(true) {
+	##{$prefix}-video-create-modal {
+		// Related to: IVT-248?focusedCommentId=209429.
+		// Temporary fix until fixed in SUI.
+		.sui-box .sui-box-banner img {
+			min-width: 100%;
+		}
+
+		.sui-icon-social-youtube:before {
+			color: #fe0200;
+		}
+
+		.sui-icon-instagram,
+		.sui-icon-social-twitter {
+			width: 20px;
+			height: 17px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+
+			&:before {
+				content: ' ';
+				content: unset;
+				display: none;
+			}
+		}
+
+		.sui-icon-instagram {
+			background-image: url('../../../images/icons/icon-vimeo.png');
+
+			@media only screen and (-webkit-min-device-pixel-ratio: 2),
+				only screen and (min--moz-device-pixel-ratio: 2),
+				only screen and (-o-min-device-pixel-ratio: 2/1),
+				only screen and (min-device-pixel-ratio: 2),
+				only screen and (min-resolution: 192dpi),
+				only screen and (min-resolution: 2dppx) {
+				background-image: url('../../../images/icons/icon-vimeo@2x.png');
+			}
+		}
+
+		.sui-icon-social-twitter {
+			background-image: url('../../../images/icons/icon-wistia.png');
+
+			@media only screen and (-webkit-min-device-pixel-ratio: 2),
+				only screen and (min--moz-device-pixel-ratio: 2),
+				only screen and (-o-min-device-pixel-ratio: 2/1),
+				only screen and (min-device-pixel-ratio: 2),
+				only screen and (min-resolution: 192dpi),
+				only screen and (min-resolution: 2dppx) {
+				background-image: url('../../../images/icons/icon-wistia@2x.png');
+			}
+		}
+
+		.sui-content-left{
+			text-align: left !important;
+		}
+
+		
+	}
+
+	#wpmudev-videos-video-create-modal-video-start-label,
+	#wpmudev-videos-video-create-modal-video-end-label,
+	#wpmudev-videos-video-edit-modal-video-start-label,
+	#wpmudev-videos-video-edit-modal-video-end-label {
+		display: inline-block;
+		min-width: 50px;
+	}
+}

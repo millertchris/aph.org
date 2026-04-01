@@ -1,0 +1,89 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import StaticNotice from './StaticNotice'
+import { action } from '@storybook/addon-actions'
+
+<Meta title="lib/components/StaticNotice" component={StaticNotice} />
+
+export const Template = (args) => <StaticNotice {...args} />
+
+# StaticNotice
+
+<Canvas>
+	<Story name="default">{Template.bind()}</Story>
+</Canvas>
+
+<ArgsTable story="default" />
+
+## Stories
+
+<h2>Stories</h2>
+
+<h4>Success</h4>
+
+<Canvas>
+	<Story
+		name="success"
+		args={{
+			type: 'success',
+			children: <p>This's a success message!</p>,
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<h4>Info</h4>
+
+<Canvas>
+	<Story
+		name="info"
+		args={{
+			type: 'info',
+			children: <p>This's an info notice!</p>,
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<h4>Warning</h4>
+
+<Canvas>
+	<Story
+		name="warning"
+		args={{
+			type: 'warning',
+			children: <p>This's a warning notice</p>,
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<h4>Error</h4>
+
+<Canvas>
+	<Story
+		name="error"
+		args={{
+			type: 'error',
+			children: <p>This's a warning notice</p>,
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<h4>Purpule</h4>
+
+<Canvas>
+	<Story
+		name="purple"
+		args={{
+			type: 'purple',
+			children: <p>This's a purple notice</p>,
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>

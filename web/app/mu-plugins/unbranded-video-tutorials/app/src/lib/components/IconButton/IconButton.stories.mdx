@@ -1,0 +1,31 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import IconButton from './IconButton'
+import { action } from '@storybook/addon-actions'
+import iconsList from '../../helpers/icons-list/icons-list'
+
+<Meta
+	title="lib/components/IconButton"
+	component={IconButton}
+	argTypes={{
+		icon: {
+			name: 'icon',
+			description: 'Icon Name',
+			options: iconsList,
+			control: { type: 'select' },
+			table: {
+				type: { summary: 'string' },
+				defaultValue: { summary: 'large' },
+			},
+		},
+	}}
+/>
+
+export const Template = (args) => <IconButton {...args} />
+
+# IconButton
+
+<Canvas>
+	<Story name="default">{Template.bind()}</Story>
+</Canvas>
+
+<ArgsTable story="default" />

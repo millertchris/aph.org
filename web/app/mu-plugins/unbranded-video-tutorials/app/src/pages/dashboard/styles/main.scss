@@ -1,0 +1,67 @@
+$prefix: 'wpmudev-videos';
+
+// Summary image.
+//$summary-image: '../../../images/summary/dashboard.png';
+$summary-image: '../../../images/summary/main.png';
+$summary-image--width: 96px !default;
+$summary-image--height: 96px !default;
+$summary-image--position-x: 40px !default;
+$summary-image--position-y: center !default;
+
+// Overwrite font path.
+$sui-font-path: '~@wpmudev/shared-ui/dist/fonts/';
+$sui-image-path: '~@wpmudev/shared-ui/dist/images/';
+
+// Share UI styles.
+@import '~@wpmudev/shared-ui/scss/shared-ui';
+
+// Custom styles.
+@import '../../../styles/colors';
+@import '../../../styles/thumbs';
+@import '../../../styles/summary';
+
+// Page components.
+@import './components/box-message';
+@import './components/box-table';
+@import './components/modal-highlight';
+@import './components/dash-baner';
+
+.video-iframe {
+	iframe {
+		max-width: 100%;
+	}
+}
+
+.sui-icon-playlist {
+	width: 20px;
+	height: 17px;
+	background-image: url('../../../images/icons/icon-playlist.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (min--moz-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-device-pixel-ratio: 2),
+		only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx) {
+		background-image: url('../../../images/icons/icon-playlist@2x.png');
+	}
+
+	&:before {
+		display: none;
+	}
+}
+
+@include body-class(true) {
+	.sui-box-title {
+		[class*='sui-icon-'] {
+			&.#{$prefix}-custom-icon {
+				float: none;
+				display: inline-block;
+			}
+		}
+	}
+
+}

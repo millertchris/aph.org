@@ -1,0 +1,515 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: save-for-later-for-woocommerce\n"
+"POT-Creation-Date: 2025-01-31 20:43+0530\n"
+"PO-Revision-Date: 2018-04-27 12:20+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html_e;esc_attr_e;esc_html__;esc_attr__;esc_html_x;esc_attr_x\n"
+"X-Poedit-SearchPath-0: save-for-later-for-woocommerce.php\n"
+"X-Poedit-SearchPath-1: inc\n"
+"X-Poedit-SearchPath-2: templates\n"
+
+#: inc/abstracts/class-sfl-settings-page.php:212
+msgid "Your settings have been saved"
+msgstr ""
+
+#: inc/abstracts/class-sfl-settings-page.php:238
+msgid "Your settings have been reset"
+msgstr ""
+
+#: inc/admin/class-sfl-admin-ajax.php:53
+msgid "No Product(s) found"
+msgstr ""
+
+#: inc/admin/class-sfl-admin-ajax.php:85
+msgid "No Customer(s) found"
+msgstr ""
+
+#: inc/admin/class-sfl-admin-ajax.php:125
+msgid "Invalid Request"
+msgstr ""
+
+#: inc/admin/class-sfl-post-table.php:90
+msgid "Users List"
+msgstr ""
+
+#: inc/admin/class-sfl-post-table.php:252
+msgid "User Details"
+msgstr ""
+
+#: inc/admin/class-sfl-post-table.php:253
+#: inc/admin/menu/reports/reports-view.php:47
+msgid "Total Number of Saved Later Products"
+msgstr ""
+
+#: inc/admin/class-sfl-post-table.php:254
+#: inc/admin/menu/reports/reports-view.php:57
+msgid "Total Number of Current Saved Later Products"
+msgstr ""
+
+#: inc/admin/class-sfl-post-table.php:255
+#: inc/admin/menu/reports/reports-view.php:67
+msgid "Total Number of Purchased Products"
+msgstr ""
+
+#: inc/admin/class-sfl-post-table.php:256
+#: inc/admin/menu/reports/reports-view.php:77
+msgid "Total Number of Deleted Products"
+msgstr ""
+
+#: inc/admin/class-sfl-post-table.php:257
+msgid "Last Activity Date"
+msgstr ""
+
+#: inc/admin/class-sfl-post-table.php:258
+msgid "Action"
+msgstr ""
+
+#: inc/admin/menu/class-sfl-menu-management.php:89
+#: inc/admin/menu/views/html-settings.php:15
+#: inc/privacy/class-sfl-privacy.php:44
+msgid "Save For Later"
+msgstr ""
+
+#: inc/admin/menu/class-sfl-menu-management.php:91 inc/class-sfl-install.php:61
+msgid "Settings"
+msgstr ""
+
+#: inc/admin/menu/class-sfl-menu-management.php:92
+msgid "Reports"
+msgstr ""
+
+#: inc/admin/menu/reports/reports-view.php:14
+msgid "Save For Later - Reports"
+msgstr ""
+
+#: inc/admin/menu/reports/reports-view.php:21
+msgid "Filters"
+msgstr ""
+
+#: inc/admin/menu/reports/reports-view.php:30
+msgid "Submit"
+msgstr ""
+
+#: inc/admin/menu/reports/reports-view.php:86
+msgid "Total Amount Received Through Save for Later"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:26
+msgid "Advanced"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:39
+msgid "Restriction Settings"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:43
+msgid "\"Save for Later\" link will be displayed for"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:46
+msgid "All Product (s)"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:47 inc/admin/menu/tabs/advanced.php:56
+msgid "Include Product(s)"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:48 inc/admin/menu/tabs/advanced.php:69
+msgid "Exclude Product(s)"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:49 inc/admin/menu/tabs/advanced.php:82
+msgid "Include Categories"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:50 inc/admin/menu/tabs/advanced.php:90
+msgid "Exclude Categories"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:64 inc/admin/menu/tabs/advanced.php:77
+msgid "You can also choose multiple products"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:65 inc/admin/menu/tabs/advanced.php:78
+msgid "Select a Product"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:98
+msgid "Allow \"Save for Later\" for"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:101
+msgid "All user(s)"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:102
+msgid "Included user(s)"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:103
+msgid "Excluded user(s)"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:104
+msgid "Included User Role(s)"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:105
+msgid "Excluded User Role(s)"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:111
+msgid "Include User(s)"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:118 inc/admin/menu/tabs/advanced.php:129
+msgid "Select a User"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:122
+msgid "Exclude User(s)"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:133
+msgid "Include User Roles"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:140
+msgid "Exclude User Roles"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:152
+msgid "Style Settings"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:156
+msgid "Apply Styles from"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:159
+msgid "Plugin"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:160
+msgid "Theme"
+msgstr ""
+
+#: inc/admin/menu/tabs/advanced.php:166
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/admin/menu/tabs/general.php:26
+msgid "General"
+msgstr ""
+
+#: inc/admin/menu/tabs/general.php:44
+msgid "General Settings"
+msgstr ""
+
+#: inc/admin/menu/tabs/general.php:51
+msgid "Allow \"Save for Later\" for Logged-in Users"
+msgstr ""
+
+#: inc/admin/menu/tabs/general.php:57
+msgid "Allow \"Save for Later\" for Guest Users"
+msgstr ""
+
+#: inc/admin/menu/tabs/general.php:71
+msgid "Display Settings"
+msgstr ""
+
+#: inc/admin/menu/tabs/general.php:76
+msgid "Positions to display the Saved for Later Table"
+msgstr ""
+
+#: inc/admin/menu/tabs/general.php:89
+msgid "Pagination for Saved Later Table"
+msgstr ""
+
+#: inc/admin/menu/tabs/general.php:112
+msgid "Set a time to display the\"Saved For Later\" products on cart page for Guest Users"
+msgstr ""
+
+#: inc/admin/menu/tabs/general.php:116
+msgid "Mins"
+msgstr ""
+
+#: inc/admin/menu/tabs/general.php:117
+msgid "Hours"
+msgstr ""
+
+#: inc/admin/menu/tabs/general.php:118
+msgid "Days"
+msgstr ""
+
+#: inc/admin/menu/tabs/localization.php:26
+msgid "Localization"
+msgstr ""
+
+#: inc/admin/menu/tabs/localization.php:39
+msgid "Saved For Later Label Customization"
+msgstr ""
+
+#: inc/admin/menu/tabs/localization.php:43
+msgid "Saved For Later Label"
+msgstr ""
+
+#: inc/admin/menu/tabs/localization.php:49
+msgid "S.No"
+msgstr ""
+
+#: inc/admin/menu/tabs/localization.php:55
+msgid "Image Label"
+msgstr ""
+
+#: inc/admin/menu/tabs/localization.php:61
+msgid "Product Name Label"
+msgstr ""
+
+#: inc/admin/menu/tabs/localization.php:67
+msgid "Price Label"
+msgstr ""
+
+#: inc/admin/menu/tabs/localization.php:73
+msgid "Quantity Label"
+msgstr ""
+
+#: inc/admin/menu/tabs/localization.php:79
+msgid "Actions Label"
+msgstr ""
+
+#: inc/admin/menu/tabs/localization.php:85
+msgid "Move to Cart Label"
+msgstr ""
+
+#: inc/admin/menu/tabs/localization.php:91
+msgid "Remove Label"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:26
+msgid "Messages"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:39
+msgid "Save For Later Link Text"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:43
+msgid "\"Save For Later\" Text to display on Cart Page"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:54
+msgid "Saved For Later Table Messages"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:58
+msgid "Message to display on each product when the price has increased"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:64
+msgid "Message to display on each product when the price has decreased"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:75
+msgid "Stock Message"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:79
+msgid "Message to display when a quantity of the saved later product is less than the available quantity while adding the product to cart"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:90
+msgid "Cart Message"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:95
+msgid "Message to display when a user added the product to Saved for Later Table"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:101
+msgid "Message to display when a user moved the product to cart from Saved for Later Table"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:107
+msgid "Message to display when a user removed the product from Saved for Later Table"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:113
+msgid "Bulk Action - Products Moving to Cart from Saved for Later Table"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:119
+msgid "Bulk Action - Removing Products from Saved for Later Table"
+msgstr ""
+
+#: inc/admin/menu/tabs/messages.php:125
+msgid "Message to display when a user moved the product to cart from Saved for Later Table which is already exist"
+msgstr ""
+
+#: inc/admin/menu/views/html-settings-buttons.php:14
+msgid "Save changes"
+msgstr ""
+
+#: inc/admin/menu/views/html-settings-buttons.php:24
+msgid "Reset"
+msgstr ""
+
+#: inc/admin/menu/wp-list-table/class-sfl-purchased-list-table.php:151
+#: inc/admin/menu/wp-list-table/class-sfl-save-delete-list-table.php:159
+msgid "Product Name"
+msgstr ""
+
+#: inc/admin/menu/wp-list-table/class-sfl-purchased-list-table.php:152
+#: inc/admin/menu/wp-list-table/class-sfl-save-delete-list-table.php:160
+msgid "Price"
+msgstr ""
+
+#: inc/admin/menu/wp-list-table/class-sfl-purchased-list-table.php:153
+#: inc/admin/menu/wp-list-table/class-sfl-save-delete-list-table.php:161
+msgid "Quantity"
+msgstr ""
+
+#: inc/admin/menu/wp-list-table/class-sfl-purchased-list-table.php:154
+#: inc/admin/menu/wp-list-table/class-sfl-save-delete-list-table.php:162
+msgid "Total"
+msgstr ""
+
+#: inc/admin/menu/wp-list-table/class-sfl-purchased-list-table.php:155
+msgid "Order ID"
+msgstr ""
+
+#: inc/admin/menu/wp-list-table/class-sfl-purchased-list-table.php:156
+#: inc/admin/menu/wp-list-table/class-sfl-save-delete-list-table.php:163
+msgid "Activity Date"
+msgstr ""
+
+#: inc/class-sfl-register-post-status.php:80
+msgid "Log Currently Saved"
+msgstr ""
+
+#: inc/class-sfl-register-post-status.php:105
+#: inc/sfl-post-common-functions.php:231
+msgid "Saved"
+msgstr ""
+
+#: inc/class-sfl-register-post-status.php:130
+#: inc/sfl-post-common-functions.php:232
+msgid "Purchased"
+msgstr ""
+
+#: inc/class-sfl-register-post-status.php:155
+#: inc/sfl-post-common-functions.php:233
+msgid "Deleted"
+msgstr ""
+
+#: inc/class-sfl-register-post-types.php:92
+#: inc/class-sfl-register-post-types.php:93
+#: inc/class-sfl-register-post-types.php:94
+msgid "Product List"
+msgstr ""
+
+#: inc/class-sfl-register-post-types.php:95
+#: inc/class-sfl-register-post-types.php:96
+msgid "Add New Product List"
+msgstr ""
+
+#: inc/class-sfl-register-post-types.php:97
+msgid "Edit Product List"
+msgstr ""
+
+#: inc/class-sfl-register-post-types.php:98
+#: inc/class-sfl-register-post-types.php:100
+#: inc/class-sfl-register-post-types.php:101
+msgid "View Product List"
+msgstr ""
+
+#: inc/class-sfl-register-post-types.php:99
+msgid "New Product List"
+msgstr ""
+
+#: inc/class-sfl-register-post-types.php:102
+msgid "Search Users"
+msgstr ""
+
+#: inc/class-sfl-register-post-types.php:103
+msgid "No Users found"
+msgstr ""
+
+#: inc/class-sfl-register-post-types.php:104
+msgid "No Users found in trash"
+msgstr ""
+
+#: inc/class-sfl-register-post-types.php:106
+msgid "Here you can able to see list of Users"
+msgstr ""
+
+#: inc/class-sfl-register-post-types.php:146
+msgid "Master Log"
+msgstr ""
+
+#: inc/frontend/class-sfl-actions-handler.php:454
+#: inc/frontend/class-sfl-actions-handler.php:535
+msgid "Something Went Wrong"
+msgstr ""
+
+#: inc/frontend/class-sfl-actions-handler.php:513
+msgid "Somthing Went Wrong"
+msgstr ""
+
+#: inc/frontend/class-sfl-frontend-assets.php:46
+msgid "Are you sure you want to remove from the list?"
+msgstr ""
+
+#: inc/frontend/class-sfl-handler.php:74
+msgid "Bulk actions"
+msgstr ""
+
+#: inc/frontend/class-sfl-handler.php:75
+msgid "Move to cart"
+msgstr ""
+
+#: inc/frontend/class-sfl-handler.php:76
+msgid "Remove"
+msgstr ""
+
+#: inc/privacy/class-sfl-privacy.php:62
+msgid "This includes the basics of what personal data your store may collect, store & share. Depending on what settings are enabled furthermore which additional plugins used, the specific information shared by your store will vary."
+msgstr ""
+
+#: inc/privacy/class-sfl-privacy.php:63
+msgid "What the Plugin Does?"
+msgstr ""
+
+#: inc/privacy/class-sfl-privacy.php:64
+msgid " This plugin allows users to move products from cart to Save for Later list which they can move back to cart when ready to buy."
+msgstr ""
+
+#: inc/privacy/class-sfl-privacy.php:65
+msgid "What We Collect and Store?"
+msgstr ""
+
+#: inc/privacy/class-sfl-privacy.php:66
+msgid "Username and Email ID"
+msgstr ""
+
+#: inc/privacy/class-sfl-privacy.php:69
+msgid "We record the usernames and email ids of the logged-in users to identify the users who have added products to their Save for Later List."
+msgstr ""
+
+#: inc/sfl-layout-functions.php:387
+msgid "Out Of Stock"
+msgstr ""
+
+#: templates/sfl-list-filter.php:24
+msgid "Apply"
+msgstr ""

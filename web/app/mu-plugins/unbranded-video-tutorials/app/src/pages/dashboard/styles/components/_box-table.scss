@@ -1,0 +1,53 @@
+@include body-class(true) {
+	.#{$prefix}-box-table {
+		thead,
+		tbody {
+			tr th,
+			tr td {
+				&.wpmudev-videos-row--options {
+					@include media(max-width, md) {
+						width: #{($sui-gutter-md - 1px) + (
+								calc($sui-gutter-md / 2) - 1
+							) + 30px};
+					}
+
+					@include media(min-width, md) {
+						width: #{($sui-gutter - 1px) + (
+								calc($sui-gutter / 2) - 1
+							) + 30px};
+					}
+				}
+			}
+		}
+
+		tbody {
+			tr td.wpmudev-videos-row--name {
+				position: relative;
+
+				.#{$prefix}-name-wrapper {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+
+					a {
+						min-width: 1px;
+						flex: 1;
+						overflow: hidden;
+						display: block;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+
+					.#{$prefix}-list-thumb {
+						margin-left: 0;
+
+						&.playlist-thumb {
+							width: 50px;
+							height: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

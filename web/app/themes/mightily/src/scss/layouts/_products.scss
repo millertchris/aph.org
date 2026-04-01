@@ -1,0 +1,50 @@
+.layout.products {
+	&.filtering {
+		.wrapper {
+			display: flex;
+		}
+	}
+
+	.shop-filtering {
+		min-width: 220px;
+		border: 1px solid #000;
+	}
+
+	.shop-categories {
+		li {
+			ul {
+				display: none;
+			}
+		}
+	}
+
+	.product-list {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.product {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		width: 300px;
+		padding: 40px;
+		margin-bottom: 80px;
+		transition: 300ms all ease-in-out;
+	}
+
+	.image {
+		position: relative;
+		width: 100%;
+		height: 160px;
+		text-align: center;
+		margin-bottom: 40px;
+		overflow: hidden;
+
+		img {
+			width: auto;
+			height: 100%;
+		}
+	}
+}

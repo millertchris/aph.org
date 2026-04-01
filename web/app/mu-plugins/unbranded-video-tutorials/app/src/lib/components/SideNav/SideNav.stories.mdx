@@ -1,0 +1,31 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import SideNav from './SideNav'
+import { action } from '@storybook/addon-actions'
+import { BrowserRouter } from 'react-router-dom'
+
+<Meta title="lib/components/SideNav" component={SideNav} />
+
+export const Template = (args) => (
+	<BrowserRouter>
+		<SideNav {...args} />
+	</BrowserRouter>
+)
+
+# SideNav
+
+This component can only be used within the context of a `Router` from [`react-router-dom`](https://www.npmjs.com/package/react-router-dom) library
+
+<Canvas>
+	<Story name="default">{Template.bind()}</Story>
+</Canvas>
+
+<ArgsTable story="default" />
+
+## Global Variables & props
+
+These global variables need to be passed to the `paths` argument, this's for the settings page only for the plugin IVT.
+
+-   $i18n.settings.titles.display_settings
+-   $i18n.settings.titles.permissions
+-   $i18n.settings.titles.import_export
+-   $i18n.settings.titles.data

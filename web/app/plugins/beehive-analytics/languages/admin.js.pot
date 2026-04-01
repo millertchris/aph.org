@@ -1,0 +1,1458 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: src/layout/Wrapper/Wrapper.tsx:102
+msgid "Free Plugins"
+msgstr ""
+
+#: src/layout/Wrapper/Wrapper.tsx:106
+msgid "Membership"
+msgstr ""
+
+#: src/layout/Wrapper/Wrapper.tsx:132
+msgid "The Hub"
+msgstr ""
+
+#: src/layout/Wrapper/Wrapper.tsx:136
+msgid "Plugins"
+msgstr ""
+
+#: src/layout/Wrapper/Wrapper.tsx:140
+msgid "Roadmap"
+msgstr ""
+
+#: src/layout/Wrapper/Wrapper.tsx:144
+msgid "Support"
+msgstr ""
+
+#: src/layout/Wrapper/Wrapper.tsx:148
+msgid "Docs"
+msgstr ""
+
+#: src/layout/Wrapper/Wrapper.tsx:152
+msgid "Community"
+msgstr ""
+
+#: src/layout/Wrapper/Wrapper.tsx:156
+msgid "Terms of Service"
+msgstr ""
+
+#: src/layout/Wrapper/Wrapper.tsx:160
+msgid "Privacy Policy"
+msgstr ""
+
+#: src/layout/Wrapper/Wrapper.tsx:47
+msgid "Upgrade to pro"
+msgstr ""
+
+#: src/layout/Wrapper/Wrapper.tsx:55
+msgid "Analytics"
+msgstr ""
+
+#: src/layout/Wrapper/Wrapper.tsx:59
+msgid "More from WPMU DEV"
+msgstr ""
+
+#: src/layout/Wrapper/Wrapper.tsx:69
+msgid "Check out our <link>All-in-One WordPress Toolkit</link>"
+msgstr ""
+
+#: src/layout/Wrapper/Wrapper.tsx:74
+msgid "To get the most out of the plugin, <link>see the Help section</link>"
+msgstr ""
+
+#: src/pages/accounts/accounts.tsx:17
+msgid ""
+"Your Google account is connected. You can now view analytics in your "
+"WordPress Dashboard."
+msgstr ""
+
+#: src/pages/accounts/accounts.tsx:22
+msgid ""
+"Note: Your account is already configured at the network level. Optionally, "
+"you can set up a different account by adding it below."
+msgstr ""
+
+#: src/pages/accounts/accounts.tsx:42
+msgid "Accounts"
+msgstr ""
+
+#: src/pages/accounts/accounts.tsx:47
+msgid "Connect Google account and Services to your website."
+msgstr ""
+
+#: src/pages/accounts/accounts.tsx:48
+msgid "Connect Google account and Services to your website. <link>Learn more</link>"
+msgstr ""
+
+#: src/pages/accounts/accounts.tsx:55
+msgid "Google Accounts"
+msgstr ""
+
+#: src/pages/accounts/accounts.tsx:56
+#: src/pages/ga/main.tsx:25
+#: src/pages/ga/tabs/account.tsx:63
+#: src/pages/gtm/main.tsx:21
+msgid "Account"
+msgstr ""
+
+#: src/pages/accounts/accounts.tsx:56
+msgid ""
+"Authenticate with Google to easily connect Google Services to your website "
+"and display statistics in your WordPress Dashboard."
+msgstr ""
+
+#: src/pages/accounts/modals/logout.tsx:13
+msgid ""
+"Logging out will remove analytics from your Dashboard. Are you sure you "
+"want to logout?"
+msgstr ""
+
+#: src/pages/accounts/modals/logout.tsx:20
+#: src/pages/gtm/modals/deactivate.tsx:22
+#: src/pages/settings/modals/add-user.tsx:67
+#: src/pages/settings/modals/reset.tsx:33
+msgid "Cancel"
+msgstr ""
+
+#: src/pages/accounts/modals/logout.tsx:24
+#: src/pages/accounts/modules/account.tsx:151
+msgid "Logout"
+msgstr ""
+
+#: src/pages/accounts/modals/logout.tsx:9
+msgid "Log out"
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:105
+msgid "Google Client Secret"
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:106
+msgid "Paste Google Client Secret here"
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:111
+msgid "Authorize"
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:119
+msgid "URI Redirects"
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:123
+msgid ""
+"Copy the below URIs and enter them into the “Authorized redirect URIs” list "
+"when you create the API project in the Google Developers Console."
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:129
+msgid "URI redirects"
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:147
+msgid "No account information"
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:29
+msgid "Please enter Client ID."
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:33
+msgid "Please enter Client Secret."
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:69
+#: src/pages/onboarding/modules/get-started.tsx:37
+#: src/pages/onboarding/tabs/connect.tsx:7
+#: ../common/components/google/google.tsx:7
+msgid "Connect with Google"
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:72
+msgid "Set up API Project"
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:78
+msgid ""
+"Easily connect with Google by clicking the “Connect with Google” button and "
+"pasting the access code below."
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:90
+msgid ""
+"If you're a site admin and experienced with Google's tools, you might want "
+"to set up an API Project instead. Need help setting this up? Check the docs "
+"<link>here</link>."
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:98
+msgid "Google Client ID"
+msgstr ""
+
+#: src/pages/accounts/modules/account.tsx:99
+msgid "Paste Google Client ID here"
+msgstr ""
+
+#: src/pages/dashboard/main.tsx:31
+msgid "Dashboard"
+msgstr ""
+
+#: src/pages/dashboard/main.tsx:50
+#: src/pages/ga/section/header.tsx:104
+msgid "Refreshing..."
+msgstr ""
+
+#: src/pages/dashboard/main.tsx:51
+#: src/pages/ga/section/header.tsx:105
+msgid "Refresh data"
+msgstr ""
+
+#: src/pages/dashboard/main.tsx:61
+#: src/pages/ga/section/header.tsx:115
+msgid "Clear Beehive's local analytics cache and grab the latest data from Google"
+msgstr ""
+
+#: src/pages/dashboard/modules/analytics-table/analytics-table.tsx:21
+msgid "Google Analytics 4"
+msgstr ""
+
+#: src/pages/dashboard/modules/analytics-table/analytics-table.tsx:29
+#: src/pages/dashboard/modules/gtm-table/gtm-table.tsx:29
+msgid "Active"
+msgstr ""
+
+#: src/pages/dashboard/modules/analytics-table/analytics-table.tsx:30
+#: src/pages/dashboard/modules/gtm-table/gtm-table.tsx:30
+msgid "Inactive"
+msgstr ""
+
+#: src/pages/dashboard/modules/gtm-table/gtm-table.tsx:22
+msgid "GTM Account"
+msgstr ""
+
+#: src/pages/dashboard/modules/gtm-table/gtm-table.tsx:41
+#: src/pages/gtm/tabs/settings.tsx:46
+msgid "Variables"
+msgstr ""
+
+#: src/pages/dashboard/sections/summary/summary.tsx:32
+msgid "Summary"
+msgstr ""
+
+#: src/pages/dashboard/sections/summary/summary.tsx:53
+msgid "Top page"
+msgstr ""
+
+#: src/pages/dashboard/sections/summary/summary.tsx:56
+msgid "Top search engine"
+msgstr ""
+
+#: src/pages/dashboard/sections/summary/summary.tsx:57
+msgid "None"
+msgstr ""
+
+#: src/pages/dashboard/sections/summary/summary.tsx:57
+msgid "Top medium"
+msgstr ""
+
+#: src/pages/dashboard/sections/summary/summary.tsx:72
+#: ../common/hooks/useSummary/useSummary.ts:7
+#: ../common/utils/constants.ts:27
+msgid "Pageviews"
+msgstr ""
+
+#: src/pages/dashboard/sections/summary/summary.tsx:81
+msgid "-"
+msgstr ""
+
+#: src/pages/dashboard/sections/summary/summary.tsx:85
+msgid "New Users"
+msgstr ""
+
+#: src/pages/dashboard/sections/summary/summary.tsx:93
+msgid "<strong>Last refresh:</strong> <last_updated/>"
+msgstr ""
+
+#: src/pages/dashboard/widgets/analytics/analytics.tsx:10
+msgid "Analytics Configuration"
+msgstr ""
+
+#: src/pages/dashboard/widgets/analytics/analytics.tsx:11
+msgid "Monitor Google Analytics 4 status."
+msgstr ""
+
+#: src/pages/dashboard/widgets/analytics/analytics.tsx:13
+msgid "Learn more"
+msgstr ""
+
+#: src/pages/dashboard/widgets/gtm/gtm.tsx:10
+#: src/pages/gtm/main.tsx:116
+#: src/pages/gtm/tabs/account.tsx:32
+msgid "Google Tag Manager"
+msgstr ""
+
+#: src/pages/dashboard/widgets/gtm/gtm.tsx:12
+#: src/pages/gtm/main.tsx:86
+msgid ""
+"Set up Google Tag Manager on your website and assign predefined and "
+"customizable variables to the data layer."
+msgstr ""
+
+#: src/pages/dashboard/widgets/gtm/gtm.tsx:14
+msgid ""
+"Google Tag Manager has not been added to your website. Add your Container "
+"ID to finish setup."
+msgstr ""
+
+#: src/pages/dashboard/widgets/gtm/gtm.tsx:15
+#: src/pages/onboarding/modules/analytics.tsx:71
+msgid "Finish setup"
+msgstr ""
+
+#: src/pages/dashboard/widgets/gtm/gtm.tsx:19
+msgid "Configure"
+msgstr ""
+
+#: src/pages/dashboard/widgets/gtm/gtm.tsx:22
+#: src/pages/gtm/main.tsx:100
+msgid "Activate"
+msgstr ""
+
+#: src/pages/dashboard/widgets/statistics/statistics.tsx:17
+#: src/pages/ga/main.tsx:17
+#: src/pages/settings/tabs/general.tsx:12
+#: src/pages/settings/tabs/permissions.tsx:26
+msgid "Statistics"
+msgstr ""
+
+#: src/pages/dashboard/widgets/statistics/statistics.tsx:19
+msgid ""
+"View your website's full analytics report with Sessions, Users, Pageviews, "
+"Average Time and Bounce Rate"
+msgstr ""
+
+#: src/pages/dashboard/widgets/statistics/statistics.tsx:21
+msgid ""
+"You need to authenticate with your Google account to automatically get the "
+"measurement ID for this website and enable access to statistics, or you can "
+"add the measurement ID manually."
+msgstr ""
+
+#: src/pages/dashboard/widgets/statistics/statistics.tsx:22
+msgid "Configure account"
+msgstr ""
+
+#: src/pages/dashboard/widgets/statistics/statistics.tsx:24
+msgid "We haven't collected enough data. Please check back soon."
+msgstr ""
+
+#: src/pages/dashboard/widgets/statistics/statistics.tsx:26
+msgid "View full report"
+msgstr ""
+
+#: src/pages/ga/context/context.tsx:14
+#: src/pages/ga/tabs/settings.tsx:24
+msgid "Google Analytics configuration has been saved."
+msgstr ""
+
+#: src/pages/ga/main.tsx:28
+#: src/pages/ga/tabs/settings.tsx:77
+#: src/pages/gtm/main.tsx:24
+#: src/pages/gtm/tabs/settings.tsx:21
+#: src/pages/settings/main.tsx:59
+#: src/pages/settings/tabs/data-settings.tsx:48
+#: src/pages/settings/tabs/permissions.tsx:29
+msgid "Settings"
+msgstr ""
+
+#: src/pages/ga/section/header.tsx:25
+msgid "Data refreshed. New data should begin feeding shortly."
+msgstr ""
+
+#: src/pages/ga/section/header.tsx:38
+msgid "Google Analytics"
+msgstr ""
+
+#: src/pages/ga/section/header.tsx:43
+msgid "Tracking and analysis of website traffic and user behavior."
+msgstr ""
+
+#: src/pages/ga/section/header.tsx:44
+msgid ""
+"Tracking and analysis of website traffic and user behavior. <link>Learn "
+"more</link>"
+msgstr ""
+
+#: src/pages/ga/section/header.tsx:60
+msgid "Compare to last period"
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:114
+#: src/pages/ga/tabs/settings.tsx:89
+#: src/pages/gtm/tabs/account.tsx:51
+#: src/pages/gtm/tabs/settings.tsx:38
+#: src/pages/settings/tabs/data-settings.tsx:44
+#: src/pages/settings/tabs/general.tsx:29
+#: src/pages/settings/tabs/permissions.tsx:23
+msgid "Save settings"
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:117
+msgid "Analytics profile"
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:117
+msgid ""
+"Authenticate with Google to connect your Analytics profile and begin "
+"feeding analytics to your WordPress Dashboard."
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:121
+msgid ""
+"You don't have any Google Analytics profile connected to your account. To "
+"get going, just <link>sign up for Google Analytics</link>."
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:125
+#: ../common/components/select-accounts/select-accounts.tsx:131
+msgid "Choose your view (data stream)"
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:125
+#: ../common/components/select-accounts/select-accounts.tsx:131
+msgid "Site not here? Try logging into another <link>Google account</link>."
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:128
+msgid "No website information"
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:132
+msgid ""
+"Multiple analytics accounts are linked to your Google account. To enhance "
+"your site's performance, we display the list of streams from a maximum of "
+"25 accounts."
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:133
+msgid ""
+"Multiple analytics accounts are linked to your Google account. To enhance "
+"your site's performance, we display the list of streams from a maximum of "
+"25 accounts. <link>Learn more</link>"
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:136
+msgid ""
+"To choose your profile first you need to go to the <link>Accounts "
+"page</link> and connect your Google account."
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:139
+msgid "Automatically detect measurement ID"
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:170
+#: src/pages/onboarding/tabs/measurement.tsx:41
+msgid "Measurement ID"
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:170
+msgid ""
+"Copy and paste your Google Analytics Measurement ID to add it to your "
+"website."
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:172
+msgid "Add your Measurement ID"
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:172
+msgid "This Measurement ID is being output in the <head> section of your pages."
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:173
+msgid "G-XXXXXXXXXX"
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:183
+msgid ""
+"We couldn't automatically detect the measurement ID. Please check your "
+"analytics account is configured correctly for this account or try to "
+"manually paste your Google Analytics measurement ID."
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:184
+msgid ""
+"Whoops, looks like that's an invalid measurement ID. Double check you have "
+"your <link>Analytics 4 measurement ID</link> and try again."
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:31
+msgid "Tracking code added successfully."
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:39
+#: src/pages/onboarding/tabs/measurement.tsx:21
+msgid "Please enter a valid Google Analytics Measurement ID."
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:64
+msgid ""
+"Connect and authenticate your Google Analytics account to view analytics "
+"data on Beehive's Dashboard. If you only want to connect your site to "
+"Google Analytics without displaying the analytics data on Beehive's "
+"dashboard, add the Measurement ID in the corresponding field."
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:65
+msgid ""
+"Your Google account is now connected and analytics are being tracked. You "
+"can view this site's analytics on the <link>Statistics page</link>."
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:78
+msgid ""
+"To automatically detect your measurement ID first you need to connect the "
+"Google account in the <a1>Accounts Page</a1> or alternatively you can "
+"manually paste your Google Analytics tracking ID. If you're still stuck you "
+"can <a2>contact support</a2> for assistance."
+msgstr ""
+
+#: src/pages/ga/tabs/account.tsx:92
+msgid ""
+"We couldn't automatically detect the measurement ID. Please check your "
+"analytics account is configured correctly for this account."
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:101
+msgid "Enable IP Anonymization"
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:105
+msgid "Whole network tracking"
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:106
+msgid "Force on sub-sites tracking"
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:113
+msgid "Display Advertising"
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:113
+msgid ""
+"Enable support for Google's Display Advertising and get additional "
+"demographic and interests reports. You can read more about it "
+"<link>here</link>."
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:117
+msgid "Enable Display Advertising Support"
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:121
+msgid ""
+"Note: Enabling this feature requires <link>updating your privacy "
+"policy</link>."
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:126
+msgid "Exclude Roles from Tracking"
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:126
+msgid ""
+"Choose which user roles you want to exclude from having their activity "
+"tracked when they're logged in and visiting the site."
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:127
+msgid "User Roles"
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:128
+msgid "Select Roles"
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:144
+msgid "Statistics in post types"
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:144
+msgid ""
+"Choose which post types you want to include the statistics meta box in. By "
+"default, it will only display on posts and pages."
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:146
+msgid "Post Types"
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:92
+msgid "Admin pages tracking"
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:92
+msgid ""
+"When enabled, the activity in the wp-admin area will be tracked and "
+"included in statistics. By default, only the activity on the front-end "
+"pages of your site are tracked."
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:93
+#: src/pages/onboarding/tabs/measurement.tsx:54
+msgid "Enable Admin pages tracking"
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:98
+msgid "IP Anonymization"
+msgstr ""
+
+#: src/pages/ga/tabs/settings.tsx:98
+msgid "When enabled, visitor IP addresses will be <link>anonymized</link>."
+msgstr ""
+
+#: src/pages/ga/widgets/medium/medium.tsx:13
+msgid "Medium"
+msgstr ""
+
+#: src/pages/ga/widgets/medium/medium.tsx:22
+#: src/pages/ga/widgets/search-engine/search-engine.tsx:22
+#: src/pages/ga/widgets/social-network/social-network.tsx:22
+#: src/pages/ga/widgets/top-countries/top-countries.tsx:47
+#: src/pages/ga/widgets/top-pages/top-pages.tsx:32
+msgid "No Information available."
+msgstr ""
+
+#: src/pages/ga/widgets/real-time/real-time.tsx:16
+msgid "Real-Time Visitors"
+msgstr ""
+
+#: src/pages/ga/widgets/real-time/real-time.tsx:19
+msgid "Reload"
+msgstr ""
+
+#: src/pages/ga/widgets/real-time/real-time.tsx:36
+msgid "Visitors now"
+msgstr ""
+
+#: src/pages/ga/widgets/real-time/real-time.tsx:47
+msgid "Desktop"
+msgstr ""
+
+#: src/pages/ga/widgets/real-time/real-time.tsx:48
+msgid "Mobile"
+msgstr ""
+
+#: src/pages/ga/widgets/real-time/real-time.tsx:49
+msgid "Tablet"
+msgstr ""
+
+#: src/pages/ga/widgets/search-engine/search-engine.tsx:13
+msgid "Search Engine"
+msgstr ""
+
+#: src/pages/ga/widgets/social-network/social-network.tsx:13
+msgid "Social Network"
+msgstr ""
+
+#: src/pages/ga/widgets/top-countries/top-countries.tsx:21
+msgid "Country"
+msgstr ""
+
+#: src/pages/ga/widgets/top-countries/top-countries.tsx:22
+#: ../common/hooks/useSummary/useSummary.ts:5
+#: ../common/utils/constants.ts:13
+msgid "Sessions"
+msgstr ""
+
+#: src/pages/ga/widgets/top-countries/top-countries.tsx:40
+msgid "Top Countries"
+msgstr ""
+
+#: src/pages/ga/widgets/top-pages/top-pages.tsx:22
+msgid "Top Pages"
+msgstr ""
+
+#: src/pages/ga/widgets/top-pages/top-pages.tsx:42
+msgid "Most Visited"
+msgstr ""
+
+#: src/pages/ga/widgets/top-pages/top-pages.tsx:45
+msgid "Avg. time"
+msgstr ""
+
+#: src/pages/ga/widgets/top-pages/top-pages.tsx:48
+msgid "Views"
+msgstr ""
+
+#: src/pages/ga/widgets/top-pages/top-pages.tsx:51
+msgid "Trend"
+msgstr ""
+
+#: src/pages/ga/widgets/visitor/visitor.tsx:17
+#: src/pages/gtm/tabs/settings.tsx:54
+msgid "Visitors"
+msgstr ""
+
+#: src/pages/ga/widgets/visitor/visitor.tsx:24
+msgid ""
+"A Google Analytics account hasn't been linked yet. To see statistics, "
+"<link>link an account.</link>"
+msgstr ""
+
+#: src/pages/ga/widgets/visitor/visitor.tsx:32
+msgid ""
+"There's no analytics data to display yet. Either you haven't had traffic to "
+"this site, or we don't have any data from the API yet. Please check back in "
+"a few hours."
+msgstr ""
+
+#: src/pages/gtm/constants/constants.tsx:11
+msgid "Enable this to include a dataLayer event after a successful form submission."
+msgstr ""
+
+#: src/pages/gtm/constants/constants.tsx:12
+msgid ""
+"<link>Activate Hustle</link> to enable. This will include a dataLayer event "
+"after a successful form submission."
+msgstr ""
+
+#: src/pages/gtm/constants/constants.tsx:52
+msgid "Forminator Forms"
+msgstr ""
+
+#: src/pages/gtm/constants/constants.tsx:58
+msgid "Forminator Polls"
+msgstr ""
+
+#: src/pages/gtm/constants/constants.tsx:64
+msgid "Forminator Quizzes"
+msgstr ""
+
+#: src/pages/gtm/constants/constants.tsx:70
+msgid "Hustle Leads"
+msgstr ""
+
+#: src/pages/gtm/constants/constants.tsx:8
+msgid ""
+"<link>Install Hustle</link> to enable. This will include a dataLayer event "
+"after a successful form submission."
+msgstr ""
+
+#: src/pages/gtm/context/context.tsx:10
+#: src/pages/gtm/tabs/account.tsx:40
+#: src/pages/gtm/tabs/settings.tsx:30
+msgid "GTM configuration has been saved."
+msgstr ""
+
+#: src/pages/gtm/main.tsx:121
+msgid "Track and manage site data in Google Tag Manager."
+msgstr ""
+
+#: src/pages/gtm/main.tsx:122
+msgid "Track and manage site data in Google Tag Manager. <link>Learn more</link>"
+msgstr ""
+
+#: src/pages/gtm/main.tsx:89
+msgid "GTM has been activated."
+msgstr ""
+
+#: src/pages/gtm/modals/deactivate.tsx:10
+msgid "Deactivate Google Tag Manager"
+msgstr ""
+
+#: src/pages/gtm/modals/deactivate.tsx:15
+msgid ""
+"Google Tag Manager will no longer be installed on your website. Are you "
+"sure you want to deactivate it?"
+msgstr ""
+
+#: src/pages/gtm/modals/deactivate.tsx:26
+msgid "GTM has been deactivated."
+msgstr ""
+
+#: src/pages/gtm/modals/deactivate.tsx:39
+#: src/pages/gtm/tabs/account.tsx:56
+#: src/pages/gtm/tabs/settings.tsx:43
+msgid "Deactivate"
+msgstr ""
+
+#: src/pages/gtm/modules/custom.tsx:44
+msgid ""
+"Add global variables that will show on all pages. To see some examples, "
+"please visit the <link>Google Tag Manager Reference.</link>"
+msgstr ""
+
+#: src/pages/gtm/modules/custom.tsx:55
+#: src/pages/gtm/modules/default.tsx:35
+#: src/pages/gtm/modules/visitors.tsx:35
+msgid "Variable"
+msgstr ""
+
+#: src/pages/gtm/modules/custom.tsx:58
+#: src/pages/gtm/modules/default.tsx:38
+#: src/pages/gtm/modules/visitors.tsx:38
+msgid "Custom name"
+msgstr ""
+
+#: src/pages/gtm/modules/custom.tsx:66
+msgid "No variables added yet. Please add variable using the button below."
+msgstr ""
+
+#: src/pages/gtm/modules/custom.tsx:72
+msgid "Name"
+msgstr ""
+
+#: src/pages/gtm/modules/custom.tsx:77
+msgid "Value"
+msgstr ""
+
+#: src/pages/gtm/modules/custom.tsx:82
+msgid "Remove Variable"
+msgstr ""
+
+#: src/pages/gtm/modules/custom.tsx:92
+msgid "Add Variable"
+msgstr ""
+
+#: src/pages/gtm/modules/default.tsx:55
+#: src/pages/gtm/modules/visitors.tsx:55
+msgid "Custom label"
+msgstr ""
+
+#: src/pages/gtm/modules/integrations.tsx:28
+msgid ""
+"Integrate your plugins with Google Tag Manager adding a dataLayer event to "
+"fire a conversion tracking tag after each successful user interaction."
+msgstr ""
+
+#: src/pages/gtm/tabs/account.tsx:23
+msgid "Please enter a valid Google Tag Manager Container ID."
+msgstr ""
+
+#: src/pages/gtm/tabs/account.tsx:32
+msgid ""
+"Place the Container ID on your website to easily start tracking and "
+"managing your tags in the Tag Manager interface."
+msgstr ""
+
+#: src/pages/gtm/tabs/account.tsx:59
+msgid "Container ID"
+msgstr ""
+
+#: src/pages/gtm/tabs/account.tsx:59
+msgid ""
+"Copy and paste your Google Tag Manager container ID to add it to your "
+"website."
+msgstr ""
+
+#: src/pages/gtm/tabs/account.tsx:61
+msgid "GTM ID"
+msgstr ""
+
+#: src/pages/gtm/tabs/account.tsx:62
+msgid ""
+"Having trouble finding your GTM ID? Go to the <link>help center</link> and "
+"follow the steps."
+msgstr ""
+
+#: src/pages/gtm/tabs/account.tsx:65
+msgid "This tracking ID is being output in the <head> section of your pages."
+msgstr ""
+
+#: src/pages/gtm/tabs/account.tsx:66
+msgid "GTM-XXXXXXX"
+msgstr ""
+
+#: src/pages/gtm/tabs/account.tsx:71
+msgid ""
+"Whoops, looks like that's an invalid container ID. Double-check you have "
+"your <link>Google Tag Manager ID</link> and try again."
+msgstr ""
+
+#: src/pages/gtm/tabs/settings.tsx:22
+msgid ""
+"Google Tag Manager has not been added to your website yet. You can easily "
+"add it by entering your Container ID on the Google Tag Manager "
+"<link>Account Page.</link>"
+msgstr ""
+
+#: src/pages/gtm/tabs/settings.tsx:46
+msgid ""
+"Assign variables to the data layer to simplify and automate your tags in "
+"Google Tag Manager."
+msgstr ""
+
+#: src/pages/gtm/tabs/settings.tsx:53
+msgid "Default"
+msgstr ""
+
+#: src/pages/gtm/tabs/settings.tsx:55
+msgid "Integrations"
+msgstr ""
+
+#: src/pages/gtm/tabs/settings.tsx:56
+msgid "Custom"
+msgstr ""
+
+#: src/pages/onboarding/context/context.tsx:15
+msgid "Onboarding settings have been saved."
+msgstr ""
+
+#: src/pages/onboarding/main.tsx:13
+msgid ""
+"Your Google account is connected. Choose your analytics profile to finish "
+"setup and view analytics in your WordPress Dashboard."
+msgstr ""
+
+#: src/pages/onboarding/main.tsx:15
+msgid ""
+"All-in-one analytics plugin to effortlessly monitor the Google Analytics "
+"and reports of your WordPress site directly from your admin dashboard."
+msgstr ""
+
+#: src/pages/onboarding/modules/analytics.tsx:29
+msgid "Choose your Analytics 4 Stream"
+msgstr ""
+
+#: src/pages/onboarding/modules/analytics.tsx:29
+msgid ""
+"Select your Google Analytics 4 stream and begin feeding analytics to your "
+"WordPress dashboard."
+msgstr ""
+
+#: src/pages/onboarding/modules/analytics.tsx:44
+#: src/pages/onboarding/modules/get-started.tsx:29
+msgid "Skip"
+msgstr ""
+
+#: src/pages/onboarding/modules/analytics.tsx:79
+msgid "Display analytics to"
+msgstr ""
+
+#: src/pages/onboarding/modules/get-started.tsx:14
+msgid "Let’s Get Started"
+msgstr ""
+
+#: src/pages/onboarding/modules/get-started.tsx:14
+msgid ""
+"To get started, connect your Google Analytics account. Alternatively, you "
+"can paste your analytics code to enable tracking without reports."
+msgstr ""
+
+#: src/pages/onboarding/modules/get-started.tsx:37
+msgid "Connect Beehive to your Google Analytics account."
+msgstr ""
+
+#: src/pages/onboarding/modules/get-started.tsx:38
+#: src/pages/onboarding/tabs/measurement.tsx:31
+msgid "Add Google Analytics Measurement ID"
+msgstr ""
+
+#: src/pages/onboarding/modules/get-started.tsx:38
+msgid "Paste your Analytics Measurement ID to enable tracking without reports."
+msgstr ""
+
+#: src/pages/onboarding/tabs/connect.tsx:15
+msgid "Sign in with Google"
+msgstr ""
+
+#: src/pages/onboarding/tabs/connect.tsx:9
+msgid "Click on the button below to easily connect with your Google account."
+msgstr ""
+
+#: src/pages/onboarding/tabs/measurement.tsx:33
+msgid ""
+"Paste your Google Analytics 4 Measurement ID in the field below to enable "
+"analytics tracking. You can get your <link>Measurement ID here</link>."
+msgstr ""
+
+#: src/pages/onboarding/tabs/measurement.tsx:35
+msgid "here"
+msgstr ""
+
+#: src/pages/onboarding/tabs/measurement.tsx:42
+msgid "Please enter a valid Google Analytics Tracking ID."
+msgstr ""
+
+#: src/pages/onboarding/tabs/measurement.tsx:51
+msgid "Enter your analytics measurement ID"
+msgstr ""
+
+#: src/pages/onboarding/tabs/measurement.tsx:54
+msgid "When enabled you will get statistics from all admin pages."
+msgstr ""
+
+#: src/pages/onboarding/tabs/measurement.tsx:87
+msgid "Save"
+msgstr ""
+
+#: src/pages/settings/context/context.tsx:13
+msgid "Settings have been saved."
+msgstr ""
+
+#: src/pages/settings/main.tsx:20
+#: src/pages/settings/tabs/general.tsx:22
+msgid "General"
+msgstr ""
+
+#: src/pages/settings/main.tsx:23
+#: src/pages/settings/tabs/data-settings.tsx:37
+msgid "Data & Settings"
+msgstr ""
+
+#: src/pages/settings/main.tsx:25
+#: src/pages/settings/tabs/permissions.tsx:11
+msgid "Permissions"
+msgstr ""
+
+#: src/pages/settings/main.tsx:64
+msgid "Manage general settings, data and permissions."
+msgstr ""
+
+#: src/pages/settings/main.tsx:65
+msgid "Manage general settings, data and permissions. <link>Learn more</link>"
+msgstr ""
+
+#: src/pages/settings/modals/add-user.tsx:40
+msgid "Add User"
+msgstr ""
+
+#: src/pages/settings/modals/add-user.tsx:44
+msgid ""
+"Type the username in the searchbox to add. You can add as many users as you "
+"like."
+msgstr ""
+
+#: src/pages/settings/modals/add-user.tsx:46
+msgid "Search users"
+msgstr ""
+
+#: src/pages/settings/modals/add-user.tsx:47
+msgid "Type Username"
+msgstr ""
+
+#: src/pages/settings/modals/add-user.tsx:49
+msgid "Type username to search"
+msgstr ""
+
+#: src/pages/settings/modals/add-user.tsx:56
+msgid "No users found"
+msgstr ""
+
+#: src/pages/settings/modals/add-user.tsx:57
+msgid "Please enter 2 or more characters"
+msgstr ""
+
+#: src/pages/settings/modals/add-user.tsx:86
+msgid "Add"
+msgstr ""
+
+#: src/pages/settings/modals/reset.tsx:11
+msgid "The plugin settings have been reset"
+msgstr ""
+
+#: src/pages/settings/modals/reset.tsx:20
+#: src/pages/settings/tabs/data-settings.tsx:66
+msgid "Reset Settings"
+msgstr ""
+
+#: src/pages/settings/modals/reset.tsx:25
+msgid ""
+"Are you sure you want to reset Beehive’s settings back to the factory "
+"defaults?"
+msgstr ""
+
+#: src/pages/settings/modals/reset.tsx:27
+msgid ""
+"Please note that you may lose access to the settings page due to the "
+"resetting of permissions if you are not an admin user."
+msgstr ""
+
+#: src/pages/settings/modals/reset.tsx:38
+#: src/pages/settings/tabs/data-settings.tsx:70
+msgid "Reset"
+msgstr ""
+
+#: src/pages/settings/modules/recipient.tsx:27
+msgid "Remove"
+msgstr ""
+
+#: src/pages/settings/modules/settings.tsx:31
+msgid "User role"
+msgstr ""
+
+#: src/pages/settings/modules/settings.tsx:32
+msgid "Custom users"
+msgstr ""
+
+#: src/pages/settings/modules/settings.tsx:43
+msgid "You don’t have access to this page."
+msgstr ""
+
+#: src/pages/settings/modules/settings.tsx:49
+#: src/pages/settings/modules/statistics.tsx:150
+msgid "Allow sub-site admins to override these permissions."
+msgstr ""
+
+#: src/pages/settings/modules/statistics.tsx:115
+msgid "Network Administrator Role"
+msgstr ""
+
+#: src/pages/settings/modules/statistics.tsx:116
+msgid "Administrator Role"
+msgstr ""
+
+#: src/pages/settings/modules/statistics.tsx:120
+msgid "Network Administrators have access to Beehive statistics by default."
+msgstr ""
+
+#: src/pages/settings/modules/statistics.tsx:121
+msgid "Administrators have access to Beehive statistics by default."
+msgstr ""
+
+#: src/pages/settings/modules/statistics.tsx:140
+msgid ""
+"Specify a custom capability that, if a user role matches it, can see "
+"analytics. You can view default capabilities <link>here</link>."
+msgstr ""
+
+#: src/pages/settings/modules/statistics.tsx:143
+msgid "Set custom capability"
+msgstr ""
+
+#: src/pages/settings/modules/statistics.tsx:85
+msgid "Roles"
+msgstr ""
+
+#: src/pages/settings/modules/statistics.tsx:88
+msgid "Capabilities"
+msgstr ""
+
+#: src/pages/settings/tabs/custom-users.tsx:102
+msgid "Users who don’t have access to settings"
+msgstr ""
+
+#: src/pages/settings/tabs/custom-users.tsx:114
+msgid "Users who have access to settings"
+msgstr ""
+
+#: src/pages/settings/tabs/custom-users.tsx:127
+msgid "Add user"
+msgstr ""
+
+#: src/pages/settings/tabs/custom-users.tsx:81
+msgid ""
+"In addition to the enabled user roles you can include or exclude individual "
+"users."
+msgstr ""
+
+#: src/pages/settings/tabs/custom-users.tsx:88
+msgid "Exclude"
+msgstr ""
+
+#: src/pages/settings/tabs/custom-users.tsx:91
+msgid "Include"
+msgstr ""
+
+#: src/pages/settings/tabs/custom-users.tsx:95
+msgid ""
+"Exclude users who match the user roles you specified in the User Role tab, "
+"but don't want to allow access. Note: You can also exclude users with the "
+"Administrator role if necessary."
+msgstr ""
+
+#: src/pages/settings/tabs/custom-users.tsx:97
+msgid ""
+"Include users who don’t match the user roles you specified in the User Role "
+"tab, but that you want to allow access."
+msgstr ""
+
+#: src/pages/settings/tabs/data-settings.tsx:37
+msgid ""
+"Control what to do with your settings if Beehive is reset or removed from "
+"the site. The Settings in this area refer to the configuration options for "
+"each module."
+msgstr ""
+
+#: src/pages/settings/tabs/data-settings.tsx:47
+msgid "Uninstallation"
+msgstr ""
+
+#: src/pages/settings/tabs/data-settings.tsx:47
+msgid "When you uninstall this plugin, what do you want to do with your settings?"
+msgstr ""
+
+#: src/pages/settings/tabs/data-settings.tsx:48
+msgid "Choose whether to save your settings for next time or reset them."
+msgstr ""
+
+#: src/pages/settings/tabs/data-settings.tsx:58
+msgid "Preserve"
+msgstr ""
+
+#: src/pages/settings/tabs/data-settings.tsx:66
+msgid "This will instantly revert all settings to their default states."
+msgstr ""
+
+#: src/pages/settings/tabs/data-settings.tsx:73
+msgid ""
+"Note: This will instantly revert all settings to their default states and "
+"will remove your Google authentication and your statistics reports."
+msgstr ""
+
+#: src/pages/settings/tabs/general.tsx:32
+msgid "Statistics Tab"
+msgstr ""
+
+#: src/pages/settings/tabs/general.tsx:32
+msgid ""
+"When enabled, the Statistics page will be moved to a top-level position in "
+"your wp-admin sidebar instead of its default position in the plugin's "
+"Google Analytics menu."
+msgstr ""
+
+#: src/pages/settings/tabs/general.tsx:33
+msgid "Show the statistics tab in the WP Admin sidebar"
+msgstr ""
+
+#: src/pages/settings/tabs/general.tsx:38
+msgid "Set the menu title for the statistics page"
+msgstr ""
+
+#: src/pages/settings/tabs/general.tsx:39
+msgid "Title for the statistics page"
+msgstr ""
+
+#: src/pages/settings/tabs/permissions.tsx:26
+#: src/pages/settings/tabs/user-role.tsx:30
+msgid ""
+"Choose which user roles or capabilities can view statistics in their "
+"WordPress Dashboard area."
+msgstr ""
+
+#: src/pages/settings/tabs/permissions.tsx:29
+msgid ""
+"By default, all administrators have access to Beehive’s settings. You can "
+"configure and add permissions for other roles, as well as prevent or grant "
+"access for specific users."
+msgstr ""
+
+#: src/pages/settings/tabs/user-role.tsx:33
+msgid ""
+"<strong>Note:</strong> By default, all Administrators have access to "
+"Beehive. You can exclude custom users with the Administrator role in the "
+"Custom Users / Exclude tab."
+msgstr ""
+
+#: ../common/components/charts/LineChart.tsx:187
+msgid "No data available"
+msgstr ""
+
+#: ../common/components/copy-button/copy-button.tsx:18
+msgid "URL copied"
+msgstr ""
+
+#: ../common/components/copy-button/copy-button.tsx:18
+msgid "Copy url"
+msgstr ""
+
+#: ../common/components/google/GoogleAuthentication.tsx:25
+msgid ""
+"Google authentication failed. No authorization code was received. Please "
+"try connecting again."
+msgstr ""
+
+#: ../common/components/google/GoogleAuthentication.tsx:36
+msgid "Your Google account has been connected successfully."
+msgstr ""
+
+#: ../common/components/loading/loading.tsx:14
+msgid "Fetching data..."
+msgstr ""
+
+#: ../common/components/select-accounts/select-accounts.tsx:138
+msgid "Select Property to load streams"
+msgstr ""
+
+#: ../common/components/select-accounts/select-accounts.tsx:140
+msgid "No streams found"
+msgstr ""
+
+#: ../common/components/select-accounts/select-accounts.tsx:55
+msgid "Choose your account"
+msgstr ""
+
+#: ../common/components/select-accounts/select-accounts.tsx:57
+msgid "No accounts found"
+msgstr ""
+
+#: ../common/components/select-accounts/select-accounts.tsx:91
+msgid "Choose your property"
+msgstr ""
+
+#: ../common/components/select-accounts/select-accounts.tsx:98
+msgid "No properties found"
+msgstr ""
+
+#: ../common/components/splash/splash.tsx:15
+msgid "Splash image"
+msgstr ""
+
+#: ../common/hooks/useAuth.ts:43
+msgid ""
+"We couldn't connect your Google account. Please try reconnecting with the "
+"\"Connect\" button below. Alternately, you can set up a new API project "
+"with Google and use that instead. If you're still stuck you can contact "
+"support for assistance."
+msgstr ""
+
+#: ../common/hooks/useSettings.ts:38
+#: ../common/hooks/useUsers.ts:37
+msgid "Settings updated successfully"
+msgstr ""
+
+#: ../common/hooks/useSummary/useSummary.ts:10
+#: ../common/utils/constants.ts:48
+msgid "Bounce Rate"
+msgstr ""
+
+#: ../common/hooks/useSummary/useSummary.ts:6
+#: ../common/utils/constants.ts:20
+msgid "Users"
+msgstr ""
+
+#: ../common/hooks/useSummary/useSummary.ts:8
+msgid "Pages/Sessions"
+msgstr ""
+
+#: ../common/hooks/useSummary/useSummary.ts:9
+msgid "Average Time"
+msgstr ""
+
+#: ../common/hooks/useUsersData.ts:36
+msgid "Users updated successfully"
+msgstr ""
+
+#: ../common/utils/constants.ts:101
+msgid "Branda"
+msgstr ""
+
+#: ../common/utils/constants.ts:102
+msgid "No-code white label plugin"
+msgstr ""
+
+#: ../common/utils/constants.ts:107
+msgid "SmartCrawl"
+msgstr ""
+
+#: ../common/utils/constants.ts:108
+msgid "WordPress SEO plugin"
+msgstr ""
+
+#: ../common/utils/constants.ts:113
+msgid "Broken Link Checker"
+msgstr ""
+
+#: ../common/utils/constants.ts:114
+msgid "Scan broken links"
+msgstr ""
+
+#: ../common/utils/constants.ts:119
+msgid "Everything you need for WordPress"
+msgstr ""
+
+#: ../common/utils/constants.ts:120
+msgid "Get all 12 WPMU DEV premium plugins and more starting from just $3/month."
+msgstr ""
+
+#: ../common/utils/constants.ts:16
+msgid ""
+"Total number of Sessions within the date range. A session is the period of "
+"time user is actively engaged with your website, app, etc."
+msgstr ""
+
+#: ../common/utils/constants.ts:23
+msgid "Users who have initiated at least one session during the date range."
+msgstr ""
+
+#: ../common/utils/constants.ts:30
+msgid ""
+"Pageviews is the total number of pages viewed. Repeated views of a single "
+"page are counted."
+msgstr ""
+
+#: ../common/utils/constants.ts:34
+msgid "Page / Sessions"
+msgstr ""
+
+#: ../common/utils/constants.ts:37
+msgid ""
+"Pages/Sessions (Average Page Depth) is the average number of pages viewed "
+"during a session. Repeated views of a single page are counted."
+msgstr ""
+
+#: ../common/utils/constants.ts:41
+msgid "Avg Time"
+msgstr ""
+
+#: ../common/utils/constants.ts:44
+msgid "The average length of a session."
+msgstr ""
+
+#: ../common/utils/constants.ts:51
+msgid ""
+"The percentage of single-page sessions in which there was no interaction "
+"with the page. A bounced session has a duration of <seconds /> seconds."
+msgstr ""
+
+#: ../common/utils/constants.ts:71
+msgid "Smush"
+msgstr ""
+
+#: ../common/utils/constants.ts:72
+msgid "Best image optimization"
+msgstr ""
+
+#: ../common/utils/constants.ts:77
+msgid "Forminator"
+msgstr ""
+
+#: ../common/utils/constants.ts:78
+msgid "Best form builder plugin"
+msgstr ""
+
+#: ../common/utils/constants.ts:83
+msgid "Defender"
+msgstr ""
+
+#: ../common/utils/constants.ts:84
+msgid "Best security plugin"
+msgstr ""
+
+#: ../common/utils/constants.ts:89
+msgid "Hustle"
+msgstr ""
+
+#: ../common/utils/constants.ts:90
+msgid "Best newsletter plugin"
+msgstr ""
+
+#: ../common/utils/constants.ts:95
+msgid "Hummingbird"
+msgstr ""
+
+#: ../common/utils/constants.ts:96
+msgid "Performance optimization"
+msgstr ""
+
+#: ../common/utils/http.tsx:177
+msgid ""
+"Something went wrong, please try again or contact support if the problem "
+"persists."
+msgstr ""

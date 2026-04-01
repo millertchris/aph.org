@@ -1,0 +1,21 @@
+@include body-class(true) {
+	.sui-summary-segment {
+		.sui-list {
+			li {
+				.sui-list-label {
+					min-width: 100px;
+					max-width: 40%;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+				.sui-list-detail {
+					flex: 1;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+	}
+}

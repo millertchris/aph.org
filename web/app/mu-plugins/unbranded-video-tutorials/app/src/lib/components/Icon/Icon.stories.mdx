@@ -1,0 +1,112 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import Icon from './Icon'
+import { action } from '@storybook/addon-actions'
+import iconsList from '../../helpers/icons-list/icons-list'
+
+<Meta
+	title="lib/components/Icon"
+	argTypes={{
+		icon: {
+			name: 'icon',
+			description: 'Icon Name',
+			options: iconsList,
+			control: { type: 'select' },
+			table: {
+				type: { summary: 'string' },
+				defaultValue: { summary: 'large' },
+			},
+		},
+	}}
+	component={Icon}
+/>
+
+export const Template = (args) => <Icon {...args} />
+
+# Icon
+
+Icon component
+
+<Canvas>
+	<Story
+		name="default"
+		args={{
+			icon: 'wpmudev-logo',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<ArgsTable story="default" />
+
+<h2>Stories</h2>
+
+<h4>Small</h4>
+
+<Canvas>
+	<Story
+		name="small"
+		args={{
+			icon: 'wpmudev-logo',
+			size: 'sm',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<h4>Medium</h4>
+
+<Canvas>
+	<Story
+		name="medium"
+		args={{
+			icon: 'wpmudev-logo',
+			size: 'md',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<h4>Large</h4>
+
+<Canvas>
+	<Story
+		name="large"
+		args={{
+			icon: 'wpmudev-logo',
+			size: 'lg',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<h4>Extra Large</h4>
+
+<Canvas>
+	<Story
+		name="extra large"
+		args={{
+			icon: 'wpmudev-logo',
+			size: 'xl',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<h4>Animated</h4>
+
+<Canvas>
+	<Story
+		name="animated"
+		args={{
+			icon: 'wpmudev-logo',
+			animate: true,
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>

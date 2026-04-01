@@ -1,0 +1,95 @@
+.intro {
+	.title {
+		font-size: 3em;
+		margin-bottom: 20px;
+	}
+	.summary {
+		max-width: 800px;
+		margin: auto;
+	}
+
+	&.style-1 {
+		text-align: center;
+		margin-bottom: 100px;
+		@media screen and (max-width: 768px) {
+			margin-bottom: 50px;
+		}
+		.title {
+			@media screen and (max-width: 768px) {
+				font-size: 2.5em;
+			}
+		}
+
+		&.spaced-out {
+			padding: 60px 0 180px;
+		}
+
+		.btn {
+			margin-left: 20px;
+		}
+	}
+
+	&.style-2 {
+		.wrapper {
+			padding-bottom: 20px;
+			margin-bottom: 80px;
+			border-bottom: 1px solid #000000;
+			@media screen and (max-width: 768px) {
+				margin-bottom: 50px;
+				margin-left: 20px;
+				margin-right: 20px;
+				padding: 0 20px 20px 20px;
+				width: auto;
+				.title {
+					font-size: 2em;
+				}
+			}
+		}
+	}
+}
+
+
+
+.layout.slider {
+	.intro.style-2  {
+		.wrapper {
+			padding: 0 20px 20px;
+			margin-bottom: 80px;
+			border-bottom: 1px solid #000000;
+			@media screen and (max-width: 768px) {
+				margin-bottom: 0px;
+			}
+		}
+	}
+}
+
+.layout.custom.slider {
+	.intro.style-2 {
+		.wrapper {
+			@media screen and (max-width: 768px) {
+				margin-bottom: 50px;
+				margin-left: 20px;
+				margin-right: 20px;
+				padding: 0 20px 20px 20px;
+				width: auto;
+			}
+		}
+	}
+}
+
+.related.products {
+	.intro.style-2 .wrapper {
+		@media screen and (max-width: 768px) {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+	}
+}
+
+.search .intro {
+	h1 {
+		@media screen and (max-width: 768px) {
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,34 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import Footer from './Footer'
+import { action } from '@storybook/addon-actions'
+import { social_links, defaultLinks } from './defaults'
+
+<Meta title="lib/components/Footer" component={Footer} />
+
+export const Template = (args) => <Footer {...args} />
+
+# Footer
+
+<Canvas>
+	<Story
+		name="default"
+		args={{
+			footer_text: 'Footer Text Here!',
+			social_links: social_links,
+			links: defaultLinks,
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<ArgsTable story="default" />
+
+## Props & Global Variables
+
+| prop                     | corresponding variable                                                                                                                                                         |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| social_links[index].text | `$i18n.footer.facebook` `$i18n.footer.twitter` `$i18n.footer.instagram`                                                                                                        |
+| links[index].text        | `$i18n.footer.hub` `$i18n.footer.plugins` `$i18n.footer.roadmap` `$i18n.footer.support` `$i18n.footer.docs` `$i18n.footer.community` `$i18n.footer.tos` `$i18n.footer.privacy` |
+| footerText               | $vars.whitelabel.footer_text                                                                                                                                                   |
+| hide_branding            | $vars.whitelabel.hide_branding                                                                                                                                                 |

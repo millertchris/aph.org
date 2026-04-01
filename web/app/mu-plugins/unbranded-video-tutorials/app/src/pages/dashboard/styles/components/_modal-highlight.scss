@@ -1,0 +1,35 @@
+@include body-class(true) {
+
+	##{$prefix}-welcome-highlight {
+
+		.sui-box {
+
+			.sui-box-body {
+
+				h4.sui-description {
+					position: relative;
+					margin-top: 30px;
+					margin-bottom: 5px;
+					padding-left: 17px;
+					color: palette(gray, dark);
+					font-weight: 500;
+
+					span {
+						width: 7px;
+						height: 7px;
+						display: block;
+						position: absolute;
+						top: 7px;
+						left: 0;
+						border-radius: 10px;
+						background-color: palette(gray, dark);
+					}
+
+					&:first-child {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+}

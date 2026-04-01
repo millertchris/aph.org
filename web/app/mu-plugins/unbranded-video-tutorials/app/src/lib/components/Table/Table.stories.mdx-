@@ -1,0 +1,46 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import Table from './Table'
+import { action } from '@storybook/addon-actions'
+import { useState } from 'react'
+
+<Meta title="lib/components/Table" component={Table} />
+
+export const Template = (args) => <Table {...args} />
+
+# Table
+
+<Canvas>
+	<Story
+		name="default"
+		args={{
+			children: (
+				<>
+					<Table.Thead>
+						<Table.Tr>
+							<Table.Th className="sui-table-item-title">
+								Video title
+							</Table.Th>
+							<Table.Th className="wpmudev-videos-table--date">
+								Date added
+							</Table.Th>
+						</Table.Tr>
+					</Table.Thead>
+					<Table.Tbody>
+						<Table.Tr>
+							<Table.Td>Dashboard</Table.Td>
+							<Table.Td>April 14/2023 @ 02:04 PM</Table.Td>
+						</Table.Tr>
+						<Table.Tr>
+							<Table.Td>Adding New Pages</Table.Td>
+							<Table.Td>April 15/2023 @ 12:04 PM</Table.Td>
+						</Table.Tr>
+					</Table.Tbody>
+				</>
+			),
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<ArgsTable story="default" />

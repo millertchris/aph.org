@@ -1,0 +1,17 @@
+@include body-class(true) {
+	.#{$prefix}-red {
+		color: #ff6d6d !important;
+
+		&:hover {
+			color: #ff3a3a !important;
+
+			[class*='sui-icon-']:before {
+				color: #ff3a3a !important;
+			}
+		}
+
+		[class*='sui-icon-']:before {
+			color: #ff6d6d !important;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+@include body-class(true) {
+    .install-dashboard-modal{
+        button#wpmudev-videos-install-activate-close {
+            background-color:transparent;
+            border: none;
+            color: #fff;
+
+            &:hover,
+            &:focus,
+            &:visited,
+            &:active {
+                background-color:transparent;
+                color:#888;
+            }
+        }
+    }
+
+    .video-sui-row {
+        display: grid;
+        grid-template-columns: 130px auto;
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+	.wpmudev-videos-box-message{
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 20px 20px 20px 0;
+
+        &.no-logo {
+            padding: 30px;
+        }
+
+        .wpmudev-dashboard-message{
+            h2{
+                color: #333;
+            }
+
+            p{
+                color: #888;
+                font-size: 13px;
+            }
+        }
+
+        .wpmudev-dashboard-logo{
+            padding-left: 10px;
+            padding-right: 0;
+        }
+    }
+}

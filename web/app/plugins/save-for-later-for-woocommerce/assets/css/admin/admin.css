@@ -1,0 +1,71 @@
+.sfl_save_delete_table_wrap,
+.sfl_purchased_table_wrap {
+	padding: 10px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+
+.sfl_tab_ul .sfl_tab_li {
+	margin-bottom: 0 !important;
+}
+
+.sfl_reports_wrapper_cover {
+	float: left;
+	width: 50%;
+	padding: 15px;
+	background: #fff;
+}
+
+.sfl_reports_wrapper_cover .sfl_title h2 {
+	margin: 0;
+	padding: 10px 0;
+	border-bottom: 1px dashed #000;
+}
+
+.sfl_reports_wrapper_cover .sfl_report_table {
+	float: left;
+	width: 100%
+}
+
+.sfl_reports_wrapper_cover .sfl_report_table table {
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+	width: 100%;
+}
+
+.sfl_reports_wrapper_cover .sfl_report_table table tr {
+	border-bottom: 1px solid #ccc;
+}
+
+.sfl_reports_wrapper_cover .sfl_report_table table td {
+	padding: 10px;
+	width: 50%;
+	border-right: 1px solid #ccc;
+}
+
+.sfl_reports_wrapper_cover .sfl_report_table table td label {
+	font-size: 16px;
+
+}
+
+.sfl_reports_wrapper_cover .sfl_report_table table td span {
+	font-size: 16px;
+	color: #000;
+	font-weight: bold;
+	width: 50%;
+}
+
+.sfl_reports_wrapper_cover .sfl_report_table table tr:nth-child(odd) {
+	background: #fafafa;
+}
+
+.slf-composite-product-child .sfl-component-wrap,
+.slf-composite-product-child .sfl-component-wrap {
+	padding: 5px 0px;
+}
+
+.slf-composite-product-child .sfl-component-name-wrap::before {
+	font-family: dashicons;
+	content: "\f139";
+}

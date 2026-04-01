@@ -1,0 +1,121 @@
+.notice {
+  &.site-wide {
+    position: relative;
+    width: 100%; 
+    background: #febf37; 
+    z-index: 2;
+    &.bg-gold {
+      background: #febf37; 
+    }
+    &.bg-pomegranate {
+      background: #e90a59;
+      color: #000000;
+      a {
+        color: #000000;
+        &:hover, &:focus {
+          color: #FFFFFF;
+        }
+      }      
+    }
+    &.bg-teal {
+      background: #3ed2b8;
+      color: #000000;
+      a {
+        color: #000000;
+        &:hover, &:focus {
+          color: #1B3A3C;
+        }
+      }      
+    }
+    &.bg-purple {
+      background: #6b3077; 
+      color: #FFFFFF;
+      a {
+        color: #FFFFFF;
+        &:hover, &:focus {
+          color: #D2AEDB;
+        }
+      }
+    }
+    &.bg-slate {
+      background: #5b6770;
+      color: #FFFFFF;
+      a {
+        color: #FFFFFF;
+        &:hover, &:focus {
+          color: #E3E3E3;
+        }
+      }             
+    }
+    .content {
+      padding: 20px 60px 20px 60px;
+      @media only screen and ($tablet) {
+        padding: 40px 0 20px 0;
+      }
+    }
+    p {
+      margin: 0;
+      text-align: center;
+    }
+    &.notice-small {
+      font-size: 0.875em;
+    }    
+  }
+  .site-wide-notice-close {
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    right: 0;
+  }
+  &.cookie {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 50%;
+    padding: 20px;
+    overflow: scroll;
+    background-color: #000000;
+    color: #ffffff;
+    z-index: 1001;
+  	.wrapper {
+  		display: flex;
+  		justify-content: space-between;
+  		align-items: center;
+      p {
+  			margin-bottom:0;
+  		}
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        p {
+          margin-bottom: 20px;
+          text-align: center;
+          width: 100%;
+        }
+      }
+  	}
+  	.cookie-notice-close {
+  		color: $black;
+  		background: $pink;
+  		border: 0;
+  		transition: all .3s ease-in-out;
+      // font-weight: 700;
+      &:hover {
+				background: transparent;
+				color: $white;
+				border: 1px solid $white;
+			}
+  	}
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    min-width: auto;
+    height: 60px;
+  }
+  &.disable {
+    display: none;
+  }
+}

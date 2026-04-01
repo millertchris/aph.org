@@ -1,0 +1,86 @@
+$totop-size: 35px;
+
+@include body-class(true) {
+	.sui-box {
+		&##{$prefix}-videos-list {
+			padding-bottom: $sui-gutter-md;
+
+			@include media(min-width, md) {
+				padding-bottom: $sui-gutter;
+			}
+		}
+	}
+
+	.#{$prefix}-to-top {
+		position: fixed;
+		z-index: 5;
+		transition: $transition;
+
+		.sui-tooltip {
+			&:before,
+			&:after {
+				@include media(max-width, md) {
+					content: unset;
+					display: none;
+				}
+			}
+		}
+
+		&:not(.#{$prefix}-show) {
+			opacity: 0;
+			overflow: hidden;
+			visibility: hidden;
+			pointer-events: none;
+		}
+
+		@include media(max-width, md) {
+			right: $sui-gutter-md;
+			bottom: $sui-gutter-md;
+		}
+
+		@include media(min-width, md) {
+			top: 93%;
+			right: 10px;
+		}
+	}
+
+	.#{$prefix}-button--to-top {
+		width: $totop-size;
+		height: $totop-size;
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+		padding: 5px;
+		border: 0;
+		border-radius: 50%;
+		background-color: palette(silver, medium);
+		color: $white;
+
+		[class*='sui-icon-'] {
+			display: block;
+			flex: 0 0 auto;
+			margin-top: -1px;
+
+			&:before {
+				display: block;
+				color: inherit;
+			}
+		}
+
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			outline: none;
+			box-shadow: 0 1px 5px 1px rgba(167, 167, 167, 0.61);
+		}
+
+		&:hover,
+		&:focus {
+			background-color: palette(gray, default);
+		}
+	}
+}

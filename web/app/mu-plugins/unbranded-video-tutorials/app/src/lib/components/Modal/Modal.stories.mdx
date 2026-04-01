@@ -1,0 +1,19 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import Modal from './Modal'
+import { action } from '@storybook/addon-actions'
+
+<Meta title="lib/components/Modal" component={Modal} />
+
+# Modal
+
+A wrapper component for modals
+
+-   This component can only be used with [useModal](/docs/lib-hooks-usemodal--use-modal) hook
+
+## Props
+
+| prop     | description                                        | type                                | default |
+| -------- | -------------------------------------------------- | ----------------------------------- | ------- |
+| id       | Unique identifier for the modal                    | `string`                            | modal   |
+| children | React Element(s) or string to display in the model | `string` `element` `array[element]` | ""      |
+| size     | size of the modal one of "sm", "md", "lg"          | `string`                            | ""      |

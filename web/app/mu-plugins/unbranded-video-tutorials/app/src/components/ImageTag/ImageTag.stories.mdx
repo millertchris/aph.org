@@ -1,0 +1,34 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import ImageTag from './ImageTag'
+import { action } from '@storybook/addon-actions'
+
+<Meta title="ivt/components/ImageTag" component={ImageTag} />
+
+# ImageTag
+
+This component is used to display an image from the plugin's folder.
+
+Internally it uses imageUrl util function that prepends the src prop value with: `{siteurl}/wp-content/plugins/wpmudev_vids/app/assets/img`
+
+## Props
+
+| prop      | description                                                                                                                                        | type      | default   |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | --------- |
+| src       | Image source relative to `app/assets/img` path in the plugin folder                                                                                | `string`  | ""        |
+| srcset    | Whether or not to include `srcset` attribute, note that you need to have @2x version for the image in the same folder in order to set this to true | `boolean` | true      |
+| alt       | alternative text for the image                                                                                                                     | `string`  | Image Alt |
+| className | additional className to the image                                                                                                                  | `string`  | ""        |
+
+# Example
+
+```
+<ImageTag src="summary/dashboard.png" alt="dashboard" className="img-lg" />
+```
+
+If this component is used in a site with the URL: `jhon.com`, then the src would be:
+
+`https://jhon.com/wp-content/plugins/wpmudev-videos/app/assets/img/summary/dashboard.png"` <br/>
+
+and the srcset attribute would be:
+
+`https://jhon.com/wp-content/plugins/wpmudev-videos/app/assets/img/summary/dashboard.png 1x, http://localhost:10011/wp-content/plugins/wpmudev-videos/app/assets/img/summary/dashboard@2x.png 2x`

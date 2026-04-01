@@ -1,0 +1,4 @@
+vendor/*
+composer.*
+.idea/*
+.DS_Store

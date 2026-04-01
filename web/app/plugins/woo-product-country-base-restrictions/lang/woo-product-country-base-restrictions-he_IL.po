@@ -1,0 +1,839 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Product Country Base Restrictions\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-21 05:43+0000\n"
+"PO-Revision-Date: 2026-02-10 10:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: Hebrew\n"
+"Language: he_IL\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.0; wp-5.7-alpha-49973"
+
+#: include/views/cbr_addons_tab.php:242
+msgid "Active"
+msgstr "פָּעִיל"
+
+#: include/views/cbr_payment_restrictions_tab.php:52
+#: include/views/cbr_catalog_restrictions_tab.php:54
+msgid "Add New Restriction Rule"
+msgstr "הוסף כלל הגבלה חדש"
+
+#: include/views/cbr_addons_tab.php:144
+msgid "Advanced Debug"
+msgstr "ניפוי שגיאות מתקדם"
+
+#: include/views/cbr_addons_tab.php:95
+msgid "Advanced Detection"
+msgstr "זיהוי מתקדם"
+
+#: include/admin-settings.php:377
+msgid "After add to cart"
+msgstr ""
+"לאחר הוספה לעגלה\n"
+
+#: include/admin-settings.php:378
+msgid "After meta"
+msgstr ""
+"לאחר מטא\n"
+
+#: include/admin-settings.php:375
+msgid "After price"
+msgstr ""
+"אחרי המחיר\n"
+
+#: include/admin-settings.php:379
+msgid "After sharing"
+msgstr ""
+"לאחר שיתוף\n"
+
+#: include/admin-settings.php:376
+msgid "After short description"
+msgstr ""
+"לאחר תיאור קצר\n"
+
+#: include/admin-settings.php:374
+msgid "After title"
+msgstr ""
+"אחרי הכותרת\n"
+
+#: include/views/cbr_setting_tab.php:105
+msgid "Allow Add To Cart"
+msgstr "אפשר הוספה לעגלה"
+
+#: include/views/cbr_addons_tab.php:155
+msgid ""
+"Allow specific users or user roles to bypass country-based restrictions."
+msgstr "לאפשר למשתמשים או לתפקידי משתמש ספציפיים לעקוף מגבלות מבוססות מדינה."
+
+#: include/views/cbr_addons_tab.php:32
+msgid ""
+"AST Pro provides powerful features to easily add tracking information to "
+"WooCommerce orders, automate fulfillment workflows, and keep your customers "
+"happy and informed."
+msgstr ""
+"AST Pro מספק תכונות עוצמתיות להוספת מידע מעקב בקלות להזמנות WooCommerce, "
+"אוטומציה של תהליכי עבודה למילוי הזמנות ושמירה על שביעות רצון ומעודכנות של "
+"הלקוחות שלכם."
+
+#: include/views/cbr_setting_tab.php:194
+msgid "Available variable: {Product_Name}, {Product_name_with_link}"
+msgstr "משתנה זמין: {Product_Name}, {Product_name_with_link}"
+
+#: include/views/cbr_addons_tab.php:108
+msgid "Basic"
+msgstr "בְּסִיסִי"
+
+#: include/admin-settings.php:373
+msgid "Before title"
+msgstr ""
+"לפני הכותרת\n"
+
+#: include/views/cbr_addons_tab.php:162
+msgid "Built-in support for WPML, Polylang, and other popular plugins."
+msgstr "תמיכה מובנית ב-WPML, Polylang ותוספים פופולריים אחרים."
+
+#: include/views/cbr_addons_tab.php:130
+msgid "Bulk Import"
+msgstr "ייבוא בכמות גדולה"
+
+#: include/views/cbr_addons_tab.php:126
+msgid "Bulk Import Restrictions"
+msgstr "הגבלות ייבוא בכמות גדולה"
+
+#: include/views/cbr_catalog_restrictions_tab.php:26
+msgid "By Categories"
+msgstr "לפי קטגוריות"
+
+#: include/views/cbr_catalog_restrictions_tab.php:39
+msgid "By Tags"
+msgstr "לפי תגיות"
+
+#: include/views/cbr_setting_tab.php:161
+msgid "Bypass Restriction for Specific Users"
+msgstr "עקיפת הגבלת משתמשים ספציפיים"
+
+#: include/admin-settings.php:279
+msgid "Bypass restrictions for specific users"
+msgstr "עקיפת הגבלות עבור משתמשים ספציפיים"
+
+#: include/views/cbr_addons_tab.php:154
+msgid "Bypass Restrictions for Users"
+msgstr "עקיפת הגבלות עבור משתמשים"
+
+#: include/admin-settings.php:280
+msgid "Cart & category restriction messages"
+msgstr "הודעות הגבלת עגלה וקטגוריות"
+
+#: include/views/cbr_setting_tab.php:184
+msgid "Cart restriction message"
+msgstr "הודעת הגבלת עגלה"
+
+#: include/views/cbr_addons_tab.php:112
+msgid "Catalog Restriction Rules"
+msgstr "כללי הגבלת קטלוג"
+
+#: include/admin-settings.php:276
+msgid "Catalog restriction rules by category"
+msgstr "כללי הגבלת קטלוג לפי קטגוריה"
+
+#: include/admin-settings.php:166 include/admin-settings.php:236
+#: include/admin-settings.php:243
+#: include/views/cbr_catalog_restrictions_tab.php:10
+msgid "Catalog Restrictions"
+msgstr "הגבלות קטלוג"
+
+#: include/views/cbr_addons_tab.php:105 include/views/cbr_setting_tab.php:17
+msgid "Catalog Visibility"
+msgstr ""
+"נראות קטלוגית\n"
+
+#: include/views/cbr_setting_tab.php:77
+msgid "Catalog Visible (non purchasable)"
+msgstr ""
+"קטלוג גלוי (לא ניתן לרכישה)\n"
+
+#: include/views/cbr_setting_tab.php:201
+msgid "Category restriction message"
+msgstr "הודעת הגבלת קטגוריות"
+
+#: include/views/cbr_addons_tab.php:116
+msgid "Category Rules"
+msgstr "חוקי קטגוריה"
+
+#: include/views/cbr_addons_tab.php:81
+msgid "CBR FREE"
+msgstr "CBR חינם"
+
+#: include/views/cbr_addons_tab.php:85
+msgid "CBR PRO"
+msgstr "CBR PRO"
+
+#: include/admin-settings.php:290
+msgid ""
+"Check our documentation or contact our support team if you have any "
+"questions."
+msgstr "עיין בתיעוד שלנו או צור קשר עם צוות התמיכה שלנו אם יש לך שאלות."
+
+#: include/views/cbr_addons_tab.php:151
+msgid "Checkout Control"
+msgstr "בקרת קופה"
+
+#: include/admin-settings.php:409
+msgid "Choose the page to redirect"
+msgstr ""
+"בחר את הדף להפניה\n"
+
+#: include/admin-settings.php:365
+msgid ""
+"Choose where to display the restriction message on the product page. Default:"
+" ‘After add to cart.’"
+msgstr ""
+"בחר היכן להציג את הודעת ההגבלה בדף המוצר. ברירת מחדל: 'לאחר הוספה לעגלה'."
+
+#: include/views/cbr_addons_tab.php:161
+msgid "Compatible with Popular Plugins"
+msgstr "תואם לתוספים פופולריים"
+
+#: include/views/cbr_setting_tab.php:27
+msgid "Completely hide restricted products from your store."
+msgstr "הסתר לחלוטין מוצרים אסורים מהחנות שלך."
+
+#: include/admin-settings.php:177
+msgid "Country Based Restriction"
+msgstr "הגבלה מבוססת מדינה"
+
+#. Name of the plugin
+msgid "Country Based Restrictions for WooCommerce"
+msgstr "הגבלות מבוססות מדינה עבור WooCommerce"
+
+#: include/views/cbr_addons_tab.php:133 include/views/cbr_setting_tab.php:238
+msgid "Country Detection Widget"
+msgstr "ווידג'ט לזיהוי מדינה"
+
+#: include/admin-settings.php:278
+msgid "Country detection widget & customizer"
+msgstr "ווידג'ט והתאמה אישית של זיהוי מדינות"
+
+#: include/single-product.php:89
+msgid "Country Restrictions"
+msgstr ""
+"הגבלות מדינה\n"
+
+#: include/views/cbr_catalog_restrictions_tab.php:11
+msgid ""
+"Create bulk restriction rules to restrict products by categories, tags, "
+"attributes, and shipping classes for specific countries. Upgrade to PRO to "
+"unlock this feature."
+msgstr ""
+"צור כללי הגבלת מכירות בכמות גדולה כדי להגביל מוצרים לפי קטגוריות, תגים, "
+"מאפיינים וקטגוריות משלוח עבור מדינות ספציפיות. שדרג ל-PRO כדי לפתוח תכונה זו."
+
+#: include/views/cbr_addons_tab.php:113
+msgid ""
+"Create restriction rules by product categories and apply to multiple "
+"countries at once."
+msgstr "צור כללי הגבלה לפי קטגוריות מוצרים והחל על מספר מדינות בו זמנית."
+
+#: include/views/cbr_addons_tab.php:80
+msgid "Current"
+msgstr "נוֹכְחִי"
+
+#: include/views/cbr_addons_tab.php:39
+msgid ""
+"Customer Email Verification helps WooCommerce store owners reduce "
+"registration spam and fraudulent orders by requiring customers to verify "
+"their email address when registering an account or before placing an order."
+msgstr ""
+"אימות דוא\"ל של לקוח עוזר לבעלי חנויות WooCommerce להפחית ספאם של הרשמה "
+"והזמנות הונאה על ידי דרישה מלקוחות לאמת את כתובת הדוא\"ל שלהם בעת רישום "
+"חשבון או לפני ביצוע הזמנה."
+
+#: include/views/cbr_setting_tab.php:251
+msgid "Customize the country detection widget"
+msgstr "התאם אישית את ווידג'ט זיהוי המדינה"
+
+#: include/views/cbr_addons_tab.php:140
+msgid "Debug Mode"
+msgstr "מצב ניפוי שגיאות"
+
+#: include/views/cbr_addons_tab.php:92
+msgid ""
+"Detect customer country using WooCommerce geolocation or shipping address."
+msgstr ""
+"זהה את מדינת הלקוח באמצעות מיקום גיאוגרפי של WooCommerce או כתובת משלוח."
+
+#: include/admin-settings.php:329
+msgid ""
+"Detect the customer’s country using WooCommerce’s geolocation feature, "
+"ignoring the shipping address (if logged in)"
+msgstr ""
+"זיהוי מדינת הלקוח באמצעות תכונת המיקום הגיאוגרפי של WooCommerce, תוך התעלמות "
+"מכתובת המשלוח (אם מחובר)"
+
+#: include/views/cbr_addons_tab.php:134
+msgid ""
+"Display a country detection widget on the frontend with customizer support."
+msgstr "הצגת ווידג'ט לזיהוי מדינה בממשק המשתמש עם תמיכה בהתאמה אישית."
+
+#: include/views/cbr_setting_tab.php:219
+msgid ""
+"Display a custom message on product listing pages (shop, category, tag, or "
+"search results) when all products are restricted for the customer's detected "
+"country."
+msgstr ""
+"הצגת הודעה מותאמת אישית בדפי רשימת מוצרים (חנות, קטגוריה, תג או תוצאות חיפוש)"
+" כאשר כל המוצרים מוגבלים עבור המדינה שזוהתה על ידי הלקוח."
+
+#: include/views/cbr_setting_tab.php:78
+msgid ""
+"Display restricted products in your catalog but make them non-purchasable."
+msgstr "הצג מוצרים מוגבלים בקטלוג שלך אך הפוך אותם לבלתי ניתנים לרכישה."
+
+#: include/views/cbr_setting_tab.php:202
+msgid ""
+"Displayed on category/tag pages when restricted. Default: 'Sorry, products "
+"from this category are not available in your country.'"
+msgstr ""
+"מוצג בדפי קטגוריות/תגיות כאשר מוגבל. ברירת מחדל: 'מצטערים, מוצרים מקטגוריה "
+"זו אינם זמינים במדינתך'."
+
+#: include/views/cbr_setting_tab.php:185
+msgid ""
+"Displayed on the cart page when a product is removed due to country "
+"restrictions."
+msgstr "מוצג בדף עגלת הקניות כאשר מוצר מוסר עקב מגבלות מדינה."
+
+#: include/admin-settings.php:356
+msgid ""
+"Displayed on the product page when a product is not purchasable. Default: "
+"‘Sorry, this product is not available in your country.’"
+msgstr ""
+"מוצג בדף המוצר כאשר מוצר אינו ניתן לרכישה. ברירת מחדל: 'מצטערים, מוצר זה "
+"אינו זמין במדינתך'."
+
+#: include/admin-settings.php:294
+msgid "Documentation"
+msgstr "תיעוד"
+
+#: include/admin-settings.php:332
+msgid "Enable Debug Toolbar"
+msgstr ""
+"הפעל את סרגל הכלים לאיתור באגים\n"
+
+#: include/views/cbr_setting_tab.php:106
+msgid ""
+"Enable this option to allow add to cart the restricted products but the "
+"customer can't process to checkout."
+msgstr ""
+"הפעל אפשרות זו כדי לאפשר הוספה לעגלה של מוצרים מוגבלים אך הלקוח לא יוכל "
+"לעבור לקופה."
+
+#: include/views/cbr_setting_tab.php:141
+msgid ""
+"Enable this option to apply country-based restriction only when the customer "
+"clicks the Place Order button on the checkout page."
+msgstr ""
+"הפעל אפשרות זו כדי להחיל הגבלה מבוססת מדינה רק כאשר הלקוח לוחץ על כפתור "
+"\"בצע הזמנה\" בדף התשלום."
+
+#: include/views/cbr_setting_tab.php:93
+msgid "Enable this option to hide prices for restricted products."
+msgstr "הפעל אפשרות זו כדי להסתיר מחירים עבור מוצרים מוגבלים."
+
+#: include/views/cbr_setting_tab.php:59
+msgid "Enable this option to hide restricted product price."
+msgstr "הפעל אפשרות זו כדי להסתיר את מחיר המוצר המוגבל."
+
+#: include/admin-settings.php:439
+msgid ""
+"Enable this option to hide restricted product variations from the product "
+"selection on variable product pages"
+msgstr ""
+"הפעל אפשרות זו כדי להסתיר וריאציות מוצר מוגבלות ממבחר המוצרים בדפי מוצרים "
+"משתנים"
+
+#: include/admin-settings.php:473
+msgid ""
+"Enable this option to hide the restricted product variations form the "
+"product variations selection on variable product page."
+msgstr ""
+"הפעל אפשרות זו כדי להסתיר את וריאציות המוצר המוגבלות מביצוע בחירת וריאציות "
+"המוצר בדף המוצר המשתנה.\n"
+
+#: include/admin-settings.php:449
+#| msgid ""
+#| "Enable this option to make products non-purchasable (i.e. product can't "
+#| "be added to the cart)."
+msgid ""
+"Enable this option to make products non-purchasable (i.e., cannot be added "
+"to the cart)"
+msgstr ""
+"הפעל אפשרות זו כדי להפוך מוצרים ללא ניתנים לרכישה (כלומר, לא ניתן להוסיף "
+"אותם לעגלת הקניות)"
+
+#: include/admin-settings.php:405
+#| msgid "Enable this option to redirect 404 error page to shop page."
+msgid "Enable this option to redirect the 404 error page to the shop page"
+msgstr "הפעל אפשרות זו כדי להפנות את דף השגיאה 404 לדף החנות"
+
+#: include/views/cbr_addons_tab.php:221
+msgid "Extend your store's capabilities with our ecosystem"
+msgstr "הרחב את יכולות החנות שלך בעזרת המערכת האקולוגית שלנו"
+
+#: include/views/cbr_addons_tab.php:78
+msgid "Feature Comparison"
+msgstr "השוואת תכונות"
+
+#: include/admin-settings.php:322
+msgid "Force Geolocation"
+msgstr ""
+"כוח גיאוגרפי\n"
+
+#: include/views/cbr_addons_tab.php:109
+msgid "Full Control"
+msgstr "שליטה מלאה"
+
+#: include/views/cbr_addons_tab.php:165
+msgid "Full Integration"
+msgstr "אינטגרציה מלאה"
+
+#: include/views/cbr_addons_tab.php:102
+msgid "Full Restrictions"
+msgstr "הגבלות מלאות"
+
+#: include/views/cbr_addons_tab.php:137
+msgid "Full Widget"
+msgstr "ווידג'ט מלא"
+
+#: include/views/cbr_addons_tab.php:123
+msgid "Gateway Control"
+msgstr "בקרת שער"
+
+#: include/views/cbr_addons_tab.php:91
+msgid "GeoLocation Detection"
+msgstr "זיהוי מיקום גיאוגרפי"
+
+#: include/views/cbr_addons_tab.php:208
+msgid "GET STARTED WITH PRO"
+msgstr "התחל עם מקצוען"
+
+#: include/admin-settings.php:170 include/admin-settings.php:252
+#: include/admin-settings.php:259
+msgid "Go Pro"
+msgstr "גו פרו"
+
+#: include/views/cbr_setting_tab.php:43
+msgid "Hide catalog visibility"
+msgstr ""
+"הסתר את נראות הקטלוג\n"
+
+#: include/views/cbr_setting_tab.php:26
+msgid "Hide Completely"
+msgstr ""
+"הסתתר לחלוטין\n"
+
+#: include/views/cbr_addons_tab.php:106
+msgid "Hide or show products in your catalog based on the customer's country."
+msgstr "הסתר או הצג מוצרים בקטלוג שלך בהתבסס על מדינת הלקוח."
+
+#: include/admin-settings.php:432 include/admin-settings.php:466
+msgid "Hide Product Variations"
+msgstr ""
+"הסתר וריאציות מוצרים\n"
+
+#: include/views/cbr_setting_tab.php:58 include/views/cbr_setting_tab.php:92
+msgid "Hide Restricted Product Price"
+msgstr "הסתר מחיר מוצר מוגבל"
+
+#: include/views/cbr_setting_tab.php:44
+msgid ""
+"Hide restricted products from your shop and search results. Products remain "
+"accessible via direct links."
+msgstr ""
+"הסתר מוצרים מוגבלים מהחנות שלך ומתוצאות החיפוש. המוצרים נשארים נגישים דרך "
+"קישורים ישירים."
+
+#. Author URI of the plugin
+msgid "https://www.zorem.com/"
+msgstr "https://www.zorem.com/"
+
+#. URI of the plugin
+msgid ""
+"https://www.zorem.com/shop/woocommerce-product-country-based-restrictions/"
+msgstr ""
+"https://www.zorem.com/shop/woocommerce-product-country-based-restrictions/"
+
+#: include/views/cbr_addons_tab.php:127
+msgid ""
+"Import product restrictions in bulk via CSV for efficient store management."
+msgstr "ייבוא הגבלות מוצרים בכמות גדולה באמצעות CSV לניהול יעיל של החנות."
+
+#: include/views/cbr_addons_tab.php:209
+msgid "Join store owners optimizing their country restrictions"
+msgstr "הצטרפו לבעלי חנויות שמייעלים את מגבלות המדינה שלהם"
+
+#: include/views/cbr_addons_tab.php:18
+msgid ""
+"Keep your customers informed by sending them automated SMS text messages "
+"with order and delivery updates. You can send SMS notifications to customers "
+"when the order status is updated or when the shipment is out for delivery "
+"and more."
+msgstr ""
+"שמרו על עדכוני הזמנה ומשלוח על ידי שליחת הודעות SMS אוטומטיות. תוכלו לשלוח "
+"ללקוחות התראות SMS כאשר סטטוס ההזמנה מתעדכן או כאשר המשלוח יוצא למשלוח ועוד."
+
+#: include/views/cbr_addons_tab.php:244
+msgid "Learn More"
+msgstr "למידע נוסף"
+
+#: include/views/cbr_addons_tab.php:164
+msgid "Limited Support"
+msgstr "תמיכה מוגבלת"
+
+#: include/admin-settings.php:442
+msgid "Make non-purchasable"
+msgstr ""
+"הפוך ללא רכישה\n"
+
+#: include/views/cbr_setting_tab.php:119
+msgid "Move restricted products to the end of product listings."
+msgstr "העברת מוצרים מוגבלים לסוף רשימות המוצרים."
+
+#: include/admin-settings.php:289
+msgid "Need help?"
+msgstr "צריכים עזרה?"
+
+#: include/views/cbr_addons_tab.php:115 include/views/cbr_addons_tab.php:122
+#: include/views/cbr_addons_tab.php:129 include/views/cbr_addons_tab.php:136
+#: include/views/cbr_addons_tab.php:150 include/views/cbr_addons_tab.php:157
+msgid "Not Available"
+msgstr "לא זמין"
+
+#: include/views/cbr_addons_tab.php:119
+msgid "Payment Gateway by Country"
+msgstr "שער תשלום לפי מדינה"
+
+#: include/admin-settings.php:277
+msgid "Payment gateway restrictions by country"
+msgstr "הגבלות על שער תשלום לפי מדינה"
+
+#: include/views/cbr_payment_restrictions_tab.php:25
+msgid "Payment Restriction Rule 1"
+msgstr "כלל הגבלת תשלום 1"
+
+#: include/views/cbr_payment_restrictions_tab.php:37
+msgid "Payment Restriction Rule 2"
+msgstr "כלל הגבלת תשלום 2"
+
+#: include/admin-settings.php:168 include/admin-settings.php:244
+#: include/admin-settings.php:251
+#: include/views/cbr_payment_restrictions_tab.php:10
+msgid "Payment Restrictions"
+msgstr "הגבלות תשלום"
+
+#: include/views/cbr_addons_tab.php:220
+msgid "Powerful Add-ons"
+msgstr "תוספים רבי עוצמה"
+
+#: include/views/cbr_addons_tab.php:168
+msgid "Premium Support"
+msgstr "תמיכה פרימיום"
+
+#: include/views/cbr_addons_tab.php:172
+msgid "Priority Support"
+msgstr "תמיכה בעדיפות"
+
+#: include/views/cbr_addons_tab.php:169
+msgid "Priority ticket handling and dedicated help center access."
+msgstr "טיפול בעדיפות בכרטיסים וגישה ייעודית למרכז עזרה."
+
+#: include/admin-settings.php:243 include/admin-settings.php:251
+#: include/views/cbr_payment_restrictions_tab.php:10
+#: include/views/cbr_setting_tab.php:61 include/views/cbr_setting_tab.php:95
+#: include/views/cbr_setting_tab.php:108 include/views/cbr_setting_tab.php:121
+#: include/views/cbr_setting_tab.php:138 include/views/cbr_setting_tab.php:165
+#: include/views/cbr_setting_tab.php:188 include/views/cbr_setting_tab.php:205
+#: include/views/cbr_setting_tab.php:222 include/views/cbr_setting_tab.php:240
+#: include/views/cbr_catalog_restrictions_tab.php:10
+msgid "PRO"
+msgstr "מִקצוֹעָן"
+
+#: include/single-product.php:116 include/single-product.php:172
+msgid "Product Available for selected countries"
+msgstr ""
+"מוצר זמין עבור מדינות נבחרות\n"
+
+#: woocommerce-product-country-base-restrictions.php:260
+msgid "Product Country Restrictions requires WooCommerce 3.0 or newer"
+msgstr ""
+"הגבלות ארץ מוצר דורשות WooCommerce 3.0 או חדש יותר\n"
+
+#: include/views/cbr_setting_tab.php:218
+msgid "Product Listing Restriction Message"
+msgstr "הודעת הגבלת רישום מוצרים"
+
+#: include/single-product.php:117 include/single-product.php:173
+msgid "Product not Available for selected countries"
+msgstr ""
+"המוצר אינו זמין במדינות שנבחרו\n"
+
+#: include/admin-settings.php:355
+msgid "Product restriction message"
+msgstr ""
+"הודעת הגבלת מוצרים\n"
+
+#: include/admin-settings.php:364
+msgid "Product restriction message position"
+msgstr ""
+"מיקום הודעת הגבלת מוצרים\n"
+
+#: include/views/cbr_addons_tab.php:98
+msgid "Product Restrictions"
+msgstr "הגבלות מוצר"
+
+#: include/views/cbr_addons_tab.php:84
+msgid "Recommended"
+msgstr "מוּמלָץ"
+
+#: include/admin-settings.php:399
+msgid "Redirect the 404 page"
+msgstr ""
+"הפנה מחדש את עמוד 404\n"
+
+#: include/admin-settings.php:281 include/views/cbr_addons_tab.php:147
+msgid "Restrict on Place Order (Checkout)"
+msgstr "הגבלת ביצוע הזמנה (קופה)"
+
+#: include/views/cbr_payment_restrictions_tab.php:11
+msgid ""
+"Restrict payment methods based on the customer billing or shipping country. "
+"Create rules to include or exclude specific payment gateways for specific "
+"countries. Upgrade to PRO to unlock this feature."
+msgstr ""
+"הגבל את אמצעי התשלום בהתאם למדינת החיוב או המשלוח של הלקוח. צור כללים כדי "
+"לכלול או לא לכלול שערי תשלום ספציפיים עבור מדינות ספציפיות. שדרג ל-PRO כדי "
+"לפתוח תכונה זו."
+
+#: include/views/cbr_setting_tab.php:136
+msgid "Restrict product only on Place Order (Checkout)"
+msgstr "הגבל מוצר רק בהזמנה (קופה)"
+
+#: include/views/cbr_addons_tab.php:148
+msgid ""
+"Restrict products at checkout based on the customer's billing/shipping "
+"country."
+msgstr "הגבל מוצרים בקופה בהתבסס על מדינת החיוב/משלוח של הלקוח."
+
+#: include/views/cbr_addons_tab.php:120
+msgid "Restrict specific payment gateways based on the customer's country."
+msgstr "הגבל שערי תשלום ספציפיים בהתבסס על מדינת הלקוח."
+
+#: include/views/cbr_addons_tab.php:99
+msgid "Restrict specific products from being purchased in certain countries."
+msgstr "להגביל רכישה של מוצרים ספציפיים במדינות מסוימות."
+
+#. Description of the plugin
+msgid "Restrict WooCommerce products in specific countries"
+msgstr ""
+"הגבל מוצרים של WooCommerce בארצות ספציפיות\n"
+
+#: include/single-product.php:110 include/single-product.php:165
+msgid "Restriction rule"
+msgstr ""
+"כלל הגבלה\n"
+
+#: include/views/cbr_setting_tab.php:150
+msgid "Restriction Settings"
+msgstr "הגדרות הגבלה"
+
+#: include/views/cbr_catalog_restrictions_tab.php:25
+msgid "Restrictions Rule 1"
+msgstr "כלל הגבלות 1"
+
+#: include/views/cbr_catalog_restrictions_tab.php:38
+msgid "Restrictions Rule 2"
+msgstr "כלל הגבלות 2"
+
+#: include/views/cbr_addons_tab.php:46
+msgid ""
+"Sales Report Email Pro helps you understand how well your store is "
+"performing and how your products are selling by sending daily, weekly, or "
+"monthly sales reports directly from your WooCommerce store to your email."
+msgstr ""
+"דו\"ח דוחות מכירות דוא\"ל פרו עוזר לך להבין את ביצועי החנות שלך וכיצד "
+"המוצרים שלך נמכרים על ידי שליחת דוחות מכירות יומיים, שבועיים או חודשיים "
+"ישירות מחנות WooCommerce שלך למייל שלך."
+
+#: include/views/cbr_setting_tab.php:170
+msgid "Search for users..."
+msgstr "חפש משתמשים..."
+
+#: include/single-product.php:115 include/single-product.php:171
+msgid "Select a Rule"
+msgstr "בחר כלל"
+
+#: include/views/cbr_setting_tab.php:162
+msgid ""
+"Select individual users who should be exempt from all country-based "
+"restrictions. These users will see all products and can purchase without "
+"restriction regardless of their detected country."
+msgstr ""
+"בחר משתמשים בודדים שצריכים להיות פטורים מכל ההגבלות המבוססות על מדינה. "
+"משתמשים אלה יראו את כל המוצרים ויוכלו לרכוש ללא הגבלה ללא קשר למדינה שזוהתה."
+
+#: include/admin-settings.php:416
+msgid "Select the page to redirect the 404 error page"
+msgstr "בחר את הדף להפניה מחדש של דף השגיאה 404"
+
+#: include/admin-settings.php:172 include/admin-settings.php:234
+#: include/admin-settings.php:235
+msgid "Settings"
+msgstr "הגדרות"
+
+#: include/views/cbr_addons_tab.php:141
+msgid "Show geolocation country in the frontend toolbar for easy debugging."
+msgstr ""
+"הצג את מדינת המיקום הגיאוגרפי בסרגל הכלים של ממשק המשתמש לצורך ניפוי שגיאות "
+"קל."
+
+#: include/views/cbr_setting_tab.php:252
+msgid ""
+"Show the detected country and allow customers to change their shipping "
+"country on any page."
+msgstr "הצג את המדינה שזוהתה ואפשר ללקוחות לשנות את מדינת המשלוח שלהם בכל דף."
+
+#: include/admin-settings.php:339
+msgid ""
+"Show the detected geolocation country at the top of the header on the "
+"frontend"
+msgstr "הצג את מדינת המיקום הגיאוגרפי שזוהתה בראש הכותרת בממשק המשתמש"
+
+#: include/views/cbr_setting_tab.php:228
+msgid "Shown when no products are available due to country-based restrictions."
+msgstr "מוצג כאשר אין מוצרים זמינים עקב מגבלות מדינה."
+
+#: include/views/cbr_setting_tab.php:226
+msgid "Sorry, products are not available in your country."
+msgstr "מצטערים, המוצרים אינם זמינים במדינתך."
+
+#: include/views/cbr_setting_tab.php:209
+msgid ""
+"Sorry, products from this category are not available to purchase in your "
+"country."
+msgstr "מצטערים, מוצרים מקטגוריה זו אינם זמינים לרכישה במדינתך."
+
+#: include/products-restriction.php:235 include/admin-settings.php:357
+msgid "Sorry, this product is not available to purchase in your country."
+msgstr ""
+"מצטערים, מוצר זה אינו זמין לרכישה במדינתך.\n"
+
+#: include/views/cbr_setting_tab.php:118
+msgid "Sort products by availability (Available → Restricted)"
+msgstr "מיין מוצרים לפי זמינות (זמין → מוגבל)"
+
+#: include/views/cbr_addons_tab.php:171
+msgid "Standard Only"
+msgstr "סטנדרטי בלבד"
+
+#: include/views/cbr_addons_tab.php:70
+msgid ""
+"Stop limiting your store with basic restrictions. Switch from a <strong>"
+"basic setup</strong> to a <a href=\"https://www.zorem.com/product/country-"
+"based-restriction-pro/?utm_source=wp-admin&utm_medium=CBRPRO&utm_campaign=go-"
+"pro\" target=\"_blank\">fully advanced restriction powerhouse</a>."
+msgstr ""
+"הפסיקו להגביל את החנות שלכם עם הגבלות בסיסיות. עברו <strong>מהגדרה "
+"בסיסית</strong> למערכת <a href=\"https://www.zorem.com/product/country-based-"
+"restriction-pro/?utm_source=wp-admin&utm_medium=CBRPRO&utm_campaign=go-pro\" "
+"target=\"_blank\">הגבלות מתקדמת לחלוטין</a> ."
+
+#: include/views/cbr_addons_tab.php:11
+msgid ""
+"Take control of your post-shipping workflows, reduce time spent on customer "
+"service and provide a superior post-purchase experience to your customers. "
+"Beyond automatic shipment tracking, TrackShip brings a branded tracking "
+"experience into your store."
+msgstr ""
+"קחו שליטה על תהליכי העבודה שלכם לאחר המשלוח, צמצמו את הזמן המושקע בשירות "
+"לקוחות וספקו ללקוחות שלכם חוויית מעקב מעולה לאחר הרכישה. מעבר למעקב אוטומטי "
+"אחר משלוחים, TrackShip מביאה חוויית מעקב ממותגת לחנות שלכם."
+
+#: include/views/cbr_addons_tab.php:68
+msgid "Take Your Country Restrictions to the Next Level"
+msgstr "קחו את מגבלות המדינה שלכם לשלב הבא"
+
+#: include/views/cbr_addons_tab.php:25
+msgid ""
+"The Advanced Local Pickup (ALP) helps you manage local pickup order "
+"workflows more conveniently by extending the WooCommerce Local Pickup "
+"shipping method. The Pro version lets you set up multiple pickup locations, "
+"split business hours, and apply discounts by pickup location."
+msgstr ""
+"איסוף מקומי מתקדם (ALP) עוזר לך לנהל זרימות עבודה של הזמנות לאיסוף מקומי "
+"בצורה נוחה יותר על ידי הרחבת שיטת המשלוח של איסוף מקומי ב-WooCommerce. גרסת "
+"ה-Pro מאפשרת לך להגדיר מספר מיקומי איסוף, לפצל את שעות הפעילות ולהחיל הנחות "
+"לפי מיקום איסוף."
+
+#: include/admin-settings.php:273
+msgid "Unlock Advanced Country Based Restrictions with CBR PRO"
+msgstr "פתח הגבלות מתקדמות המבוססות על מדינה עם CBR PRO"
+
+#: include/admin-settings.php:283
+msgid "UPGRADE TO CBR PRO"
+msgstr "שדרגו ל-CBR PRO"
+
+#: include/admin-settings.php:274
+msgid ""
+"Upgrade to CBR PRO to extend your country-based restrictions beyond the "
+"basics."
+msgstr ""
+"שדרגו ל-CBR PRO כדי להרחיב את המגבלות המדינתיות שלכם מעבר למגבלות הבסיסיות."
+
+#: include/views/cbr_payment_restrictions_tab.php:12
+#: include/views/cbr_catalog_restrictions_tab.php:12
+#| msgid "UPGRADE TO PRO"
+msgid "Upgrade To PRO"
+msgstr "שדרגו ל-PRO"
+
+#: include/views/cbr_setting_tab.php:255
+msgid "Upgrade to PRO"
+msgstr "שדרגו ל-PRO"
+
+#: include/admin-settings.php:380
+msgid "Use shortcode"
+msgstr ""
+"השתמש בקיצור\n"
+
+#: include/admin-settings.php:366
+msgid "Use the shortcode [cbr_message_position] in your product template."
+msgstr ""
+"השתמש בקוד הקיצור [cbr_message_position] בתבנית המוצר שלך.\n"
+
+#: include/views/cbr_addons_tab.php:158
+msgid "User Bypass"
+msgstr "עקיפת משתמש"
+
+#: include/views/cbr_setting_tab.php:211
+msgid "You can use shortcode [cbr_category_message] in your category template."
+msgstr "ניתן להשתמש בקוד הקיצור [cbr_category_message] בתבנית הקטגוריה שלכם."
+
+#. Author of the plugin
+msgid "zorem"
+msgstr "זורם"
+
+#: include/views/cbr_setting_tab.php:192
+msgid ""
+"{Product_Name} has been removed from your cart since it is not available for "
+"purchase to your Country."
+msgstr ""
+"המוצר {Product_Name} הוסר מעגלת הקניות שלך מכיוון שהוא אינו זמין לרכישה "
+"במדינתך."
+
+#: include/views/admin_message_panel.php:3
+msgid "🌍 Expand Your Control with Country Based Restrictions PRO!"
+msgstr "🌍 הרחב את השליטה שלך עם הגבלות מבוססות מדינה PRO!"

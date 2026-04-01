@@ -1,0 +1,319 @@
+/* Black Friday Banner Styles */
+.lmfwc-blackfriday-notice {
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    margin: 15px 0 !important;
+}
+
+.lmfwc-blackfriday-notice .notice-dismiss {
+    z-index: 100;
+    top: 10px;
+    right: 10px;
+}
+
+.lmfwc-bf-banner {
+    position: relative;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border: 2px solid white;
+    border-bottom: 4px solid white;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 140px;
+}
+
+.lmfwc-bf-banner::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+    border-radius: 8px;
+    opacity: 0.2;
+    z-index: 0;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%);
+}
+
+.lmfwc-bf-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #ff6b35 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: 0;
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+}
+
+.lmfwc-bf-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Left Section - Deal Text */
+.lmfwc-bf-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 0 0 auto;
+}
+
+.lmfwc-bf-deal-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.lmfwc-bf-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #b8a3ff;
+    margin: 0;
+    line-height: 1.2;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    letter-spacing: -0.5px;
+}
+
+.lmfwc-bf-subtitle {
+    font-size: 14px;
+    color: #b8a3ff;
+    margin: 5px 0 0 0;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.lmfwc-bf-discount-badge {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+    min-width: 100px;
+}
+
+.lmfwc-bf-extra {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.lmfwc-bf-percent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lmfwc-bf-number {
+    font-size: 42px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    background: linear-gradient(135deg, #fff 0%, #ffe0d0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.lmfwc-bf-off {
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: -5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Center Section - Countdown Timer */
+.lmfwc-bf-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lmfwc-bf-countdown {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.lmfwc-bf-timer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 60px;
+}
+
+.lmfwc-bf-timer-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.lmfwc-bf-timer-label {
+    font-size: 11px;
+    color: #ccc;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Right Section - CTA */
+.lmfwc-bf-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    flex: 0 0 auto;
+}
+
+.lmfwc-bf-coupon {
+    border: 2px dashed #6c5dd3;
+    border-radius: 8px;
+    padding: 10px 18px;
+    background: rgba(108, 93, 211, 0.1);
+}
+
+.lmfwc-bf-coupon-text {
+    font-size: 13px;
+    color: #fff;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.lmfwc-bf-coupon-text strong {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.lmfwc-bf-cta-button {
+    background: linear-gradient(135deg, #6c5dd3 0%, #4f8cff 100%);
+    color: #fff !important;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 93, 211, 0.4);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    white-space: nowrap;
+}
+
+.lmfwc-bf-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 93, 211, 0.5);
+    color: #fff !important;
+}
+
+/* Decorative Elements */
+.lmfwc-bf-banner .lmfwc-bf-confetti {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #ffd700;
+    border-radius: 50%;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.lmfwc-bf-banner .lmfwc-bf-confetti:nth-child(1) { top: 20px; left: 15%; animation: float 3s ease-in-out infinite; }
+.lmfwc-bf-banner .lmfwc-bf-confetti:nth-child(2) { top: 40px; left: 25%; animation: float 3.5s ease-in-out infinite 0.5s; }
+.lmfwc-bf-banner .lmfwc-bf-confetti:nth-child(3) { top: 15px; right: 20%; animation: float 2.8s ease-in-out infinite 1s; }
+.lmfwc-bf-banner .lmfwc-bf-confetti:nth-child(4) { bottom: 30px; left: 30%; animation: float 3.2s ease-in-out infinite 0.3s; }
+
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(180deg); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 1200px) {
+    .lmfwc-bf-content {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .lmfwc-bf-center {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .lmfwc-bf-right {
+        order: 2;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .lmfwc-bf-banner {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .lmfwc-bf-title {
+        font-size: 24px;
+    }
+
+    .lmfwc-bf-countdown {
+        gap: 10px;
+    }
+
+    .lmfwc-bf-timer-item {
+        min-width: 50px;
+    }
+
+    .lmfwc-bf-timer-number {
+        font-size: 24px;
+    }
+
+    .lmfwc-bf-timer-label {
+        font-size: 10px;
+    }
+
+    .lmfwc-bf-number {
+        font-size: 32px;
+    }
+
+    .lmfwc-bf-cta-button {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+}
+

@@ -1,0 +1,58 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import WhiteLabelSummary from './WhiteLabelSummary'
+import { action } from '@storybook/addon-actions'
+
+<Meta title="lib/components/WhiteLabelSummary" component={WhiteLabelSummary} />
+
+export const Template = (args) => <WhiteLabelSummary />
+
+# WhiteLabelSummary
+
+<Canvas>
+	<Story
+		name="default"
+		args={{
+			children: (
+				<>
+					{' '}
+					<WhiteLabelSummary.Segment>
+						<WhiteLabelSummary.Details>
+							Segment 1: Wrapped in Details Component
+						</WhiteLabelSummary.Details>
+					</WhiteLabelSummary.Segment>
+					<WhiteLabelSummary.Segment>
+						Segment 2
+					</WhiteLabelSummary.Segment>
+				</>
+			),
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<ArgsTable story="default" />
+
+## Usage
+
+### `isUnbranded` prop set to `true`.
+
+The component won't have any image background, so other props won't have any effect.
+
+### The following cases is when `isUnbranded` is set to `false`
+
+<hr />
+
+#### `isRebranded` prop is set to `false`:
+
+You must set SASS vraiables in your global style sass file right before where you import the shared-ui styles. these varibles hold the image relative urls:
+
+**$summary-image:** In the case where isSmall prop is set to flase
+
+**$summary-image-sm:** In the case where **isSmall** prop is set to true
+
+#### `isSmall` when set to true, the component will be smaller
+
+#### `isRebranded` prop set to `true`.
+
+When you set this to true you MUST provide a custom image url using the `prop` `customImageUrl`

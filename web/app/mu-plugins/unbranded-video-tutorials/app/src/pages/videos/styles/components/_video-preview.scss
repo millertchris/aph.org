@@ -1,0 +1,45 @@
+@include body-class(true) {
+	.wpmudev-video-container {
+		&.video-iframe {
+			iframe {
+				max-width: 100%;
+			}
+
+			&.custom-video-iframe {
+				iframe {
+					max-width: 255px;
+					max-height: 140px;
+				}
+			}
+
+			.lazyframe[data-vendor='vimeo'] {
+				max-width: 255px;
+				max-height: 140px;
+
+				.lazyframe__title {
+					font-size: 15px;
+				}
+
+				&:after {
+					height: 30px;
+					width: 50px;
+				}
+
+				&:before {
+					padding-top: 44.25%;
+				}
+			}
+
+			.lazyframe[data-vendor='youtube'] {
+				.lazyframe__title {
+					font-size: 13px;
+				}
+
+				&:after {
+					height: 39px;
+					width: 55px;
+				}
+			}
+		}
+	}
+}

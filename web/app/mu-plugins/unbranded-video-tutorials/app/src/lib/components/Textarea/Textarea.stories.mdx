@@ -1,0 +1,16 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import Textarea from './Textarea'
+import { action } from '@storybook/addon-actions'
+import { useState } from 'react'
+
+<Meta title="lib/components/Textarea" component={Textarea} />
+
+export const Template = (args) => <Textarea {...args} />
+
+# Textarea
+
+<Canvas>
+	<Story name="default">{Template.bind()}</Story>
+</Canvas>
+
+<ArgsTable story="default" />

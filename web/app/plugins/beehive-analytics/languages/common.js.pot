@@ -1,0 +1,233 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: components/charts/LineChart.tsx:187
+msgid "No data available"
+msgstr ""
+
+#: components/copy-button/copy-button.tsx:18
+msgid "URL copied"
+msgstr ""
+
+#: components/copy-button/copy-button.tsx:18
+msgid "Copy url"
+msgstr ""
+
+#: components/google/GoogleAuthentication.tsx:25
+msgid ""
+"Google authentication failed. No authorization code was received. Please "
+"try connecting again."
+msgstr ""
+
+#: components/google/GoogleAuthentication.tsx:36
+msgid "Your Google account has been connected successfully."
+msgstr ""
+
+#: components/google/google.tsx:7
+msgid "Connect with Google"
+msgstr ""
+
+#: components/loading/loading.tsx:14
+msgid "Fetching data..."
+msgstr ""
+
+#: components/select-accounts/select-accounts.tsx:131
+msgid "Choose your view (data stream)"
+msgstr ""
+
+#: components/select-accounts/select-accounts.tsx:131
+msgid "Site not here? Try logging into another <link>Google account</link>."
+msgstr ""
+
+#: components/select-accounts/select-accounts.tsx:138
+msgid "Select Property to load streams"
+msgstr ""
+
+#: components/select-accounts/select-accounts.tsx:140
+msgid "No streams found"
+msgstr ""
+
+#: components/select-accounts/select-accounts.tsx:55
+msgid "Choose your account"
+msgstr ""
+
+#: components/select-accounts/select-accounts.tsx:57
+msgid "No accounts found"
+msgstr ""
+
+#: components/select-accounts/select-accounts.tsx:91
+msgid "Choose your property"
+msgstr ""
+
+#: components/select-accounts/select-accounts.tsx:98
+msgid "No properties found"
+msgstr ""
+
+#: components/splash/splash.tsx:15
+msgid "Splash image"
+msgstr ""
+
+#: hooks/useAuth.ts:43
+msgid ""
+"We couldn't connect your Google account. Please try reconnecting with the "
+"\"Connect\" button below. Alternately, you can set up a new API project "
+"with Google and use that instead. If you're still stuck you can contact "
+"support for assistance."
+msgstr ""
+
+#: hooks/useSettings.ts:38
+#: hooks/useUsers.ts:37
+msgid "Settings updated successfully"
+msgstr ""
+
+#: hooks/useSummary/useSummary.ts:10
+#: utils/constants.ts:48
+msgid "Bounce Rate"
+msgstr ""
+
+#: hooks/useSummary/useSummary.ts:5
+#: utils/constants.ts:13
+msgid "Sessions"
+msgstr ""
+
+#: hooks/useSummary/useSummary.ts:6
+#: utils/constants.ts:20
+msgid "Users"
+msgstr ""
+
+#: hooks/useSummary/useSummary.ts:7
+#: utils/constants.ts:27
+msgid "Pageviews"
+msgstr ""
+
+#: hooks/useSummary/useSummary.ts:8
+msgid "Pages/Sessions"
+msgstr ""
+
+#: hooks/useSummary/useSummary.ts:9
+msgid "Average Time"
+msgstr ""
+
+#: hooks/useUsersData.ts:36
+msgid "Users updated successfully"
+msgstr ""
+
+#: utils/constants.ts:101
+msgid "Branda"
+msgstr ""
+
+#: utils/constants.ts:102
+msgid "No-code white label plugin"
+msgstr ""
+
+#: utils/constants.ts:107
+msgid "SmartCrawl"
+msgstr ""
+
+#: utils/constants.ts:108
+msgid "WordPress SEO plugin"
+msgstr ""
+
+#: utils/constants.ts:113
+msgid "Broken Link Checker"
+msgstr ""
+
+#: utils/constants.ts:114
+msgid "Scan broken links"
+msgstr ""
+
+#: utils/constants.ts:119
+msgid "Everything you need for WordPress"
+msgstr ""
+
+#: utils/constants.ts:120
+msgid "Get all 12 WPMU DEV premium plugins and more starting from just $3/month."
+msgstr ""
+
+#: utils/constants.ts:16
+msgid ""
+"Total number of Sessions within the date range. A session is the period of "
+"time user is actively engaged with your website, app, etc."
+msgstr ""
+
+#: utils/constants.ts:23
+msgid "Users who have initiated at least one session during the date range."
+msgstr ""
+
+#: utils/constants.ts:30
+msgid ""
+"Pageviews is the total number of pages viewed. Repeated views of a single "
+"page are counted."
+msgstr ""
+
+#: utils/constants.ts:34
+msgid "Page / Sessions"
+msgstr ""
+
+#: utils/constants.ts:37
+msgid ""
+"Pages/Sessions (Average Page Depth) is the average number of pages viewed "
+"during a session. Repeated views of a single page are counted."
+msgstr ""
+
+#: utils/constants.ts:41
+msgid "Avg Time"
+msgstr ""
+
+#: utils/constants.ts:44
+msgid "The average length of a session."
+msgstr ""
+
+#: utils/constants.ts:51
+msgid ""
+"The percentage of single-page sessions in which there was no interaction "
+"with the page. A bounced session has a duration of <seconds /> seconds."
+msgstr ""
+
+#: utils/constants.ts:71
+msgid "Smush"
+msgstr ""
+
+#: utils/constants.ts:72
+msgid "Best image optimization"
+msgstr ""
+
+#: utils/constants.ts:77
+msgid "Forminator"
+msgstr ""
+
+#: utils/constants.ts:78
+msgid "Best form builder plugin"
+msgstr ""
+
+#: utils/constants.ts:83
+msgid "Defender"
+msgstr ""
+
+#: utils/constants.ts:84
+msgid "Best security plugin"
+msgstr ""
+
+#: utils/constants.ts:89
+msgid "Hustle"
+msgstr ""
+
+#: utils/constants.ts:90
+msgid "Best newsletter plugin"
+msgstr ""
+
+#: utils/constants.ts:95
+msgid "Hummingbird"
+msgstr ""
+
+#: utils/constants.ts:96
+msgid "Performance optimization"
+msgstr ""
+
+#: utils/http.tsx:177
+msgid ""
+"Something went wrong, please try again or contact support if the problem "
+"persists."
+msgstr ""

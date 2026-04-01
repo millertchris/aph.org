@@ -1,0 +1,661 @@
+<?php
+/**
+ * Asset Optimization AJAX actions.
+ *
+ * @since 2.7.2
+ * @package Hummingbird\Admin\Ajax\Caching
+ */
+
+namespace Hummingbird\Admin\Ajax;
+
+use Hummingbird\Core\Modules\Minify\Minify_Group;
+use Hummingbird\Core\Modules\Minify\Sources_Collector;
+use Hummingbird\Core\SafeMode;
+use Hummingbird\Core\Settings;
+use Hummingbird\Core\Utils;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Class Minify.
+ */
+class Minify {
+
+	/**
+	 * Minify constructor.
+	 */
+	public function __construct() {
+		$endpoints = array(
+			'minify_auto_status',
+			'minify_clear_cache',
+			'minify_recheck_files',
+			'minify_reset_settings',
+			'minify_auto_save_settings',
+			'minify_manual_save_settings',
+			'minify_save_safe_mode_settings',
+			'minify_save_and_publish_safe_mode',
+			'minify_publish_safe_mode',
+			'minify_discard_safe_mode',
+			'minify_manual_status',
+			'minify_regenerate_asset',
+			'minify_toggle_cdn',
+			'minify_start_ao_scan',
+			'minify_background_processing_status',
+		);
+
+		foreach ( $endpoints as $endpoint ) {
+			/**
+			 * Register callbacks.
+			 *
+			 * @uses minify_auto_status()
+			 * @uses minify_clear_cache()
+			 * @uses minify_recheck_files()
+			 * @uses minify_reset_settings()
+			 * @uses minify_auto_save_settings()
+			 * @uses minify_manual_save_settings()
+			 * @uses minify_save_safe_mode_settings()
+			 * @uses minify_publish_safe_mode()
+			 * @uses minify_save_and_publish_safe_mode()
+			 * @uses minify_discard_safe_mode()
+			 * @uses minify_manual_status()
+			 * @uses minify_regenerate_asset()
+			 * @uses minify_toggle_cdn()
+			 * @uses minify_start_ao_scan()
+			 * @uses minify_background_processing_status()
+			 */
+			add_action( "wp_ajax_wphb_react_$endpoint", array( $this, $endpoint ) );
+		}
+	}
+
+	/**
+	 * Get exclusions.
+	 *
+	 * @since 3.3.0  Moved out to a function to remove duplicate code.
+	 *
+	 * @param array $options  Asset optimization module options.
+	 *
+	 * @return array
+	 */
+	private function get_exclusions( $options ) {
+		if ( ! $options['combine'] ) {
+			$excluded_styles  = $options['dont_minify']['styles'];
+			$excluded_scripts = $options['dont_minify']['scripts'];
+		} else {
+			$excluded_styles  = array_unique( array_merge( $options['dont_minify']['styles'], $options['dont_combine']['styles'] ) );
+			$excluded_scripts = array_unique( array_merge( $options['dont_minify']['scripts'], $options['dont_combine']['scripts'] ) );
+
+			$excluded_styles  = array_values( $excluded_styles );
+			$excluded_scripts = array_values( $excluded_scripts );
+		}
+
+		return array( (array) $excluded_styles, (array) $excluded_scripts );
+	}
+
+	/**
+	 * Get asset optimization status.
+	 *
+	 * @since 2.7.2
+	 */
+	public function minify_auto_status() {
+		check_ajax_referer( 'wphb-fetch' );
+
+		// Check permission.
+		if ( ! current_user_can( Utils::get_admin_capability() ) ) {
+			die();
+		}
+
+		$options = Utils::get_module( 'minify' )->get_options();
+
+		list( $excluded_styles, $excluded_scripts ) = $this->get_exclusions( $options );
+
+		wp_send_json_success(
+			array(
+				'assets'     => Sources_Collector::get_collection(),
+				'enabled'    => array(
+					'styles'  => isset( $options['do_assets']['styles'] ) ? $options['do_assets']['styles'] : false,
+					'scripts' => isset( $options['do_assets']['scripts'] ) ? $options['do_assets']['scripts'] : false,
+					'fonts'   => isset( $options['do_assets']['fonts'] ) ? $options['do_assets']['fonts'] : false,
+				),
+				'exclusions' => array(
+					'styles'  => $excluded_styles,
+					'scripts' => $excluded_scripts,
+				),
+				'compress'   => $options['compress'],
+				'combine'    => $options['combine'],
+			)
+		);
+	}
+
+	/**
+	 * Fetch/refresh asset optimization status.
+	 *
+	 * @since 2.7.2
+	 */
+	public function minify_clear_cache() {
+		check_ajax_referer( 'wphb-fetch' );
+
+		// Check permission.
+		if ( ! current_user_can( Utils::get_admin_capability() ) ) {
+			die();
+		}
+
+		Utils::get_module( 'minify' )->clear_cache( false );
+		Utils::get_module( 'critical_css' )->regenerate_critical_css();
+
+		wp_send_json_success(
+			array(
+				'isCriticalActive' => Utils::get_module( 'critical_css' )->is_active(),
+			)
+		);
+	}
+
+	/**
+	 * Re-check files.
+	 *
+	 * @since 2.7.2
+	 */
+	public function minify_recheck_files() {
+		check_ajax_referer( 'wphb-fetch' );
+
+		// Check permission.
+		if ( ! current_user_can( Utils::get_admin_capability() ) ) {
+			die();
+		}
+
+		Utils::get_module( 'minify' )->clear_cache( false );
+
+		$collector = Utils::get_module( 'minify' )->sources_collector;
+		$collector::clear_collection();
+
+		// Activate minification if is not.
+		Utils::get_module( 'minify' )->toggle_service( true );
+		Utils::get_module( 'minify' )->scanner->init_scan();
+
+		wp_send_json_success();
+	}
+
+	/**
+	 * Reset asset optimization settings.
+	 *
+	 * @since 2.7.2
+	 */
+	public function minify_reset_settings() {
+		check_ajax_referer( 'wphb-fetch' );
+
+		// Check permission.
+		if ( ! current_user_can( Utils::get_admin_capability() ) ) {
+			die();
+		}
+
+		$options = Utils::get_module( 'minify' )->get_options();
+
+		$defaults = Settings::get_default_settings();
+
+		$options['do_assets']    = $defaults['minify']['do_assets'];
+		$options['dont_minify']  = $defaults['minify']['dont_minify'];
+		$options['dont_combine'] = $defaults['minify']['dont_combine'];
+		$options['fonts']        = $defaults['minify']['fonts'];
+
+		Utils::get_module( 'minify' )->update_options( $options );
+		Utils::get_module( 'minify' )->clear_cache( false );
+
+		wp_send_json_success();
+	}
+
+	/**
+	 * Save asset optimization settings.
+	 *
+	 * @since 2.7.2
+	 */
+	public function minify_auto_save_settings() {
+		check_ajax_referer( 'wphb-fetch' );
+
+		// Check permission.
+		if ( ! current_user_can( Utils::get_admin_capability() ) ) {
+			die();
+		}
+
+		$settings = filter_input( INPUT_POST, 'data', FILTER_DEFAULT, FILTER_UNSAFE_RAW );
+		$settings = json_decode( html_entity_decode( $settings ), true );
+
+		$options = Utils::get_module( 'minify' )->get_options();
+
+		// Update compress and combine settings.
+		$compress_changed = false;
+		$combine_changed  = false;
+
+		if ( isset( $settings['compress'] ) ) {
+			$compress_changed    = $options['compress'] !== $settings['compress'];
+			$options['compress'] = $settings['compress'];
+		}
+
+		if ( isset( $settings['combine'] ) ) {
+			$combine_changed    = $options['combine'] !== $settings['combine'];
+			$options['combine'] = $settings['combine'];
+		}
+
+		// Process font optimization changes.
+		$options['do_assets']['fonts'] = ! ( isset( $settings['fonts'] ) && false === $settings['fonts'] ) && $settings['combine'];
+		if ( false === $options['do_assets']['fonts'] ) {
+			$options['fonts'] = array();
+		}
+
+		$collections = Sources_Collector::get_collection();
+
+		foreach ( array( 'scripts', 'styles' ) as $type ) {
+			$new_value = ! ( isset( $settings[ $type ] ) && false === $settings[ $type ] );
+
+			$remove_exclusions = true === $new_value && false === $options['do_assets'][ $type ];
+
+			// Save the type selection.
+			$options['do_assets'][ $type ] = $new_value;
+
+			// By default, we minify and combine everything.
+			$options['dont_minify'][ $type ] = array();
+			if ( $settings['combine'] ) {
+				$options['dont_combine'][ $type ] = array();
+			} else {
+				$options['dont_combine'][ $type ] = array_keys( $collections[ $type ] );
+			}
+
+			// At this point we have no setting field? Weird, let's skip further processing.
+			if ( ! isset( $settings[ $type ] ) ) {
+				continue;
+			}
+
+			$handles = array();
+			if ( false === $options['do_assets'][ $type ] ) {
+				// If an option (CSS/JS) is disabled, put all handles in the "don't do" list.
+				$handles = array_keys( $collections[ $type ] );
+			} elseif ( ! $remove_exclusions && count( $settings['exclusions'][ $type ] ) !== count( $collections[ $type ] ) ) {
+				// If the exclusion does not have all the assets, exclude the selected ones.
+				$handles = $settings['exclusions'][ $type ];
+			}
+
+			$options['dont_minify'][ $type ] = $handles;
+			// We've already excluded all the handles for compress-only mode above.
+			if ( $settings['combine'] ) {
+				$options['dont_combine'][ $type ] = $handles;
+			}
+		}
+
+		Utils::get_module( 'minify' )->update_options( $options );
+
+		// After we've updated the options - process fonts.
+		if ( true === $options['do_assets']['fonts'] ) {
+			do_action( 'wphb_process_fonts' );
+		}
+
+		Utils::get_module( 'minify' )->clear_cache( false );
+
+		$settings_changed_message = false;
+		if ( $compress_changed || $combine_changed ) {
+			if ( $settings['combine'] ) {
+				$optimization_mode = __( 'Combine and Compress optimizations are', 'wphb' );
+			} elseif ( $settings['compress'] ) {
+				$optimization_mode = __( 'Compress optimization is', 'wphb' );
+			} else {
+				$optimization_mode = __( 'None optimization is', 'wphb' );
+			}
+
+			$settings_changed_message = sprintf( /* translators: %1$s - optimization mode, %2$s - opening <a> tag, %3$s - closing </a> tag */
+				esc_html__( '%1$s active. Plugins and theme files are now being queued for processing and will gradually be optimized as they are requested by your visitors. For more information on how automatic optimization works, you can check %2$sHow Does It Work%3$s section.', 'wphb' ),
+				$optimization_mode,
+				sprintf(
+					"<a href='%s' target='_blank' >",
+					esc_url( Utils::get_documentation_url( 'wphb-minification' ) )
+				),
+				'</a>'
+			);
+		}
+
+		list( $excluded_styles, $excluded_scripts ) = $this->get_exclusions( $options );
+
+		wp_send_json_success(
+			array(
+				'assets'     => $collections,
+				'mode'       => Utils::get_minification_mode(),
+				'enabled'    => array(
+					'styles'  => $options['do_assets']['styles'],
+					'scripts' => $options['do_assets']['scripts'],
+					'fonts'   => $options['do_assets']['fonts'],
+				),
+				'exclusions' => array(
+					'styles'  => $excluded_styles,
+					'scripts' => $excluded_scripts,
+				),
+				'compress'   => $options['compress'],
+				'combine'    => $options['combine'],
+				'notice'     => ( $settings['compress'] || $settings['combine'] ) && $settings_changed_message ? $settings_changed_message : false,
+			)
+		);
+	}
+
+	/**
+	 * Save asset optimization settings (manual mode).
+	 *
+	 * @since 3.4.0
+	 *
+	 * @return void
+	 */
+	public function minify_manual_save_settings() {
+		check_ajax_referer( 'wphb-fetch' );
+
+		$settings = filter_input( INPUT_POST, 'data', FILTER_DEFAULT, FILTER_UNSAFE_RAW );
+		$settings = json_decode( html_entity_decode( $settings ), true );
+
+		$minify = Utils::get_module( 'minify' );
+		$this->save_manual_settings( $settings, array( $minify, 'update_options' ) );
+
+		$this->minify_manual_status();
+	}
+
+	private function save_manual_settings( $settings, $save_method ) {
+		$minify  = Utils::get_module( 'minify' );
+		$options = $minify->get_options();
+
+		foreach ( $settings as $action => $assets ) {
+			if ( ! isset( $options[ $action ] ) || ! is_array( $options[ $action ] ) ) {
+				continue;
+			}
+
+			if ( 'fonts' !== $action ) {
+				// Prevent fatal error.
+				$assets_scripts = ( empty( $assets['scripts'] ) || ! is_array( $assets['scripts'] ) ) ? array() : $assets['scripts'];
+				$diff_scripts   = array_diff( $assets_scripts, $this->hb_is_array( $options[ $action ], 'scripts' ) );
+				$this->clear_out_group( $diff_scripts, 'scripts' );
+
+				// Prevent fatal error.
+				$assets_styles = ( empty( $assets['styles'] ) || ! is_array( $assets['styles'] ) ) ? array() : $assets['styles'];
+				$diff_styles   = array_diff( $assets_styles, $this->hb_is_array( $options[ $action ], 'styles' ) );
+				$this->clear_out_group( $diff_styles, 'styles' );
+			}
+
+			$options[ $action ] = $assets;
+		}
+
+		call_user_func( $save_method, $options );
+
+		// Remove notice.
+		delete_site_option( 'wphb-notice-minification-optimized-show' );
+
+		// Reset Complete time.
+		$minify::update_ao_completion_time( true );
+
+		// Clear all the page cache.
+		do_action( 'wphb_clear_page_cache' );
+	}
+
+	/**
+	 * Helper function to check if the key exists and is an array.
+	 *
+	 * @param array  $data Data array.
+	 * @param string $key  Key to check.
+	 *
+	 * @return array
+	 */
+	public function hb_is_array( $data, $key ) {
+		return isset( $data[ $key ] ) && is_array( $data[ $key ] ) ? $data[ $key ] : array();
+	}
+
+	public function minify_save_safe_mode_settings() {
+		check_ajax_referer( 'wphb-fetch' );
+
+		$settings = filter_input( INPUT_POST, 'data', FILTER_DEFAULT, FILTER_UNSAFE_RAW );
+		$settings = json_decode( html_entity_decode( $settings ), true );
+
+		$this->save_manual_settings(
+			SafeMode::filter_options( $settings, 'minify' ),
+			array( $this, 'save_safe_mode_settings' )
+		);
+
+		$this->minify_manual_status();
+	}
+
+	public function minify_save_and_publish_safe_mode() {
+		check_ajax_referer( 'wphb-fetch' );
+
+		$settings = filter_input( INPUT_POST, 'data', FILTER_DEFAULT, FILTER_UNSAFE_RAW );
+		$settings = json_decode( html_entity_decode( $settings ), true );
+
+		$minify = Utils::get_module( 'minify' );
+		$this->save_manual_settings( $settings, array( $minify, 'update_options' ) );
+		$minify->reset_safe_mode();
+
+		$this->minify_manual_status();
+	}
+
+	public function minify_publish_safe_mode() {
+		check_ajax_referer( 'wphb-fetch' );
+		$minify   = Utils::get_module( 'minify' );
+		$settings = array_merge( $minify->get_options(), $minify->get_safe_mode_settings() );
+		$settings = SafeMode::filter_options( $settings, 'minify' );
+
+		$this->save_manual_settings( $settings, array( $minify, 'update_options' ) );
+		$minify->reset_safe_mode();
+
+		$this->minify_manual_status();
+	}
+
+	public function minify_discard_safe_mode() {
+		check_ajax_referer( 'wphb-fetch' );
+
+		Utils::get_module( 'minify' )->reset_safe_mode();
+		$this->minify_manual_status();
+	}
+
+	private function save_safe_mode_settings( $settings ) {
+		$minify = Utils::get_module( 'minify' );
+		$minify->set_safe_mode_settings( SafeMode::filter_options( $settings, 'minify' ) );
+	}
+
+	/**
+	 * Clear out groups for assets, where settings have changed.
+	 *
+	 * @since 3.4.0
+	 *
+	 * @param array  $assets Changed asset handles.
+	 * @param string $type   Asset type (scripts or styles).
+	 *
+	 * @return void
+	 */
+	private function clear_out_group( $assets, $type ) {
+		if ( empty( $assets ) ) {
+			return;
+		}
+
+		foreach ( $assets as $asset ) {
+			$changed_groups = Minify_Group::get_groups_from_handle( $asset, $type );
+			foreach ( $changed_groups as $group ) {
+				/**
+				 * Delete those groups.
+				 *
+				 * @var Minify_Group $group
+				 */
+				$group->delete_file();
+			}
+		}
+	}
+
+	/**
+	 * Status for asset optimization manual mode.
+	 *
+	 * @since 3.4.0
+	 */
+	public function minify_manual_status() {
+		check_ajax_referer( 'wphb-fetch' );
+
+		$minify            = Utils::get_module( 'minify' );
+		$options           = SafeMode::filter_options( $minify->get_options(), 'minify' );
+		$safe_mode_options = array_merge( $options, $minify->get_safe_mode_settings() );
+
+		wp_send_json_success(
+			array(
+				'options'           => array_map( array( $this, 'flatten_array' ), $options ),
+				'safe_mode_options' => $safe_mode_options,
+			)
+		);
+	}
+
+	/**
+	 * Flatten the input array.
+	 *
+	 * We do this, because when we send an array with non-consecutive indexes, for example:
+	 *   Array (
+	 *     [0] => astra-google-fonts
+	 *     [17] => global-styles
+	 *     [18] => woocommerce-inline
+	 *   )
+	 * it is converted to an Object in JavaScript. So we need to reset the indexes.
+	 *
+	 * @param array $arr  Input array.
+	 *
+	 * @return mixed
+	 */
+	public function flatten_array( $arr ) {
+		if ( ! is_array( $arr ) ) {
+			return $arr;
+		}
+
+		// Recurse into children first.
+		foreach ( $arr as $key => $value ) {
+			$arr[ $key ] = $this->flatten_array( $value );
+		}
+
+		// If all keys are integers, reindex them.
+		if ( $this->has_all_integer_keys( $arr ) ) {
+			$arr = array_values( $arr );
+		}
+
+		return $arr;
+	}
+
+	/**
+	 * Check if all keys in an array are integers.
+	 *
+	 * @param array $arr Input array.
+	 * @return bool
+	 */
+	private function has_all_integer_keys( array $arr ): bool {
+		foreach ( array_keys( $arr ) as $key ) {
+			if ( ! is_int( $key ) ) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+
+	/**
+	 * Reset individual file.
+	 *
+	 * @since 1.9.2
+	 * @since 3.4.0 Moved out from Ajax class.
+	 */
+	public function minify_regenerate_asset() {
+		check_ajax_referer( 'wphb-fetch' );
+
+		if ( ! current_user_can( Utils::get_admin_capability() ) ) {
+			die();
+		}
+
+		$data = filter_input( INPUT_POST, 'data', FILTER_DEFAULT, FILTER_UNSAFE_RAW );
+		$data = json_decode( html_entity_decode( $data ), true );
+
+		if ( ! isset( $data['handle'] ) || ! isset( $data['type'] ) ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'Error removing asset file.', 'wphb' ),
+				)
+			);
+		}
+
+		Utils::get_module( 'minify' )->clear_file( $data['handle'], $data['type'] );
+
+		wp_send_json_success();
+	}
+
+	/**
+	 * Toggle CDN.
+	 *
+	 * @since 3.4.0
+	 *
+	 * @return void
+	 */
+	public function minify_toggle_cdn() {
+		check_ajax_referer( 'wphb-fetch' );
+
+		$value = filter_input( INPUT_POST, 'data', FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE );
+
+		Utils::get_module( 'minify' )->toggle_cdn( $value );
+		Utils::get_module( 'minify' )->clear_files();
+		$notice = esc_html__( 'Settings updated', 'wphb' );
+
+		wp_send_json_success(
+			array(
+				'cdn'    => $value,
+				'notice' => $notice,
+			)
+		);
+	}
+
+	/**
+	 * Start asset optimization scan.
+	 *
+	 * @since 3.16.0
+	 *
+	 * @return void
+	 */
+	public function minify_start_ao_scan() {
+		check_ajax_referer( 'wphb-fetch' );
+
+		if ( ! current_user_can( Utils::get_admin_capability() ) ) {
+			die();
+		}
+
+		$minify = Utils::get_module( 'minify' );
+		$minify->clear_cache( false );
+
+		$collector = $minify->sources_collector;
+		$collector::clear_collection();
+
+		$minify->start_process();
+
+		wp_send_json_success(
+			array(
+				'notice' => __( 'Hummingbird is running a file check to see what files can be optimized. Feel free to close this page while Hummingbird works its magic in the background.', 'wphb' ),
+			)
+		);
+	}
+
+	/**
+	 * Get background processing status.
+	 *
+	 * @since 3.16.0
+	 *
+	 * @return void
+	 */
+	public function minify_background_processing_status() {
+		check_ajax_referer( 'wphb-fetch' );
+
+		if ( ! current_user_can( Utils::get_admin_capability() ) ) {
+			die();
+		}
+
+		$background_process = Utils::get_module( 'background_processing' )->get_processor( 'ao_scan' );
+		$status             = $background_process->get_status();
+		$notice             = '';
+		if ( ! $status->is_running() ) {
+			$notice = Utils::get_ao_background_processing_completion_message();
+		}
+
+		wp_send_json_success(
+			array(
+				'isAoScanProcessing' => $status->is_running(),
+				'notice'             => $notice,
+			)
+		);
+	}
+}

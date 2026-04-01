@@ -1,0 +1,94 @@
+@import '~lazyframe/src/scss/base';
+@import '~lazyframe/src/scss/themes/youtube';
+@import '~lazyframe/src/scss/themes/vimeo';
+
+// Custom players.
+@import 'players/vimeo';
+@import 'players/wistia';
+@import 'players/wpmudev';
+
+#tab-panel-wpmudev_vids {
+
+	.postbox {
+		display: flex;
+		flex-direction: column-reverse;
+		padding: 0;
+		border: 0;
+		background-color: #FFFFFF;
+		box-shadow: 0 2px 7px 0 rgba(0,0,0,0.05);
+
+		.hndle {
+			margin: 0;
+			padding: 15px 20px;
+			border: 0;
+			color: #333;
+			font-size: 13px;
+			line-height: 22px;
+			font-weight: 500;
+			letter-spacing: -0.25px;
+
+			span {
+				display: block;
+			}
+		}
+
+		.inside {
+			margin: 0;
+			padding: 0;
+			border: 0;
+
+			iframe {
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+}
+
+#wpmudev_vids_gutenberg_metabox,
+.wpmudev-videos-tutorials {
+
+	.inside,
+	.wpmudev-videos-tutorials-content {
+		display: flex;
+		flex-direction: column-reverse;
+
+		h4 {
+			margin: 0;
+			border: 0;
+			padding: 15px;
+			color: #333;
+			font-size: 13px;
+			line-height: 22px;
+			letter-spacing: -0.25px;
+			background-color: #FFF;
+			box-shadow: 0 2px 7px 0 rgba(0,0,0,0.05);
+
+			+ iframe {
+				margin-top: 30px;
+
+				&:last-child,
+				&:last-of-type {
+					margin-top: 0;
+				}
+			}
+		}
+
+		iframe {
+			display: block;
+		}
+	}
+}
+
+.lazyframe {
+
+	&[data-thumbnail] {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	iframe {
+		background-color: palette(silver, light);
+	}
+}

@@ -1,0 +1,2183 @@
+# Copyright (C) 2024 WPMU DEV
+# This file is distributed under the same license as the WPMU DEV Videos plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPMU DEV Videos 1.8.15\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-07-22T16:03:24+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+
+#. Plugin Name of the plugin
+#: wpmudev-videos.php
+msgid "WPMU DEV Videos"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: wpmudev-videos.php
+msgid "https://wpmudev.com/project/unbranded-video-tutorials/"
+msgstr ""
+
+#. Description of the plugin
+#: wpmudev-videos.php
+msgid "A simple way to integrate WPMU DEV's over 40 unbranded support videos into your websites."
+msgstr ""
+
+#. Author of the plugin
+#: wpmudev-videos.php
+msgid "WPMU DEV"
+msgstr ""
+
+#. Author URI of the plugin
+#: wpmudev-videos.php
+msgid "https://wpmudev.com/"
+msgstr ""
+
+#: core/controllers/class-compatibility.php:54
+msgid "Access Settings"
+msgstr ""
+
+#: core/controllers/class-compatibility.php:73
+#: core/controllers/class-compatibility.php:109
+#: core/modules/videos/class-controller.php:65
+msgid "WPMUDEV Videos"
+msgstr ""
+
+#: core/controllers/class-contextual.php:142
+#: core/controllers/class-installer.php:148
+#: core/controllers/class-menu.php:240
+#: core/controllers/class-menu.php:245
+#: core/helpers/class-settings.php:209
+#: app/src/pages/settings/tabs/DisplaySettings/Partials/SubMenu.js:27
+#: app/src/pages/settings/tabs/DisplaySettings/Partials/SubMenu.js:73
+#: app/src/pages/tutorials/partials/Header/Header.js:15
+msgid "Video Tutorials"
+msgstr ""
+
+#: core/controllers/class-installer.php:356
+#: core/modules/class-content.php:246
+msgid "Import and Export"
+msgstr ""
+
+#: core/controllers/class-installer.php:362
+#: core/modules/class-content.php:247
+msgid "Site Health"
+msgstr ""
+
+#: core/controllers/class-installer.php:368
+#: core/modules/class-content.php:248
+msgid "Export and Erase Personal Data"
+msgstr ""
+
+#: core/controllers/class-installer.php:374
+#: core/modules/class-content.php:249
+msgid "Paragraphs"
+msgstr ""
+
+#: core/controllers/class-installer.php:380
+#: core/modules/class-content.php:250
+msgid "WordPress File Block"
+msgstr ""
+
+#: core/controllers/class-installer.php:386
+#: core/modules/class-content.php:251
+msgid "Embedding a Google Calendar"
+msgstr ""
+
+#: core/controllers/class-menu.php:81
+#: core/controllers/class-menu.php:82
+#: core/helpers/class-data.php:115
+#: core/views/class-admin.php:264
+#: core/views/class-admin.php:343
+#: app/src/pages/dashboard/App.js:182
+msgid "Dashboard"
+msgstr ""
+
+#: core/controllers/class-menu.php:100
+#: core/controllers/class-menu.php:101
+#: app/src/pages/dashboard/partials/Videos/Videos.js:99
+#: app/src/pages/playlists/components/VideosList/VideosList.js:111
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportConfirmation.js:31
+#: app/src/pages/settings/tabs/ImportExport/Partials/Configs.js:17
+#: app/src/pages/videos/App.js:87
+#: app/src/pages/videos/partials/SummaryBox/SummaryBox.js:118
+msgid "Videos"
+msgstr ""
+
+#: core/controllers/class-menu.php:116
+#: core/controllers/class-menu.php:117
+#: app/src/pages/dashboard/partials/Playlists/Playlists.js:78
+#: app/src/pages/playlists/App.js:94
+#: app/src/pages/playlists/partials/SummaryBox/SummaryBox.js:88
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportConfirmation.js:32
+#: app/src/pages/settings/tabs/ImportExport/Partials/Configs.js:18
+msgid "Playlists"
+msgstr ""
+
+#: core/controllers/class-menu.php:134
+#: core/controllers/class-menu.php:135
+#: core/modules/class-content.php:237
+#: app/src/pages/settings/App.js:44
+#: app/src/pages/settings/tabs/Data/Partials/DataPreserve.js:79
+#: app/src/pages/videos/components/VideoSettings/VideoSettings.js:30
+msgid "Settings"
+msgstr ""
+
+#: core/controllers/class-menu.php:157
+msgid "Video Settings"
+msgstr ""
+
+#: core/endpoints/class-actions.php:65
+msgid "Action name to execute."
+msgstr ""
+
+#: core/endpoints/class-actions.php:108
+msgid "Invalid action. Please try again with a valid action name."
+msgstr ""
+
+#: core/endpoints/class-actions.php:158
+msgid "Membership has been successfully refreshed."
+msgstr ""
+
+#: core/endpoints/class-actions.php:165
+msgid "WPMUDEV Dashboard is not active."
+msgstr ""
+
+#: core/endpoints/class-actions.php:190
+msgid "Plugin settings reset succesfully."
+msgstr ""
+
+#: core/endpoints/class-actions.php:223
+msgid "Plugin data reset succesfully."
+msgstr ""
+
+#: core/endpoints/class-data.php:71
+msgid "Items to import."
+msgstr ""
+
+#: core/endpoints/class-data.php:77
+msgid "Should import thumbnails."
+msgstr ""
+
+#: core/endpoints/class-data.php:116
+msgid "Nothing to import. Please select something."
+msgstr ""
+
+#: core/endpoints/class-data.php:126
+msgid "Invalid file. Please try again with a valid export file."
+msgstr ""
+
+#: core/endpoints/class-data.php:137
+msgid "Invalid file format. Please try again with a valid export file."
+msgstr ""
+
+#: core/endpoints/class-settings.php:64
+msgid "Setting key to get data. If empty, the whole settings will be returned."
+msgstr ""
+
+#: core/endpoints/class-settings.php:75
+msgid "Value(s) to update."
+msgstr ""
+
+#: core/endpoints/class-settings.php:90
+msgid "Setting key to update. If empty, the whole settings will be updated."
+msgstr ""
+
+#: core/external/autoloader.php:78
+msgid "The file attempting to be loaded at %s does not exist."
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:246
+msgid "install"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:252
+msgid "Important updates are available for <strong>%s</strong>. Install the free WPMU DEV Dashboard plugin now for updates and support!"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:254
+msgid "<strong>%s</strong> is almost ready - install the free WPMU DEV Dashboard plugin for updates and support!"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:257
+msgid "Important updates are available for your WPMU DEV plugins/themes. Install the free WPMU DEV Dashboard plugin now for updates and support!"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:259
+msgid "Almost ready - install the free WPMU DEV Dashboard plugin for updates and support!"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:265
+#: app/src/components/DashNotice/DashNotice.js:37
+#: app/src/pages/dashboard/banners/DashBanner.js:52
+#: app/src/pages/dashboard/modals/DashModal.js:73
+#: app/src/pages/playlists/components/DashNotice/DashNotice.js:37
+msgid "Install Plugin"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:267
+#: core/external/dash-notice/wpmudev-dash-notification.php:308
+msgid "Saving..."
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:268
+#: core/external/dash-notice/wpmudev-dash-notification.php:309
+msgid "Dismiss"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:287
+msgid "activate"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:293
+msgid "Important updates are available for <strong>%s</strong>. Activate the WPMU DEV Dashboard to update now!"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:295
+msgid "Just one more step to enable updates and support for <strong>%s</strong>!"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:298
+msgid "Important updates are available for your WPMU DEV plugins/themes. Activate the WPMU DEV Dashboard to update now!"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:300
+msgid "Just one more step - activate the WPMU DEV Dashboard plugin and you're all done!"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:306
+#: app/src/pages/dashboard/banners/DashBanner.js:34
+#: app/src/pages/dashboard/modals/DashModal.js:79
+msgid "Activate WPMU DEV Dashboard"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:1045
+msgid "We did not find any data for this plugin or theme..."
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:1220
+msgid "%s changelog"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:1250
+msgid "Current"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:1256
+msgid "New"
+msgstr ""
+
+#. translators: %s - version
+#: core/external/dash-notice/wpmudev-dash-notification.php:1273
+msgid "Version %s"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:1292
+msgid "Show all changes"
+msgstr ""
+
+#: core/external/dash-notice/wpmudev-dash-notification.php:1293
+msgid "Hide details"
+msgstr ""
+
+#: core/external/queue/class-background-process.php:427
+msgid "Every %d Minutes"
+msgstr ""
+
+#: core/helpers/class-data.php:69
+msgid "YouTube"
+msgstr ""
+
+#: core/helpers/class-data.php:75
+msgid "Vimeo"
+msgstr ""
+
+#: core/helpers/class-data.php:81
+msgid "Wistia"
+msgstr ""
+
+#: core/helpers/class-data.php:116
+msgid "Add Post"
+msgstr ""
+
+#: core/helpers/class-data.php:117
+msgid "Edit Post"
+msgstr ""
+
+#: core/helpers/class-data.php:118
+msgid "Add Page"
+msgstr ""
+
+#: core/helpers/class-data.php:119
+msgid "Edit Page"
+msgstr ""
+
+#: core/helpers/class-data.php:120
+msgid "Gutenberg Editor"
+msgstr ""
+
+#: core/helpers/class-data.php:121
+msgid "Widgets"
+msgstr ""
+
+#: core/helpers/class-data.php:122
+msgid "Menus"
+msgstr ""
+
+#: core/helpers/class-data.php:123
+msgid "Themes"
+msgstr ""
+
+#: core/helpers/class-data.php:124
+msgid "Tags"
+msgstr ""
+
+#: core/helpers/class-data.php:125
+#: core/modules/class-content.php:208
+msgid "Categories"
+msgstr ""
+
+#: core/helpers/class-data.php:126
+#: core/modules/class-content.php:139
+msgid "Media Library"
+msgstr ""
+
+#: core/helpers/class-data.php:127
+msgid "Upload Media"
+msgstr ""
+
+#: core/helpers/class-data.php:128
+msgid "Comments"
+msgstr ""
+
+#: core/helpers/class-data.php:129
+msgid "Users"
+msgstr ""
+
+#: core/helpers/class-data.php:130
+msgid "Add User"
+msgstr ""
+
+#: core/helpers/class-data.php:131
+msgid "Profile"
+msgstr ""
+
+#: core/helpers/class-data.php:132
+msgid "Edit User"
+msgstr ""
+
+#: core/helpers/class-data.php:133
+#: core/modules/class-content.php:236
+msgid "Tools"
+msgstr ""
+
+#: core/helpers/class-data.php:134
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportConfirmation.js:184
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportConfirmation.js:239
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportProgress.js:131
+#: app/src/pages/settings/tabs/ImportExport/Partials/ImportSection.js:159
+#: app/src/pages/settings/tabs/ImportExport/Partials/ImportSection.js:192
+msgid "Import"
+msgstr ""
+
+#: core/helpers/class-data.php:135
+#: app/src/pages/settings/tabs/ImportExport/Partials/ExportSection.js:56
+#: app/src/pages/settings/tabs/ImportExport/Partials/ExportSection.js:125
+msgid "Export"
+msgstr ""
+
+#: core/helpers/class-data.php:136
+msgid "General Settings"
+msgstr ""
+
+#: core/helpers/class-data.php:137
+msgid "Writing Settings"
+msgstr ""
+
+#: core/helpers/class-data.php:138
+msgid "Reading Settings"
+msgstr ""
+
+#: core/helpers/class-data.php:139
+msgid "Discussion Settings"
+msgstr ""
+
+#: core/helpers/class-data.php:140
+msgid "Media Settings"
+msgstr ""
+
+#: core/helpers/class-data.php:141
+msgid "Permalink Settings"
+msgstr ""
+
+#: core/helpers/class-data.php:142
+msgid "WordPress Updates"
+msgstr ""
+
+#: core/helpers/class-data.php:143
+msgid "Add Plugins"
+msgstr ""
+
+#: core/helpers/class-data.php:144
+msgid "Add Themes"
+msgstr ""
+
+#: core/helpers/class-general.php:317
+msgid "User"
+msgstr ""
+
+#: core/modules/class-content.php:109
+#: core/modules/class-content.php:211
+msgid "The Dashboard"
+msgstr ""
+
+#: core/modules/class-content.php:111
+msgid "Learn how to navigate, configure and customize the WordPress dashboard."
+msgstr ""
+
+#: core/modules/class-content.php:114
+msgid "Posts"
+msgstr ""
+
+#: core/modules/class-content.php:116
+msgid "Learn how to create and manage posts, from Add New to archives and everything in between."
+msgstr ""
+
+#: core/modules/class-content.php:119
+msgid "Pages"
+msgstr ""
+
+#: core/modules/class-content.php:121
+msgid "Learn how to create and manage pages, from Add New to archives and everything in between."
+msgstr ""
+
+#: core/modules/class-content.php:124
+msgid "The Gutenberg Editor"
+msgstr ""
+
+#: core/modules/class-content.php:126
+msgid "Learn how to use the WordPress Gutenberg editor to design high-quality pages and posts."
+msgstr ""
+
+#: core/modules/class-content.php:129
+msgid "The Classic Editor"
+msgstr ""
+
+#: core/modules/class-content.php:131
+msgid "Learn how to use the classic editor to design high-quality pages and posts."
+msgstr ""
+
+#: core/modules/class-content.php:134
+msgid "Working With Images"
+msgstr ""
+
+#: core/modules/class-content.php:136
+msgid "Learn how to work with images in WordPress, including multiple ways to upload and add images to pages or posts, creating image galleries and addressing common image-related issues."
+msgstr ""
+
+#: core/modules/class-content.php:141
+msgid "Learn how to add, remove, configure, customize, secure and manage all the media uploaded to your site or network of sites."
+msgstr ""
+
+#: core/modules/class-content.php:144
+msgid "Appearance"
+msgstr ""
+
+#: core/modules/class-content.php:146
+msgid "Learn how to configure and customize a site's design, including working with themes, widgets and menus."
+msgstr ""
+
+#: core/modules/class-content.php:149
+msgid "Organizing Content"
+msgstr ""
+
+#: core/modules/class-content.php:151
+msgid "Learn how to use tags and categories to organize site content."
+msgstr ""
+
+#: core/modules/class-content.php:154
+#: core/modules/class-content.php:210
+msgid "Managing Comments"
+msgstr ""
+
+#: core/modules/class-content.php:156
+msgid "Learn how to organize user comments, including creating and moderating comments, addressing spam and archiving old comments."
+msgstr ""
+
+#: core/modules/class-content.php:159
+msgid "Users, Tools, and Settings"
+msgstr ""
+
+#: core/modules/class-content.php:178
+msgid "Learn how to, among other things, manage users, configure admin settings, back up a site or restore a site from backup."
+msgstr ""
+
+#: core/modules/class-content.php:198
+msgid "Heading Styles"
+msgstr ""
+
+#: core/modules/class-content.php:199
+msgid "Adding Images From Media Library"
+msgstr ""
+
+#: core/modules/class-content.php:200
+msgid "Uploading Images"
+msgstr ""
+
+#: core/modules/class-content.php:201
+msgid "Add Image From URL"
+msgstr ""
+
+#: core/modules/class-content.php:202
+msgid "Image Galleries"
+msgstr ""
+
+#: core/modules/class-content.php:203
+msgid "Adding Media"
+msgstr ""
+
+#: core/modules/class-content.php:204
+msgid "Adding New Pages"
+msgstr ""
+
+#: core/modules/class-content.php:205
+msgid "Adding New Posts"
+msgstr ""
+
+#: core/modules/class-content.php:206
+msgid "Using Paragraphs"
+msgstr ""
+
+#: core/modules/class-content.php:207
+msgid "The Admin Bar"
+msgstr ""
+
+#: core/modules/class-content.php:209
+msgid "Changing Your Password"
+msgstr ""
+
+#: core/modules/class-content.php:212
+msgid "Deleting Images"
+msgstr ""
+
+#: core/modules/class-content.php:213
+msgid "Editing Images"
+msgstr ""
+
+#: core/modules/class-content.php:214
+msgid "Editing Text"
+msgstr ""
+
+#: core/modules/class-content.php:215
+msgid "Post Excerpts"
+msgstr ""
+
+#: core/modules/class-content.php:216
+msgid "Set Featured Image"
+msgstr ""
+
+#: core/modules/class-content.php:217
+msgid "Hyperlinks"
+msgstr ""
+
+#: core/modules/class-content.php:218
+msgid "The Image Editor"
+msgstr ""
+
+#: core/modules/class-content.php:219
+msgid "Lists"
+msgstr ""
+
+#: core/modules/class-content.php:220
+msgid "The Media Library"
+msgstr ""
+
+#: core/modules/class-content.php:221
+msgid "Embed Videos"
+msgstr ""
+
+#: core/modules/class-content.php:222
+msgid "Quick Draft"
+msgstr ""
+
+#: core/modules/class-content.php:223
+msgid "Replace an Image"
+msgstr ""
+
+#: core/modules/class-content.php:224
+msgid "Restoring Pages"
+msgstr ""
+
+#: core/modules/class-content.php:225
+msgid "Restoring Posts"
+msgstr ""
+
+#: core/modules/class-content.php:226
+msgid "Revisions"
+msgstr ""
+
+#: core/modules/class-content.php:227
+msgid "Pages vs. Posts"
+msgstr ""
+
+#: core/modules/class-content.php:228
+msgid "Using Tags"
+msgstr ""
+
+#: core/modules/class-content.php:229
+msgid "The Toolbar"
+msgstr ""
+
+#: core/modules/class-content.php:230
+msgid "Using Trash"
+msgstr ""
+
+#: core/modules/class-content.php:231
+msgid "Managing Widgets"
+msgstr ""
+
+#: core/modules/class-content.php:232
+msgid "Navigation Menus"
+msgstr ""
+
+#: core/modules/class-content.php:233
+msgid "Change Theme"
+msgstr ""
+
+#: core/modules/class-content.php:234
+msgid "The Customizer"
+msgstr ""
+
+#: core/modules/class-content.php:235
+msgid "Create and Edit Users"
+msgstr ""
+
+#: core/modules/class-content.php:238
+msgid "Creating Playlists"
+msgstr ""
+
+#: core/modules/class-content.php:239
+msgid "Editor Overview"
+msgstr ""
+
+#: core/modules/class-content.php:240
+msgid "Reusable Blocks"
+msgstr ""
+
+#: core/modules/class-content.php:241
+msgid "Adding New Pages (Gutenberg)"
+msgstr ""
+
+#: core/modules/class-content.php:242
+msgid "Adding New Posts (Gutenberg)"
+msgstr ""
+
+#: core/modules/class-content.php:243
+msgid "Running Updates"
+msgstr ""
+
+#: core/modules/class-content.php:244
+msgid "Install a Theme"
+msgstr ""
+
+#: core/modules/class-content.php:245
+msgid "Install and Configure a Plugin"
+msgstr ""
+
+#: core/modules/playlists/class-controller.php:70
+#: core/modules/playlists/class-controller.php:71
+#: core/modules/playlists/class-controller.php:78
+msgid "Playlist"
+msgstr ""
+
+#: core/modules/playlists/class-controller.php:72
+msgid "Search Playlist"
+msgstr ""
+
+#: core/modules/playlists/class-controller.php:73
+msgid "All Playlist"
+msgstr ""
+
+#: core/modules/playlists/class-controller.php:74
+#: app/src/pages/playlists/modals/EditPlaylist.js:121
+msgid "Edit Playlist"
+msgstr ""
+
+#: core/modules/playlists/class-controller.php:75
+msgid "Update Playlist"
+msgstr ""
+
+#: core/modules/playlists/class-controller.php:76
+msgid "Add New Playlist"
+msgstr ""
+
+#: core/modules/playlists/class-controller.php:77
+msgid "New Playlist Name"
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:70
+msgid "Text to search playlist. Only titles will be searched."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:75
+msgid "No. of playlists required."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:80
+#: core/modules/videos/class-endpoints.php:81
+msgid "Current page number (required only if count is set)."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:85
+msgid "Should skip permission check and get all playlists."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:97
+#: core/modules/playlists/class-endpoints.php:175
+msgid "Playlist title."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:103
+#: core/modules/playlists/class-endpoints.php:249
+msgid "Video IDs to add to the playlist."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:112
+#: core/modules/playlists/class-endpoints.php:192
+msgid "Locations where these playlist videos are available in contextual help."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:121
+#: core/modules/playlists/class-endpoints.php:200
+msgid "User roles who can access this playlist and it's videos"
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:129
+#: core/modules/playlists/class-endpoints.php:180
+msgid "Playlist description."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:134
+#: core/modules/playlists/class-endpoints.php:208
+msgid "Playlist thumbnail ID."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:158
+msgid "Playlist ID to get details."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:170
+msgid "Playlist ID to update."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:184
+msgid "Video IDs of the playlist (Be careful, you need to provide all playlists here. Otherwise existing videos will be removed)."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:224
+msgid "Playlist ID to delete."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:244
+#: core/modules/playlists/class-endpoints.php:264
+msgid "Playlist ID."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:269
+msgid "Video IDs to remove from the playlist."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:306
+msgid "Bulk action to perform with playlist."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:311
+msgid "Video IDs to bulk process."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:319
+msgid "Playlist IDs to bulk process."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:342
+msgid "Playlist ID to reorder."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:347
+msgid "Previous order of the playlist."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:352
+msgid "New order of the playlist."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:470
+#: app/src/pages/playlists/modals/slides/PlaylistVideos.js:86
+msgid "Could not create the playlist. Please try again."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:565
+msgid "Could not update the playlist. Please try again."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:607
+msgid "Playlist has been deleted."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:612
+msgid "Could not delete the playlist. Please try again."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:642
+msgid "Could not process the bulk action. Please try again."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:719
+msgid "Videos has been linked to the playlist."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:726
+msgid "Could not link the videos to playlist. Please try again."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:765
+msgid "Videos has been unlinked from the playlist."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:772
+msgid "Could not unlink the videos from playlist. Please try again."
+msgstr ""
+
+#. translators: %d: Invalid video ID.
+#: core/modules/playlists/class-endpoints.php:820
+msgid "Invalid video ID: %d"
+msgstr ""
+
+#. translators: %d: Invalid locations.
+#: core/modules/playlists/class-endpoints.php:854
+msgid "Invalid locations: %s"
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:882
+msgid "Playlist name already in use. Please try another name."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:963
+msgid "Playlist and videos has been deleted."
+msgstr ""
+
+#: core/modules/playlists/class-endpoints.php:972
+msgid "Could not delete the playlists and videos. Please try again."
+msgstr ""
+
+#: core/modules/playlists/models/class-playlist.php:157
+msgid "Playlist ID is invalid. Please try again with a valid ID."
+msgstr ""
+
+#: core/modules/videos/class-controller.php:66
+msgid "WPMUDEV Video"
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:66
+msgid "Text to search videos. Only titles will be searched."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:71
+msgid "Video type to get. By default all types will be included."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:76
+msgid "No. of videos required."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:86
+msgid "Fields to return (ids or object)."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:102
+#: core/modules/videos/class-endpoints.php:195
+msgid "Video title."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:110
+#: core/modules/videos/class-endpoints.php:203
+#: core/modules/videos/class-endpoints.php:356
+msgid "Video host type. Only supported hosts will be allowed."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:116
+#: core/modules/videos/class-endpoints.php:209
+#: core/modules/videos/class-endpoints.php:347
+msgid "Video URL. Only oEmbed supported URLs should be used."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:126
+#: core/modules/videos/class-endpoints.php:219
+msgid "Video playlist ID. Should be a valid term ID."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:134
+#: core/modules/videos/class-endpoints.php:227
+#: core/modules/videos/class-endpoints.php:303
+#: core/modules/videos/class-endpoints.php:377
+msgid "Video custom thumbnail ID. Should be a valid attachment ID."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:143
+#: core/modules/videos/class-endpoints.php:236
+#: core/modules/videos/class-endpoints.php:312
+#: core/modules/videos/class-endpoints.php:386
+msgid "Video start time enabled."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:148
+#: core/modules/videos/class-endpoints.php:241
+#: core/modules/videos/class-endpoints.php:317
+#: core/modules/videos/class-endpoints.php:391
+msgid "Video end time enabled."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:153
+#: core/modules/videos/class-endpoints.php:246
+#: core/modules/videos/class-endpoints.php:322
+#: core/modules/videos/class-endpoints.php:396
+msgid "Video start time."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:158
+#: core/modules/videos/class-endpoints.php:251
+#: core/modules/videos/class-endpoints.php:327
+#: core/modules/videos/class-endpoints.php:401
+msgid "Video end time."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:178
+msgid "Video ID to get details."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:190
+msgid "Video ID to update."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:263
+msgid "Video ID to delete."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:283
+msgid "Video ID to get embed."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:288
+#: core/modules/videos/class-endpoints.php:362
+msgid "The embed width."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:293
+#: core/modules/videos/class-endpoints.php:367
+msgid "The embed height."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:298
+#: core/modules/videos/class-endpoints.php:372
+msgid "Should autoplay the embed video."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:534
+msgid "Could not create the video. Please try again."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:647
+msgid "Could not update the video. Please try again."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:685
+msgid "Default videos can not be deleted."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:697
+msgid "Video has been deleted."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:702
+msgid "Could not delete the video. Please try again."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:813
+msgid "Couldn't find the embed for the given video."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:869
+msgid "Invalid host. Please try again with valid URL and host."
+msgstr ""
+
+#: core/modules/videos/class-endpoints.php:882
+msgid "There was an error processing the video URL. Please try again."
+msgstr ""
+
+#: core/modules/videos/models/class-custom-video.php:119
+msgid "Trying to use custom video object on a non-custom video."
+msgstr ""
+
+#: core/modules/videos/models/class-custom-video.php:306
+msgid "The URL you have attached is invalid. Try again by copying the URL from your browser and placing below."
+msgstr ""
+
+#: core/modules/videos/models/class-video.php:148
+msgid "Video ID is invalid. Please try again with a valid ID."
+msgstr ""
+
+#. translators: %s: heart icon
+#: core/views/class-admin.php:193
+msgid "Made with %s by WPMU DEV"
+msgstr ""
+
+#: core/views/class-admin.php:265
+msgid "Top Level"
+msgstr ""
+
+#: core/views/class-admin.php:273
+msgid "Support System Plugin"
+msgstr ""
+
+#: core/views/class-admin.php:344
+msgid "Documentation"
+msgstr ""
+
+#: core/views/class-admin.php:344
+#: app/src/components/PageFooter/PageFooter.js:56
+msgid "Docs"
+msgstr ""
+
+#: core/views/class-admin.php:354
+msgid "Renew Your Membership"
+msgstr ""
+
+#: core/views/class-admin.php:354
+#: app/src/components/ExpiredNotice/ExpiredNotice.js:26
+#: app/src/pages/dashboard/banners/ExpiredBanner.js:85
+#: app/src/pages/dashboard/modals/ExpiredModal.js:94
+#: app/src/pages/playlists/components/ExpiredNotice/ExpiredNotice.js:37
+#: app/src/pages/playlists/components/RenewNotice/RenewNotice.js:42
+msgid "Renew Membership"
+msgstr ""
+
+#: core/views/class-admin.php:357
+msgid "Upgrade"
+msgstr ""
+
+#: core/views/class-admin.php:382
+msgid "View Details"
+msgstr ""
+
+#: core/views/class-admin.php:386
+msgid "Get Premium Support"
+msgstr ""
+
+#: core/views/class-admin.php:386
+msgid "Premium Support"
+msgstr ""
+
+#: core/views/class-admin.php:387
+msgid "View our Public Roadmap"
+msgstr ""
+
+#: core/views/class-admin.php:387
+#: app/src/components/PageFooter/PageFooter.js:46
+msgid "Roadmap"
+msgstr ""
+
+#: app/src/components/DashNotice/DashNotice.js:33
+msgid "WPMU DEV videos are locked and you only have access to custom videos in Video Tutorials page. Install and log into the plugin to start setting up your video tutorials."
+msgstr ""
+
+#: app/src/components/DashNotice/DashNotice.js:43
+msgid "WPMU DEV videos are locked and you only have access to custom videos in Video Tutorials page. Activate and log into the plugin to start setting up your video tutorials."
+msgstr ""
+
+#: app/src/components/DashNotice/DashNotice.js:47
+#: app/src/pages/dashboard/banners/DashBanner.js:63
+#: app/src/pages/dashboard/modals/DashModal.js:87
+#: app/src/pages/playlists/components/DashNotice/DashNotice.js:47
+msgid "Activate Plugin"
+msgstr ""
+
+#: app/src/components/DashNotice/DashNotice.js:53
+#: app/src/pages/playlists/components/DashNotice/DashNotice.js:53
+msgid "WPMU DEV videos are locked and you only have access to custom videos in Video Tutorials page. Log into the plugin to begin setting up your video tutorials."
+msgstr ""
+
+#: app/src/components/DashNotice/DashNotice.js:57
+#: app/src/pages/dashboard/modals/DashModal.js:100
+#: app/src/pages/playlists/components/DashNotice/DashNotice.js:57
+msgid "Login"
+msgstr ""
+
+#: app/src/components/ExpiredNotice/ExpiredNotice.js:15
+#: app/src/pages/playlists/components/ExpiredNotice/ExpiredNotice.js:23
+msgid "WPMU DEV Videos are locked. To continue displaying WPMU DEV's white label tutorial videos to your customers, renew your membership today."
+msgstr ""
+
+#: app/src/components/GoTopButton/GoTopButton.js:56
+#: app/src/components/GoTopButton/GoTopButton.js:64
+msgid "Go to top"
+msgstr ""
+
+#: app/src/components/PageFooter/PageFooter.js:16
+msgid "Facebook"
+msgstr ""
+
+#: app/src/components/PageFooter/PageFooter.js:22
+msgid "Twitter"
+msgstr ""
+
+#: app/src/components/PageFooter/PageFooter.js:28
+msgid "Instagram"
+msgstr ""
+
+#: app/src/components/PageFooter/PageFooter.js:36
+msgid "The Hub"
+msgstr ""
+
+#: app/src/components/PageFooter/PageFooter.js:41
+msgid "Plugins"
+msgstr ""
+
+#: app/src/components/PageFooter/PageFooter.js:51
+msgid "Support"
+msgstr ""
+
+#: app/src/components/PageFooter/PageFooter.js:61
+msgid "Community"
+msgstr ""
+
+#: app/src/components/PageFooter/PageFooter.js:66
+msgid "Terms of Service"
+msgstr ""
+
+#: app/src/components/PageFooter/PageFooter.js:71
+msgid "Privacy Policy"
+msgstr ""
+
+#: app/src/components/UpgradeNotice/UpgradeNotice.js:15
+msgid "WPMU DEV Videos are locked due to your current membership status. You can unlock WPMU DEV white-labeled video tutorials by activating a full membership. Click the button below for more information on the WPMU DEV pricing structure."
+msgstr ""
+
+#: app/src/components/UpgradeNotice/UpgradeNotice.js:26
+#: app/src/pages/dashboard/banners/UpgradeBanner.js:83
+#: app/src/pages/dashboard/modals/UpgradeModal.js:97
+#: app/src/pages/playlists/components/UpgradeNotice/UpgradeNotice.js:42
+msgid "Get Full Membership"
+msgstr ""
+
+#: app/src/components/UploadThumb/UploadThumb.js:20
+msgid "Set as thumbnail"
+msgstr ""
+
+#: app/src/components/UploadThumb/UploadThumb.js:21
+msgid "Upload image"
+msgstr ""
+
+#: app/src/components/UploadThumb/UploadThumb.js:22
+#: app/src/pages/settings/tabs/ImportExport/Partials/ImportSection.js:181
+msgid "Remove file"
+msgstr ""
+
+#: app/src/components/UserRoles/UserRoles.js:41
+msgid "Network Administrator"
+msgstr ""
+
+#: app/src/components/UserRoles/UserRoles.js:50
+msgid "Super Admin"
+msgstr ""
+
+#: app/src/components/UserRoles/UserRoles.js:58
+msgid "Administrator"
+msgstr ""
+
+#: app/src/components/VideoSearchForm/VideoSearchForm.js:90
+#: app/src/components/VideoSearchForm/VideoSearchForm.js:101
+#: app/src/pages/playlists/components/VideoSearchInput/VideoSearchInput.js:70
+msgid "Search videos"
+msgstr ""
+
+#: app/src/components/VideoSearchForm/VideoSearchForm.js:114
+msgid "Clear search"
+msgstr ""
+
+#: app/src/components/VideoSearchForm/VideoSearchForm.js:127
+msgid "Search"
+msgstr ""
+
+#: app/src/pages/dashboard/App.js:181
+#: app/src/pages/playlists/App.js:93
+#: app/src/pages/settings/App.js:43
+#: app/src/pages/videos/App.js:86
+msgid "View Documentation"
+msgstr ""
+
+#: app/src/pages/dashboard/App.js:199
+#: app/src/pages/playlists/App.js:112
+#: app/src/pages/settings/App.js:53
+#: app/src/pages/videos/App.js:102
+msgid "Dismiss this notice"
+msgstr ""
+
+#: app/src/pages/dashboard/banners/DashBanner.js:47
+#: app/src/pages/dashboard/modals/DashModal.js:65
+msgid "Install WPMU DEV Dashboard"
+msgstr ""
+
+#: app/src/pages/dashboard/banners/DashBanner.js:48
+msgid "You don't have the WPMU DEV Dashboard plugin, which you'll need to access the videos API. WPMU DEV videos are locked, and you only have access to custom videos on the Video Tutorials page. Install and log in to the dashboard to unlock the complete library of WPMU DEV video tutorials."
+msgstr ""
+
+#: app/src/pages/dashboard/banners/DashBanner.js:59
+msgid "The WPMU DEV Dashboard plugin is installed but not activated. Activate the plugin to unlock the complete library of WPMU DEV video tutorials."
+msgstr ""
+
+#: app/src/pages/dashboard/banners/DashBanner.js:74
+#: app/src/pages/dashboard/modals/DashModal.js:93
+msgid "Login to WPMU DEV Dashboard"
+msgstr ""
+
+#: app/src/pages/dashboard/banners/DashBanner.js:75
+msgid "You haven't logged into the WPMU DEV Dashboard plugin installed, which you'll need to access the videos API. WPMU DEV videos are locked, and you only have access to custom videos on the Video Tutorials page. Log into the WPMU DEV dashboard to unlock the complete library of WPMU DEV video tutorials."
+msgstr ""
+
+#: app/src/pages/dashboard/banners/DashBanner.js:79
+msgid "Login into Dashboard"
+msgstr ""
+
+#: app/src/pages/dashboard/banners/ExpiredBanner.js:50
+#: app/src/pages/dashboard/modals/ExpiredModal.js:56
+#: app/src/pages/dashboard/modals/ExpiredModal.js:73
+msgid "Membership Expired"
+msgstr ""
+
+#: app/src/pages/dashboard/banners/ExpiredBanner.js:62
+#: app/src/pages/dashboard/modals/ExpiredModal.js:78
+msgid "%s, welcome to Integrated Video Tutorials - the best video tutorials plugin for WordPress. It looks like your WPMU DEV subscription has expired. To continue displaying WPMU DEV's white label tutorial videos to your users, renew your membership today."
+msgstr ""
+
+#: app/src/pages/dashboard/banners/ExpiredBanner.js:72
+#: app/src/pages/dashboard/banners/UpgradeBanner.js:69
+msgid "Refreshing Status"
+msgstr ""
+
+#: app/src/pages/dashboard/banners/ExpiredBanner.js:78
+#: app/src/pages/dashboard/banners/UpgradeBanner.js:75
+msgid "Refresh Status"
+msgstr ""
+
+#: app/src/pages/dashboard/banners/UpgradeBanner.js:50
+#: app/src/pages/dashboard/modals/UpgradeModal.js:56
+#: app/src/pages/dashboard/modals/UpgradeModal.js:76
+msgid "Get Integrated Video Tutorial Access"
+msgstr ""
+
+#: app/src/pages/dashboard/banners/UpgradeBanner.js:60
+#: app/src/pages/dashboard/modals/UpgradeModal.js:81
+msgid "Hey %s, it looks like you don't have access to the WPMU DEV white-labeled video tutorials due to your current membership status. You can gain access by activating a full membership. Click the button below for more information on the WPMU DEV pricing structure."
+msgstr ""
+
+#: app/src/pages/dashboard/modals/DashModal.js:67
+msgid "%s, welcome to Integrated Video Tutorials - the best tutorials plugin for WordPress. It looks like you don't have the WPMU DEV Dashboard plugin installed, which you'll need to access the videos API. Install and log into the plugin to start setting up your video tutorials."
+msgstr ""
+
+#: app/src/pages/dashboard/modals/DashModal.js:81
+msgid "Great, %s! The WPMU DEV Dashboard plugin is installed, but not activated yet. You'll need to activate it to access our videos API and set up your video tutorials."
+msgstr ""
+
+#: app/src/pages/dashboard/modals/DashModal.js:95
+msgid "%s, welcome to Integrated Video Tutorials - the best tutorials plugin for WordPress. It looks like you haven't logged into the WPMU DEV Dashboard plugin, which you'll need to do to access the videos API. Log into the plugin to begin setting up your video tutorials."
+msgstr ""
+
+#: app/src/pages/dashboard/modals/DashModal.js:122
+#: app/src/pages/dashboard/modals/ExpiredModal.js:68
+#: app/src/pages/dashboard/modals/Highlights.js:68
+#: app/src/pages/dashboard/modals/UpgradeModal.js:71
+#: app/src/pages/playlists/modals/AddVideos.js:109
+#: app/src/pages/playlists/modals/AddVideos.js:122
+#: app/src/pages/playlists/modals/DeletePlaylist.js:81
+#: app/src/pages/playlists/modals/EditPlaylist.js:117
+#: app/src/pages/playlists/modals/slides/PlaylistSettings.js:81
+#: app/src/pages/playlists/modals/slides/PlaylistVideos.js:160
+#: app/src/pages/playlists/modals/slides/PlaylistVideos.js:174
+#: app/src/pages/playlists/modals/VisibilitySettings.js:116
+#: app/src/pages/settings/tabs/Data/Modals/ResetConfirmation.js:30
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportConfirmation.js:181
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportProgress.js:127
+#: app/src/pages/videos/modals/DeleteVideo.js:76
+#: app/src/pages/videos/modals/EditPlaylists.js:173
+#: app/src/pages/videos/modals/EditTitle.js:108
+#: app/src/pages/videos/modals/EditVideo.js:116
+#: app/src/pages/videos/modals/slides/VideoHost.js:53
+#: app/src/pages/videos/modals/slides/VideoPlaylists.js:181
+#: app/src/pages/videos/modals/slides/VideoUrl.js:66
+msgid "Close this dialog."
+msgstr ""
+
+#: app/src/pages/dashboard/modals/Highlights.js:56
+#: app/src/pages/dashboard/modals/Highlights.js:73
+msgid "Introducing New Videos!"
+msgstr ""
+
+#: app/src/pages/dashboard/modals/Highlights.js:78
+msgid "Hey, %s! WordPress is always evolving with new features and improvements, and our job is to keep you abreast of those changes. So, we’ve added new videos (Site Health, Export and Erase Personal Data, Import and Export, Lists, Categories, and Editing Images) to our Video Tutorials. Take a look!"
+msgstr ""
+
+#: app/src/pages/dashboard/modals/Highlights.js:89
+msgid "Got it"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Playlists/Playlists.js:60
+#: app/src/pages/dashboard/partials/Videos/Videos.js:68
+#: app/src/pages/playlists/components/DropDown/DropDown.js:38
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:52
+msgid "Shortcode has been copied successfully."
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Playlists/Playlists.js:83
+msgid "Create playlists of videos and display them around your WordPress Admin area to help your clients get to know WordPress."
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Playlists/Playlists.js:97
+#: app/src/pages/dashboard/partials/Playlists/Playlists.js:214
+msgid "Add Playlist"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Playlists/Playlists.js:108
+msgid "Recently added playlists"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Playlists/Playlists.js:112
+msgid "Playlist options menu"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Playlists/Playlists.js:143
+#: app/src/pages/dashboard/partials/Playlists/Playlists.js:147
+#: app/src/pages/dashboard/partials/Videos/Videos.js:164
+#: app/src/pages/dashboard/partials/Videos/Videos.js:168
+msgid "Actions"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Playlists/Playlists.js:159
+#: app/src/pages/playlists/components/DropDown/DropDown.js:60
+msgid "Edit"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Playlists/Playlists.js:167
+#: app/src/pages/playlists/components/DropDown/DropDown.js:71
+#: app/src/pages/playlists/modals/AddVideos.js:114
+#: app/src/pages/playlists/modals/AddVideos.js:126
+#: app/src/pages/playlists/modals/AddVideos.js:162
+msgid "Add videos"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Playlists/Playlists.js:178
+#: app/src/pages/playlists/components/DropDown/DropDown.js:82
+#: app/src/pages/playlists/modals/VisibilitySettings.js:120
+msgid "Visibility settings"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Playlists/Playlists.js:191
+#: app/src/pages/playlists/components/DropDown/DropDown.js:92
+msgid "Copy shortcode"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Playlists/Playlists.js:224
+#: app/src/pages/dashboard/partials/Videos/Videos.js:261
+msgid "View All"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/SummaryBox/SummaryBox.js:18
+#: app/src/pages/playlists/partials/SummaryBox/SummaryBox.js:17
+#: app/src/pages/videos/partials/SummaryBox/SummaryBox.js:18
+msgid "Never"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/SummaryBox/SummaryBox.js:93
+#: app/src/pages/videos/partials/SummaryBox/SummaryBox.js:97
+msgid "Recently updated video"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/SummaryBox/SummaryBox.js:98
+msgid "Recently created custom video"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/SummaryBox/SummaryBox.js:103
+#: app/src/pages/playlists/partials/SummaryBox/SummaryBox.js:73
+msgid "Recently created playlist"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/SummaryBox/SummaryBox.js:114
+msgid "Total videos"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/SummaryBox/SummaryBox.js:128
+msgid "Last uploaded video"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Videos/Videos.js:104
+msgid "View all default video tutorials and upload your own custom videos in the Videos area."
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Videos/Videos.js:118
+#: app/src/pages/dashboard/partials/Videos/Videos.js:251
+#: app/src/pages/videos/App.js:90
+#: app/src/pages/videos/modals/slides/VideoHost.js:41
+#: app/src/pages/videos/modals/slides/VideoHost.js:61
+#: app/src/pages/videos/modals/slides/VideoPlaylists.js:173
+#: app/src/pages/videos/modals/slides/VideoPlaylists.js:198
+#: app/src/pages/videos/modals/slides/VideoUrl.js:58
+#: app/src/pages/videos/modals/slides/VideoUrl.js:83
+msgid "Add Custom Video"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Videos/Videos.js:129
+msgid "Recently added videos"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Videos/Videos.js:133
+msgid "Video options menu"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Videos/Videos.js:181
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:153
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:159
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:223
+#: app/src/pages/videos/modals/EditVideo.js:107
+msgid "Edit video"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Videos/Videos.js:185
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:154
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:160
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:247
+msgid "Edit title"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Videos/Videos.js:201
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:145
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:146
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:265
+msgid "Copy Shortcode"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Videos/Videos.js:213
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:127
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:130
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:185
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:188
+#: app/src/pages/videos/modals/EditPlaylists.js:217
+msgid "Add to Playlist"
+msgstr ""
+
+#: app/src/pages/dashboard/partials/Videos/Videos.js:227
+#: app/src/pages/playlists/components/DropDown/DropDown.js:105
+#: app/src/pages/playlists/components/PlaylistVideos/VideoRow.js:147
+#: app/src/pages/playlists/modals/DeletePlaylist.js:111
+#: app/src/pages/playlists/partials/BulkActions/BulkActions.js:40
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:289
+#: app/src/pages/videos/modals/DeleteVideo.js:107
+msgid "Delete"
+msgstr ""
+
+#: app/src/pages/playlists/App.js:101
+#: app/src/pages/playlists/modals/slides/PlaylistVideos.js:244
+msgid "Create Playlist"
+msgstr ""
+
+#: app/src/pages/playlists/components/DashNotice/DashNotice.js:33
+msgid "WPMU DEV videos are locked, and you only have access to custom videos because the WPMU DEV Dashboard plugin is not installed. Install and log into the WPMU DEV dashboard plugin to unlock the complete library of WPMU DEV video tutorials."
+msgstr ""
+
+#: app/src/pages/playlists/components/DashNotice/DashNotice.js:43
+msgid "WPMU DEV videos are locked, and you only have access to custom videos because the WPMU DEV Dashboard plugin is not active. Activate the WPMU DEV dashboard plugin to unlock the complete library of WPMU DEV video tutorials."
+msgstr ""
+
+#: app/src/pages/playlists/components/PlaylistDesc/PlaylistDesc.js:19
+msgid "Playlist description"
+msgstr ""
+
+#: app/src/pages/playlists/components/PlaylistTitle/PlaylistTitle.js:19
+msgid "Playlist name"
+msgstr ""
+
+#: app/src/pages/playlists/components/PlaylistTitle/PlaylistTitle.js:22
+msgid "E.g. New playlist"
+msgstr ""
+
+#: app/src/pages/playlists/components/PlaylistVideos/PlaylistVideos.js:36
+#: app/src/pages/videos/modals/EditTitle.js:112
+#: app/src/pages/videos/modals/EditTitle.js:122
+#: app/src/pages/videos/partials/VideosBox/VideosBox.js:268
+msgid "Video title"
+msgstr ""
+
+#: app/src/pages/playlists/components/PlaylistVideos/PlaylistVideos.js:39
+msgid "Date added"
+msgstr ""
+
+#: app/src/pages/playlists/components/PlaylistVideos/PlaylistVideos.js:43
+msgid "Row actions"
+msgstr ""
+
+#: app/src/pages/playlists/components/PlaylistVideos/PlaylistVideos.js:61
+msgid "No videos assigned."
+msgstr ""
+
+#: app/src/pages/playlists/components/PlaylistVideos/PlaylistVideos.js:78
+#: app/src/pages/videos/components/VideoUrlField/VideoUrlField.js:64
+msgid "Add Video"
+msgstr ""
+
+#: app/src/pages/playlists/components/PlaylistVideos/VideoRow.js:136
+msgid "Remove video from playlist"
+msgstr ""
+
+#: app/src/pages/playlists/components/RenewNotice/RenewNotice.js:20
+msgid "You don't have any custom videos available to add to this playlist. To unlock WPMU DEV tutorial videos you'll need to renew your membership. "
+msgstr ""
+
+#: app/src/pages/playlists/components/RenewNotice/RenewNotice.js:27
+msgid "Note: You can still <a href=\"%s\">create and add custom videos</a> to this playlist."
+msgstr ""
+
+#: app/src/pages/playlists/components/UpgradeNotice/UpgradeNotice.js:20
+msgid "You don't have any custom videos available to add to this playlist. You can unlock WPMU DEV white-labeled video tutorials by activating a full membership. Click the button below for more information on the WPMU DEV pricing structure."
+msgstr ""
+
+#: app/src/pages/playlists/components/UpgradeNotice/UpgradeNotice.js:28
+msgid "<strong>Note:</strong> You can still <a href=\"%s\">create and add custom videos</a> to this playlist."
+msgstr ""
+
+#: app/src/pages/playlists/components/VideosList/VideoListRow.js:82
+#: app/src/pages/playlists/components/VideosList/VideoListRow.js:114
+msgid "Added"
+msgstr ""
+
+#: app/src/pages/playlists/components/VideosList/VideoListRow.js:90
+#: app/src/pages/playlists/components/VideosList/VideoListRow.js:105
+#: app/src/pages/settings/tabs/Data/Partials/DataPreserve.js:72
+msgid "Remove"
+msgstr ""
+
+#: app/src/pages/playlists/components/VideosList/VideoListRow.js:124
+msgid "Add"
+msgstr ""
+
+#: app/src/pages/playlists/components/VideosList/VideosList.js:118
+msgid "%s videos selected"
+msgstr ""
+
+#: app/src/pages/playlists/modals/AddVideos.js:85
+msgid "Playlist videos updated successfully."
+msgstr ""
+
+#: app/src/pages/playlists/modals/AddVideos.js:95
+msgid "Could not update the playlist videos. Please try again."
+msgstr ""
+
+#: app/src/pages/playlists/modals/AddVideos.js:129
+#: app/src/pages/playlists/modals/slides/PlaylistVideos.js:195
+msgid "Choose which videos you want to assign to this playlist. You can add as many as you like."
+msgstr ""
+
+#: app/src/pages/playlists/modals/AddVideos.js:153
+#: app/src/pages/playlists/modals/DeletePlaylist.js:99
+#: app/src/pages/playlists/modals/slides/PlaylistSettings.js:136
+#: app/src/pages/settings/tabs/Data/Modals/ResetConfirmation.js:46
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportConfirmation.js:229
+#: app/src/pages/videos/modals/DeleteVideo.js:97
+msgid "Cancel"
+msgstr ""
+
+#: app/src/pages/playlists/modals/AddVideos.js:160
+msgid "Adding Videos"
+msgstr ""
+
+#: app/src/pages/playlists/modals/DeletePlaylist.js:54
+msgid "Playlist deleted successfully."
+msgstr ""
+
+#: app/src/pages/playlists/modals/DeletePlaylist.js:85
+msgid "Delete playlist"
+msgstr ""
+
+#: app/src/pages/playlists/modals/DeletePlaylist.js:90
+msgid "This playlist contains %d video(s). These videos will be unassigned from this playlist. Are you sure you want to delete this playlist?"
+msgstr ""
+
+#: app/src/pages/playlists/modals/DeletePlaylist.js:106
+#: app/src/pages/videos/modals/DeleteVideo.js:104
+msgid "Deleting"
+msgstr ""
+
+#: app/src/pages/playlists/modals/EditPlaylist.js:85
+msgid "Playlist “%s” updated successfully."
+msgstr ""
+
+#: app/src/pages/playlists/modals/EditPlaylist.js:97
+msgid "Updating playlist failed.."
+msgstr ""
+
+#: app/src/pages/playlists/modals/EditPlaylist.js:144
+#: app/src/pages/playlists/modals/slides/PlaylistSettings.js:119
+msgid "Playlist thumbnail image"
+msgstr ""
+
+#: app/src/pages/playlists/modals/EditPlaylist.js:147
+#: app/src/pages/playlists/modals/slides/PlaylistSettings.js:122
+msgid "Add a custom thumbnail to your playlist, otherwise we'll just use the first video's thumbnail."
+msgstr ""
+
+#: app/src/pages/playlists/modals/EditPlaylist.js:168
+#: app/src/pages/playlists/modals/VisibilitySettings.js:206
+#: app/src/pages/settings/components/TabsFooter.js:67
+#: app/src/pages/videos/modals/EditTitle.js:130
+#: app/src/pages/videos/modals/EditVideo.js:145
+msgid "Saving Changes"
+msgstr ""
+
+#: app/src/pages/playlists/modals/EditPlaylist.js:171
+#: app/src/pages/playlists/modals/VisibilitySettings.js:209
+#: app/src/pages/settings/components/TabsFooter.js:69
+#: app/src/pages/videos/modals/EditTitle.js:134
+#: app/src/pages/videos/modals/EditVideo.js:150
+msgid "Save Changes"
+msgstr ""
+
+#: app/src/pages/playlists/modals/slides/PlaylistSettings.js:69
+#: app/src/pages/playlists/modals/slides/PlaylistSettings.js:89
+#: app/src/pages/playlists/modals/slides/PlaylistVideos.js:165
+#: app/src/pages/playlists/modals/slides/PlaylistVideos.js:191
+msgid "Create a new playlist"
+msgstr ""
+
+#: app/src/pages/playlists/modals/slides/PlaylistSettings.js:93
+msgid "Choose a title, description and custom thumbnail for your playlist and then start adding videos to it."
+msgstr ""
+
+#: app/src/pages/playlists/modals/slides/PlaylistSettings.js:144
+#: app/src/pages/videos/modals/slides/VideoHost.js:84
+#: app/src/pages/videos/modals/slides/VideoUrl.js:120
+msgid "Continue"
+msgstr ""
+
+#: app/src/pages/playlists/modals/slides/PlaylistVideos.js:136
+msgid "Playlist created successfully."
+msgstr ""
+
+#: app/src/pages/playlists/modals/slides/PlaylistVideos.js:184
+#: app/src/pages/videos/modals/slides/VideoPlaylists.js:191
+#: app/src/pages/videos/modals/slides/VideoUrl.js:76
+msgid "Go back to previous slide."
+msgstr ""
+
+#: app/src/pages/playlists/modals/slides/PlaylistVideos.js:232
+msgid "Back"
+msgstr ""
+
+#: app/src/pages/playlists/modals/slides/PlaylistVideos.js:239
+msgid "Creating Playlist"
+msgstr ""
+
+#: app/src/pages/playlists/modals/VisibilitySettings.js:86
+msgid "Playlist settings updated successfully."
+msgstr ""
+
+#: app/src/pages/playlists/modals/VisibilitySettings.js:96
+msgid "Playlist settings update failed."
+msgstr ""
+
+#: app/src/pages/playlists/modals/VisibilitySettings.js:125
+msgid "Control which user roles are able to see this playlist, in addition to where it will be displayed as an available WordPress widget"
+msgstr ""
+
+#: app/src/pages/playlists/modals/VisibilitySettings.js:133
+#: app/src/pages/settings/App.js:67
+#: app/src/pages/settings/tabs/ImportExport/Partials/Configs.js:24
+#: app/src/pages/settings/tabs/Permissions/Permissions.js:30
+msgid "Permissions"
+msgstr ""
+
+#: app/src/pages/playlists/modals/VisibilitySettings.js:136
+msgid "Choose which user roles will be able to view this playlist."
+msgstr ""
+
+#: app/src/pages/playlists/modals/VisibilitySettings.js:149
+msgid "Location"
+msgstr ""
+
+#: app/src/pages/playlists/modals/VisibilitySettings.js:151
+msgid "Choose which default locations will show this video playlist to the user roles selected above."
+msgstr ""
+
+#: app/src/pages/playlists/modals/VisibilitySettings.js:163
+#: app/src/pages/playlists/modals/VisibilitySettings.js:174
+msgid "Choose WP Admin pages"
+msgstr ""
+
+#: app/src/pages/playlists/modals/VisibilitySettings.js:187
+msgid "To configure locations for this playlist, please enable the <a href=\"%s\">Add Videos to Contextual Help</a> feature on the Settings page."
+msgstr ""
+
+#: app/src/pages/playlists/partials/BulkActions/BulkActions.js:102
+msgid "Bulk actions"
+msgstr ""
+
+#: app/src/pages/playlists/partials/BulkActions/BulkActions.js:111
+msgid "Processing"
+msgstr ""
+
+#: app/src/pages/playlists/partials/BulkActions/BulkActions.js:117
+msgid "Apply"
+msgstr ""
+
+#: app/src/pages/playlists/partials/Playlists/PlaylistItem.js:118
+#: app/src/pages/playlists/partials/Playlists/PlaylistItem.js:119
+msgid "Open Item"
+msgstr ""
+
+#: app/src/pages/playlists/partials/PlaylistsLoader/PlaylistsLoader.js:16
+#: app/src/pages/videos/partials/VideosBox/VideosBox.js:245
+msgid "Loading..."
+msgstr ""
+
+#: app/src/pages/playlists/partials/SummaryBox/SummaryBox.js:77
+msgid "Recently updated playlist"
+msgstr ""
+
+#: app/src/pages/settings/App.js:60
+#: app/src/pages/settings/tabs/DisplaySettings/DisplaySettings.js:43
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportConfirmation.js:33
+#: app/src/pages/settings/tabs/ImportExport/Partials/Configs.js:19
+msgid "Display Settings"
+msgstr ""
+
+#: app/src/pages/settings/App.js:73
+#: app/src/pages/settings/tabs/ImportExport/ImportExport.js:20
+msgid "Import / Export"
+msgstr ""
+
+#: app/src/pages/settings/App.js:78
+#: app/src/pages/settings/tabs/Data/Data.js:21
+#: app/src/pages/settings/tabs/Data/Partials/DataPreserve.js:93
+msgid "Data"
+msgstr ""
+
+#: app/src/pages/settings/components/TabsFooter.js:38
+msgid "Changes were saved successfully."
+msgstr ""
+
+#: app/src/pages/settings/components/TabsFooter.js:48
+msgid "Sorry. Could not save the changes. Please try again."
+msgstr ""
+
+#: app/src/pages/settings/tabs/Data/Data.js:26
+msgid "Control what to do with your settings and data. Data includes Videos, Playlists, and other pieces of information stored over time."
+msgstr ""
+
+#: app/src/pages/settings/tabs/Data/Data.js:35
+msgid "Uninstallation"
+msgstr ""
+
+#: app/src/pages/settings/tabs/Data/Data.js:38
+msgid "When you uninstall this plugin, what do you want to do with your settings and stored data?"
+msgstr ""
+
+#: app/src/pages/settings/tabs/Data/Data.js:51
+msgid "Reset Settings"
+msgstr ""
+
+#: app/src/pages/settings/tabs/Data/Data.js:54
+msgid "Needing to start fresh? Use this button to roll back to the default settings."
+msgstr ""
+
+#: app/src/pages/settings/tabs/Data/Modals/ResetConfirmation.js:34
+msgid "Reset Plugin"
+msgstr ""
+
+#: app/src/pages/settings/tabs/Data/Modals/ResetConfirmation.js:38
+msgid "Are you sure you want to reset the plugin to its default state?"
+msgstr ""
+
+#: app/src/pages/settings/tabs/Data/Modals/ResetConfirmation.js:54
+#: app/src/pages/settings/tabs/Data/Partials/ResetSettings.js:38
+msgid "Resetting"
+msgstr ""
+
+#: app/src/pages/settings/tabs/Data/Modals/ResetConfirmation.js:56
+#: app/src/pages/settings/tabs/Data/Partials/DataPreserve.js:59
+#: app/src/pages/settings/tabs/Data/Partials/ResetSettings.js:40
+msgid "Reset"
+msgstr ""
+
+#: app/src/pages/settings/tabs/Data/Partials/DataPreserve.js:54
+msgid "Preserve"
+msgstr ""
+
+#: app/src/pages/settings/tabs/Data/Partials/DataPreserve.js:67
+msgid "Keep"
+msgstr ""
+
+#: app/src/pages/settings/tabs/Data/Partials/DataPreserve.js:82
+msgid "Choose whether to save your settings for next time, or reset them."
+msgstr ""
+
+#: app/src/pages/settings/tabs/Data/Partials/DataPreserve.js:95
+msgid "Choose whether to keep or remove Videos and Playlists data."
+msgstr ""
+
+#: app/src/pages/settings/tabs/Data/Partials/ResetSettings.js:43
+msgid "Note: This will instantly revert all settings to their default states but will leave your data intact."
+msgstr ""
+
+#: app/src/pages/settings/tabs/DisplaySettings/DisplaySettings.js:49
+msgid "Tutorials Tab"
+msgstr ""
+
+#: app/src/pages/settings/tabs/DisplaySettings/DisplaySettings.js:52
+msgid "Customize the default \"Video Tutorials\" tab title and position in the WordPress Admin menu."
+msgstr ""
+
+#: app/src/pages/settings/tabs/DisplaySettings/DisplaySettings.js:63
+#: app/src/pages/settings/tabs/DisplaySettings/Partials/SubMenu.js:64
+msgid "Show the tutorials tab in the WP Admin sidebar"
+msgstr ""
+
+#: app/src/pages/settings/tabs/DisplaySettings/DisplaySettings.js:81
+msgid "Help Videos"
+msgstr ""
+
+#: app/src/pages/settings/tabs/DisplaySettings/DisplaySettings.js:84
+msgid "This will add the appropriate video tutorials to the help dropdowns on WordPress admin screens."
+msgstr ""
+
+#: app/src/pages/settings/tabs/DisplaySettings/DisplaySettings.js:95
+msgid "Add Videos to Contextual Help"
+msgstr ""
+
+#: app/src/pages/settings/tabs/DisplaySettings/Partials/SubMenu.js:45
+msgid "Choose the location of the videos page in the admin menu."
+msgstr ""
+
+#: app/src/pages/settings/tabs/DisplaySettings/Partials/SubMenu.js:56
+msgid "Select item"
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportConfirmation.js:187
+msgid "To continue, select the configuration data to import below and click the import button to begin."
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportConfirmation.js:207
+msgid "Import thumbnails"
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportConfirmation.js:211
+msgid "Include video and playlist thumbnails"
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportConfirmation.js:220
+msgid "Note: The selected configurations and data above will replace your current settings and data."
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportConfirmation.js:235
+msgid "Importing"
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportProgress.js:64
+msgid "Settings successfully imported and configured."
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportProgress.js:135
+msgid "Your import is in progress. Downloading thumbnails might take a bit longer depending on the file sizes and volume. Feel free to close this modal as your import will continue running in the background."
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportProgress.js:143
+msgid "Importing in progress..."
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Modals/ImportProgress.js:155
+msgid "Continue in background"
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Partials/Configs.js:94
+msgid "All"
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Partials/ExportSection.js:58
+msgid "Use this tool to export the IVT configurations and data to another site."
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Partials/ExportSection.js:66
+msgid "Export Configurations"
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Partials/ExportSection.js:79
+msgid "Choose export options"
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Partials/ExportSection.js:83
+msgid "Select configurations or data to export or check All to export all settings."
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Partials/ExportSection.js:102
+msgid "Export thumbnails"
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Partials/ExportSection.js:107
+msgid "Include video and playlist thumbnails in export."
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Partials/ExportSection.js:123
+msgid "Exporting"
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Partials/ImportSection.js:161
+msgid "Use this tool to import the Integrated Video Tutorial configurations and data from another site."
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Partials/ImportSection.js:169
+msgid "Import Configurations"
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Partials/ImportSection.js:172
+msgid "Import an Integrated Video Tutorial configuration and data file."
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Partials/ImportSection.js:180
+msgid "Upload file"
+msgstr ""
+
+#: app/src/pages/settings/tabs/ImportExport/Partials/ImportSection.js:196
+msgid "Choose a JSON (.json) file to import the configurations."
+msgstr ""
+
+#: app/src/pages/settings/tabs/Permissions/Permissions.js:36
+msgid "User Permissions"
+msgstr ""
+
+#: app/src/pages/settings/tabs/Permissions/Permissions.js:39
+msgid "Configure which user roles can access and configure plugin’s settings."
+msgstr ""
+
+#: app/src/pages/settings/tabs/Permissions/Permissions.js:50
+msgid "User Roles"
+msgstr ""
+
+#: app/src/pages/settings/tabs/Permissions/Permissions.js:53
+msgid "Choose which user roles can have access and configure Integrated Video Tutorials."
+msgstr ""
+
+#: app/src/pages/tutorials/components/VideoItem/VideoItem.js:71
+msgid "Click to open"
+msgstr ""
+
+#: app/src/pages/tutorials/components/VideoPlayer/VideoPlayer.js:97
+#: app/src/pages/videos/components/VideoRow/VideoRowBody.js:65
+#: app/src/pages/videos/components/VideoRow/VideoRowBody.js:74
+msgid "Close video"
+msgstr ""
+
+#: app/src/pages/tutorials/partials/VideosList/VideosList.js:149
+msgid "Search cleared successfully."
+msgstr ""
+
+#: app/src/pages/tutorials/partials/VideosList/VideosList.js:155
+msgid "We found %s videos for your search."
+msgstr ""
+
+#: app/src/pages/tutorials/partials/VideosSearch/VideosSearch.js:20
+msgid "Use these in-depth video tutorials to master all aspects of the WordPress platform."
+msgstr ""
+
+#: app/src/pages/tutorials/partials/VideosSearch/VideosSearch.js:30
+msgid "Searching"
+msgstr ""
+
+#: app/src/pages/videos/components/VideoForm/VideoForm.js:235
+msgid "Duration %s"
+msgstr ""
+
+#: app/src/pages/videos/components/VideoRow/VideoRowBody.js:64
+#: app/src/pages/videos/components/VideoRow/VideoRowBody.js:73
+msgid "Close this region"
+msgstr ""
+
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:180
+msgid "Unknown"
+msgstr ""
+
+#: app/src/pages/videos/components/VideoRow/VideoRowHeader.js:203
+msgid "Video actions"
+msgstr ""
+
+#: app/src/pages/videos/components/VideoSettings/TimeForm.js:60
+msgid "Start at:"
+msgstr ""
+
+#: app/src/pages/videos/components/VideoSettings/TimeForm.js:80
+#: app/src/pages/videos/components/VideoSettings/TimeForm.js:107
+msgid "Invalid time format."
+msgstr ""
+
+#: app/src/pages/videos/components/VideoSettings/TimeForm.js:89
+msgid "End at:"
+msgstr ""
+
+#: app/src/pages/videos/components/VideoSettings/VideoSettings.js:34
+msgid "Customize the duration of the video."
+msgstr ""
+
+#: app/src/pages/videos/components/VideoSettings/VideoSettings.js:42
+msgid "Thumbnail image"
+msgstr ""
+
+#: app/src/pages/videos/components/VideoSettings/VideoSettings.js:46
+msgid "Add a custom thumbnail to your video."
+msgstr ""
+
+#: app/src/pages/videos/components/VideoUrlField/VideoUrlField.js:32
+msgid "Video URL"
+msgstr ""
+
+#: app/src/pages/videos/components/VideoUrlField/VideoUrlField.js:52
+msgid "Clear"
+msgstr ""
+
+#: app/src/pages/videos/components/VideoUrlField/VideoUrlField.js:62
+msgid "Adding"
+msgstr ""
+
+#: app/src/pages/videos/modals/DeleteVideo.js:46
+msgid "Video deleted successfully."
+msgstr ""
+
+#: app/src/pages/videos/modals/DeleteVideo.js:80
+msgid "Delete video"
+msgstr ""
+
+#: app/src/pages/videos/modals/DeleteVideo.js:84
+msgid "Are you sure you want to delete the video?"
+msgstr ""
+
+#: app/src/pages/videos/modals/EditPlaylists.js:135
+msgid "Playlists of \"%s\" was successfully updated."
+msgstr ""
+
+#: app/src/pages/videos/modals/EditPlaylists.js:152
+msgid "Updating “%s” failed."
+msgstr ""
+
+#: app/src/pages/videos/modals/EditPlaylists.js:177
+msgid "Add to playlist"
+msgstr ""
+
+#: app/src/pages/videos/modals/EditPlaylists.js:182
+msgid "Choose which playlists you want to add the \"%s\" video to. It will be available for people to watch if they can access the playlist."
+msgstr ""
+
+#: app/src/pages/videos/modals/EditPlaylists.js:212
+msgid "Updating playlist"
+msgstr ""
+
+#: app/src/pages/videos/modals/EditTitle.js:70
+msgid "Video title is changed to “%s”."
+msgstr ""
+
+#: app/src/pages/videos/modals/EditTitle.js:86
+msgid "Sorry. Could not update the video title."
+msgstr ""
+
+#: app/src/pages/videos/modals/EditTitle.js:116
+msgid "Change the title of the video below."
+msgstr ""
+
+#: app/src/pages/videos/modals/EditVideo.js:74
+msgid "“%s” updated successfully."
+msgstr ""
+
+#: app/src/pages/videos/modals/EditVideo.js:90
+msgid "Updated failed: Please enter a valid URL and Title."
+msgstr ""
+
+#: app/src/pages/videos/modals/EditVideo.js:125
+#: app/src/pages/videos/modals/slides/VideoUrl.js:96
+msgid "The URL you have attached is invalid. Try again by copying the URL from your browser and pasting it into the input field below."
+msgstr ""
+
+#: app/src/pages/videos/modals/slides/VideoHost.js:65
+msgid "Link to custom videos you've found, or uploaded on another video host. Choose from the available hosts below."
+msgstr ""
+
+#: app/src/pages/videos/modals/slides/VideoPlaylists.js:133
+msgid "Custom video added successfully. You can <a href=\"%s\">view the video</a> on the Video Tutorials page."
+msgstr ""
+
+#: app/src/pages/videos/modals/slides/VideoPlaylists.js:137
+msgid "Custom video added successfully. Assign it to a playlist so the video becomes available on the Video Tutorials page."
+msgstr ""
+
+#: app/src/pages/videos/modals/slides/VideoPlaylists.js:202
+msgid "To finish adding this video, assign it to a playlist."
+msgstr ""
+
+#: app/src/pages/videos/modals/slides/VideoPlaylists.js:213
+msgid "There was an error publishing the video. Please try again."
+msgstr ""
+
+#: app/src/pages/videos/modals/slides/VideoPlaylists.js:221
+msgid "Note: We recommend adding your custom video to an existing playlist so it's available on the Video Tutorials page."
+msgstr ""
+
+#: app/src/pages/videos/modals/slides/VideoPlaylists.js:234
+#: app/src/pages/videos/modals/slides/VideoPlaylists.js:245
+msgid "Choose playlist"
+msgstr ""
+
+#: app/src/pages/videos/modals/slides/VideoPlaylists.js:252
+msgid "Publishing"
+msgstr ""
+
+#: app/src/pages/videos/modals/slides/VideoPlaylists.js:256
+msgid "Publish"
+msgstr ""
+
+#: app/src/pages/videos/modals/slides/VideoUrl.js:87
+msgid "Copy and paste the video URL from your browser into the input field below."
+msgstr ""
+
+#: app/src/pages/videos/partials/EmptyBox/EmptyBox.js:27
+msgid "Empty results"
+msgstr ""
+
+#: app/src/pages/videos/partials/EmptyBox/EmptyBox.js:34
+msgid "We couldn't find any videos matching your search <strong>“%s”</strong>. Please try again"
+msgstr ""
+
+#: app/src/pages/videos/partials/SummaryBox/SummaryBox.js:102
+msgid "Recent video host"
+msgstr ""
+
+#: app/src/pages/videos/partials/SummaryBox/SummaryBox.js:106
+msgid "Recent custom video"
+msgstr ""
+
+#: app/src/pages/videos/partials/VideosBox/VideosBox.js:249
+msgid "Available Videos"
+msgstr ""
+
+#: app/src/pages/videos/partials/VideosBox/VideosBox.js:254
+msgid "Add, edit and view video tutorials all in one handy place."
+msgstr ""
+
+#: app/src/pages/videos/partials/VideosBox/VideosBox.js:271
+msgid "Duration"
+msgstr ""

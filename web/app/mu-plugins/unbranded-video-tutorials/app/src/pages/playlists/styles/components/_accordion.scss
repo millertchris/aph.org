@@ -1,0 +1,170 @@
+@include body-class(true) {
+	.sui-accordion {
+		.sui-accordion-item {
+			&.#{$prefix}-accordion {
+				margin: 0 0 10px;
+				transition: $transition;
+				.sui-accordion-item-header {
+					.sui-accordion-item-title {
+						font-size: 13px;
+
+						span.sortable {
+							display: block;
+							cursor: move;
+							margin-right: 17px;
+							color: $overcast;
+							transition: $transition;
+
+							&:before {
+								display: block;
+								color: inherit;
+							}
+
+							&:hover {
+								color: $ironmike;
+							}
+						}
+
+						@include media(max-width, md) {
+							min-width: 1px;
+							flex: 1;
+						}
+					}
+
+					.sui-accordion-item-date {
+						overflow: hidden;
+						display: block;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+
+						@include media(max-width, md) {
+							display: none;
+						}
+					}
+
+					.sui-accordion-col-auto {
+						@include media(max-width, md) {
+							flex: 0 0 auto;
+							margin-top: 0;
+							margin-left: #{calc($sui-gutter-md / 2)};
+						}
+					}
+
+					@include media(max-width, md) {
+						display: flex;
+						flex-flow: row wrap;
+						align-items: center;
+					}
+
+					@include media(min-width, md) {
+						min-height: 82px;
+					}
+				}
+
+				.sui-accordion-item-body {
+					.sui-table {
+						thead,
+						tbody {
+							tr th,
+							tr td {
+								&.sui-table-item-title {
+									@include media(max-width, md) {
+										width: 100%;
+									}
+								}
+
+								&.#{$prefix}-table--date {
+									@include media(max-width, md) {
+										display: none;
+									}
+								}
+
+								&.#{$prefix}-table--actions {
+									text-align: right;
+
+									@include media(max-width, md) {
+										width: 58px;
+									}
+
+									@include media(min-width, md) {
+										width: #{($sui-gutter - 1px) + (
+												calc($sui-gutter / 2) - 1px
+											) + 70px};
+									}
+								}
+							}
+						}
+
+						thead {
+							tr th,
+							tr td {
+								@include media(min-width, md) {
+									padding-top: $sui-gutter;
+								}
+							}
+						}
+
+						tbody {
+							tr td {
+								&.sui-table-item-title {
+									.#{$prefix}-table--title {
+										max-width: 100%;
+										display: flex;
+										flex-direction: row;
+										align-items: center;
+
+										.sui-checkbox {
+											display: flex;
+											flex: 0 0 auto;
+											margin-right: 10px;
+										}
+
+										.#{$prefix}-list-thumb {
+											display: block;
+											flex: 0 0 auto;
+											margin-right: 15px;
+											margin-left: 0;
+										}
+
+										span {
+											min-width: 1px;
+											overflow: hidden;
+											display: block;
+											flex: 1;
+											color: $blue;
+											white-space: nowrap;
+											text-overflow: ellipsis;
+										}
+									}
+								}
+							}
+						}
+
+						tfoot {
+							tr td {
+								@include media(min-width, md) {
+									padding-top: $sui-gutter;
+									padding-bottom: $sui-gutter;
+								}
+							}
+						}
+					}
+				}
+
+				&.sui-accordion-item--open {
+					background-color: palette(silver, light);
+					box-shadow: none;
+				}
+
+				&.sortable-chosen {
+					box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.02),
+						0 4px 15px 0 rgba(0, 0, 0, 0.05);
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

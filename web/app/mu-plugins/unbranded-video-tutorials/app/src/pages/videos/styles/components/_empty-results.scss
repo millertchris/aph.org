@@ -1,0 +1,12 @@
+@include body-class(true) {
+
+	.sui-message {
+
+		.sui-message-content {
+
+			p strong {
+				color: palette(gray, dark);
+			}
+		}
+	}
+}

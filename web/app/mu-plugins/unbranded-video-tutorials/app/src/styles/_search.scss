@@ -1,0 +1,12 @@
+@include body-class(true) {
+	.select2 {
+		// Select2.
+		.select2-search {
+			input.select2-search__field {
+				&:focus {
+					box-shadow: none !important;
+				}
+			}
+		}
+	}
+}

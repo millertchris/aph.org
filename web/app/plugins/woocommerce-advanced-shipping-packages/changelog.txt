@@ -1,0 +1,101 @@
+*** WooCommerce Advanced Shipping Packages Changelog ***
+
+2025-10-16 - version 1.2.3
+* update - Plugin name to Advanced Shipping Packages for WooCommerce
+* update - WooCommerce 10.2 compatibility tested
+* update - Qit security report fixes
+* update - WP Conditions library to 1.0.15.2
+
+2025-04-07 - version 1.2.2
+* update - Leaving package name empty will now revert to the original (Woo Core) package name
+* update - Subscription package keep their original index to ensure compatibility
+* fix - Error when using dimensional conditions with Stripe on a empty cart
+* fix - Changelog formatting
+* add - WooCommerce 9.7 compatibility
+* add - PHP 8.4 compatibility
+
+2024-03-11 - version 1.2.1
+* add - Notice when package is not enabled
+* update - WP Conditions library to 1.0.15.1
+* fix - Shipping line title not showing for default package (thank you page)
+* fix - Error when no exclude/whitelist options are stored
+* fix - Package title not saving
+* fix - Saving bug with product condition when changing condition
+
+2024-02-22 - version 1.2.0
+* add - PHP 8.2 tested/compatibility
+* add - WooCommerce 8.6 tested/compatibility
+* update - Rewrite settings/configuration. All falls within the WooCommerce > Settings area now
+* update - WP Conditions library to 1.0.15
+* fix - Only change shipping/package line items on TY page when packages are used.
+
+2023-07-27 - version 1.1.11
+* update - WP Conditions library to 1.0.14
+* fix - Package name when not using index for package ID
+
+2023-01-09 - version 1.1.10
+* add - Hooks for settings
+* add - Declare HPOS compatibility
+* update - New Gulp structure
+* update - Stock condition to check for empty value
+* update - Default package ID being the same as it was before
+* update - WP Conditions library to 1.0.13
+
+2022-02-01 - version 1.1.9
+* add - Setting to show packages separately on thank you page and emails
+* update - WP Conditions library to 1.0.12
+
+2021-02-09 - version 1.1.8
+* update - Update WP Conditions to 1.0.10
+* update - Use 'asp_id' for package ID in shipping package data
+
+2020-06-08 - version 1.1.7
+* fix - Main package settings not saving with certain WC versions
+
+2019-08-06 - version 1.1.6
+* add - Ability to change the 'Exclude shipping methods' setting to 'Whitelist shipping methods'
+* update - Update WP Conditions to 1.0.9
+* fix - Default WC shipping options showing below package settings in WC 3.6
+* fix - Notice on overview page when using debug mode
+
+2018-10-03 - version 1.1.5
+* update - Update WP Conditions to 1.0.8
+* fix - Notice on overview page for counting
+
+2017-11-04 - version 1.1.4
+* update - Better compatibility with shipping carrier plugins with the 'Exclude rates' option.
+* update - Overview table more responsive on small screens
+* fix - Prevent notice when $packages[0] doesn't exist (only happens when packages are altered before this plugin)
+
+2017-09-15 - version 1.1.3
+* fix - Shipping lines in cart could disappear when not matching any shipping packages.
+
+2017-09-01 - version 1.1.2
+* fix - Virtual products being packaged for shipping
+* update - Update WP Conditions to 1.0.4
+		- fix - Use WC_Method:get_method_title() instead of get_title() to get method title.
+
+2017-07-03 - version 1.1.1
+* update - Update WP Conditions to 1.0.3
+* fix - 'User role' condition 'Guest' wasn't working
+* update - Allow conditions outside postbox / multiple times inside. Not limited to .postbox class.
+* add - Zipcode range support. E.g. 'Zipcode' = 'equal to' = '10000-20000,30000-40000'
+
+2017-03-13 - version 1.1.0
+* add - WC 2.7 compatibility
+* add - PHP 7.1 compatibility
+* update - BIG refactor of the backend conditions - please verify your setup if using custom coded conditions
+* update - Smoother User Experience with conditions
+* update - 	Instant adding of conditions / condition groups
+* update - 	Only show valid operator options
+* update - 	Instantly show condition descriptions
+* update - 	Deleting entire condition groups
+* update - 	Duplicate condition groups
+
+2016-12-14 - version 1.0.1
+* fix - Excluded shipping rates not working properly with rates that have different method IDs and rate IDs
+* update - Add support for variations in the 'contains product' condition
+
+
+2016-10-18 - version 1.0.0
+* new - Initial release.

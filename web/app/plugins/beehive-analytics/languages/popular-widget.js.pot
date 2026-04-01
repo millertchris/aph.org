@@ -1,0 +1,241 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: ../common/components/charts/LineChart.tsx:187
+msgid "No data available"
+msgstr ""
+
+#: ../common/components/copy-button/copy-button.tsx:18
+msgid "URL copied"
+msgstr ""
+
+#: ../common/components/copy-button/copy-button.tsx:18
+msgid "Copy url"
+msgstr ""
+
+#: ../common/components/google/GoogleAuthentication.tsx:25
+msgid ""
+"Google authentication failed. No authorization code was received. Please "
+"try connecting again."
+msgstr ""
+
+#: ../common/components/google/GoogleAuthentication.tsx:36
+msgid "Your Google account has been connected successfully."
+msgstr ""
+
+#: ../common/components/google/google.tsx:7
+msgid "Connect with Google"
+msgstr ""
+
+#: ../common/components/loading/loading.tsx:14
+msgid "Fetching data..."
+msgstr ""
+
+#: ../common/components/select-accounts/select-accounts.tsx:131
+msgid "Choose your view (data stream)"
+msgstr ""
+
+#: ../common/components/select-accounts/select-accounts.tsx:131
+msgid "Site not here? Try logging into another <link>Google account</link>."
+msgstr ""
+
+#: ../common/components/select-accounts/select-accounts.tsx:138
+msgid "Select Property to load streams"
+msgstr ""
+
+#: ../common/components/select-accounts/select-accounts.tsx:140
+msgid "No streams found"
+msgstr ""
+
+#: ../common/components/select-accounts/select-accounts.tsx:55
+msgid "Choose your account"
+msgstr ""
+
+#: ../common/components/select-accounts/select-accounts.tsx:57
+msgid "No accounts found"
+msgstr ""
+
+#: ../common/components/select-accounts/select-accounts.tsx:91
+msgid "Choose your property"
+msgstr ""
+
+#: ../common/components/select-accounts/select-accounts.tsx:98
+msgid "No properties found"
+msgstr ""
+
+#: ../common/components/splash/splash.tsx:15
+msgid "Splash image"
+msgstr ""
+
+#: ../common/hooks/useAuth.ts:43
+msgid ""
+"We couldn't connect your Google account. Please try reconnecting with the "
+"\"Connect\" button below. Alternately, you can set up a new API project "
+"with Google and use that instead. If you're still stuck you can contact "
+"support for assistance."
+msgstr ""
+
+#: ../common/hooks/useSettings.ts:38
+#: ../common/hooks/useUsers.ts:37
+msgid "Settings updated successfully"
+msgstr ""
+
+#: ../common/hooks/useSummary/useSummary.ts:10
+#: ../common/utils/constants.ts:48
+msgid "Bounce Rate"
+msgstr ""
+
+#: ../common/hooks/useSummary/useSummary.ts:5
+#: ../common/utils/constants.ts:13
+msgid "Sessions"
+msgstr ""
+
+#: ../common/hooks/useSummary/useSummary.ts:6
+#: ../common/utils/constants.ts:20
+msgid "Users"
+msgstr ""
+
+#: ../common/hooks/useSummary/useSummary.ts:7
+#: ../common/utils/constants.ts:27
+msgid "Pageviews"
+msgstr ""
+
+#: ../common/hooks/useSummary/useSummary.ts:8
+msgid "Pages/Sessions"
+msgstr ""
+
+#: ../common/hooks/useSummary/useSummary.ts:9
+msgid "Average Time"
+msgstr ""
+
+#: ../common/hooks/useUsersData.ts:36
+msgid "Users updated successfully"
+msgstr ""
+
+#: ../common/utils/constants.ts:101
+msgid "Branda"
+msgstr ""
+
+#: ../common/utils/constants.ts:102
+msgid "No-code white label plugin"
+msgstr ""
+
+#: ../common/utils/constants.ts:107
+msgid "SmartCrawl"
+msgstr ""
+
+#: ../common/utils/constants.ts:108
+msgid "WordPress SEO plugin"
+msgstr ""
+
+#: ../common/utils/constants.ts:113
+msgid "Broken Link Checker"
+msgstr ""
+
+#: ../common/utils/constants.ts:114
+msgid "Scan broken links"
+msgstr ""
+
+#: ../common/utils/constants.ts:119
+msgid "Everything you need for WordPress"
+msgstr ""
+
+#: ../common/utils/constants.ts:120
+msgid "Get all 12 WPMU DEV premium plugins and more starting from just $3/month."
+msgstr ""
+
+#: ../common/utils/constants.ts:16
+msgid ""
+"Total number of Sessions within the date range. A session is the period of "
+"time user is actively engaged with your website, app, etc."
+msgstr ""
+
+#: ../common/utils/constants.ts:23
+msgid "Users who have initiated at least one session during the date range."
+msgstr ""
+
+#: ../common/utils/constants.ts:30
+msgid ""
+"Pageviews is the total number of pages viewed. Repeated views of a single "
+"page are counted."
+msgstr ""
+
+#: ../common/utils/constants.ts:34
+msgid "Page / Sessions"
+msgstr ""
+
+#: ../common/utils/constants.ts:37
+msgid ""
+"Pages/Sessions (Average Page Depth) is the average number of pages viewed "
+"during a session. Repeated views of a single page are counted."
+msgstr ""
+
+#: ../common/utils/constants.ts:41
+msgid "Avg Time"
+msgstr ""
+
+#: ../common/utils/constants.ts:44
+msgid "The average length of a session."
+msgstr ""
+
+#: ../common/utils/constants.ts:51
+msgid ""
+"The percentage of single-page sessions in which there was no interaction "
+"with the page. A bounced session has a duration of <seconds /> seconds."
+msgstr ""
+
+#: ../common/utils/constants.ts:71
+msgid "Smush"
+msgstr ""
+
+#: ../common/utils/constants.ts:72
+msgid "Best image optimization"
+msgstr ""
+
+#: ../common/utils/constants.ts:77
+msgid "Forminator"
+msgstr ""
+
+#: ../common/utils/constants.ts:78
+msgid "Best form builder plugin"
+msgstr ""
+
+#: ../common/utils/constants.ts:83
+msgid "Defender"
+msgstr ""
+
+#: ../common/utils/constants.ts:84
+msgid "Best security plugin"
+msgstr ""
+
+#: ../common/utils/constants.ts:89
+msgid "Hustle"
+msgstr ""
+
+#: ../common/utils/constants.ts:90
+msgid "Best newsletter plugin"
+msgstr ""
+
+#: ../common/utils/constants.ts:95
+msgid "Hummingbird"
+msgstr ""
+
+#: ../common/utils/constants.ts:96
+msgid "Performance optimization"
+msgstr ""
+
+#: ../common/utils/http.tsx:177
+msgid ""
+"Something went wrong, please try again or contact support if the problem "
+"persists."
+msgstr ""
+
+#: src/main.tsx:17
+msgid "No popular posts."
+msgstr ""
+
+#: src/main.tsx:7
+msgid "Loading..."
+msgstr ""

@@ -1,0 +1,65 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import Checkbox from './Checkbox'
+import { action } from '@storybook/addon-actions'
+import { useState } from 'react'
+
+<Meta
+	title="lib/components/Checkbox"
+	component={Checkbox}
+	argTypes={{
+		isStacked: {
+			name: 'isStacked',
+			description: 'When true the checkbox takes 100% width',
+			table: {
+				type: { summary: 'boolean' },
+				defaultValue: { summary: false },
+			},
+		},
+	}}
+/>
+
+export const Template = (args) => {
+	const [checked, setChecked] = useState(false)
+	return <Checkbox {...args} checked={checked} onChange={setChecked} />
+}
+
+export const TemplateChecked = (args) => {
+	const [checked, setChecked] = useState(true)
+	return <Checkbox {...args} checked={checked} onChange={setChecked} />
+}
+
+# Checkbox
+
+<Canvas>
+	<Story name="default">{Template.bind()}</Story>
+</Canvas>
+
+<ArgsTable story="default" />
+
+## Stories
+
+#### Checked
+
+<Canvas>
+	<Story
+		name="checked"
+		args={{
+			checked: true,
+		}}
+	>
+		{TemplateChecked.bind()}
+	</Story>
+</Canvas>
+
+#### Disabled
+
+<Canvas>
+	<Story
+		name="disabled"
+		args={{
+			disabled: true,
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>

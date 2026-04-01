@@ -1,0 +1,32 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import { action } from '@storybook/addon-actions'
+
+<Meta title="ivt/components/WhiteLabelBanner" />
+
+# WhiteLabelBanner
+
+WhiteLabelBaner adds figures wrapper to [ImageTag](/docs/ivt-components-imagetag--page) component
+
+## Props
+
+| prop           | description                                                                                                                                        | type      | default   |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | --------- |
+| src            | Image source relative to `app/assets/img` path in the plugin folder                                                                                | `string`  | ""        |
+| srcset         | Whether or not to include `srcset` attribute, note that you need to have @2x version for the image in the same folder in order to set this to true | `boolean` | true      |
+| alt            | alternative text for the image                                                                                                                     | `string`  | Image Alt |
+| className      | additional className                                                                                                                               | `string`  | ""        |
+| imageClassName | Additional className for the image                                                                                                                 | `string`  | ""        |
+
+# Example
+
+```
+<WhiteLabelBanner src="summary/dashboard.png" alt="dashboard" className="img-lg" />
+```
+
+If this component is used in a site with the URL: `jhon.com`, then the src would be:
+
+`https://jhon.com/wp-content/plugins/wpmudev-videos/app/assets/img/summary/dashboard.png"` <br/>
+
+and the srcset attribute would be:
+
+`https://jhon.com/wp-content/plugins/wpmudev-videos/app/assets/img/summary/dashboard.png 1x, http://localhost:10011/wp-content/plugins/wpmudev-videos/app/assets/img/summary/dashboard@2x.png 2x`

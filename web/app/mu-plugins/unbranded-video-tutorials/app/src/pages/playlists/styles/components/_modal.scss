@@ -1,0 +1,10 @@
+@include body-class(true) {
+	##{$prefix}-playlist-create-modal,
+	##{$prefix}-playlist-videos-modal {
+		// Related to: IVT-248?focusedCommentId=209429.
+		// Temporary fix until fixed in SUI.
+		.sui-box .sui-box-banner img {
+			min-width: 100%;
+		}
+    }
+}

@@ -1,0 +1,154 @@
+@include body-class(true) {
+
+	.sui-summary {
+		&.sui-rebranded{
+			.sui-summary-image-space {
+				min-width: 126px;
+				min-height: 212px;
+				flex: 0 0 126px;
+			}
+		}
+		
+		.sui-summary-segment {
+
+			.sui-list {
+
+				li {
+
+					.sui-list-label {
+
+						@include media(max-width, md) {
+							display: block;
+							padding-right: 0;
+						}
+					}
+
+					.sui-list-detail {
+
+						@include media(max-width, md) {
+							display: block;
+							padding-left: 0;
+							text-align: left;
+						}
+					}
+
+					@include media(max-width, md) {
+						display: block;
+					}
+				}
+			}
+
+			.sui-summary-details {
+
+				p.sui-summary-large {
+					margin: 0;
+					color: palette(gray, dark);
+					font-size: 50px;
+					line-height: 55px;
+					letter-spacing: $font--letter-spacing;
+				}
+
+				p.sui-summary-sub {
+					font-size: 13px;
+					line-height: 22px;
+					letter-spacing: $font--letter-spacing;
+
+					+ .sui-form-field {
+
+						@include media(max-width, md) {
+							margin-top: $sui-gutter-md;
+						}
+					}
+				}
+
+				.sui-form-field {
+
+					.sui-with-button,
+					.sui-control-with-icon {
+
+						[class*="sui-icon-"] {
+							position: absolute;
+							top: 12px;
+							left: 15px;
+						}
+					}
+
+					.sui-with-button {
+
+						.sui-button {
+							flex: 0 0 auto;
+							margin-left: 10px;
+							font-size: 12px;
+
+							> [class*="sui-icon-"] {
+
+								&.sui-loading {
+									display: none;
+									top: 50%;
+									left: 50%;
+									transform: translate(-50%, -50%);
+								}
+
+								&:not(.sui-loading) {
+									top: auto;
+									left: auto;
+								}
+							}
+
+							.sui-button-text-default {
+								display: block;
+							}
+
+							.sui-button-text-onload {
+								display: none;
+
+								[class*="sui-icon-"] {
+									top: auto;
+									left: auto;
+								}
+							}
+
+							&.sui-button-onload-text {
+
+								.sui-button-text-default {
+									display: none;
+								}
+
+								.sui-button-text-onload {
+									display: block;
+								}
+							}
+
+							&.sui-button-onload {
+
+								> [class*="sui-icon-"] {
+
+									&.sui-loading {
+										display: block;
+									}
+								}
+							}
+						}
+
+						.sui-button-icon {
+
+							[class*="sui-icon-"] {
+								top: auto;
+								left: auto;
+							}
+						}
+
+						.sui-control-with-icon {
+							min-width: 100px;
+							flex: 1;
+
+							@include media(min-width, md) {
+								max-width: 240px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

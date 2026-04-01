@@ -1,0 +1,34 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import MobileNav from './MobileNav'
+import { action } from '@storybook/addon-actions'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+
+<Meta
+	title="lib/components/MobileNav"
+	component={MobileNav}
+	argTypes={{
+		paths: {
+			name: 'paths',
+			description: 'Object keys represent the routes',
+		},
+	}}
+/>
+
+export const Template = (args) => (
+	<Router>
+		<MobileNav {...args} />
+	</Router>
+)
+
+# MobileNav
+
+This component can only be used within the context of a `Router` from [`react-router-dom`](https://www.npmjs.com/package/react-router-dom) library
+
+<Canvas>
+	<Story name="default">{Template.bind()}</Story>
+</Canvas>
+
+<ArgsTable story="default" />
+
+<h2>Global variables & props</h2>
+The component use no gloabl variables

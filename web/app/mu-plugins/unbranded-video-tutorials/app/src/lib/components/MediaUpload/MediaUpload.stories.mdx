@@ -1,0 +1,19 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="lib/components/MediaUpload" />
+
+# MediaUpload
+
+This is a WordPress specific component to upload media files to WordPress. it can only be used in WordPress dashboard. it's UI is quite similar to [FileUpload](/story/lib-components-fileupload--default-story) component with an additional preview button.
+
+## Props
+
+| prop            | type       | decription                                                                                                                                                                                     |
+| --------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id              | `string`   | Unique id to be added to the component container                                                                                                                                               |
+| label           | `string`   | Button Upload Text                                                                                                                                                                             |
+| mediaTitle      | `string`   | WordPress Media Modal Title                                                                                                                                                                    |
+| buttonText      | `string`   | WordPress Medial Modal Buttn Text                                                                                                                                                              |
+| onSelect        | `function` | A callback to be executed when the user selects a media, the first parameter is the thumbnail object with the following structure `{id: {{Media id}}, file: {{Media Name}, url: {{Media Url}}` |
+| thumbnial       | `object`   | thumbnial object, same structure explained above                                                                                                                                               |
+| removeFileLabel | `string`   | aria-label for remove media button                                                                                                                                                             |

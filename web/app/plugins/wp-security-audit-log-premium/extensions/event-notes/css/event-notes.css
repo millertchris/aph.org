@@ -1,0 +1,112 @@
+/* Styles for Event Notes */
+
+.wp-core-ui .wsal-add-note.button.button-secondary {
+	cursor: pointer;
+	font-size: 11px;
+	padding: 0.34em 0.5em 0.25em;
+	min-height: initial;
+	line-height: 1;
+	margin: 8px;
+	border-color: #ddd;
+	text-align: center;
+	float: right;
+}
+
+.wsal-note-icon {
+	font-size: 14px;
+	line-height: 1;
+	margin-right: 4px;
+	margin-bottom: 0;
+	height: auto;
+	width: auto;
+}
+
+.ui-dialog-titlebar.ui-widget-header,
+#wsal-event-notes.ui-widget-content {
+	background: #fff;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	color: inherit;
+}
+
+.ui-dialog-titlebar.ui-widget-header {
+	border-bottom: 1px solid #dcdcde;
+}
+
+#wsal-note-form .event-notes-actions button,
+#wsal-note-form textarea {
+	font-size: 14px;
+	line-height: 1.4em;
+}
+
+#wsal-note-form textarea {
+	border: 1px solid #ccc;
+	display: block;
+	width: 100%;
+	margin-bottom: 16px;
+	padding: 8px;
+}
+
+.wsal-event-notes-actions {
+	display: flex;
+	gap: 8px;
+}
+
+#wsal-note-form .wsal-event-notes-actions button {
+	background-color: #565656;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	line-height: 1.4em;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.wsal-event-notes-actions button#wsal-save-note-btn {
+	background-color: #009344;
+}
+
+.wsal-success-notice,
+.wsal-error-notice {
+	margin-bottom: 1em;
+	line-height: 1;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.wsal-error-notice {
+	color: #d63638;
+}
+
+.wsal-success-notice {
+	color: #009344;
+}
+
+#wsal-event-notes small {
+	display: block;
+	font-size: 12px;
+	line-height: 1.5;
+	color: #4f4f4f;
+	font-style: italic;
+	margin-top: 1em;
+}
+
+/* Responsive edit note modal on main event-list page  */
+.toplevel_page_wsal-auditlog .ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front {
+	width: 100% !important;
+	max-width: 592px;
+	left: 50% !important;
+	transform: translateX(-50%);
+	padding-top: 8px;
+}
+
+@media (min-width: 783px) {
+	.wp-core-ui .wsal-add-note.button.button-secondary {
+		margin: 8px auto 0;
+	}
+}

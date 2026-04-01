@@ -1,0 +1,31 @@
+name: aph
+type: wordpress
+docroot: web
+php_version: "8.4"
+webserver_type: nginx-fpm
+xdebug_enabled: false
+additional_hostnames: []
+additional_fqdns: []
+database:
+    type: mariadb
+    version: "10.11"
+performance_mode: none
+hooks:
+    post-start:
+        - exec: |
+            # Install Composer dependencies if vendor directory is missing
+            if [ ! -d /var/www/html/vendor ]; then
+              composer install
+            fi
+            # Copy .env.example to .env if .env doesn't exist
+            if [ ! -f /var/www/html/.env ] && [ -f /var/www/html/.env.example ]; then
+              cp /var/www/html/.env.example /var/www/html/.env
+              echo "Created .env from .env.example"
+            fi
+upload_dirs:
+    - web/app/uploads
+webimage_extra_packages: [vim, less]
+use_dns_when_possible: true
+composer_version: "2"
+nodejs_version: "20"
+corepack_enable: true

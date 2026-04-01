@@ -1,0 +1,402 @@
+$action_time: 50px;
+$action_spacing: 10px;
+
+@include body-class(true) {
+	.#{$prefix}-accordion {
+		background-color: $white;
+
+		.#{$prefix}-accordion--row {
+			padding: 0 $sui-gutter-md;
+
+			.#{$prefix}-accordion--col-large,
+			.#{$prefix}-accordion--col-small {
+				padding: 0 5px;
+
+				&:first-child {
+					padding-left: 0;
+				}
+
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+
+			.#{$prefix}-accordion--col-large {
+				@include media(min-width, md) {
+					min-width: 1px;
+					flex: 1;
+					text-align: left;
+				}
+			}
+
+			.#{$prefix}-accordion--col-small {
+				@include media(min-width, md) {
+					flex: 0 0 165px;
+					text-align: right;
+				}
+			}
+
+			@include media(min-width, md) {
+				display: flex;
+				flex-wrap: wrap;
+				margin: 0;
+				padding: 0 $sui-gutter;
+				border: 0;
+			}
+		}
+
+		.#{$prefix}-accordion--header {
+			margin: 0;
+			padding-bottom: 5px;
+			border: 0 solid palette(silver, soft);
+			border-bottom-width: 1px;
+
+			p {
+				display: block;
+				flex: 0 0 auto;
+				margin: 0;
+				padding: 0;
+				border: 0;
+				color: palette(gray, dark);
+				font-size: 13px;
+				line-height: 22px;
+				font-weight: bold;
+			}
+
+			.#{$prefix}-accordion--col-small {
+				@include media(max-width, md) {
+					display: none;
+				}
+			}
+
+			+ .sui-notice {
+				margin-top: 0;
+
+				@include media(min-width, md) {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.#{$prefix}-accordion--group {
+			display: flex;
+			flex-direction: column-reverse;
+			margin: 0;
+			padding: 0;
+			border: 0 solid palette(silver, soft);
+			border-bottom-width: 1px;
+
+			.#{$prefix}-accordion--heading {
+				.#{$prefix}-accordion--title {
+					width: 100%;
+					cursor: pointer;
+					display: block;
+					margin: 0;
+					padding: #{calc($sui-gutter-md / 2)} 0;
+					border: 0;
+					background-color: transparent;
+					color: $blue;
+					font: 500 13px/22px $font;
+					letter-spacing: $font--letter-spacing;
+					text-align: left;
+					transition: $transition;
+
+					.video-thumb,
+					.video-icon,
+					.video-name {
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					.video-thumb {
+						margin: 0;
+						transition: $transition;
+
+						+ .video-icon {
+							margin-left: #{calc($sui-gutter-md / 2)};
+
+							@include media(min-width, md) {
+								margin-left: #{calc($sui-gutter / 2)};
+							}
+						}
+					}
+
+					.video-icon {
+						&:before {
+							color: inherit;
+						}
+
+						+ .video-name {
+							margin-left: 5px;
+						}
+					}
+
+					&,
+					&:hover,
+					&:focus,
+					&:active {
+						outline: none;
+						box-shadow: none;
+					}
+
+					&:hover,
+					&:focus {
+						color: #0a89bc;
+
+						.video-thumb {
+							&.dashicons {
+								background-color: palette(gray, default);
+							}
+						}
+					}
+
+					@include media(min-width, md) {
+						padding: #{calc($sui-gutter / 2)} 0;
+					}
+				}
+
+				.#{$prefix}-accordion--actions {
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: row;
+					justify-content: flex-end;
+					align-items: center;
+					padding: #{calc($sui-gutter-md / 2)} 0;
+
+					> button,
+					> .sui-dropdown,
+					> .sui-description {
+						margin: 0;
+						flex: 0 0 auto;
+
+						+ button,
+						+ .sui-dropdown,
+						+ .sui-description {
+							margin-left: $action_spacing;
+						}
+
+						&.sui-tooltip {
+							&:before,
+							&:after {
+								z-index: 6;
+							}
+						}
+					}
+
+					> .sui-description {
+						width: $action_time;
+						padding: 0;
+						border: 0;
+						line-height: 30px;
+						font-weight: 500;
+					}
+
+					@include media(min-width, md) {
+						padding: #{calc($sui-gutter / 2)} 0;
+					}
+				}
+			}
+
+			.#{$prefix}-accordion--region {
+				display: none;
+				visibility: hidden;
+				padding: $sui-gutter-md $sui-gutter-md 0;
+				background-color: palette(silver, light);
+
+				.wpmudev-videos-show_desktop {
+					@include media(max-width, md) {
+						display: none !important;
+					}
+				}
+
+				.wpmudev-videos-show_mobile {
+					@include media(min-width, md) {
+						display: none !important;
+					}
+				}
+
+				.sui-button-icon {
+					@include media(max-width, md) {
+						margin: 0 0 #{calc($sui-gutter-md / 2)};
+					}
+
+					@include media(min-width, md) {
+						position: absolute;
+						top: 0;
+						right: 0;
+						margin-right: 0;
+					}
+				}
+
+				@include media(min-width, md) {
+					position: relative;
+					padding: $sui-gutter $sui-gutter 0;
+				}
+			}
+
+			&.#{$prefix}-active {
+				background-color: palette(silver, light);
+
+				.#{$prefix}-accordion--heading {
+					background-color: palette(silver, light);
+
+					.video-name {
+						margin: 0;
+						padding: 0;
+						border: 0;
+						color: palette(gray, dark);
+						font: bold 15px/30px $font;
+						letter-spacing: -0.17px;
+
+						@include media(max-width, md) {
+							margin-top: #{calc($sui-gutter-md / 2)};
+						}
+
+						@include media(min-width, md) {
+							padding: #{calc($sui-gutter / 2)} 0;
+						}
+					}
+
+					.video-length {
+						margin: 0 0 #{calc($sui-gutter-md / 2)};
+						padding: 0;
+						border: 0;
+						color: palette(gray, light);
+						font: 500 13px/22px $font;
+						letter-spacing: $font--letter-spacing;
+
+						@include media(min-width, md) {
+							display: none !important;
+						}
+					}
+
+					.#{$prefix}-accordion--col-small {
+						@include media(max-width, md) {
+							padding-left: 0;
+						}
+					}
+
+					.#{$prefix}-accordion--actions {
+						@include media(max-width, md) {
+							justify-content: flex-start;
+							padding-top: 0;
+							padding-bottom: $sui-gutter-md;
+						}
+					}
+
+					@include media(min-width, md) {
+						width: 100%;
+						max-width: #{($sui-gutter * 2) + 1000px};
+						margin: 0 auto;
+					}
+				}
+
+				.#{$prefix}-accordion--region {
+					display: block;
+					visibility: visible;
+
+					@include media(max-width, md) {
+						text-align: right;
+					}
+
+					@include media(min-width, md) {
+						width: 100%;
+						max-width: #{($sui-gutter * 2) + 1000px};
+						margin: 0 auto;
+					}
+				}
+			}
+
+			&:not(.#{$prefix}-active) {
+				.#{$prefix}-accordion--heading {
+					.#{$prefix}-accordion--col-small {
+						@include media(max-width, md) {
+							display: none;
+						}
+					}
+				}
+
+				.#{$prefix}-accordion--region {
+					position: relative;
+				}
+			}
+
+			&.#{$prefix}-disabled {
+				position: relative;
+
+				&,
+				* {
+					pointer-events: none;
+				}
+
+				&:before {
+					content: ' ';
+					width: 100%;
+					opacity: 0.76;
+					position: absolute;
+					z-index: 1;
+					top: 0;
+					left: 0;
+					bottom: -1px;
+					background-color: #fafafa;
+				}
+			}
+		}
+
+		.#{$prefix}-accordion--notice {
+			margin: $sui-gutter-md 0;
+			padding: 0 $sui-gutter-md;
+
+			&:first-child {
+				margin-top: 0 !important;
+			}
+
+			&:last-child {
+				margin-bottom: 0 !important;
+			}
+
+			@include media(min-width, md) {
+				margin: $sui-gutter 0;
+				padding: 0 $sui-gutter;
+			}
+		}
+
+		// Custom icon.
+		.sui-button-icon {
+			.sui-icon-add-playlist {
+				width: 20px;
+				height: 17px;
+				background-image: url('../../../images/icons/icon-add-playlist.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+
+				@media only screen and (-webkit-min-device-pixel-ratio: 2),
+					only screen and (min--moz-device-pixel-ratio: 2),
+					only screen and (-o-min-device-pixel-ratio: 2/1),
+					only screen and (min-device-pixel-ratio: 2),
+					only screen and (min-resolution: 192dpi),
+					only screen and (min-resolution: 2dppx) {
+					background-image: url('../../../images/icons/icon-add-playlist@2x.png');
+				}
+			}
+
+			&:hover,
+			&:focus,
+			&:active {
+				.sui-icon-add-playlist {
+					background-image: url('../../../images/icons/icon-add-playlist-white.png');
+
+					@media only screen and (-webkit-min-device-pixel-ratio: 2),
+						only screen and (min--moz-device-pixel-ratio: 2),
+						only screen and (-o-min-device-pixel-ratio: 2/1),
+						only screen and (min-device-pixel-ratio: 2),
+						only screen and (min-resolution: 192dpi),
+						only screen and (min-resolution: 2dppx) {
+						background-image: url('../../../images/icons/icon-add-playlist-white@2x.png');
+					}
+				}
+			}
+		}
+	}
+}

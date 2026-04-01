@@ -1,0 +1,134 @@
+*** Save for Later for WooCommerce ***
+
+2025-02-01 - version 3.9.0
+ * Tweak: Tested with WooCommerce v9.6.0
+ * Fix: Cart Action is not working when choosing the "WooCommerce Before Cart" Table position
+
+2024-12-25 - version 3.8.0
+ * New: Compatibility given with Composite Products for WooCommerce
+ * Tweak: Improvement in PO Translation
+ * Tweak: Tested with WordPress v6.7.1
+ * Tweak: Tested with WooCommerce v9.5.1
+
+2024-08-07 - version 3.7.0
+ * New: Compatibility given with WooCommerce Cart Blocks 
+ * Tweak: Tested with WordPress v6.6.1 
+ * Tweak: Tested with WooCommerce v9.1.4
+
+2023-09-05 - version 3.6.0
+ * Tweak: Tested with WordPress v6.3.1 
+ * Tweak: Tested with WooCommerce v8.0.3
+ * Tweak: Tested with PHP v8.2.0
+ * Fix: Save for Later link is not displaying in the cart
+
+2023-07-10 - version 3.5.0
+ * Tweak: Purchased count is not getting updated when manually changing the Order Status 
+ * Tweak: Tested with WooCommerce v7.8.2
+
+2023-06-20 - version 3.4.0
+ * New: Pagination can be set for the Saved for Later Table
+ * Tweak: Compatible with High-Performance Order Storage[HPOS]
+ * Tweak: Improvement in deleting the products in the cart from Saved for Later Table
+ * Tweak: Tested with WordPress 6.2.2 & WooCommerce v7.8.0
+
+2023-03-20 - version 3.3.0
+ * Tweak: Tested with WordPress v6.1.1 & WooCommerce v7.5.0
+
+2022-11-08 - version 3.2.0
+ * Tweak: Display Improvements in Saved for Later Table
+ * Tweak: Tested with WordPress v6.1 & WooCommerce v7.0.1
+
+2022-08-19 - version 3.1.0
+ * New: Bulk Action to move the products to cart from Saved for Later Table
+ * New: Bulk Action to remove the products from the Saved for Later Table
+ * Tweak: Tested with WooCommerce v6.8.1
+
+2022-07-13 - version 3.0.0
+ * New: Positions to display the Saved for Later Table on Cart Page
+ * Tweak: Tested with WordPress v6.0.1 & WooCommerce v6.7.0
+
+2022-06-03 - version 2.9.0
+ * Tweak: Code Improvements
+ * Tweak: Improvement in saving the default values when WooCommerce is not active
+ * Tweak: Tested with WordPress v6.0 & WooCommerce v6.5.1
+ * Fix: Header already sent error message on plugin activation when WooCommerce is inactive
+
+2022-05-17 - version 2.8.0
+ * Tweak: Improvement in displaying the Saved Later Products for Guest Users
+ * Tweak: Tested with WordPress v5.9.3 & WooCommerce v6.5.1
+ * Fix: Pagination is not displaying in Saved Later Table on Cart Page
+
+2022-03-01 - version 2.7.0
+* New: Site Admin can track the following details through Reports Menu,
+     - Total Number of Saved Later Products
+     - Total Number of Current Saved Later Products
+     - Total Number of Purchased Products
+     - Total Number of Deleted Products
+     - Total Amount received through Save for Later
+ * Tweak: Tested with WordPress v5.9.1 & WooCommerce v6.2.1
+
+2021-07-16 - version 2.6.0
+ * Tweak: Improvement when moving the product to Cart from Saved for Later Table
+ * Tweak: Improvement when product added to the Saved for Later Table has deleted
+ * Tweak: Improvement in displaying the Product Image in Saved for Later Table
+ * Tweak: Tested WordPress up to v5.7.2 & WooCommerce v5.5.1
+
+2020-12-02 - version 2.5.0
+ * Tweak: Tested up to WooCommerce v4.7
+ * Fix: Product Price is not displaying in the "Saved Later Table" for "Guest Users"
+
+2020-07-24 - version 2.4.0
+ * Fix: Product & Category filters are not working properly for guest users
+
+2020-07-03 - version 2.3.0
+ * Fix: Redirection Issue in Cart[Conflict with Advanced Coupons for WooCommerce Plugin]
+
+2020-04-30 - version 2.2.0
+ * Fix: Exclude Categories Filter is not working
+
+2020-04-08 - version 2.1.0
+ * Tweak: Product Price in "Saved Later Table" will be displayed including tax.
+
+2020-04-06 - version 2.0.0
+ * Tweak: Tested up to v4.0.1
+ * Fix: Issue in updating the quantity of the products when moving from "Cart Table" 	to "Save for Later Table"
+
+2020-03-19 - version 1.9.0
+ * Tweak: Added class name for "Save for Later Link".
+ * Fix: Save for Later validity for guest users is not working.
+
+2020-03-16 - version 1.8.0
+ * Fix: Custom CSS Settings is not working
+ * Fix: Title display issue in "Saved for Later" Table on mobile view at cart page
+ * Fix: Following issues facing by Guest Users,
+     - "Saved for Later" Table becomes empty while moving one saved product to cart
+     - Saved products still remain in the table after purchasing them
+
+2020-03-06 - version 1.7.0
+ * Tweak: Translation Compatibility with Loco Translate Plugin
+
+2020-02-21 - version 1.6.0
+ * New: Option added to choose the styles from Plugin/Theme
+
+2020-02-14 - version 1.5.0
+ * Tweak: Hiding the Saved Later Table when no products are saved
+ * Tweak: Improvement in displaying Saved Later Table when the cart is empty
+ * Fix: Error in displaying the default values
+
+2020-01-31 - version 1.4.0
+ * Fix: Error when order status gets updated via cron
+
+2020-01-20 - version 1.3.0
+ * Tweak: Improvement in displaying the "Out of Stock products" at "Saved Later Table"
+ * Fix: All Products filter is not working
+
+2020-01-06 - version 1.2.0
+ * Fix: Include and Exclude Categories in Restriction Settings is not working
+
+2020-01-01 - version 1.1.0
+ * New: Added Privacy Policy Content
+ * New: S.No Column added for Saved Later Table at Cart Page
+ * Tweak: PO File Updated
+
+2019-11-26 - version 1.0.0
+ * Initial Release

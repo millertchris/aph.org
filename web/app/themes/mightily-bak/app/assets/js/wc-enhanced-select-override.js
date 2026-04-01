@@ -1,0 +1,407 @@
+/* APH added functions */
+jQuery(function ($) {
+	var customerRoleConditionalFields = $('#_billing_first_name, #_billing_last_name, #_billing_company, #_billing_address_1, #_billing_address_2, #_billing_city, #_billing_postcode, #_billing_email, #_billing_phone, #_billing_country');
+	var defaultPaymentMethods = $('#_payment_method option');
+	function updateCustomerPaymentMethods(role) {
+		var paymentMethodSelect = $('#_payment_method');
+		var paymentMethodOptions = $('#_payment_method option');
+		console.log(defaultPaymentMethods);
+		// Remove all values
+		paymentMethodOptions.remove();
+		// Re-add the default values
+		paymentMethodSelect.append(defaultPaymentMethods);
+		// Remove options based on user role
+		if (role == 'guest' || role == 'customer') {
+			$('#_payment_method option[value="accountfunds"]').remove();
+			$('#_payment_method option[value="eot_gateway"]').remove();
+			// Select card point if its available, else select authorize
+			if($('#_payment_method option[value="card_connect"]').length > 0){
+				paymentMethodSelect.val('card_connect');
+			} else {
+				paymentMethodSelect.val('authorize_net_aim');
+			}
+			//paymentMethodSelect.val('authorize_net_aim');
+			//paymentMethodSelect.val('card_connect');
+		}
+		if (role == 'eot' || role == 'eot-assistant' || role == 'teacher') {
+			$('#_payment_method option[value="authorize_net_aim"]').remove();
+			$('#_payment_method option[value="card_connect"]').remove();
+			paymentMethodSelect.val('accountfunds');
+		}
+	}
+	function updateCustomerFqOptions(fqOptions) {
+		wc_enhanced_select_params.fq_options = fqOptions;
+		var fqSelect = $('#fq_account');
+		fqSelect.empty();
+		fqSelect.append($("<option></option>").attr('value', '-1').text('Not Set'));
+		$.each(fqOptions, function (key, value) {
+			if (key != '-1') {
+				fqSelect.append($("<option></option>").attr("value", key).text(value));
+			}
+		});
+
+	}
+	function updateCustomerAbilties(role) {
+		// Set the global var for customer role
+		wc_enhanced_select_params.current_customer_role = role;
+		console.log('Customer Role: ' + role);
+		// set all fields to enabled
+		customerRoleConditionalFields.each(function () {
+			$(this).prop('readonly', false);
+		});
+		// enable the billing country and state
+		$('p.form-field._billing_country_field').removeClass('admin-field-disabled');
+		$('p.form-field._billing_state_field').removeClass('admin-field-disabled');
+		// Set the payment methods available for each user role
+		updateCustomerPaymentMethods(wc_enhanced_select_params.current_customer_role);
+		// If the customer has role eot or eot assistant
+		if (role == 'eot' || role == 'eot-assistant') {
+			// Set all fields to disabled
+			customerRoleConditionalFields.each(function () {
+				$(this).prop('readonly', true);
+			});
+			// disable the billing country and state
+			$('p.form-field._billing_country_field').addClass('admin-field-disabled');
+			$('p.form-field._billing_state_field').addClass('admin-field-disabled');
+		}
+
+	}
+	function updateProductSelectEventListeners() {
+		$(':input.wc-product-search').each(function () {
+			$(this).off('select2:select');
+			$(this).on('select2:select', function (e) {
+				console.log('Product Selected');
+				console.log(e.params.data);
+				if (wc_enhanced_select_params.current_customer_role == 'guest' || wc_enhanced_select_params.current_customer_role == 'customer') {
+					var stock = parseInt(e.params.data.stock);
+					var backorders_allowed = e.params.data.backorders_allowed;
+					if (!backorders_allowed) {
+						if (stock <= 0) {
+							alert('Sorry, this product is out of stock.');
+							$(this).val('').trigger('change');
+						}
+					}
+				}
+				if(wc_enhanced_select_params.current_customer_role == 'eot' || wc_enhanced_select_params.current_customer_role == 'eot-assistant' || wc_enhanced_select_params.current_customer_role == 'teacher'){
+					if(e.params.data.text.indexOf('Not FQ Eligible') !== -1){
+						alert('Sorry, this user is not allowed to purchase Non-FQ products.');
+						$(this).val('').trigger('change');
+					}
+				}
+			});
+		});
+	}
+	function updateCustomerSelectEventListeners() {
+		$(':input.wc-customer-search').each(function () {
+			$(this).off('select2:select');
+			//$('#_billing_state').off('change');
+			$(this).on('select2:select', function (e) {
+				updateCustomerAbilties(e.params.data.roles[0]);
+				updateCustomerFqOptions(e.params.data.fqOptions);
+			});
+			$(this).on('select2:unselect', function (e) {
+				updateCustomerAbilties('guest');
+				updateCustomerFqOptions({ '-1': 'Not Set' });
+			});
+		});
+	}
+	$(document.body).on('wc-enhanced-select-init', function () {
+		updateCustomerAbilties(wc_enhanced_select_params.current_customer_role);
+		updateProductSelectEventListeners();
+		updateCustomerSelectEventListeners();
+		// // Fire the select trigger so the user role global var is updated
+		// $(':input.wc-customer-search').each(function(){
+		// 	$(this).trigger('change');
+		// });
+	});
+});
+/*global wc_enhanced_select_params */
+jQuery(function ($) {
+
+	function getEnhancedSelectFormatString() {
+		return {
+			'language': {
+				errorLoading: function () {
+					// Workaround for https://github.com/select2/select2/issues/4355 instead of i18n_ajax_error.
+					return wc_enhanced_select_params.i18n_searching;
+				},
+				inputTooLong: function (args) {
+					var overChars = args.input.length - args.maximum;
+
+					if (1 === overChars) {
+						return wc_enhanced_select_params.i18n_input_too_long_1;
+					}
+
+					return wc_enhanced_select_params.i18n_input_too_long_n.replace('%qty%', overChars);
+				},
+				inputTooShort: function (args) {
+					var remainingChars = args.minimum - args.input.length;
+
+					if (1 === remainingChars) {
+						return wc_enhanced_select_params.i18n_input_too_short_1;
+					}
+
+					return wc_enhanced_select_params.i18n_input_too_short_n.replace('%qty%', remainingChars);
+				},
+				loadingMore: function () {
+					return wc_enhanced_select_params.i18n_load_more;
+				},
+				maximumSelected: function (args) {
+					if (args.maximum === 1) {
+						return wc_enhanced_select_params.i18n_selection_too_long_1;
+					}
+
+					return wc_enhanced_select_params.i18n_selection_too_long_n.replace('%qty%', args.maximum);
+				},
+				noResults: function () {
+					return wc_enhanced_select_params.i18n_no_matches;
+				},
+				searching: function () {
+					return wc_enhanced_select_params.i18n_searching;
+				}
+			}
+		};
+	}
+
+	try {
+		$(document.body)
+
+			.on('wc-enhanced-select-init', function () {
+
+				// Regular select boxes
+				$(':input.wc-enhanced-select, :input.chosen_select').filter(':not(.enhanced)').each(function () {
+					var select2_args = $.extend({
+						minimumResultsForSearch: 10,
+						allowClear: $(this).data('allow_clear') ? true : false,
+						placeholder: $(this).data('placeholder')
+					}, getEnhancedSelectFormatString());
+
+					$(this).selectWoo(select2_args).addClass('enhanced');
+				});
+
+				$(':input.wc-enhanced-select-nostd, :input.chosen_select_nostd').filter(':not(.enhanced)').each(function () {
+					var select2_args = $.extend({
+						minimumResultsForSearch: 10,
+						allowClear: true,
+						placeholder: $(this).data('placeholder')
+					}, getEnhancedSelectFormatString());
+
+					$(this).selectWoo(select2_args).addClass('enhanced');
+				});
+
+				// Ajax product search box
+				$(':input.wc-product-search').filter(':not(.enhanced)').each(function () {
+					var select2_args = {
+						allowClear: $(this).data('allow_clear') ? true : false,
+						placeholder: $(this).data('placeholder'),
+						minimumInputLength: $(this).data('minimum_input_length') ? $(this).data('minimum_input_length') : '3',
+						escapeMarkup: function (m) {
+							return m;
+						},
+						ajax: {
+							url: wc_enhanced_select_params.ajax_url,
+							dataType: 'json',
+							delay: 250,
+							data: function (params) {
+								if(typeof woocommerce_admin_meta_boxes === 'undefined'){
+									var order_id = 0;
+								} else {
+									var order_id = woocommerce_admin_meta_boxes.post_id;
+								}
+								return {
+									term: params.term,
+									action: $(this).data('action') || 'woocommerce_json_search_products_and_variations',
+									security: wc_enhanced_select_params.search_products_nonce,
+									exclude: $(this).data('exclude'),
+									include: $(this).data('include'),
+									limit: $(this).data('limit'),
+									order_id: order_id,
+									display_stock: $(this).data('display_stock')
+								};
+							},
+							processResults: function (data) {
+								var terms = [];
+								if (data) {
+									$.each(data, function (id, value) {
+										terms.push({
+											id: id,
+											text: value.text,
+											stock: value.stock,
+											backorders_allowed: value.backorders_allowed
+										});
+									});
+								}
+								return {
+									results: terms
+								};
+							},
+							cache: true
+						}
+					};
+
+					select2_args = $.extend(select2_args, getEnhancedSelectFormatString());
+
+					$(this).selectWoo(select2_args).addClass('enhanced');
+
+					if ($(this).data('sortable')) {
+						var $select = $(this);
+						var $list = $(this).next('.select2-container').find('ul.select2-selection__rendered');
+
+						$list.sortable({
+							placeholder: 'ui-state-highlight select2-selection__choice',
+							forcePlaceholderSize: true,
+							items: 'li:not(.select2-search__field)',
+							tolerance: 'pointer',
+							stop: function () {
+								$($list.find('.select2-selection__choice').get().reverse()).each(function () {
+									var id = $(this).data('data').id;
+									var option = $select.find('option[value="' + id + '"]')[0];
+									$select.prepend(option);
+								});
+							}
+						});
+						// Keep multiselects ordered alphabetically if they are not sortable.
+					} else if ($(this).prop('multiple')) {
+						$(this).on('change', function () {
+							var $children = $(this).children();
+							$children.sort(function (a, b) {
+								var atext = a.text.toLowerCase();
+								var btext = b.text.toLowerCase();
+
+								if (atext > btext) {
+									return 1;
+								}
+								if (atext < btext) {
+									return -1;
+								}
+								return 0;
+							});
+							$(this).html($children);
+						});
+					}
+				});
+
+				// Ajax customer search boxes
+				$(':input.wc-customer-search').filter(':not(.enhanced)').each(function () {
+					var select2_args = {
+						allowClear: $(this).data('allow_clear') ? true : false,
+						placeholder: $(this).data('placeholder'),
+						minimumInputLength: $(this).data('minimum_input_length') ? $(this).data('minimum_input_length') : '1',
+						escapeMarkup: function (m) {
+							return m;
+						},
+						ajax: {
+							url: wc_enhanced_select_params.ajax_url,
+							dataType: 'json',
+							delay: 1000,
+							data: function (params) {
+								return {
+									term: params.term,
+									action: 'woocommerce_json_search_customers',
+									security: wc_enhanced_select_params.search_customers_nonce,
+									exclude: $(this).data('exclude')
+								};
+							},
+							processResults: function (data) {
+								var terms = [];
+								if (data) {
+									$.each(data, function (id, value) {
+										terms.push({
+											id: id,
+											text: value.text,
+											roles: value.roles,
+											fqOptions: value.fq_options
+										});
+									});
+								}
+								return {
+									results: terms
+								};
+							},
+							cache: true
+						}
+					};
+
+					select2_args = $.extend(select2_args, getEnhancedSelectFormatString());
+
+					$(this).selectWoo(select2_args).addClass('enhanced');
+
+					if ($(this).data('sortable')) {
+						var $select = $(this);
+						var $list = $(this).next('.select2-container').find('ul.select2-selection__rendered');
+
+						$list.sortable({
+							placeholder: 'ui-state-highlight select2-selection__choice',
+							forcePlaceholderSize: true,
+							items: 'li:not(.select2-search__field)',
+							tolerance: 'pointer',
+							stop: function () {
+								$($list.find('.select2-selection__choice').get().reverse()).each(function () {
+									var id = $(this).data('data').id;
+									var option = $select.find('option[value="' + id + '"]')[0];
+									$select.prepend(option);
+								});
+							}
+						});
+					}
+				});
+
+				// Ajax category search boxes
+				$(':input.wc-category-search').filter(':not(.enhanced)').each(function () {
+					var select2_args = $.extend({
+						allowClear: $(this).data('allow_clear') ? true : false,
+						placeholder: $(this).data('placeholder'),
+						minimumInputLength: $(this).data('minimum_input_length') ? $(this).data('minimum_input_length') : 3,
+						escapeMarkup: function (m) {
+							return m;
+						},
+						ajax: {
+							url: wc_enhanced_select_params.ajax_url,
+							dataType: 'json',
+							delay: 250,
+							data: function (params) {
+								return {
+									term: params.term,
+									action: 'woocommerce_json_search_categories',
+									security: wc_enhanced_select_params.search_categories_nonce
+								};
+							},
+							processResults: function (data) {
+								var terms = [];
+								if (data) {
+									$.each(data, function (id, term) {
+										terms.push({
+											id: term.slug,
+											text: term.formatted_name
+										});
+									});
+								}
+								return {
+									results: terms
+								};
+							},
+							cache: true
+						}
+					}, getEnhancedSelectFormatString());
+
+					$(this).selectWoo(select2_args).addClass('enhanced');
+				});
+			})
+
+			// WooCommerce Backbone Modal
+			.on('wc_backbone_modal_before_remove', function () {
+				$('.wc-enhanced-select, :input.wc-product-search, :input.wc-customer-search').filter('.select2-hidden-accessible').selectWoo('close');
+			})
+
+			.trigger('wc-enhanced-select-init');
+
+		$('html').on('click', function (event) {
+			if (this === event.target) {
+				$('.wc-enhanced-select, :input.wc-product-search, :input.wc-customer-search').filter('.select2-hidden-accessible').selectWoo('close');
+			}
+		});
+	} catch (err) {
+		// If select2 failed (conflict?) log the error but don't stop other scripts breaking.
+		window.console.log(err);
+	}
+});

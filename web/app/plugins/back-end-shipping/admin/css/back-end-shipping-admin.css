@@ -1,0 +1,76 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+#woocommerce-order-items .wc-order-data-row.wc-order-bulk-actions.wc-order-data-row-toggle {
+	display: block !important;
+}
+#woocommerce-order-items .wc-order-data-row.wc-order-add-item.wc-order-data-row-toggle {
+	display: block !important;
+}
+#woocommerce-order-items .button.add-line-item {
+	display: none !important;
+}
+#woocommerce-order-items .button.cancel-action {
+	display: none !important;
+}
+/** Hide "_shipped" Meta from Order Items Table **/
+#order_line_items table.display_meta tr:nth-child(1){
+	display: none !important;
+}
+/** Hide "Add Meta" button from Order Items Table **/
+#order_line_items .add_order_item_meta.button {
+	display: none !important;
+}
+/** Hide "IDs" Meta from Shipping Table **/
+#order_shipping_line_items table.display_meta tr:nth-child(2){
+	display: none !important;
+}
+#wc-backbone-modal-dialog .select2-container, #wc-backbone-modal-dialog .select2-drop {
+	z-index: 9999999999 !important;
+}
+#wc-backbone-modal-dialog + .select2-container, #wc-backbone-modal-dialog + .select2-drop {
+	z-index: 9999999999 !important;
+}
+#wc-backbone-modal-dialog .wc-backbone-modal-content {
+	z-index: 999999999;
+}
+#wc-backbone-modal-dialog .wc-backbone-modal-backdrop {
+	z-index: 99999999;
+}
+/* EOT Links */
+body.role-eot .button.add-order-fee {
+	display: none;
+}
+body.role-eot .button.add-order-shipping {
+	display: none;
+}
+body.role-eot .button.add-order-tax {
+	display: none;
+}
+body.role-eot .button.add-order-tax {
+	display: none;
+}
+body.role-eot .order_data_column:nth-child(2) a.edit_address {
+	display: none;
+}
+/* EOT Assistant Links */
+body.role-eot-assistant .button.add-order-fee {
+	display: none;
+}
+body.role-eot-assistant .button.add-order-shipping {
+	display: none;
+}
+body.role-eot-assistant .button.add-order-tax {
+	display: none;
+}
+body.role-eot-assistant .button.add-order-tax {
+	display: none;
+}
+body.role-eot-assistant .order_data_column:nth-child(2) a.edit_address {
+	display: none;
+}
+#order_data .order_data_column a.edit_address {
+    width: auto !important;
+    height: auto !important;
+}

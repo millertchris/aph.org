@@ -1,0 +1,167 @@
+table {
+	border-collapse: collapse;
+	margin: $base-spacing 0;
+	table-layout: fixed;
+	text-align: left;
+	width: 100%;
+}
+
+thead {
+	line-height: $heading-line-height;
+	vertical-align: bottom;
+}
+
+tbody {
+	vertical-align: top;
+}
+
+tr {
+	border-bottom: $base-border;
+}
+
+th {
+	font-weight: 600;
+}
+
+td,
+th {
+	padding: $small-spacing $small-spacing $small-spacing 0;
+}
+
+/********************************
+  Tables
+*********************************/
+
+/* Variables
+================================== */
+$bw: 3px; // border width
+
+/* Tables
+================================== */
+.Rtable .row {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	border-bottom: 2px solid #000000;
+	@media only screen and (max-width: 768px) {
+		display: block;
+	}
+	&.Rtable-head {
+		display: flex;
+		@media only screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+	&:nth-of-type(even) {
+		color: #ffffff;
+		background-color: #000000;
+		a {
+			color: #ffffff;
+		}
+		@media only screen and (max-width: 768px) {
+			color: initial;
+			background-color: initial;
+			a {
+				color: initial;
+			}
+		}
+	}
+	&.Rtable-body {
+		@media only screen and (max-width: 768px) {
+			margin-bottom: 30px;
+		}
+	}
+	.wrapper {
+		padding: 0;
+	}
+}
+
+.Rtable-cell {
+	box-sizing: border-box;
+	flex-grow: 1;
+	width: 100%;
+	// Default to full width
+	padding: 10px;
+	overflow: hidden; // Or flex might break
+	list-style: none;
+	@media only screen and (max-width: 768px) {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	}
+	> h2,
+	 > h3,
+	 > h4,
+	 > h5,
+	 > h6,
+	> h1 {
+		margin: 0;
+	}
+	span.head-title {
+		display: none;
+		@media only screen and (max-width: 768px) {
+			display: block;
+	    font-weight: 700;
+	    float: left;
+		}
+	}
+
+}
+
+/* Table column sizing
+================================== */
+.Rtable--2cols > .row > .Rtable-cell {
+	width: 50%;
+}
+
+.Rtable--3cols > .row > .Rtable-cell {
+	width: 33.33%;
+}
+
+.Rtable--4cols > .row > .Rtable-cell {
+	width: 25%;
+}
+
+.Rtable--5cols > .row > .Rtable-cell {
+	width: 20%;
+}
+
+.Rtable--6cols > .row > .Rtable-cell {
+	width: 16.6%;
+}
+
+.Rtable--7cols > .row > .Rtable-cell {
+	width: 13.6%;
+}
+
+.Rtable-cell.quota {
+	display: none;
+}
+
+$breakpoint: 500px;
+
+/* Responsive
+==================================== */
+@media all and (max-width: $breakpoint) {
+	.Rtable--collapse {
+		display: block;
+		> .row > .Rtable-cell {
+			width: 100% !important;
+			    text-align: right;
+		}
+		> .row > .Rtable-cell--foot {
+			margin-bottom: 1em;
+		}
+	}
+}
+
+// Non-Flex modernizer fallback
+.no-flexbox .Rtable {
+	display: block;
+
+	> .row > .Rtable-cell {
+		width: 100%;
+	}
+
+	> .row > .Rtable-cell--foot {
+		margin-bottom: 1em;
+	}
+}

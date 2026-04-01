@@ -1,0 +1,15 @@
+#!/bin/bash
+# Prolific CLI Posts Manager - Command Wrapper
+# Auto-generated wrapper script
+
+PLUGIN_DIR="/sites/www.aph.org/files/web/app/plugins/prolific-advanced-cli-posts-manager"
+RUNNER_SCRIPT="$PLUGIN_DIR/standalone-runner.php"
+
+if [ ! -f "$RUNNER_SCRIPT" ]; then
+    echo "Error: Prolific CLI runner not found at $RUNNER_SCRIPT"
+    echo "Please ensure the plugin is properly installed."
+    exit 1
+fi
+
+# Forward all arguments to the runner
+php "$RUNNER_SCRIPT" "$@"

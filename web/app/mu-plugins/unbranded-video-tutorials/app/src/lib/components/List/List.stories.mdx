@@ -1,0 +1,32 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import List from './List'
+import { action } from '@storybook/addon-actions'
+
+<Meta title="lib/components/List" component={List} />
+
+export const Template = (args) => <List {...args} />
+
+# List
+
+<Canvas>
+	<Story
+		args={{
+			items: [
+				{
+					label: 'Label 01',
+					details: 'Label 01 Details',
+				},
+				{
+					label: 'Label 02',
+					details: 'Label 02 Details',
+					link: 'https://wpmudev.com',
+				},
+			],
+		}}
+		name="default"
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<ArgsTable story="default" />

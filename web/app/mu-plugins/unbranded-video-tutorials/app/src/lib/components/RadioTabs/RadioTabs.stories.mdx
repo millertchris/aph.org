@@ -1,0 +1,32 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import RadioTabs from './RadioTabs'
+import { action } from '@storybook/addon-actions'
+import { useState } from 'react'
+
+<Meta title="lib/components/RadioTabs" component={RadioTabs} />
+
+export const Template = (args) => {
+	const [selected, setSelected] = useState('option-1')
+	return (
+		<RadioTabs
+			{...args}
+			options={[
+				{ label: 'option 1', value: 'option-1', id: 'option-1-id' },
+				{ label: 'option 2', value: 'option-2', id: 'option-2-id' },
+				{ label: 'option 3', value: 'option-3', id: 'option-3-id' },
+			]}
+			value={selected}
+			onChange={(val) => {
+				setSelected(val)
+			}}
+		/>
+	)
+}
+
+# RadioTabs
+
+<Canvas>
+	<Story name="default">{Template.bind()}</Story>
+</Canvas>
+
+<ArgsTable story="default" />

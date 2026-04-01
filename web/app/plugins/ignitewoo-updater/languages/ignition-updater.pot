@@ -1,0 +1,226 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR team@ignitewoo.com
+# This file is distributed under the same license as the ignitewoo-updater package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ignitewoo-updater 3.0.2\n"
+"Report-Msgid-Bugs-To: team@ignitewoo.com\n"
+"POT-Creation-Date: 2020-09-08 11:21-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:54
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:55
+msgid "IgniteWoo Licenses"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:123
+#, php-format
+msgid ""
+"%sYour IgniteWoo products are almost ready.%s To get started, %sactivate "
+"your product licenses%s."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:149
+#, php-format
+msgid ""
+"Your license for <strong>%s</strong> expires on %s, %sRenew now%s to avoid "
+"losing access to important updates and support."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:151
+#, php-format
+msgid ""
+"Your license for <strong>%s</strong> has expired. Please %srenew%s to "
+"receive important updates and support."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:157
+msgid "a license is about to expire"
+msgid_plural "several licenses are about to expire"
+msgstr[0] ""
+msgstr[1] ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:158
+msgid "Warning:"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:180
+msgid ""
+"Any customizations you have made to theme files will be lost. Are you sure "
+"you would like to update?"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:215
+msgid "IgniteWoo Key Manager"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:219
+msgid "This is where you activate your IgniteWoo license keys."
+msgstr ""
+
+#. /a>', '<a href="' . esc_url( $this->my_subscriptions_url ) . '">' ) );
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:224
+msgid ""
+"Make certain that you activate your licenses otherwise you cannot receive "
+"important software updates and support."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:304
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:305
+msgid "Documentation"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:306
+msgid "Contact IgniteWoo"
+msgstr ""
+
+#. /woocommerce.png' ) . '" alt="' . __( 'Getting Started', 'ignition-updater' ) . '" />' . "\n";
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:309
+msgid "For help please review our FAQ, our documentation, or contact us."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:498
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:610
+msgid "Products activated successfully."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:498
+msgid "Refreshing the products list..."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:505
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:612
+msgid "There was an error and not all products were activated."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:525
+msgid "Oops. Something went wrong with key activation."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:533
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:596
+msgid "No license keys were specified for activation."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:601
+msgid "Product deactivated successfully."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:603
+msgid "There was an error while deactivating the product."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-admin.php:708
+msgid "Not activated"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-api.php:225
+msgid "IgniteWoo Request Error"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-api.php:238
+msgid "There was an error making your request, please try again."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-licenses-table.php:43
+msgid "No products found."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-licenses-table.php:87
+msgid "Product"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-licenses-table.php:88
+msgid "Version"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-licenses-table.php:89
+msgid "Key"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-licenses-table.php:91
+msgid "Renew By"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-licenses-table.php:114
+#, php-format
+msgid "version %1$s is available"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-licenses-table.php:132
+msgid "Deactivate"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-licenses-table.php:134
+msgid "Place your license key here"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-screen.php:93
+msgid "Licenses"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-screen.php:94
+msgid "Help"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-update-checker.php:537
+msgid ""
+"An unexpected error occurred. Something may be wrong with IgniteWoo.com or "
+"this server&#8217;s configuration. If you continue to have problems, please "
+"try the <a href=\"https://ignitewoo.com/\">contact page</a>."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater-update-checker.php:537
+msgid ""
+"(WordPress could not establish a secure connection to IgniteWoo.com. Please "
+"contact your server administrator.)"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater.php:320
+msgid "Theme Information File Not Found."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater.php:336
+msgid "Theme Information File is Inaccurate. Please try again."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater.php:410
+msgid ""
+"IgniteWoo Updater must be network activated when in multisite environment."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater.php:441
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/classes/class-ignition-updater.php:465
+msgid ""
+"To enable this update please activate your IgniteWoo license by visiting the "
+"Dashboard > IgniteWoo Licenses screen."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/screens/ignition-api-unreachable.php:4
+#, php-format
+msgid ""
+"There seems to be an error reaching the IgniteWoo API at this time. Please "
+"try again later. Should this error persist, please %submit a support request"
+"%s on our web site."
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/screens/screen-manage.php:19
+msgid "Activate Licenses"
+msgstr ""
+
+#: /var/www/wp38/wp-content/plugins/ignitewoo-updater/screens/screen-manage.php:20
+msgid "Manage my Licenses"
+msgstr ""

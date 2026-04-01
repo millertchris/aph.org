@@ -1,0 +1,17 @@
+.home {
+    .layout.cards.medium .image {
+        @media screen and ($mobile-lg) {
+            margin-bottom: 20px;
+        }
+    }
+    .layout.listing.cards.grid .card:last-of-type {
+        @media screen and ($mobile-lg) {
+            margin-bottom: 0px;
+        }
+    }
+    .layout.cards .card.accessible-card.btn+.btn {
+        @media screen and ($mobile-lg) {
+        	margin-bottom: 0px;
+        }
+    }
+}

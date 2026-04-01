@@ -1,0 +1,47 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="Introduction" />
+
+# Introduction
+
+This article summarizes the general guidelines & decisions made during the development of this project.
+
+### Library
+
+As the goal is to migrate multiple plugins from Vue to React ( IVT & Beehive for instance ), and as those plugins share multiple components & functionalities, creating a shared library would enhance reusability and help us achieve our goal faster.
+
+You find on the library section all the components & hooks that have been created so far.
+
+Once we are done with ivt, this library will be packaged and deployed to npm preparing to use it with Beehive project.
+
+The library still depend on [@wpmudev/shared-ui](https://www.npmjs.com/package/@wpmudev/shared-ui), at a later stage it will be replaced with the SUI React package that's currently under development.
+
+### Ivt
+
+Here you find docs for components and functionalites that are specific to ivt, The rule of thumb is to document only the parts that have potential use in multiple contexts.
+
+## Development
+
+### Environement Setup
+
+-   Make sure to have node version 16 or higher
+
+-   Setup dependencies:
+
+```
+npm install
+```
+
+### Available scripts
+
+#### React App
+
+```
+npm run dev
+```
+
+#### storybook
+
+```
+npm run storybook
+```

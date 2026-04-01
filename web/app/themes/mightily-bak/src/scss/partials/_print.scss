@@ -1,0 +1,27 @@
+.notice.cookie {
+    display: none !important;
+}
+.notice.site-wide {
+    display: none !important;
+}
+.skip-nav {
+    display: none !important;
+}
+header.header {
+    display: none !important;
+}
+footer {
+    display: none !important;
+}
+#main {
+    padding-top: 0 !important;
+}
+.woocommerce-account {
+    .woocommerce-MyAccount-navigation {
+        display: none;
+    }
+    .woocommerce-MyAccount-content {
+        width: 100%;
+        float: none;
+    }
+}

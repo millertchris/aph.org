@@ -1,0 +1,73 @@
+.flat_rate_box_weights td {
+    vertical-align: middle;
+    padding: 4px 7px;
+}
+
+.flat_rate_box_weights th {
+    padding: 9px 7px;
+}
+
+.flat_rate_box_weights td input {
+    margin-right: 4px;
+}
+
+#flat_rate_box_weights {
+    display: none;
+}
+
+.usps_boxes td, .usps_services td, .usps_boxes th, .usps_services th {
+    vertical-align: middle;
+    padding: 4px 7px;
+}
+
+.usps_boxes td input {
+    margin-right: 4px;
+	max-width:84px;
+}
+
+.usps_boxes .check-column {
+    vertical-align: middle;
+    text-align: left;
+    padding: 0 7px;
+}
+
+.usps_boxes .check-column input {
+    margin: 0;
+}
+
+.usps_services th.sort {
+    width: 16px;
+}
+
+.usps_services td.sort {
+    cursor: move;
+    width: 16px;
+    padding: 0;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAHUlEQVQYV2O8f//+fwY8gJGgAny6QXKETRgEVgAAXxAVsa5Xr3QAAAAASUVORK5CYII=) no-repeat center;
+}
+
+.usps_services .sub_services {
+    font-size: 0.92em;
+}
+
+.usps_services .sub_services li {
+    min-height: 30px;
+    line-height: 28px;
+	white-space: nowrap;
+	position:relative;
+}
+
+.usps_services .sub_services input[type=number] {
+	max-width:64px;
+}
+
+.usps_services .media-mail-notice {
+    background-color: #cce5ff;
+    border-left: 4px solid #0073aa;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+#woocommerce-usps-settings .form-table tr:has(input[type="hidden"]) {
+	display: none;
+}

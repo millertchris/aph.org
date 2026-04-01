@@ -1,0 +1,73 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import TopNotice from './TopNotice'
+import { action } from '@storybook/addon-actions'
+
+<Meta title="lib/components/TopNotice" component={TopNotice} />
+
+export const Template = (args) => <TopNotice {...args} />
+
+# TopNotice
+
+<Canvas>
+	<Story name="default">{Template.bind()}</Story>
+</Canvas>
+
+<ArgsTable story="default" />
+
+<h2>Stories</h2>
+
+<h4>Success</h4>
+
+<Canvas>
+	<Story
+		name="success"
+		args={{
+			type: 'success',
+			message: "This's a success message!",
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<h4>Info</h4>
+
+<Canvas>
+	<Story
+		name="info"
+		args={{
+			type: 'info',
+			message: "This's an info notice!",
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<h4>Warning</h4>
+
+<Canvas>
+	<Story
+		name="warning"
+		args={{
+			type: 'warning',
+			message: "This's a warning notice",
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<h4>Error</h4>
+
+<Canvas>
+	<Story
+		name="error"
+		args={{
+			type: 'error',
+			message: "This's a warning notice",
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>

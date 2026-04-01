@@ -1,0 +1,24 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import Select from './Select'
+import { action } from '@storybook/addon-actions'
+import { defaultOptions } from './defaultValues'
+
+<Meta title="lib/components/Select" component={Select} />
+
+export const Template = (args) => <Select {...args} />
+
+# Select
+
+<Canvas>
+	<Story
+		name="default"
+		args={{
+			id: 'select',
+			options: defaultOptions,
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<ArgsTable story="default" />

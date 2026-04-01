@@ -1,0 +1,93 @@
+.wsal-copy-event-btns {
+	display: flex;
+	gap: 8px;
+	float: right;
+	padding: 12px 0;
+}
+
+
+.wsal-copy-event-btns a {
+	background-color: #e7e9e9;
+	border-radius: 50%;
+
+	display: flex;
+	justify-content: center;
+
+	width: 24px;
+	height: 24px;
+}
+
+.wsal-copy-event-btns a span {
+	position: relative;
+	top: 5px;
+
+	font-size: 14px;
+	line-height: 1;
+}
+
+.wsal-copy-spinner,
+.wsal-copy-spinner div {
+	box-sizing: border-box;
+}
+
+.wsal-copy-spinner {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 20px;
+	height: 20px;
+	top: 2px;
+}
+
+.wsal-copy-spinner div {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	margin: 8px;
+	border: 2px solid currentColor;
+	border-radius: 50%;
+	animation: wsal-copy-spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	border-color: currentColor transparent transparent transparent;
+}
+
+.wsal-copy-spinner div:nth-child(1) {
+	animation-delay: -0.45s;
+}
+
+.wsal-copy-spinner div:nth-child(2) {
+	animation-delay: -0.3s;
+}
+
+.wsal-copy-spinner div:nth-child(3) {
+	animation-delay: -0.15s;
+}
+
+@media (min-width: 1280px) {
+	.wsal-copy-event-btns {
+		justify-content: flex-end;
+		flex-direction: column;
+		padding-bottom: 0;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	#the-list>tr:hover .wsal-copy-event-btns {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
+@keyframes wsal-copy-spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

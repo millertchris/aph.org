@@ -1,0 +1,58 @@
+@include body-class(true) {
+
+	##{$prefix}-videos-list {
+
+		&.loading {
+			overflow: hidden;
+			position: relative;
+			padding-bottom: 200px;
+
+			.loading-text {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-flow: row wrap;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				z-index: 10;
+				top: 0;
+				left: 0;
+				background-color: rgba(255,255,255,0.95);
+				color: palette(gray, light);
+				font-size: 13px;
+				line-height: 22px;
+				text-align: center;
+
+				[class*="sui-icon-"] {
+					vertical-align: middle;
+					margin-top: -2px;
+					margin-right: 10px;
+
+					&:before {
+						display: block;
+					}
+				}
+			}
+
+			.#{$prefix}-accordion {
+
+				.#{$prefix}-accordion--group {
+					display: none !important;
+				}
+			}
+
+			.#{$prefix}-to-top {
+				display: none !important;
+			}
+		}
+
+		&:not(.loading) {
+
+			.loading-text {
+				display: none;
+				pointer-events: none;
+			}
+		}
+	}
+}

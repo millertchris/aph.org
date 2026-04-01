@@ -1,0 +1,61 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import { Portal } from './Portal'
+import { action } from '@storybook/addon-actions'
+import { useState, useRef, useEffect } from 'react'
+
+<Meta title="lib/components/Portal" component={Portal} />
+
+export const Template = (args) => {
+	// React Portal is used to fix the issue of having nested forms
+	const [portal, setPortal] = useState()
+	const portalRef = useRef(null)
+	useEffect(() => {
+		setPortal(portalRef.current)
+	}, [portalRef])
+	return (
+		<>
+			<div ref={portalRef} />
+			<Portal container={portal} {...args} />
+		</>
+	)
+}
+
+# Portal
+
+A basic implementation for a react portal container, <a href="https://mui.com/material-ui/react-portal/" target="_blank"> similar to the one that comes with MaterialUI </a>, the container prop is the HTML element where the children will be rendered
+
+<Canvas>
+	<Story
+		name="Default"
+		args={{
+			children:
+				'Those are a children elements rendered in a portal, check the docs!',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<ArgsTable story="Default" />
+
+## Example:
+
+```
+
+	const [portal, setPortal] = useState()
+	const portalRef = useRef(null)
+	useEffect(() => {
+		setPortal(portalRef.current)
+	}, [portalRef])
+	return (
+		<>
+			<div ref={portalRef} />
+			<Portal container={portal} {...args} >
+        Content you want to render inside the div with portanRef reference.
+      <Portal>
+		</>
+	)
+}
+```
+
+**React Portal is used to fix the issue of having nested forms or issues with event listeners between children and parents**

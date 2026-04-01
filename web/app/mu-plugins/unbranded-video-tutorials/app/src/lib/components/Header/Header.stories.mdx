@@ -1,0 +1,38 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import Header from './Header'
+import { action } from '@storybook/addon-actions'
+import './style.stories.scss'
+
+<Meta title="lib/components/Header" component={Header} />
+
+export const Template = (args) => <Header {...args} />
+
+# Header
+
+Header for an admin page
+
+<Canvas>
+	<Story
+		name="default"
+		args={{
+			actionsRight: '',
+			actionsLeft: '',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<ArgsTable story="default" />
+
+<h2>Global variables & props</h2>
+
+| prop        | corresponding variable              |
+| ----------- | ----------------------------------- |
+| docText     | $i18n.header.doc                    |
+| white_label | this.$vars.whitelabel.hide_doc_link |
+
+`this.$vars.whitelabel.hide_doc_link`
+It's useless to turn this into a prop as we have `showDocLink`
+
+> **Make sure to use `!this.$vars.whitelabel.hide_doc_link` as a value for showDocLink** prop

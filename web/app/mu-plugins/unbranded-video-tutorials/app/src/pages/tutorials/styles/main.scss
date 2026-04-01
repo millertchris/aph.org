@@ -1,0 +1,45 @@
+$prefix: 'wpmudev-videos';
+
+// Overwrite summary image.
+$summary-image: '../../../images/summary/main.png';
+
+// Overwrite font path.
+$sui-font-path: '~@wpmudev/shared-ui/dist/fonts/';
+$sui-image-path: '~@wpmudev/shared-ui/dist/images/';
+
+// Share UI styles.
+@import '~@wpmudev/shared-ui/scss/shared-ui';
+
+// Video icons.
+@import '../../../styles/icons';
+@import '../../../styles/player';
+
+// Custom styles.
+@import './videos-menu';
+@import './videos-section';
+
+.video-iframe {
+	iframe {
+		max-width: 100%;
+	}
+}
+
+@include body-class(true) {
+	.sui-form-field {
+		.sui-with-button {
+			> .sui-with-button,
+			> .sui-control-with-icon {
+				min-width: 100px;
+				flex: 1;
+
+				@include media(min-width, md) {
+					max-width: 240px;
+				}
+			}
+
+			.sui-button {
+				margin-left: 10px;
+			}
+		}
+	}
+}

@@ -1,0 +1,120 @@
+.profile {
+	margin-top: 135px;
+	@media screen and (min-width: 1101px) {
+		margin-top: 60px;
+	}
+	.basic-info {
+		.row {
+			margin-bottom: 100px;
+			@media screen and (min-width: 768px) {
+				display: flex;
+			}
+			.profile-info {
+				flex:1;
+				position:relative;
+			}
+		}
+		.info {
+			max-width: 860px;
+			@media screen and (min-width: 560px) {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			@media screen and (max-width: 768px) {
+				text-align: center;
+			}
+		}
+		.actions {
+			@media screen and (max-width: 768px) {
+				text-align: center;
+			}
+		}
+		.contact,
+		.image {
+			flex-basis: 40%;
+		}
+		.image {
+			margin-right: 60px;
+		}
+		.email,
+		.name,
+		.position {
+			margin-bottom: 10px;
+		}
+		.image {
+			margin-bottom: 20px;
+			@media screen and (max-width: 768px) {
+				margin: 0 auto 20px;
+			}			
+			img {
+				border-radius:50%;
+				width: 100%;
+				max-width: 200px;				
+			}
+		}
+	}
+	.edit-profile {
+		margin-bottom: 10px;
+	}
+	.credits {
+		@media screen and (min-width: 768px) {
+			margin-left: 40px;
+		}
+	}
+	.fq-accounts {
+		+.fq-accounts {
+			padding-top: 20px;
+			margin-top: 20px;
+			border-top: 1px solid #000;
+		}
+		.label {
+			font-weight: 800;
+		}
+		.balance {
+			margin-bottom: 10px;
+			font-size: 2em;
+		}
+	}
+	.credit {
+		@media screen and (max-width: 768px) {
+			margin-top: 60px;
+		}
+		.fq-accounts {
+			@media screen and (max-width: 768px) {
+				text-align:center;
+			}
+		}
+		.title {
+			margin-bottom: 18px;
+		}
+		.buttons {
+			.btn {
+				display: block;
+				max-width: 220px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.order-history {
+		.h3 {
+			font-size: 1.25em;
+		}
+		.name-item {
+			margin-bottom: 10px;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
+	}
+	.order-history.quota-users {
+		.fq-name,
+		.fq-role-name {
+			margin-bottom: 20px;
+		}
+		.line-items {
+			margin-bottom: 40px;
+		}
+	}
+}

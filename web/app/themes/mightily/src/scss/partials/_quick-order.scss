@@ -1,0 +1,19 @@
+#cn-quick-order {
+    .form-row {
+        display: flex;
+    }
+    .product-cn-col {
+        width: 61%;
+        padding-right: 30px;
+    }
+    .product-qty-col {
+        width: 20%;
+        padding-right: 30px;
+    }
+    .delete {
+        margin-top: 32px;
+    }
+    .btn+.btn {
+        margin-top: 0;
+    }
+}

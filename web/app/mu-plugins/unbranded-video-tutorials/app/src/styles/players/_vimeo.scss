@@ -1,0 +1,17 @@
+.lazyframe[data-vendor="vimeo"] {
+	max-width: 100% !important;
+	max-height: unset !important;
+	margin-right: auto;
+	margin-left: auto;
+
+	&:after {
+		position: absolute;
+	}
+}
+
+.wpmudev-videos-shortcode {
+
+	.lazyframe[data-vendor="vimeo"] {
+		max-height: inherit !important;
+	}
+}

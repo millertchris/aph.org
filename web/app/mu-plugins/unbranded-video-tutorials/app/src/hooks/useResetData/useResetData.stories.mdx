@@ -1,0 +1,33 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="ivt/hooks/useResetData" />
+
+# useResetData
+
+Resets Settings Data for IVT
+
+## Usage
+
+### Parameters
+
+The hook accepts a single parameter of type object with the following parameter(s): <br />
+
+| key        | type     | parameters | description                         |
+| ---------- | -------- | ---------- | ----------------------------------- |
+| afterReset | function | `response` | Gets called after successfull reset |
+
+### Data
+
+| data         | type     | parameters | description                  |
+| ------------ | -------- | ---------- | ---------------------------- |
+| resetData    | function | /          | Resets the data              |
+| isProcessing | boolean  | /          | if it's currently processing |
+
+### Example
+
+```
+const { resetData, isProcessing } = useResetData({
+  afterReset,
+  onError
+})
+```

@@ -1,0 +1,191 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import Button from './Button'
+import { action } from '@storybook/addon-actions'
+import iconsList from '../../helpers/icons-list/icons-list'
+
+<Meta
+	title="lib/components/Button"
+	argTypes={{
+		icon: {
+			name: 'icon',
+			description: 'Icon Name',
+			options: iconsList,
+			control: { type: 'select' },
+			table: {
+				type: { summary: 'string' },
+				defaultValue: { summary: '' },
+			},
+		},
+	}}
+	component={Button}
+/>
+
+export const Template = (args) => <Button {...args} />
+
+# Button
+
+<Canvas>
+	<Story
+		name="default"
+		args={{
+			onLoadingText: 'Loading',
+			children: 'Button',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+<ArgsTable story="default" />
+
+## Stories
+
+#### Icon
+
+<Canvas>
+	<Story
+		name="Icon"
+		args={{
+			onLoadingText: 'Loading',
+			children: 'Button',
+			icon: 'save',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+#### Loading
+
+<Canvas>
+	<Story
+		name="Loading"
+		args={{
+			onLoadingText: 'Loading',
+			children: 'Button',
+			isLoading: true,
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+#### Blue
+
+<Canvas>
+	<Story
+		name="Blue"
+		args={{
+			color: 'blue',
+			onLoadingText: 'Loading',
+			children: 'Button',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+#### Green
+
+<Canvas>
+	<Story
+		name="Green"
+		args={{
+			color: 'green',
+			onLoadingText: 'Loading',
+			children: 'Button',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+#### Red
+
+<Canvas>
+	<Story
+		name="Red"
+		args={{
+			color: 'red',
+			onLoadingText: 'Loading',
+			children: 'Button',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+#### Orange
+
+<Canvas>
+	<Story
+		name="Orange"
+		args={{
+			color: 'orange',
+			onLoadingText: 'Loading',
+			children: 'Button',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+#### Yellow
+
+<Canvas>
+	<Story
+		name="Yellow"
+		args={{
+			color: 'yellow',
+			onLoadingText: 'Loading',
+			children: 'Button',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+#### Purple
+
+<Canvas>
+	<Story
+		name="Purple"
+		args={{
+			color: 'purple',
+			onLoadingText: 'Loading',
+			children: 'Button',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+#### White
+
+<Canvas>
+	<Story
+		name="White"
+		args={{
+			color: 'white',
+			onLoadingText: 'Loading',
+			children: 'Button',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>
+
+#### Ghoast
+
+<Canvas>
+	<Story
+		name="Ghost"
+		args={{
+			color: 'ghost',
+			onLoadingText: 'Loading',
+			children: 'Button',
+		}}
+	>
+		{Template.bind()}
+	</Story>
+</Canvas>

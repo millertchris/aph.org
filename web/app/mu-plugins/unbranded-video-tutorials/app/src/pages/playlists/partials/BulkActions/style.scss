@@ -1,0 +1,4 @@
+// Fix select options list being hidden under bulkactions div wrapper
+span.select2-container {
+	z-index: 999 !important;
+}

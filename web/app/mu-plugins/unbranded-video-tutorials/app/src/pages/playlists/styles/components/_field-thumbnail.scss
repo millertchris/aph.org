@@ -1,0 +1,15 @@
+@include body-class(true) {
+
+	.#{$prefix}-field--thumbnail {
+
+		.sui-label {
+			color: palette(gray, dark);
+			font-size: 15px;
+			line-height: 22px;
+		}
+
+		.sui-description {
+			margin-bottom: 10px !important;
+		}
+	}
+}

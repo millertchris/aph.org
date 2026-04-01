@@ -1,0 +1,434 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>American Printing House for the Blind</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link href="assets/css/style.min.css" rel="stylesheet">
+	<script src="assets/components/modernizr/modernizr.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+	<script src="https://unpkg.com/@carbon/vue@2.23.1/dist/carbon-vue.umd.min.js"></script>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-TXfwrfuHVznxCssTxWoPZjhcss/hp38gEOH8UPZG/JcXonvBQ6SlsIF49wUzsGno" crossorigin="anonymous">
+</head>
+
+<body>
+	<a href="#main" class="skip-nav">Skip to main content</a>
+
+	<header class="header" role="banner">
+		<a href="#main-menu" class="skip-nav">Skip to main menu</a>
+		<div class="nav-top">
+			<div class="wrapper">
+				<div class="logo">
+					<a href="index.html" aria-label="Return to the APH home page"><img src="assets/img/logo-white.svg" alt="American Printing House for the Blind - Logo"></a>
+					<span class="tag-line">Welcome Everyone</span>
+				</div>
+				<form class="site-search" action="index.html" method="post" role="search">
+
+					<div class="input-wrapper select-input-field">
+						<label for="site-search" aria-label="Select a search category">Search Categories</label>
+						<select id="site-search" class="filter" name="Search Categories">
+                            <option value="" disabled selected>Categories</option>
+                            <option value="option 1">Books</option>
+                            <option value="option 2">Electronics</option>
+                            <option value="option 3">Games</option>
+                            <option value="option 4">Software</option>
+                            <option value="option 5">Tactile</option>
+                            <option value="option 6">Travel</option>
+                        </select>
+					</div>
+
+					<div class="input-wrapper text-input-field">
+						<label for="search-field">Site Search</label>
+						<input type="text" name="Site Search" value="" id="search-field" class="search-field" aria-label="What would you like to search for?">
+					</div>
+
+					<button type="submit" name="button" class="search-submit"><i class="fas fa-search" aria-hidden="true"></i> Search</button>
+				</form>
+				<div class="search-results">
+					<p class="h4">Search Results</p>
+					<ul>
+						<li>Lorem ipsum dolor sit amet</li>
+						<li>Dolor sit amet</li>
+						<li>Lorem ipsum </li>
+						<li>Lorem ipsum dolor sit amet</li>
+						<li>Sit amet</li>
+					</ul>
+				</div>
+				<div class="action-items">
+					<ul class="menu white">
+						<li class="menu-item mobile-search">
+							<a href="#" aria-label="Mobile Search"><i class="fas fa-search" aria-hidden="true"></i> <span class="text">Search</span></a>
+						</li>
+						<li class="menu-item">
+							<a href="#" aria-label="Account menu, contains additional list items for your account"><i class="fas fa-user-circle" aria-hidden="true"></i> <span class="text">Account</span></a>
+							<ul class="sub-menu right">
+								<li class="menu-item"><a href="#">View Profile</a></li>
+								<li class="menu-item"><a href="#">Account Requests (2)</a></li>
+								<li class="menu-item"><a href="#">Orders in Queue (2)</a></li>
+								<li class="menu-item"><a href="#">View Wishlist</a></li>
+								<li class="menu-item"><a href="#">Quick Order</a></li>
+								<li class="menu-item"><a href="#">SRS</a></li>
+								<li class="menu-item"><a href="#">Logout</a></li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<a href="#"><i class="fas fa-shopping-cart" aria-hidden="true"></i> <span class="text">Cart</span></a>
+							<ul class="sub-menu cart right">
+								<li class="item">
+									<span>
+                                        <img src="assets/img/orbit_reader_20.png" alt="Orbit Reader 20">
+                                    </span>
+									<span>
+                                        <div>Orbit Reader 20</div>
+                                        <div>Oty: 1</div>
+                                        <div>$449.99</div>
+                                        <a href="#" class="btn white">Remove</a>
+                                    </span>
+								</li>
+								<li class="item">
+									<span>
+                                        <img src="assets/img/jaws_suite.png" alt="Jaws Suite">
+                                    </span>
+									<span>
+                                        <div>Jaws Suite</div>
+                                        <div>Oty: 1</div>
+                                        <div>$449.99</div>
+                                        <a href="" class="btn white">Remove</a>
+                                    </span>
+								</li>
+								<li class="total">
+									<span>Total: $899.98</span>
+								</li>
+								<li class="view-cart"><a href="#" class="btn white">View Cart</a></li>
+								<li class="checkout"><a href="#" class="btn white">Checkout</a></li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<button class="hamburger hamburger--elastic mobile-btn" type="button">
+						        <span class="hamburger-box">
+						            <span class="hamburger-inner"></span>
+						        </span>
+						    </button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="nav-bottom">
+			<div class="wrapper">
+				<nav class="nav" role="navigation">
+					<ul id="main-menu" class="menu main-menu">
+						<li class="menu-item">
+							<a href="#">Life with Vision Loss</a>
+							<ul class="sub-menu left">
+								<li class="menu-item"><a href="recent-diagnosis.html">Recent Diagnosis</a></li>
+								<li class="menu-item"><a href="#">Adults and Seniors</a></li>
+								<li class="menu-item"><a href="#">Kids with Vision Loss</a></li>
+								<li class="menu-item"><a href="#">Working with Vision Loss</a></li>
+								<li class="menu-item"><a href="#">Advocacy</a></li>
+								<!-- <ul class="shop-search">
+									<li class="menu-item title">Shop</li>
+									<li class="menu-item"><a href="#search-field"><i class="fas fa-search" aria-hidden="true"></i> Search</a></li>
+								</ul> -->
+							</ul>
+						</li>
+						<li class="menu-item">
+							<a href="#">Educational Resources</a>
+							<ul class="sub-menu left">
+								<li class="menu-item"><a href="#">Educational Products</a></li>
+								<li class="menu-item"><a href="field-training.html">Field Training</a></li>
+								<li class="menu-item"><a href="#">Accessible Textbooks</a></li>
+								<li class="menu-item"><a href="#">Tactile Literacy Tools</a></li>
+								<li class="menu-item"><a href="#">Braille Bug</a></li>
+								<li class="menu-item"><a href="#">Multiple Disabilities</a></li>
+								<!-- <ul class="shop-search">
+									<li class="menu-item title">Shop</li>
+									<li class="menu-item"><a href="#search-field"><i class="fas fa-search" aria-hidden="true"></i> Search</a></li>
+								</ul> -->
+							</ul>
+						</li>
+						<li class="menu-item"><a href="media-services.html">Media Services</a></li>
+						<li class="menu-item"><a href="resources.html">Resources</a></li>
+						<li class="menu-item">
+							<a href="#">R&D</a>
+							<ul class="sub-menu left">
+								<li class="menu-item"><a href="#">Get Involved</a></li>
+								<li class="menu-item"><a href="#">Research Resources</a></li>
+								<li class="menu-item"><a href="#">Product Development</a></li>
+								<!-- <ul class="shop-search">
+									<li class="menu-item title">Shop</li>
+									<li class="menu-item"><a href="#search-field"><i class="fas fa-search" aria-hidden="true"></i> Search</a></li>
+								</ul> -->
+							</ul>
+						</li>
+						<li class="menu-item"><a href="#">Louis</a></li>
+					</ul>
+
+					<ul class="menu action-menu">
+						<li class="menu-item"><a href="shop.html">Shop</a></li>
+						<li class="menu-item">
+							<a href="#">Ways to Give</a>
+							<ul class="sub-menu right">
+								<li class="menu-item"><a href="#">Our Mission</a></li>
+								<li class="menu-item"><a href="#">Donate</a></li>
+								<li class="menu-item"><a href="other-ways-to-give.html">Other Ways to Give</a></li>
+								<!-- <ul class="shop-search">
+									<li class="menu-item title">Shop</li>
+									<li class="menu-item"><a href="#search-field"><i class="fas fa-search" aria-hidden="true"></i> Search</a></li>
+								</ul> -->
+							</ul>
+						</li>
+						<li class="menu-item"><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<main id="main" role="main">
+<div class="interior-page">
+	<div class="wrapper carbon-app">
+		<div id="addresses-app"></div>
+    <div id="button-app"></div>
+    <div id="table-app"></div>
+    <div id="combo-app"></div>
+	</div>
+</div>
+<script type="text/x-template" id="addresses-template">
+  <div>  
+    <cv-text-input
+      label="You are?"
+      v-model="yourName"
+      placeholder="Tell me your name then click below, or I'll call you Bob"
+    ></cv-text-input>
+    <p>{{ hello }}</p>
+
+    <cv-content-switcher>
+      <cv-content-switcher-button owner-id="csb-1" :selected="isSelected(0)"
+        >Tiles</cv-content-switcher-button
+      >
+      <cv-content-switcher-button owner-id="csb-2" :selected="isSelected(1)"
+        >Buttons</cv-content-switcher-button
+      >
+      <cv-content-switcher-button owner-id="csb-3" :selected="isSelected(2)"
+        >Other</cv-content-switcher-button
+      >
+    </cv-content-switcher>
+
+    <section style="margin: 10px 0;">
+      <cv-content-switcher-content owner-id="csb-1" class="flexme">
+        <cv-tile>
+          <h1>Hello</h1>
+          <p>This is some tile content</p>
+        </cv-tile>
+        <cv-tile kind="expandable">
+          <h1>Hello</h1>
+          <p>This is some tile content</p>
+          <template slot="below">
+            <h2>More</h2>
+            <ul>
+              <li>This</li>
+              <li>is some</li>
+              <li>more</li>
+              <li>content</li>
+            </ul>
+          </template>
+        </cv-tile>
+        <cv-tile kind="selectable" value="tile-1">
+          <h1>Hello</h1>
+          <p>This is some tile content</p>
+          <template slot="below">
+            <h2>More</h2>
+            <ul>
+              <li>This</li>
+              <li>is some</li>
+              <li>more</li>
+              <li>content</li>
+            </ul>
+          </template>
+        </cv-tile>
+      </cv-content-switcher-content>
+      <cv-content-switcher-content owner-id="csb-2">
+        <cv-button>Default/Primary</cv-button>
+        <cv-button kind="secondary">Secondary</cv-button>
+        <cv-button kind="tertiary">Tertiary</cv-button>
+        <cv-button kind="ghost">Ghost</cv-button>
+        <cv-button kind="danger">Danger</cv-button>
+        <cv-button kind="danger--primary">Danger-Primary</cv-button>
+      </cv-content-switcher-content>
+      <cv-content-switcher-content owner-id="csb-2">
+        <cv-checkbox label="Checkbox 1" value="value-1"></cv-checkbox>
+        <cv-checkbox label="Checkbox 2" value="value-2"></cv-checkbox>
+
+        <cv-radio-group>
+          <cv-radio-button name="test" value="test-1" label="test-1" checked />
+          <cv-radio-button name="test" value="test-2" label="test-2" />
+          <cv-radio-button name="test" value="test-3" label="test-3" />
+        </cv-radio-group>
+      </cv-content-switcher-content>
+      <cv-content-switcher-content owner-id="csb-3">
+        <cv-dropdown value="value">
+          <cv-dropdown-item value="10">Option with value 10</cv-dropdown-item>
+          <cv-dropdown-item value="20">Option with value 20</cv-dropdown-item>
+          <cv-dropdown-item value="30">Option with value 30</cv-dropdown-item>
+          <cv-dropdown-item value="40">Option with value 40</cv-dropdown-item>
+          <cv-dropdown-item value="50">Option with value 50</cv-dropdown-item>
+        </cv-dropdown>
+        
+        <br>
+        <cv-progress :initialStep="2" :steps="['Start', 'Speed up', 'Travel', 'Slow down', 'Stop']" />
+        <br>
+
+        <cv-pagination :number-of-items="1250" />
+      </cv-content-switcher-content>
+    </section>
+  </div>
+</script>
+<script type="text/x-template" id="button-template">
+  <cv-accordion @change="actionChange" ref="acc">
+    <cv-accordion-item :open="open[0]">
+      <template slot="title">Section 1 title </template>
+      <template slot="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </template>
+    </cv-accordion-item>
+    <cv-accordion-item :open="open[1]">
+      <template slot="title">Section 2 title</template>
+      <template slot="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </template>
+    </cv-accordion-item>
+    <cv-accordion-item :open="open[2]">
+      <template slot="title">Section 3 title</template>
+      <template slot="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </template>
+    </cv-accordion-item>
+    <cv-accordion-item :open="open[3]">
+      <template slot="title">Section 4 title</template>
+      <template slot="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </template>
+    </cv-accordion-item>
+  </cv-accordion>  
+</script>
+
+<script type="text/x-template" id="table-template">
+  <cv-data-table
+  :row-size="rowSize"
+  :auto-width="autoWidth"
+  :sortable="sortable"
+  :title="title"
+  :action-bar-aria-label="actionBarAriaLabel"
+  :batch-cancel-label="batchCancelLabel"
+  :zebra="zebra"
+  :columns="columns"
+  @search="onFilter"
+  :pagination="{ numberOfItems: 21, pageSizes: [20, 50, 100] }" @pagination="actionOnPagination"
+  v-model="rowSelects" @row-select-change="actionRowSelectChange"
+  @sort="onSort"
+  :overflow-menu="sampleOverflowMenu"
+  :helper-text="helperText" :data="filteredData" @overflow-menu-click="onOverflowMenuClick"  ref="table">
+  <template v-if="use_actions" slot="actions">
+<cv-data-table-action @click="action1">
+  <svg fill-rule="evenodd" height="16" name="download" role="img" viewBox="0 0 14 16" width="14" aria-label="Download" alt="Download">
+    <title>Download</title>
+    <path d="M7.506 11.03l4.137-4.376.727.687-5.363 5.672-5.367-5.67.726-.687 4.14 4.374V0h1v11.03z"></path>
+    <path d="M13 15v-2h1v2a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-2h1v2h12z"></path>
+  </svg>
+</cv-data-table-action>
+<!-- <cv-data-table-action @click="action2">
+  <svg fill-rule="evenodd" height="16" name="edit" role="img" viewBox="0 0 16 16" width="16" aria-label="Edit" alt="Edit">
+    <title>Edit</title>
+    <path d="M7.926 3.38L1.002 9.72V12h2.304l6.926-6.316L7.926 3.38zm.738-.675l2.308 2.304 1.451-1.324-2.308-2.309-1.451 1.329zM.002 9.28L9.439.639a1 1 0 0 1 1.383.03l2.309 2.309a1 1 0 0 1-.034 1.446L3.694 13H.002V9.28zM0 16.013v-1h16v1z"></path>
+  </svg>
+</cv-data-table-action>
+<cv-data-table-action @click="action3">
+  <svg fill-rule="evenodd" height="16" name="settings" role="img" viewBox="0 0 15 16" width="15" aria-label="Settings" alt="Settings">
+    <title>Settings</title>
+    <path d="M7.53 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 1a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"></path>
+    <path d="M6.268 2.636l-.313.093c-.662.198-1.28.52-1.822.946l-.255.2-1.427-.754-1.214 1.735 1.186 1.073-.104.31a5.493 5.493 0 0 0-.198 2.759l.05.274L1 10.33l1.214 1.734 1.06-.56.262.275a5.5 5.5 0 0 0 2.42 1.491l.312.093L6.472 15H8.59l.204-1.636.313-.093a5.494 5.494 0 0 0 2.21-1.28l.26-.248 1.09.576 1.214-1.734-1.08-.977.071-.29a5.514 5.514 0 0 0-.073-2.905l-.091-.302 1.15-1.041-1.214-1.734-1.3.687-.257-.22a5.487 5.487 0 0 0-1.98-1.074l-.313-.093L8.59 1H6.472l-.204 1.636zM5.48.876A1 1 0 0 1 6.472 0H8.59a1 1 0 0 1 .992.876l.124.997a6.486 6.486 0 0 1 1.761.954l.71-.375a1 1 0 0 1 1.286.31l1.215 1.734a1 1 0 0 1-.149 1.316l-.688.622a6.514 6.514 0 0 1 .067 2.828l.644.581a1 1 0 0 1 .148 1.316l-1.214 1.734a1 1 0 0 1-1.287.31l-.464-.245c-.6.508-1.286.905-2.029 1.169l-.124.997A1 1 0 0 1 8.59 16H6.472a1 1 0 0 1-.992-.876l-.125-.997a6.499 6.499 0 0 1-2.274-1.389l-.399.211a1 1 0 0 1-1.287-.31L.181 10.904A1 1 0 0 1 .329 9.59l.764-.69a6.553 6.553 0 0 1 .18-2.662l-.707-.64a1 1 0 0 1-.148-1.315l1.214-1.734a1 1 0 0 1 1.287-.31l.86.454a6.482 6.482 0 0 1 1.576-.819L5.48.876z"></path>
+  </svg>
+</cv-data-table-action> -->
+<cv-button small @click="actionNew">Add new</cv-button>
+<!-- <cv-button small @click="actionNew">Download CSV</cv-button> -->
+<!-- <cv-button small @click="actionNew">Upload CSV</cv-button> -->
+      </template>
+  <template v-if="use_batchActions" slot="batch-actions">
+<cv-button @click="onBatchAction1">
+  Delete
+  <TrashCan16 class="bx--btn__icon"/>
+</cv-button>
+<cv-button @click="onBatchAction2">
+  Save
+  <Save16 class="bx--btn__icon"/>
+</cv-button>
+<cv-button @click="onBatchAction3">
+  Download
+  <Download16 class="bx--btn__icon"/>
+</cv-button>
+</template></cv-data-table>
+</script>
+<script type="text/x-template" id="combo-template">
+<cv-combo-box 
+  :label="label"
+  :title="title"
+  :disabled="disabled"
+  :auto-filter="autoFilter"
+  :auto-highlight="autoHighlight"
+  :value="initialValue"
+  :options="options"
+  @filter="onFilter"
+  @change="onChange"
+>
+</cv-combo-box>
+</script>
+
+</main>
+<footer class="footer" role="contentinfo">
+	<div class="wrapper">
+		<ul class="menu">
+			<li><a href="#">Living with blindness</a></li>
+			<li><a href="#">Educational resources</a></li>
+			<li><a href="#">Media services</a></li>
+			<li><a href="#">Resources</a></li>
+			<li><a href="#">R&D</a></li>
+			<li><a href="#">Federal quota</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">About us</a></li>
+			<li><a href="#">Annual reports</a></li>
+			<li><a href="#">Corporate ethics</a></li>
+			<li><a href="#">Careers</a></li>
+			<li><a href="#">Customer care</a></li>
+			<li><a href="#">Terms and conditions</a></li>
+			<li><a href="#">Privacy policy</a></li>
+			<li><a href="#">Press room</a></li>
+		</ul>
+		<div class="logo-social">
+			<img src="assets/img/logo-black.svg" class="logo" alt="American Printing House Logo">
+			<p class="tagline">Welcome everyone</p>
+			<ul class="social">
+				<li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fab fa-blogger-b" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+<script src="assets/js/scripts.min.js"></script>
+
+</body>
+
+</html>
