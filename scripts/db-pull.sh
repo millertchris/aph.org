@@ -42,19 +42,18 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
-if [ -f "$PROJECT_ROOT/.env" ]; then
-  set -a
-  source "$PROJECT_ROOT/.env"
-  set +a
-fi
 
 cd "$PROJECT_ROOT"
 
-# Source site URL (production)
-SOURCE_URL="${WPMDB_SOURCE_URL:-}"
+# Extract only the variables we need from .env
+# (sourcing the full .env breaks the shell — salts contain |, !, (), etc.)
+if [ -f "$PROJECT_ROOT/.env" ]; then
+  SOURCE_URL=$(grep '^WPMDB_SOURCE_URL=' "$PROJECT_ROOT/.env" | head -1 | cut -d'=' -f2- | tr -d "'" | tr -d '"')
+  SOURCE_KEY=$(grep '^WPMDB_SOURCE_KEY=' "$PROJECT_ROOT/.env" | head -1 | cut -d'=' -f2- | tr -d "'" | tr -d '"')
+fi
 
-# Source site secret key (from production WP Admin → Tools → Migrate DB Pro → Settings)
-SOURCE_KEY="${WPMDB_SOURCE_KEY:-}"
+SOURCE_URL="${SOURCE_URL:-}"
+SOURCE_KEY="${SOURCE_KEY:-}"
 
 # Use 'wp migrate' (current command name)
 MIGRATE_CMD="wp migrate"
@@ -157,11 +156,13 @@ echo "Pulling database (~1.7GB estimated)..."
 echo "(This may take several minutes)"
 echo ""
 
+# --skip-plugins --skip-themes prevents WooCommerce REST API fatal errors on PHP 8.4
 $MIGRATE_CMD pull "$SOURCE_URL" "$SOURCE_KEY" \
   --skip-replace-guids \
   --exclude-spam \
   --exclude-post-types="$EXCLUDE_POST_TYPES" \
-  --include-tables="$INCLUDE_TABLES"
+  --include-tables="$INCLUDE_TABLES" \
+  --skip-plugins --skip-themes
 
 PULL_EXIT=$?
 if [ $PULL_EXIT -ne 0 ]; then
