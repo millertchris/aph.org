@@ -16,8 +16,6 @@
 #   2. Ensure WP Migrate DB Pro is active on both source and destination
 #   3. Run: ./scripts/db-pull.sh
 #
-# This script is safe to commit — it reads credentials from .env.
-#
 # What gets pulled (~1.7GB from a 5.5GB production database):
 #   - All content: pages, posts, products, documents, people, ACF fields
 #   - All users and user meta
@@ -27,7 +25,7 @@
 #   - Redirection rules, menus, widgets
 #
 # What gets excluded (~3.8GB):
-#   - Orders and all order data (~2GB) — not needed for theme/plugin development
+#   - Orders and all order data (~2GB)
 #   - Search indexes (~780MB) — SearchWP, Yoast, FacetWP (all rebuildable)
 #   - Email logs (~491MB) — Post SMTP transcripts
 #   - WC order notes (~271MB) — comments table is all order notes
@@ -57,58 +55,77 @@ SOURCE_URL="${WPMDB_SOURCE_URL:-}"
 # Source site secret key (from production WP Admin → Tools → Migrate DB Pro → Settings)
 SOURCE_KEY="${WPMDB_SOURCE_KEY:-}"
 
-# ---- Tables to exclude ----
-# We build the include list dynamically by querying all tables and filtering out
-# the ones below. New tables are automatically included.
+# Use 'wp migrate' (current command name)
+MIGRATE_CMD="wp migrate"
 
-build_include_tables() {
-  wp db tables --all-tables --format=csv 2>/dev/null | tr ',' '\n' | grep -v \
-    \
-    -e 'wp_wc_orders$' \
-    -e 'wp_wc_orders_meta' \
-    -e 'wp_wc_order_addresses' \
-    -e 'wp_wc_order_operational_data' \
-    -e 'wp_woocommerce_order_items' \
-    -e 'wp_woocommerce_order_itemmeta' \
-    -e 'wp_woocommerce_downloadable_product_permissions' \
-    -e 'wp_wc_order_product_lookup' \
-    -e 'wp_wc_order_stats' \
-    -e 'wp_wc_order_tax_lookup' \
-    -e 'wp_wc_order_coupon_lookup' \
-    -e 'wp_wc_customer_lookup' \
-    -e 'wp_wc_download_log' \
-    \
-    -e 'wp_comments' \
-    -e 'wp_commentmeta' \
-    \
-    -e 'wp_swp_' \
-    -e 'wp_searchwp_' \
-    -e 'wp_yoast_' \
-    -e 'wp_facetwp_index' \
-    -e 'wp_wps_' \
-    \
-    -e 'wp_blc_' \
-    -e 'wp_gf_entry' \
-    -e 'wp_gf_form_view' \
-    -e 'wp_gravitysmtp_' \
-    -e 'wp_actionscheduler_' \
-    -e 'wp_pmxe_' \
-    -e 'wp_pmxi_' \
-    -e 'wp_defender_' \
-    -e 'wp_cartflows_' \
-    -e 'wp_redirection_logs' \
-    -e 'wp_redirection_404' \
-    -e 'wp_woocommerce_sessions' \
-    -e 'wp_oauth_' \
-    -e 'wp_wsal_' \
-    -e 'wp_wf' \
-    -e 'wp_smush_dir_images' \
-    -e 'wp_post_smtp_logmeta' \
-    | tr '\n' ',' | sed 's/,$//'
-}
+# ---- Static table whitelist ----
+# Only these tables get pulled. Everything else is excluded.
+# To add a new table: append it to this list and commit.
 
-# ---- Post types to exclude ----
-# These are excluded from wp_posts and wp_postmeta via --exclude-post-types.
+INCLUDE_TABLES=$(cat <<'TABLES' | tr '\n' ',' | sed 's/,$//' | sed '/^$/d'
+wp_ac_conditional_format
+wp_ac_segments
+wp_admin_columns
+wp_as3cf_items
+wp_gf_addon_feed
+wp_gf_draft_submissions
+wp_gf_form
+wp_gf_form_meta
+wp_gf_form_revisions
+wp_gf_rest_api_keys
+wp_links
+wp_lmfwc_activations
+wp_lmfwc_api_keys
+wp_lmfwc_generators
+wp_lmfwc_licenses
+wp_lmfwc_licenses_meta
+wp_options
+wp_postmeta
+wp_posts
+wp_ppress_coupons
+wp_ppress_customers
+wp_ppress_forms
+wp_ppress_formsmeta
+wp_ppress_meta_data
+wp_ppress_ordermeta
+wp_ppress_orders
+wp_ppress_plans
+wp_ppress_sessions
+wp_ppress_subscriptions
+wp_redirection_groups
+wp_redirection_items
+wp_smartcrawl_redirects
+wp_termmeta
+wp_terms
+wp_term_relationships
+wp_term_taxonomy
+wp_usermeta
+wp_users
+wp_wc_admin_notes
+wp_wc_admin_note_actions
+wp_wc_category_lookup
+wp_wc_product_attributes_lookup
+wp_wc_product_download_directories
+wp_wc_product_meta_lookup
+wp_wc_rate_limits
+wp_wc_reserved_stock
+wp_wc_tax_rate_classes
+wp_wc_webhooks
+wp_woocommerce_api_keys
+wp_woocommerce_attribute_taxonomies
+wp_woocommerce_exported_csv_items
+wp_woocommerce_log
+wp_woocommerce_payment_tokenmeta
+wp_woocommerce_payment_tokens
+wp_woocommerce_shipping_zones
+wp_woocommerce_shipping_zone_locations
+wp_woocommerce_shipping_zone_methods
+wp_woocommerce_tax_rates
+wp_woocommerce_tax_rate_locations
+TABLES
+)
+
+# ---- Post types to exclude from wp_posts/wp_postmeta ----
 EXCLUDE_POST_TYPES="shop_order,shop_order_placehold,order_shipment,postman_sent_mail,wp-rest-api-log"
 
 # ==============================================================================
@@ -125,26 +142,14 @@ echo ""
 if [ -z "$SOURCE_URL" ] || [ -z "$SOURCE_KEY" ]; then
   echo "ERROR: Set WPMDB_SOURCE_URL and WPMDB_SOURCE_KEY in your .env file."
   echo ""
-  echo "  WPMDB_SOURCE_URL='https://www.aph.org'"
+  echo "  WPMDB_SOURCE_URL='https://www.aph.org/wp'"
   echo "  WPMDB_SOURCE_KEY='your-secret-key-from-production'"
   echo ""
   echo "Get the secret key from production WP Admin → Tools → Migrate DB Pro → Settings."
   exit 1
 fi
 
-# Use 'wp migrate' (current command name)
-MIGRATE_CMD="wp migrate"
-
-echo "Building table include list..."
-INCLUDE_TABLES=$(build_include_tables)
-
-if [ -z "$INCLUDE_TABLES" ]; then
-  echo "WARNING: Could not build table list. Pulling all tables."
-  TABLE_FLAG=""
-else
-  TABLE_FLAG="--include-tables=$INCLUDE_TABLES"
-fi
-
+echo "Including $(echo "$INCLUDE_TABLES" | tr ',' '\n' | wc -l | tr -d ' ') tables (excluding orders, indexes, logs)"
 echo "Excluding post types: $EXCLUDE_POST_TYPES"
 echo ""
 echo "Pulling database (~1.7GB estimated)..."
@@ -155,7 +160,7 @@ $MIGRATE_CMD pull "$SOURCE_URL" "$SOURCE_KEY" \
   --skip-replace-guids \
   --exclude-spam \
   --exclude-post-types="$EXCLUDE_POST_TYPES" \
-  $TABLE_FLAG
+  --include-tables="$INCLUDE_TABLES"
 
 echo ""
 echo "Pull complete. Running post-import tasks..."
