@@ -35,7 +35,8 @@
 #
 # ==============================================================================
 
-set -e
+# Not using set -e — WP Migrate DB Pro on PHP 8.4 emits deprecation
+# warnings that cause non-zero exit codes. We handle errors explicitly.
 
 # ---- Load .env ----
 
@@ -161,6 +162,15 @@ $MIGRATE_CMD pull "$SOURCE_URL" "$SOURCE_KEY" \
   --exclude-spam \
   --exclude-post-types="$EXCLUDE_POST_TYPES" \
   --include-tables="$INCLUDE_TABLES"
+
+PULL_EXIT=$?
+if [ $PULL_EXIT -ne 0 ]; then
+  echo ""
+  echo "ERROR: Pull failed with exit code $PULL_EXIT"
+  echo "Try running manually to see detailed errors:"
+  echo "  wp migrate pull '$SOURCE_URL' '$SOURCE_KEY' --skip-replace-guids --include-tables=wp_options"
+  exit $PULL_EXIT
+fi
 
 echo ""
 echo "Pull complete. Running post-import tasks..."
