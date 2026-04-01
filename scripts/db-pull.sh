@@ -18,6 +18,23 @@
 #
 # This script is safe to commit — it reads credentials from .env.
 #
+# What gets pulled (~1.7GB from a 5.5GB production database):
+#   - All content: pages, posts, products, documents, people, ACF fields
+#   - All users and user meta
+#   - All site options and settings
+#   - WooCommerce products, categories, attributes, tax rates, shipping zones
+#   - Gravity Forms structure (forms, fields — not entries)
+#   - Redirection rules, menus, widgets
+#
+# What gets excluded (~3.8GB):
+#   - Orders and all order data (~2GB) — not needed for theme/plugin development
+#   - Search indexes (~780MB) — SearchWP, Yoast, FacetWP (all rebuildable)
+#   - Email logs (~491MB) — Post SMTP transcripts
+#   - WC order notes (~271MB) — comments table is all order notes
+#   - WC analytics lookups (~148MB) — rebuildable
+#   - Form entries (~84MB) — Gravity Forms submissions
+#   - Various logs and runtime data (~60MB)
+#
 # ==============================================================================
 
 set -e
@@ -41,53 +58,35 @@ SOURCE_URL="${WPMDB_SOURCE_URL:-}"
 SOURCE_KEY="${WPMDB_SOURCE_KEY:-}"
 
 # ---- Tables to exclude ----
-# WP Migrate DB Pro uses --include-tables (whitelist), not exclude.
 # We build the include list dynamically by querying all tables and filtering out
-# the ones we don't need. This way new tables are automatically included.
-#
-# Tables we SKIP — saves ~1.3GB total:
-#
-# Rebuildable indexes (~780MB):
-#   - wp_swp_*, wp_searchwp_*    (SearchWP — 702MB, rebuild via WP Admin)
-#   - wp_yoast_*                 (Yoast SEO — 58MB, rebuild via SEO → Tools)
-#   - wp_facetwp_index           (FacetWP — 9MB, rebuilds on reindex)
-#   - wp_wps_*                   (SearchWP metrics — 12MB, rebuildable)
-#
-# WooCommerce analytics/lookups (~148MB):
-#   - wp_wc_order_product_lookup (111MB, rebuild via WC → Status → Tools)
-#   - wp_wc_order_stats          (29MB, rebuildable)
-#   - wp_wc_customer_lookup      (7MB, rebuildable)
-#   - wp_wc_download_log         (2MB, download tracking)
-#
-# WooCommerce order notes (~271MB):
-#   - wp_comments/wp_commentmeta (271MB — 585K rows, ALL are WC order notes
-#     like "Payment received", "Order shipped". Not user comments or reviews.
-#     Useful for debugging but not essential for dev/staging.)
-#
-# Logs, sessions, runtime data (~60MB):
-#   - wp_gf_entry*, wp_gf_form_view (Gravity Forms entries — 84MB)
-#   - wp_gravitysmtp_*           (SMTP logs — 4MB)
-#   - wp_actionscheduler_*       (ActionScheduler — 6MB, regenerates)
-#   - wp_pmxe_*, wp_pmxi_*       (WP All Export/Import — 32MB)
-#   - wp_defender_*              (Defender — 7MB, deactivated locally)
-#   - wp_cartflows_*             (CartFlows — 4MB)
-#   - wp_blc_*                   (Broken Link Checker — 9MB, rescans)
-#   - wp_redirection_logs/404    (Redirection logs)
-#   - wp_woocommerce_sessions    (Active sessions — meaningless on another server)
-#   - wp_oauth_*                 (OAuth tokens — session-specific)
-#   - wp_wsal_*                  (WP Security Audit Log)
-#   - wp_wf*                     (Wordfence leftovers)
-
-# ---- Build include list dynamically ----
+# the ones below. New tables are automatically included.
 
 build_include_tables() {
-  # Get all tables from local DB, then filter out the ones we want to skip
   wp db tables --all-tables --format=csv 2>/dev/null | tr ',' '\n' | grep -v \
+    \
+    -e 'wp_wc_orders$' \
+    -e 'wp_wc_orders_meta' \
+    -e 'wp_wc_order_addresses' \
+    -e 'wp_wc_order_operational_data' \
+    -e 'wp_woocommerce_order_items' \
+    -e 'wp_woocommerce_order_itemmeta' \
+    -e 'wp_woocommerce_downloadable_product_permissions' \
+    -e 'wp_wc_order_product_lookup' \
+    -e 'wp_wc_order_stats' \
+    -e 'wp_wc_order_tax_lookup' \
+    -e 'wp_wc_order_coupon_lookup' \
+    -e 'wp_wc_customer_lookup' \
+    -e 'wp_wc_download_log' \
+    \
+    -e 'wp_comments' \
+    -e 'wp_commentmeta' \
+    \
     -e 'wp_swp_' \
     -e 'wp_searchwp_' \
     -e 'wp_yoast_' \
     -e 'wp_facetwp_index' \
     -e 'wp_wps_' \
+    \
     -e 'wp_blc_' \
     -e 'wp_gf_entry' \
     -e 'wp_gf_form_view' \
@@ -99,13 +98,7 @@ build_include_tables() {
     -e 'wp_cartflows_' \
     -e 'wp_redirection_logs' \
     -e 'wp_redirection_404' \
-    -e 'wp_wc_order_product_lookup' \
-    -e 'wp_wc_order_stats' \
-    -e 'wp_wc_customer_lookup' \
-    -e 'wp_wc_download_log' \
     -e 'wp_woocommerce_sessions' \
-    -e 'wp_comments' \
-    -e 'wp_commentmeta' \
     -e 'wp_oauth_' \
     -e 'wp_wsal_' \
     -e 'wp_wf' \
@@ -113,6 +106,10 @@ build_include_tables() {
     -e 'wp_post_smtp_logmeta' \
     | tr '\n' ',' | sed 's/,$//'
 }
+
+# ---- Post types to exclude ----
+# These are excluded from wp_posts and wp_postmeta via --exclude-post-types.
+EXCLUDE_POST_TYPES="shop_order,shop_order_placehold,order_shipment,postman_sent_mail,wp-rest-api-log"
 
 # ==============================================================================
 
@@ -142,7 +139,7 @@ if ! wp migratedb --help &>/dev/null; then
   exit 1
 fi
 
-echo "Building table include list (excluding rebuildable indexes, logs, analytics)..."
+echo "Building table include list..."
 INCLUDE_TABLES=$(build_include_tables)
 
 if [ -z "$INCLUDE_TABLES" ]; then
@@ -152,14 +149,11 @@ else
   TABLE_FLAG="--include-tables=$INCLUDE_TABLES"
 fi
 
-echo "Pulling database..."
-echo "(This may take several minutes for large databases)"
+echo "Excluding post types: $EXCLUDE_POST_TYPES"
 echo ""
-
-# Post types to exclude — bloat inside wp_posts/wp_postmeta:
-#   - postman_sent_mail: 491MB — Post SMTP email logs with full transcripts
-#   - wp-rest-api-log:    36MB — REST API request/response debug logs
-EXCLUDE_POST_TYPES="postman_sent_mail,wp-rest-api-log"
+echo "Pulling database (~1.7GB estimated)..."
+echo "(This may take several minutes)"
+echo ""
 
 wp migratedb pull "$SOURCE_URL" "$SOURCE_KEY" \
   --skip-replace-guids \
@@ -192,14 +186,22 @@ echo "================================================"
 echo " Database pull complete! $(date)"
 echo "================================================"
 echo ""
+echo "Estimated size: ~1.7GB (down from 5.5GB production)"
+echo ""
+echo "What was excluded:"
+echo "  - All orders and order data (~2GB)"
+echo "  - Search indexes, Yoast, FacetWP (~780MB)"
+echo "  - Email logs, form entries, analytics (~900MB)"
+echo ""
 echo "Post-pull steps:"
 echo "  1. Reset admin password:"
 echo "     wp user update <username> --user_pass='password'"
 echo ""
-echo "Rebuild indexes (excluded from pull to save ~780MB):"
-echo "  2. SearchWP:  WP Admin → SearchWP → Settings → rebuild index"
-echo "  3. Yoast SEO: WP Admin → SEO → Tools → reindex"
-echo "  4. FacetWP:   WP Admin → FacetWP → Settings → reindex"
-echo "  5. WooCommerce lookups: WP Admin → WooCommerce → Status → Tools →"
-echo "     'Regenerate order statistics' + 'Regenerate customer lookup tables'"
+echo "  2. Rebuild indexes:"
+echo "     - SearchWP:    WP Admin → SearchWP → Settings → rebuild index"
+echo "     - Yoast SEO:   WP Admin → SEO → Tools → reindex"
+echo "     - FacetWP:     WP Admin → FacetWP → Settings → reindex"
+echo ""
+echo "  Note: Orders are excluded. If you need specific orders for testing,"
+echo "  pull them manually via WP Admin → Tools → Migrate DB Pro."
 echo ""
