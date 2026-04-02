@@ -20,11 +20,11 @@ setup('authenticate as test customer', async ({ page }) => {
   await page.locator('#password').fill(customerPassword);
   await page.locator('button[name="login"], input[name="login"]').click();
 
-  // Wait for redirect to account dashboard
-  await page.waitForURL('**/my-account/**');
+  // Wait for page to load after login
+  await page.waitForLoadState('networkidle');
 
-  // Verify we're logged in — dashboard should show account navigation
-  await expect(page.locator('.woocommerce-MyAccount-navigation')).toBeVisible();
+  // Verify we're logged in — APH custom account shows Order History
+  await expect(page.locator('text=Order History')).toBeVisible({ timeout: 10000 });
 
   // Save auth state for other tests to reuse
   await page.context().storageState({ path: './fixtures/auth-state.json' });

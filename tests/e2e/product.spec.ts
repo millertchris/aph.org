@@ -37,7 +37,7 @@ test.describe('Product Page', () => {
   test('product has add to cart button', async ({ page }) => {
     await page.goto(productURL);
 
-    const addToCart = page.locator('button:has-text("Add to cart")');
+    const addToCart = page.locator('button[name="add-to-cart"], button.single_add_to_cart_button').first();
     await expect(addToCart).toBeVisible();
   });
 
@@ -89,17 +89,20 @@ test.describe('Product Page', () => {
     await firstQty.fill('1');
 
     // Click add to cart
-    await page.locator('button:has-text("Add to cart")').click();
+    await page.locator('button[name="add-to-cart"], button.single_add_to_cart_button').first().click();
 
     // Should see cart update — either redirect to cart or show success notice
     await page.waitForLoadState('networkidle');
 
-    // Cart count in header should update or we should be on cart page
-    const cartButton = page.locator('button:has-text("Cart"), a:has-text("Cart")');
-    if (await cartButton.isVisible()) {
-      const cartText = await cartButton.textContent();
-      // Cart should no longer show "0 items"
-      expect(cartText).not.toContain('0 items');
-    }
+    // Verify we're on the cart page or a success message appeared
+    // WooCommerce may redirect to cart or show an inline notice
+    const onCartPage = page.url().includes('/cart/');
+    const successNotice = page.locator('.woocommerce-message, .wc-block-components-notice-banner');
+    const viewCartLink = page.locator('a:has-text("View cart"), a:has-text("View Cart")').first();
+
+    // At least one of these should be true after add-to-cart
+    const hasNotice = await successNotice.isVisible().catch(() => false);
+    const hasViewCart = await viewCartLink.isVisible().catch(() => false);
+    expect(onCartPage || hasNotice || hasViewCart).toBeTruthy();
   });
 });

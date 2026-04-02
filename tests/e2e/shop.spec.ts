@@ -47,7 +47,7 @@ test.describe('Shop & Browse', () => {
     await page.goto('/search-results/?fwp_content_types=product');
 
     // Should have pagination navigation
-    const pagination = page.locator('nav:has-text("Search Pagination"), .facetwp-pager');
+    const pagination = page.locator('.facetwp-pager').first();
     await expect(pagination).toBeVisible();
   });
 

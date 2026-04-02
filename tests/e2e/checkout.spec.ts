@@ -6,7 +6,7 @@ test.describe('Checkout', () => {
     await page.goto('/product/braille-bridge/');
     const firstQty = page.locator('input[type="number"]').first();
     await firstQty.fill('1');
-    await page.locator('button:has-text("Add to cart")').click();
+    await page.locator('button[name="add-to-cart"], button.single_add_to_cart_button').first().click();
     await page.waitForLoadState('networkidle');
   });
 
@@ -58,12 +58,12 @@ test.describe('Checkout', () => {
     }
   });
 
-  test('checkout has payment method selection', async ({ page }) => {
+  test('checkout has payment method section', async ({ page }) => {
     await page.goto('/checkout/');
 
-    // Should have payment methods listed
-    const paymentMethods = page.locator('#payment, .wc_payment_methods');
-    await expect(paymentMethods).toBeVisible();
+    // Should have payment section — may be a single method or a list
+    const paymentArea = page.locator('#payment, .wc_payment_methods, .payment_methods').first();
+    await expect(paymentArea).toBeVisible();
   });
 
   test('checkout has PO number field (APH custom)', async ({ page }) => {

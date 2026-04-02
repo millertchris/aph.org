@@ -11,7 +11,7 @@ test.describe('Cart', () => {
     await firstQty.fill('1');
 
     // Add to cart
-    await page.locator('button:has-text("Add to cart")').click();
+    await page.locator('button[name="add-to-cart"], button.single_add_to_cart_button').first().click();
     await page.waitForLoadState('networkidle');
   });
 
@@ -26,9 +26,8 @@ test.describe('Cart', () => {
   test('cart displays product name', async ({ page }) => {
     await page.goto('/cart/');
 
-    // Should show the product we added
-    const cartTable = page.locator('.woocommerce-cart-form, .shop_table, table');
-    await expect(cartTable).toBeVisible();
+    // Should show the product we added — look for product name or cart content
+    await expect(page.locator('main')).toContainText('Braille Bridge');
   });
 
   test('cart shows item price and total', async ({ page }) => {
